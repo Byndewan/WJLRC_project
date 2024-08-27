@@ -1,0 +1,32 @@
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+
+.btn-primary, .btn-primary.disabled {
+    box-shadow: 0 2px 6px #ff8585;
+    background-color: #ff5757!important;
+    border-color: #ff5757!important;
+}
+
+.btn-primary:hover {
+    background-color: #ff3939!important;
+}
+
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+.shadow-dark {
+    box-shadow: 0 2px 6px #ffffff; }
+}
+}
+
+.br{
+    border-radius: 0.5rem;
+}

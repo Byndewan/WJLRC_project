@@ -1,0 +1,2 @@
+<link href="{{ asset('dist_front/landing_page/img/LOGO_WJLRC-removebg-preview.png') }}" rel="icon">
+  <link href="{{ asset('dist_front/landing_page/img/LOGO_WJLRC-removebg-preview.png') }}" rel="apple-touch-icon">
