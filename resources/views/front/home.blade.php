@@ -70,7 +70,8 @@
 
       <div class="container">
         <div class="row justify-content-center" data-aos="zoom-out">
-          <div class="col-xl-7 col-lg-9 text-center">       
+          <div class="col-xl-7 col-lg-9 text-center">   
+              {{-- bagian heading --}}
             <h1>WELCOME TO WJLRC WEBSITE</h1>
             <p>Tim kami di WJLRC berkomitmen untuk mencapai keunggulan dalam semua kegiatan ekstrakurikuler kami.</p>
           </div>
