@@ -121,8 +121,7 @@
                   <div class="post-meta" style="color: #b3b3b3;"><span>Azlia Nisrina Afifah</span></div>
                 </div>
               </div>
-
-                          </div>
+              </div>
           </div>
 
         </div>
