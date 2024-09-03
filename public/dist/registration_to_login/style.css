@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+.instruction {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.login-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #ff5757;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #ff8181;
+}
+
+/* Media Queries untuk tampilan yang lebih kecil */
+
+/* Mini Desktop */
+@media (max-width: 1024px) {
+    .container {
+        padding: 30px;
+    }
+    .instruction {
+        font-size: 16px;
+    }
+    .login-btn {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+    }
+    .instruction {
+        font-size: 14px;
+    }
+    .login-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Handphone */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+    .instruction {
+        font-size: 12px;
+    }
+    .login-btn {
+        padding: 8px 18px;
+        font-size: 12px;
+    }
+}
