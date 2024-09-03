@@ -62,4 +62,3 @@ Route::post('/admin/login-submit', [AdminLoginController::class, 'login_submit']
 Route::get('/admin/registration', [AdminRegisterController::class, 'index'])->name('admin_register');
 Route::get('/admin/forgot-password', [AdminLoginController::class, 'forgot_password'])->name('admin_forgot_password');
 Route::get('/admin/reset-password', [AdminLoginController::class, 'reset_password'])->name('admin_reset_password');
-
