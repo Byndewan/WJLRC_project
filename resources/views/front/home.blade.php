@@ -384,7 +384,7 @@
           </div><!-- End Team Member -->
 
           
-
+        
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="team-2-member">
               <div class="member-img-2">
