@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="{{ asset('dist/modules/bootstrap/css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('dist/modules/fontawesome/css/all.min.css') }}">
+<link rel="stylesheet" href="{{ asset('dist/modules/bootstrap-social/bootstrap-social.css') }}">
+<link rel="stylesheet" href="{{ asset('dist/css/style.css') }}">
+<link rel="stylesheet" href="{{ asset('dist/css/components.css') }}">
+<link rel="stylesheet" href="{{ asset('dist/css/custom.css') }}">
+<link rel="stylesheet" href="{{ asset('dist/css/iziToast.min.css') }}">
+<link rel="stylesheet" href="{{ asset('dist/assets/modules/jqvmap/dist/jqvmap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('dist/assets/modules/weather-icon/css/weather-icons.min.css') }}">
+<link rel="stylesheet" href="{{ asset('dist/assets/modules/weather-icon/css/weather-icons-wind.min.css') }}">
+<link rel="stylesheet" href="{{ asset('dist/assets/modules/summernote/summernote-bs4.css') }}">
