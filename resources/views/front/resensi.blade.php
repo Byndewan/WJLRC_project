@@ -125,7 +125,7 @@
                           </div>
           </div>
 
-        </div> <!-- End .row -->
+        </div>
       </div>
     </section> <!-- End Post Grid Section -->
 
@@ -170,7 +170,6 @@
             </div>
           </div>
 
-          {{-- HI --}}
           <div class="col-md-3">
             <div class="post-entry-1">
               <a href=""><img src="{{ asset('dist_front/resensi/img/galaksi.jpg') }}" alt="" class="img-fluid"></a>
