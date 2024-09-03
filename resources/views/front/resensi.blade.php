@@ -23,13 +23,6 @@
   <link href="{{ asset('dist_front/resensi/css/main.css') }}" rel="stylesheet">
   <link href="{{ asset('dist_front/resensi/css-2/main.css') }}" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: OnePage
-  * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="index-page">
