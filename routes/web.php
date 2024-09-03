@@ -47,10 +47,3 @@ Route::get('/detail/konten', [Frontkonten::class, 'index'])->name('detail_konten
 Route::get('/detail/liputan', [FrontLiputan::class, 'index'])->name('detail_liputan');
 Route::get('/detail/mading', [FrontMading::class, 'index'])->name('detail_mading');
 Route::get('/detail/resensi', [FrontMading::class, 'index'])->name('detail_resensi');
-
-// detail halaman
-// Route::get('/detail/karya', [FrontKarya::class, 'index'])->name('detail_karya');
-// Route::get('/detail/konten', [Frontkonten::class, 'index'])->name('detail_konten');
-// Route::get('/detail/liputan', [FrontLiputan::class, 'index'])->name('detail_liputan');
-// Route::get('/detail/mading', [FrontMading::class, 'index'])->name('detail_mading');
-// Route::get('/detail/resensi', [FrontMading::class, 'index'])->name('detail_resensi');
