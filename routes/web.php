@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\AdminOrganigramController;
 use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\AdminResensiController;
 use App\Http\Controllers\Admin\AdminTamanBacaController;
+use App\Http\Controllers\Admin\AdminKontakController;
 
 /* Front Controllers */
 use App\Http\Controllers\Front\HomeController;
@@ -72,6 +73,8 @@ Route::get('/admin/login', [AdminLoginController::class, 'index'])->name('admin_
 Route::post('/admin/login-submit', [AdminLoginController::class, 'login_submit'])->name('admin_login_submit');
 Route::get('/admin/forgot-password', [AdminLoginController::class, 'forgot_password'])->name('admin_forgot_password');
 Route::get('/admin/reset-password', [AdminLoginController::class, 'reset_password'])->name('admin_reset_password');
+
+Route::get('/admin/kontak', [AdminKontakController::class, 'index'])->name('admin_kontak')->middleware('admin:admin');
 
 
 /* Admin Section */
