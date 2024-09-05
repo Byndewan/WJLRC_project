@@ -470,14 +470,7 @@
           </div>
 
       <div class="col-lg-8">
-      {{-- @if(session()->get('success'))
-        <div class="text-success">{{ session()->get('success') }}</div>
-      @endif
-
-      @if(session()->get('error'))
-        <div class="text-danger">{{ session()->get('error') }}</div>
-      @endif --}}
-            <form action="{{ route('contact_send_email') }}" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form action="{{ route('contact_send_email') }}" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               @csrf
               <div class="row gy-4">
 
@@ -499,14 +492,24 @@
 
                 <div class="col-md-12 text-center">
                   <div class="loading">Menunggu</div>
+                  <div class="sent-message">Pesan telah terkirim. Terima kasih!</div>
+                  <div class="error-message"></div>
 
-                  @if(session()->get('success'))
-                    <div class="text-success">Pesan telah terkirim. Terima kasih!</div>        
+                  {{-- @if(session()->get('success'))
+                    <div class="text-success">{{ session()->get('success') }}</div>
+                  @endif
+
+                  @if(session()->get('error'))
+                    <div class="text-danger">{{ session()->get('error') }}</div>
+                  @endif --}}
+
+                  {{-- @if(session()->get('success'))
+                    <div class="sent-message">Pesan telah terkirim. Terima kasih!</div>        
                   @endif
 
                   @if(session()->get('error'))          
-                    <div class="text-danger"></div>
-                  @endif
+                    <div class="error-message"></div>
+                  @endif --}}
 
                   <button type="submit">Kirim Pesan</button>
                 </div>
