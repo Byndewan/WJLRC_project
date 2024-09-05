@@ -5,6 +5,7 @@ use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Front\PageController;
 use App\Http\Controllers\UserLoginController;
 use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\Front\ContactController;
 
 
 // Front End
@@ -15,7 +16,10 @@ Route::get('/divisi', [PageController::class, 'divisi'])->name('divisi')->middle
 Route::get('/program-online', [PageController::class, 'program_online'])->name('program_online')->middleware('user:web');
 Route::get('/program-offline', [PageController::class, 'program_offline'])->name('program_offline')->middleware('user:web');
 Route::get('/karya', [HomeController::class, 'karya'])->name('karya')->middleware('user:web');
-Route::get('/kontak', [HomeController::class, 'kontak'])->name('kontak')->middleware('user:web');
+Route::get('/#contact', [HomeController::class, 'kontak'])->name('#contact')->middleware('user:web');
+Route::post('/#contact/send-email', [ContactController::class, 'send_email'])->name('contact_send_email')->middleware('user:web');
+Route::get('/#team-2', [HomeController::class, 'team'])->name('#team-2')->middleware('user:web');
+
 
 // Front End : Program Online
 Route::get('/program-online/resensi', [PageController::class, 'resensi'])->name('resensi')->middleware('user:web');

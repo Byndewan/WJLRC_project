@@ -18,11 +18,6 @@ class HomeController extends Controller
         return view('front.karya');
     }
 
-    public function kontak() 
-    {
-        return view('front.kontak');
-    }
-
     public function contact() 
     {
         $page_data = HomePageItem::where('id',1)->first();
