@@ -469,8 +469,16 @@
 
           </div>
 
-          <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+      <div class="col-lg-8">
+      {{-- @if(session()->get('success'))
+        <div class="text-success">{{ session()->get('success') }}</div>
+      @endif
+
+      @if(session()->get('error'))
+        <div class="text-danger">{{ session()->get('error') }}</div>
+      @endif --}}
+            <form action="{{ route('contact_send_email') }}" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              @csrf
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -486,13 +494,19 @@
                 </div>
 
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Pesan" required=""></textarea>
+                  <textarea class="form-control" name="comment" rows="6" placeholder="Pesan" required=""></textarea>
                 </div>
 
                 <div class="col-md-12 text-center">
                   <div class="loading">Menunggu</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Pesan telah terkirim. Terima kasih!</div>
+
+                  @if(session()->get('success'))
+                    <div class="text-success">Pesan telah terkirim. Terima kasih!</div>        
+                  @endif
+
+                  @if(session()->get('error'))          
+                    <div class="text-danger"></div>
+                  @endif
 
                   <button type="submit">Kirim Pesan</button>
                 </div>
@@ -500,6 +514,7 @@
               </div>
             </form>
           </div><!-- End Contact Form -->
+
 
         </div>
 
