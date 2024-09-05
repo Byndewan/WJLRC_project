@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
+/* Admin Controllers */
 use App\Http\Controllers\AdminLoginController;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminKaryaController;
@@ -10,6 +12,8 @@ use App\Http\Controllers\Admin\AdminOrganigramController;
 use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\AdminResensiController;
 use App\Http\Controllers\Admin\AdminTamanBacaController;
+
+/* Front Controllers */
 use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Front\PageController;
 use App\Http\Controllers\UserLoginController;
