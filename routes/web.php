@@ -56,18 +56,6 @@ Route::get('/admin/forgot-password', [AdminLoginController::class, 'forgot_passw
 Route::get('/admin/reset-password', [AdminLoginController::class, 'reset_password'])->name('admin_reset_password');
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* Admin Section */
 Route::get('/admin/dashboard', [AdminHomeController::class, 'index'])->name('admin_home')->middleware('admin:admin');
 Route::get('/admin/tambah/admin', [AdminHomeController::class, 'tambah'])->name('admin_tambah_admin')->middleware('admin:admin');
