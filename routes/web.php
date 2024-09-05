@@ -1,10 +1,28 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
+/* Admin Controllers */
+use App\Http\Controllers\AdminLoginController;
+use App\Http\Controllers\Admin\AdminHomeController;
+use App\Http\Controllers\Admin\AdminKaryaController;
+use App\Http\Controllers\Admin\AdminKontenController;
+use App\Http\Controllers\Admin\AdminMadingController;
+use App\Http\Controllers\Admin\AdminOrganigramController;
+use App\Http\Controllers\Admin\AdminProfileController;
+use App\Http\Controllers\Admin\AdminResensiController;
+use App\Http\Controllers\Admin\AdminTamanBacaController;
+
+/* Front Controllers */
 use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Front\PageController;
 use App\Http\Controllers\UserLoginController;
 use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\FrontKarya;
+use App\Http\Controllers\FrontKonten;
+use App\Http\Controllers\FrontLiputan;
+use App\Http\Controllers\FrontMading;
+
 
 
 // Front End
@@ -52,21 +70,8 @@ Route::get('/detail/resensi', [FrontMading::class, 'index'])->name('detail_resen
 Route::get('/admin/home', [AdminHomeController::class, 'index'])->name('admin_home')->middleware('admin:admin');
 Route::get('/admin/login', [AdminLoginController::class, 'index'])->name('admin_login');
 Route::post('/admin/login-submit', [AdminLoginController::class, 'login_submit'])->name('admin_login_submit');
-Route::get('/admin/registration', [AdminRegisterController::class, 'index'])->name('admin_register');
 Route::get('/admin/forgot-password', [AdminLoginController::class, 'forgot_password'])->name('admin_forgot_password');
 Route::get('/admin/reset-password', [AdminLoginController::class, 'reset_password'])->name('admin_reset_password');
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Admin Section */
