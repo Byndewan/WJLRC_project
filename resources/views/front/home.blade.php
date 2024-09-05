@@ -469,7 +469,7 @@
 
           </div>
 
-          <div class="col-lg-8">
+      <div class="col-lg-8">
             <form action="" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               <div class="row gy-4">
 
@@ -500,6 +500,7 @@
               </div>
             </form>
           </div><!-- End Contact Form -->
+
 
         </div>
 

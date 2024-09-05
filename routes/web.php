@@ -15,6 +15,7 @@ Route::get('/divisi', [PageController::class, 'divisi'])->name('divisi')->middle
 Route::get('/program-online', [PageController::class, 'program_online'])->name('program_online')->middleware('user:web');
 Route::get('/program-offline', [PageController::class, 'program_offline'])->name('program_offline')->middleware('user:web');
 Route::get('/karya', [HomeController::class, 'karya'])->name('karya')->middleware('user:web');
+Route::get('/kontak', [HomeController::class, 'kontak'])->name('kontak')->middleware('user:web');
 
 // Front End : Program Online
 Route::get('/program-online/resensi', [PageController::class, 'resensi'])->name('resensi')->middleware('user:web');
@@ -29,8 +30,6 @@ Route::get('/user/registration', [RegistrationController::class, 'registration']
 Route::post('/user/registration-submit', [RegistrationController::class, 'registration_submit'])->name('registration_submit');
 Route::get('/user/registration-to-login', [RegistrationController::class, 'registration_success'])->name('login_button');
 Route::get('/registration/verify/{token}/{email}', [RegistrationController::class, 'registration_verify']);
-
-
 
 // User Login
 Route::get('/user/login', [UserLoginController::class, 'index'])->name('user_login');
