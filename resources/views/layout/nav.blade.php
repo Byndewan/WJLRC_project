@@ -21,8 +21,8 @@
             </ul>
           </li>
           <li><a href="{{ route('karya') }}">Karya</a></li>
-          <li><a href="#team-2">Tim</a></li>
-          <li><a href="#contact">Kontak</a></li>
+          <li><a href="{{ route('#team-2') }}">Tim</a></li>
+          <li><a href="{{ route('#contact') }}">Kontak</a></li>
           <li class="dropdown"><a href="{{ route('user_logout') }}"><span>Logout</span></a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
