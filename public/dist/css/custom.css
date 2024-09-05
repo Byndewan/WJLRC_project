@@ -8,17 +8,6 @@ background: #eee;
 .h-custom {
 height: calc(100% - 73px);
 }
-
-.btn-primary, .btn-primary.disabled {
-    box-shadow: 0 2px 6px #ff8585;
-    background-color: #ff5757!important;
-    border-color: #ff5757!important;
-}
-
-.btn-primary:hover {
-    background-color: #ff3939!important;
-}
-
 @media (max-width: 450px) {
 .h-custom {
 height: 100%;
@@ -29,4 +18,8 @@ height: 100%;
 
 .br{
     border-radius: 0.5rem;
+}
+
+.bg {
+    background-image: url("../img/5205438.webp");
 }
