@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Organigram;
 
 class PageController extends Controller
 {
@@ -14,7 +15,8 @@ class PageController extends Controller
 
     public function organigram()
     {
-        return view('front.organigram');
+        $data_organigram = Organigram::orderBy('id','asc')->get();
+        return view('front.organigram', compact('data_organigram'));
     }
 
     public function divisi()

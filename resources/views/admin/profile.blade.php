@@ -20,21 +20,6 @@
                             <div class="profile-widget-name">{{ $item->name }}<div class="text-muted d-inline font-weight-normal"><div class="slash"></div>{{ $item->profesi }}</div></div>
                             {{ $item->deskripsi }}
                             </div>
-                            <div class="card-footer text-start">
-                            <div class="font-weight-bold mb-2">Follow {{ $item->name }} On</div>
-                            <a href="#" class="btn btn-social-icon btn-facebook mr-1">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="btn btn-social-icon btn-twitter mr-1">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="btn btn-social-icon btn-github mr-1">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="#" class="btn btn-social-icon btn-instagram">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            </div>
                         </div>
                         </div>
                         @endforeach
