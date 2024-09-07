@@ -24,7 +24,7 @@ class PageController extends Controller
         $data_organigram_S1 = Organigram::where('id','7')->first();
         $data_organigram_S2 = Organigram::where('id','8')->first();
         $data_organigram_AL1 = Organigram::where('id','9')->first();
-        $data_organigram_AL2 = Organigram::where('id','10')->firt();
+        $data_organigram_AL2 = Organigram::where('id','10')->first();
         $data_organigram_KM1 = Organigram::where('id','11')->first();
         $data_organigram_KM2 = Organigram::where('id','12')->first();
         return view('front.organigram', compact('data_organigram_pembina','data_organigram_ketua','data_organigram_WK1','data_organigram_WK2','data_organigram_B1','data_organigram_B2','data_organigram_S1','data_organigram_S2','data_organigram_AL1','data_organigram_AL2','data_organigram_KM1','data_organigram_KM2'));
