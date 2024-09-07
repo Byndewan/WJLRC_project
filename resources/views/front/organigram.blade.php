@@ -49,7 +49,7 @@
         <h2>ORGANIGRAM</h2>
         <p>Kenalan yuk sama pembina dan pengurus WJLRC!</p>
       </div><!-- End Section Title -->
-      
+
       <div class="container">
         <div class="row justify-content-center g-4">
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
@@ -228,7 +228,7 @@
                 </div>
               </div>
               <div class="member-info">
-                <h4>{{ $data_organigram_AL3->nama }}</h4>
+                <h4>{{ $data_organigram_AL2->nama }}</h4>
                 <span>{{ $data_organigram_AL2->jabatan }}</span>
               </div>
             </div>
@@ -237,7 +237,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="team-member">
               <div class="member-img">
-                <img src="{{ asset('dist_front/organigram/img/mujib.jpg'.$data_organigram_KM1->photo) }}" class="img-fluid" alt="">
+                <img src="{{ asset('uploads/'.$data_organigram_KM1->photo) }}" class="img-fluid" alt="">
                 <div class="social">
 
                   <a href="{{ $data_organigram_KM1->icon1_url }}"><i class="{{ $data_organigram_KM1->icon1 }}"></i></a>
