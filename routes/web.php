@@ -37,7 +37,7 @@ Route::get('/divisi', [PageController::class, 'divisi'])->name('divisi')->middle
 Route::get('/program-online', [PageController::class, 'program_online'])->name('program_online')->middleware('user:web');
 Route::get('/program-offline', [PageController::class, 'program_offline'])->name('program_offline')->middleware('user:web');
 Route::get('/karya', [HomeController::class, 'karya'])->name('karya')->middleware('user:web');
-Route::get('/#contact', [HomeController::class, 'kontak'])->name('#contact')->middleware('user:web');
+Route::get('/#contact', [ContactController::class, 'index'])->name('#contact')->middleware('user:web');
 Route::post('/#contact/send-email', [ContactController::class, 'send_email'])->name('contact_send_email')->middleware('user:web');
 Route::get('/#team-2', [HomeController::class, 'team'])->name('#team-2')->middleware('user:web');
 
