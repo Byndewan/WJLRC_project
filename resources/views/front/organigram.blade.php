@@ -49,101 +49,60 @@
         <h2>ORGANIGRAM</h2>
         <p>Kenalan yuk sama pembina dan pengurus WJLRC!</p>
       </div><!-- End Section Title -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      
       <div class="container">
-
         <div class="row justify-content-center g-4">
-
-            @foreach ($data_organigram as $item)
             <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
               <div class="team-member">
                 <div class="member-img">
-                  <img src="{{ asset('uploads/'.$item->photo) }}" class="img-fluid" alt="">
+                  <img src="{{ asset('uploads/'.$data_organigram_pembina->photo) }}" class="img-fluid" alt="">
                   <div class="social">
 
-                    <a href="{{ $item->icon1_url }}"><i class="{{ $item->icon1 }}"></i></a>
-                    <a href="{{ $item->icon2_url }}"><i class="{{ $item->icon2 }}"></i></a>
-                    <a href="{{ $item->icon3_url }}"><i class="{{ $item->icon3 }}"></i></a>
+                    <a href="{{ $data_organigram_pembina->icon1_url }}"><i class="{{ $data_organigram_pembina->icon1 }}"></i></a>
+                    <a href="{{ $data_organigram_pembina->icon2_url }}"><i class="{{ $data_organigram_pembina->icon2 }}"></i></a>
+                    <a href="{{ $data_organigram_pembina->icon3_url }}"><i class="{{ $data_organigram_pembina->icon3 }}"></i></a>
                   </div>
                 </div>
                 <div class="member-info">
-                  <h4>{{ $item->nama }}</h4>
-                  <span>{{ $item->jabatan }}</span>
+                  <h4>{{ $data_organigram_pembina->nama }}</h4>
+                  <span>{{ $data_organigram_pembina->jabatan }}</span>
                 </div>
               </div>
             </div><!-- End Team Member -->
-            @endforeach
 
-            {{-- <div class="col-12">
+            <div class="col-12">
               <div class="row justify-content-lg-center g-4">
                 <div class="col-lg-3 offset-md-3 offset-lg-0 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
                   <div class="team-member">
                     <div class="member-img">
-                      <img src="{{ asset('uploads/'.$item->photo) }}" class="img-fluid" alt="">
+                      <img src="{{ asset('uploads/'.$data_organigram_ketua->photo) }}" class="img-fluid" alt="">
                       <div class="social">
-                        <a href="{{ $item->icon1_url }}"><i class="{{ $item->icon1 }}"></i></a>
-                        <a href="{{ $item->icon2_url }}"><i class="{{ $item->icon2 }}"></i></a>
-                        <a href="{{ $item->icon3_url }}"><i class="{{ $item->icon13}}"></i></a>
+                        <a href="{{ $data_organigram_ketua->icon1_url }}"><i class="{{ $data_organigram_ketua->icon1 }}"></i></a>
+                        <a href="{{ $data_organigram_ketua->icon2_url }}"><i class="{{ $data_organigram_ketua->icon2 }}"></i></a>
+                        <a href="{{ $data_organigram_ketua->icon3_url }}"><i class="{{ $data_organigram_ketua->icon3 }}"></i></a>
                       </div>
                     </div>
                     <div class="member-info">
-                      <h4>{{ $item->nama }}</h4>
-                      <span>{{ $item->jabatan }}</span>
+                      <h4>{{ $data_organigram_ketua->nama }}</h4>
+                      <span>{{ $data_organigram_ketua->jabatan }}</span>
                     </div>
                   </div>
-                </div><!-- End Team Member --> --}}
+                </div><!-- End Team Member -->
 
-              {{-- <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+              <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
                 <div class="team-member">
                   <div class="member-img">
-                    <img src="{{ asset('dist_front/organigram/img/pasya fadla.jpg') }}" class="img-fluid" alt="">
+                    <img src="{{ asset('uploads/'.$data_organigram_WK1->photo) }}" class="img-fluid" alt="">
                     <div class="social">
 
-                      <a href="wa.me/+6283195523591"><i class="bi bi-whatsapp"></i></a>
-                      <a href="https://www.instagram.com/3psy0/"><i class="bi bi-instagram"></i></a>
-                      <a href=""><i class="bi bi-tiktok"></i></a>
+                      <a href="{{ $data_organigram_WK1->icon1_url }}"><i class="{{ $data_organigram_WK1->icon1 }}"></i></a>
+                      <a href="{{ $data_organigram_WK1->icon2_url }}"><i class="{{ $data_organigram_WK1->icon2 }}"></i></a>
+                      <a href="{{ $data_organigram_WK1->icon3_url }}"><i class="{{ $data_organigram_WK1->icon3 }}"></i></a>
                     </div>
                   </div>
                   <div class="member-info">
-                    <h4>Pasya Fadla Fauzan</h4>
-                    <span>Wakil Ketua I</span>
+                    <h4>{{ $data_organigram_WK1->nama }}</h4>
+                    <span>{{ $data_organigram_WK1->jabatan }}</span>
                   </div>
                 </div>
               </div><!-- End Team Member -->
@@ -151,50 +110,37 @@
               <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
                 <div class="team-member">
                   <div class="member-img">
-                    <img src="{{ asset('dist_front/organigram/img/reva.jpg') }}" class="img-fluid" alt="">
+                    <img src="{{ asset('uploads/'.$data_organigram_WK2->photo) }}" class="img-fluid" alt="">
                     <div class="social">
 
-                      <a href=""><i class="bi bi-whatsapp"></i></a>
-                      <a href=""><i class="bi bi-instagram"></i></a>
-                      <a href=""><i class="bi bi-tiktok"></i></a>
+                      <a href="{{ $data_organigram_WK2->icon1_url }}"><i class="{{ $data_organigram_WK2->icon1 }}"></i></a>
+                      <a href="{{ $data_organigram_WK2->icon2_url }}"><i class="{{ $data_organigram_WK2->icon2 }}"></i></a>
+                      <a href="{{ $data_organigram_WK2->icon3_url }}"><i class="{{ $data_organigram_WK2->icon3 }}"></i></a>
                     </div>
                   </div>
                   <div class="member-info">
-                    <h4>Reva Saluha</h4>
-                    <span>Wakil Ketua II</span>
+                    <h4>{{ $data_organigram_WK2->nama }}</h4>
+                    <span>{{ $data_organigram_WK2->jabatan }}</span>
                   </div>
                 </div>
               </div>
             </div>
-        </div>--}}
+        </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-          {{-- <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="team-member">
               <div class="member-img">
-                <img src="{{ asset('dist_front/organigram/img/mawar.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ asset('uploads/'.$data_organigram_B1->photo) }}" class="img-fluid" alt="">
                 <div class="social">
 
-                  <a href="{{ asset('wa.me/+6289632245596') }}"><i class="bi bi-whatsapp"></i></a>
-                  <a href="{{ asset('https://www.instagram.com/rianimawr?igsh=aHI2M29hcGZhNXdv') }}"><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-tiktok"></i></a>
+                <a href="{{ $data_organigram_B1->icon1_url }}"><i class="{{ $data_organigram_B1->icon1 }}"></i></a>
+                <a href="{{ $data_organigram_B1->icon2_url }}"><i class="{{ $data_organigram_B1->icon2 }}"></i></a>
+                <a href="{{ $data_organigram_B1->icon3_url }}"><i class="{{ $data_organigram_B1->icon3 }}"></i></a>
                 </div>
               </div>
               <div class="member-info">
-                <h4>Mawar Riyani</h4>
-                <span>Bendahara I</span>
+                <h4>{{ $data_organigram_B1->nama }}</h4>
+                <span>{{ $data_organigram_B1->jabatan }}</span>
               </div>
             </div>
           </div><!-- End Team Member -->
@@ -202,17 +148,17 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="team-member">
               <div class="member-img">
-                <img src="{{ asset('dist_front/organigram/img/nameera.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ asset('uploads/'.$data_organigram_B2->photo) }}" class="img-fluid" alt="">
                 <div class="social">
 
-                  <a href=""><i class="bi bi-whatsapp"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-tiktok"></i></a>
+                    <a href="{{ $data_organigram_B2->icon1_url }}"><i class="{{ $data_organigram_B2->icon1 }}"></i></a>
+                    <a href="{{ $data_organigram_B2->icon2_url }}"><i class="{{ $data_organigram_B2->icon2 }}"></i></a>
+                    <a href="{{ $data_organigram_B2->icon3_url }}"><i class="{{ $data_organigram_B2->icon3 }}"></i></a>
                 </div>
               </div>
               <div class="member-info">
-                <h4>Nameera Putri Prianti</h4>
-                <span>Bendahara II</span>
+                <h4>{{ $data_organigram_B2->nama }}</h4>
+                <span>{{ $data_organigram_B2->jabatan }}</span>
               </div>
             </div>
           </div><!-- End Team Member -->
@@ -220,17 +166,16 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="team-member">
               <div class="member-img">
-                <img src="{{ asset('dist_front/organigram/img/gina.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ asset('uploads/'.$data_organigram_S1->photo) }}" class="img-fluid" alt="">
                 <div class="social">
-
-                  <a href=""><i class="bi bi-whatsapp"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-tiktok"></i></a>
+                    <a href="{{ $data_organigram_S1->icon1_url }}"><i class="{{ $data_organigram_S1->icon1 }}"></i></a>
+                    <a href="{{ $data_organigram_S1->icon2_url }}"><i class="{{ $data_organigram_S1->icon2 }}"></i></a>
+                    <a href="{{ $data_organigram_S1->icon3_url }}"><i class="{{ $data_organigram_S1->icon3 }}"></i></a>
                 </div>
               </div>
               <div class="member-info">
-                <h4>Gina Nurlaela</h4>
-                <span>Sekretaris I</span>
+                <h4>{{ $data_organigram_S1->nama }}</h4>
+                <span>{{ $data_organigram_S1->jabatan }}</span>
               </div>
             </div>
           </div><!-- End Team Member -->
@@ -238,17 +183,17 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="team-member">
               <div class="member-img">
-                <img src="{{ asset('dist_front/organigram/img/asri.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ asset('uploads/'.$data_organigram_S2->photo) }}" class="img-fluid" alt="">
                 <div class="social">
 
-                  <a href=""><i class="bi bi-whatsapp"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-tiktok"></i></a>
+                  <a href="{{ $data_organigram_S2->icon1_url }}"><i class="{{ $data_organigram_S2->icon1 }}"></i></a>
+                  <a href="{{ $data_organigram_S2->icon2_url }}"><i class="{{ $data_organigram_S2->icon2 }}"></i></a>
+                  <a href="{{ $data_organigram_S2->icon3_url }}"><i class="{{ $data_organigram_S2->icon3 }}"></i></a>
                 </div>
               </div>
               <div class="member-info">
-                <h4>Asri Yunita Agustin</h4>
-                <span>Sekretaris II</span>
+                <h4>{{ $data_organigram_S2->nama }}</h4>
+                <span>{{ $data_organigram_S2->jabatan }}</span>
               </div>
             </div>
           </div><!-- End Team Member -->
@@ -256,17 +201,17 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
             <div class="team-member">
               <div class="member-img">
-                <img src="{{ asset('dist_front/organigram/img/aeni.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ asset('uploads/'.$data_organigram_AL1->photo) }}" class="img-fluid" alt="">
                 <div class="social">
 
-                  <a href=""><i class="bi bi-whatsapp"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-tiktok"></i></a>
+                  <a href=""><i class="{{ $data_organigram_AL1->icon1 }}"></i></a>
+                  <a href=""><i class="{{ $data_organigram_AL1->icon2 }}"></i></a>
+                  <a href=""><i class="{{ $data_organigram_AL1->icon3 }}"></i></a>
                 </div>
               </div>
               <div class="member-info">
-                <h4>Nurul Aini Salsabila</h4>
-                <span>K. Area Literasi I</span>
+                <h4>{{ $data_organigram_AL1->nama }}</h4>
+                <span>{{ $data_organigram_AL1->jabatan }}</span>
               </div>
             </div>
           </div>
@@ -274,17 +219,17 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
             <div class="team-member">
               <div class="member-img">
-                <img src="{{ asset('dist_front/organigram/img/siti insi.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ asset('uploads/'.$data_organigram_AL2->photo) }}" class="img-fluid" alt="">
                 <div class="social">
 
-                  <a href=""><i class="bi bi-whatsapp"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-tiktok"></i></a>
+                  <a href="{{ $data_organigram_AL2->icon1_url }}"><i class="{{ $data_organigram_AL2->icon1 }}"></i></a>
+                  <a href="{{ $data_organigram_AL2->icon2_url }}"><i class="{{ $data_organigram_AL2->icon2 }}"></i></a>
+                  <a href="{{ $data_organigram_AL2->icon3_url }}"><i class="{{ $data_organigram_AL2->icon3 }}"></i></a>
                 </div>
               </div>
               <div class="member-info">
-                <h4>Siti Insi Sugiarti</h4>
-                <span>K. Area Literasi II</span>
+                <h4>{{ $data_organigram_AL3->nama }}</h4>
+                <span>{{ $data_organigram_AL2->jabatan }}</span>
               </div>
             </div>
           </div><!-- End Team Member -->
@@ -292,17 +237,17 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="team-member">
               <div class="member-img">
-                <img src="{{ asset('dist_front/organigram/img/mujib.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ asset('dist_front/organigram/img/mujib.jpg'.$data_organigram_KM1->photo) }}" class="img-fluid" alt="">
                 <div class="social">
 
-                  <a href=""><i class="bi bi-whatsapp"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-tiktok"></i></a>
+                  <a href="{{ $data_organigram_KM1->icon1_url }}"><i class="{{ $data_organigram_KM1->icon1 }}"></i></a>
+                  <a href="{{ $data_organigram_KM1->icon2_url }}"><i class="{{ $data_organigram_KM1->icon2 }}"></i></a>
+                  <a href="{{ $data_organigram_KM1->icon3_url }}"><i class="{{ $data_organigram_KM1->icon3 }}"></i></a>
                 </div>
               </div>
               <div class="member-info">
-                <h4>Mujib Muhamad Yaasin</h4>
-                <span>K. Mading I</span>
+                <h4>{{ $data_organigram_KM1->nama }}</h4>
+                <span>{{ $data_organigram_KM1->jabatan }}</span>
               </div>
             </div>
           </div><!-- End Team Member -->
@@ -310,53 +255,22 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
             <div class="team-member">
               <div class="member-img">
-                <img src="{{ asset('dist_front/organigram/img/lutfi.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ asset('uploads/'.$data_organigram_KM2->photo) }}" class="img-fluid" alt="">
                 <div class="social">
 
-                  <a href=""><i class="bi bi-whatsapp"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-tiktok"></i></a>
+                  <a href="{{ $data_organigram_KM2->icon1_url }}"><i class="{{ $data_organigram_KM2->icon1 }}"></i></a>
+                  <a href="{{ $data_organigram_KM2->icon2_url }}"><i class="{{ $data_organigram_KM2->icon2 }}"></i></a>
+                  <a href="{{ $data_organigram_KM2->icon3_url }}"><i class="{{ $data_organigram_KM2->icon3 }}"></i></a>
                 </div>
               </div>
               <div class="member-info">
-                <h4>Muhamad Lutfi Zakaria</h4>
-                <span>K. Mading II</span>
+                <h4>{{ $data_organigram_KM2->nama }}</h4>
+                <span>{{ $data_organigram_KM2->jabatan }}</span>
               </div>
             </div>
-          </div><!-- End Team Member --> --}}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          </div><!-- End Team Member -->
         </div>
-
       </div>
-
     </section><!-- /Team Section -->
   </main>
 
