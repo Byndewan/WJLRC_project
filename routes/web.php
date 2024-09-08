@@ -20,11 +20,6 @@ use App\Http\Controllers\Front\PageController;
 use App\Http\Controllers\UserLoginController;
 use App\Http\Controllers\RegistrationController;
 
-use App\Http\Controllers\FrontKarya;
-use App\Http\Controllers\FrontKonten;
-use App\Http\Controllers\FrontLiputan;
-use App\Http\Controllers\FrontMading;
-
 use App\Http\Controllers\Front\ContactController;
 
 
@@ -66,11 +61,12 @@ Route::get('/user/reset-password/{token}/{email}', [UserLoginController::class, 
 Route::post('/user/reset-password-submit', [UserLoginController::class, 'reset_password_submit'])->name('user_reset_password_submit');
 
 // detail halaman
-Route::get('/detail/karya', [FrontKarya::class, 'index'])->name('detail_karya');
-Route::get('/detail/konten', [Frontkonten::class, 'index'])->name('detail_konten');
-Route::get('/detail/liputan', [FrontLiputan::class, 'index'])->name('detail_liputan');
-Route::get('/detail/mading', [FrontMading::class, 'index'])->name('detail_mading');
-Route::get('/detail/resensi', [FrontMading::class, 'index'])->name('detail_resensi');
+// Route::get('/karya/detail-karya', [HomeController::class, 'detail_karya'])->name('karya_detail')->middleware('user:web');
+Route::get('/karya/detail-karya', [HomeController::class, 'detail_karya'])->name('detail_karya')->middleware('user:web');
+Route::get('/program-online/konten/detail-konten', [PageController::class, 'detail_konten'])->name('detail_konten')->middleware('user:web');
+Route::get('/program-offline/liputan/detail-liputan', [PageController::class, 'detail_liputan'])->name('detail_liputan')->middleware('user:web');
+Route::get('/program-offline/mading/detail-mading', [PageController::class, 'detail_mading'])->name('detail_mading')->middleware('user:web');
+Route::get('/program-online/resensi/detail-resensi', [PageController::class, 'detail_resensi'])->name('resensi_detail')->middleware('user:web');
 
 /*Admin*/
 Route::get('/admin/home', [AdminHomeController::class, 'index'])->name('admin_home')->middleware('admin:admin');
