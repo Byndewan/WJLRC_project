@@ -39,9 +39,19 @@ class PageController extends Controller
         return view('front.resensi');
     }
 
+    public function detail_resensi()
+    {
+        return view('detail_halaman.detail_resensi');
+    }
+
     public function konten()
     {
         return view('front.konten');
+    }
+
+    public function detail_konten()
+    {
+        return view('detail_halaman.detail_konten');
     }
 
     public function liputan()
@@ -49,8 +59,18 @@ class PageController extends Controller
         return view('front.liputan');
     }
 
+    public function detail_liputan()
+    {
+        return view('detail_halamanront.detail_liputan');
+    }
+
     public function mading()
     {
         return view('front.mading');
+    }
+
+    public function detail_mading()
+    {
+        return view('detail_halaman.detail_mading');
     }
 }
