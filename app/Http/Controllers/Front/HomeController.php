@@ -18,6 +18,11 @@ class HomeController extends Controller
         return view('front.karya');
     }
 
+    public function detail_karya()
+    {
+        return view('detail_halaman.detail_karya');
+    }
+
     public function contact() 
     {
         $page_data = HomePageItem::where('id',1)->first();
