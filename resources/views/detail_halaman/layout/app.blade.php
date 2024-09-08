@@ -8,13 +8,13 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
 
-    @include('front.layout.styles')
+    @include('detail_halaman.layout.styles')
 
 </head>
 
 <body class="index-page">
 
-    @include('front.layout.nav')
+    @include('detail_halaman.layout.nav')
 
     <main class="main">
       <section class="single-post-content">
@@ -23,9 +23,9 @@
             <div class="col-md-9 post-content" data-aos="fade-up">
 
             @yield('main_content')
-                
+
     <footer id="footer" class="footer light-background">
-  
+
       <div class="container footer-top">
         <div class="row gy-4">
           <div class="col-lg-5 col-md-12 footer-about">
@@ -38,7 +38,7 @@
               <a href="https://www.instagram.com/wjlrc.smkbbc?igsh=am92bmo3dWJzMGs0"><i class="bi bi-instagram"></i></a>
              </div>
           </div>
-  
+
           <div class="col-lg-2 col-6 footer-links">
             <h4>Tautan</h4>
             <ul>
@@ -49,9 +49,9 @@
               <li><a href="#">Sumber Relavan</a></li>
             </ul>
           </div>
-  
-         
-  
+
+
+
           <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
             <h4>Kontak</h4>
             <p>hj.udin gerengseng </p>
@@ -60,10 +60,10 @@
             <p class="mt-4"><strong>No telephone:</strong> <span>+62 881-4580-036</span></p>
             <p><strong>Email:</strong> <span>WJLRC@gmail.com</span></p>
           </div>
-  
+
         </div>
       </div>
-  
+
       <div class="container copyright text-center mt-4">
         <p> <span>Copyright WJLRC 2024</span> <strong class="px-1 sitename"></strong> <span></span></p>
         <div class="credits">
@@ -71,16 +71,16 @@
         </div>
       </div>
     </footer>
-  
+
     <!-- Scroll Top -->
     <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
     <!-- Preloader -->
     <div id="preloader"></div>
 
-    @include('front.layout.script')
+    @include('detail_halaman.layout.script')
 
-    @include('front.layout.script_footer')
+    @include('detail_halaman.layout.script_footer')
 
   </body>
   </html>

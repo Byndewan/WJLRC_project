@@ -63,7 +63,7 @@
             <div class="row g-5">
               <div class="col-lg-4 border-start custom-border">
                 <div class="post-entry-1">
-                  <a href=""><img src="{{ asset('dist_front/konten/img/konten-2.jpg') }}" alt="" class="img-fluid"></a>
+                  <a href="{{ route('detail_konten') }}"><img src="{{ asset('dist_front/konten/img/konten-2.jpg') }}" alt="" class="img-fluid"></a>
                   <div class="post-meta"><span class="mx-1"></span> <span>5 Juli 2022</span></div>
                   <h2><a href="">Apa itu literasi?</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>Nameera Putri Prianti</span></div>
@@ -89,13 +89,13 @@
                   <div class="post-meta" style="color: #b3b3b3;"><span>Andiki Bagja Gumelar</span></div>
                 </div>
                 <div class="post-entry-1">
-                  <a href=""><img src="{{ asset('dist_front/konten/img/konten-6.jpg') }}" alt="" class="img-fluid"></a>
+                  <a href="{{ route('detail_konten') }}"><img src="{{ asset('dist_front/konten/img/konten-6.jpg') }}" alt="" class="img-fluid"></a>
                   <div class="post-meta"> <span class="mx-1"></span> <span>17 Juli 2022</span></div>
                   <h2><a href="{{ route('detail_konten') }}">Teknologi Internet</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>Cantika Sahara Putri</span></div>
                 </div>
                 <div class="post-entry-1">
-                  <a href=""><img src="{{ asset('dist_front/konten/img/konten-7.jpg') }}" alt="" class="img-fluid"></a>
+                  <a href="{{ route('detail_konten') }}"><img src="{{ asset('dist_front/konten/img/konten-7.jpg') }}" alt="" class="img-fluid"></a>
                   <div class="post-meta"> <span class="mx-1"></span> <span>15 Maret 2022</span></div>
                   <h2><a href="{{ route('detail_konten') }}">Apa itu Literasi Budaya dan Kewargaan?</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>Tania Nurhasanah</span></div>
@@ -111,7 +111,7 @@
                 <div class="post-entry-1">
                   <a href="{{ route('detail_konten') }}"><img src="{{ asset('dist_front/konten/img/konten-9.jpg') }}" alt="" class="img-fluid"></a>
                   <div class="post-meta"> <span class="mx-1"></span> <span>1 Maret 2022</span></div>
-                  <h2><a href="">Literasi Sains</a></h2>                  
+                  <h2><a href="">Literasi Sains</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>Dhira Ayu Mecka</span></div>
                 </div>
                 <div class="post-entry-1">
@@ -128,7 +128,7 @@
         </div> <!-- End .row -->
       </div>
     </section> <!-- End Post Grid Section -->
-    
+
   </main><!-- End #main -->
 
   @include('layout.footer')

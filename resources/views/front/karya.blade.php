@@ -77,7 +77,7 @@
             <div class="row g-5">
               <div class="col-lg-4 border-start custom-border">
                 <div class="post-entry-1">
-                  <a href="{{ route('detai_karya') }}"><img src="{{ asset('dist_front/karya/img/Bumi.png') }}" alt="" class="img-fluid"></a>
+                  <a href="{{ route('detail_karya') }}"><img src="{{ asset('dist_front/karya/img/Bumi.png') }}" alt="" class="img-fluid"></a>
                   <div class="post-meta"><span class="mx-1"></span> <span>5 Juli 2022</span></div>
                   <h2><a href="">Bumi</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>Tere Liye</span></div>
@@ -223,7 +223,7 @@
                 <div class="post-entry-1">
                   <a href="{{ route('detail_karya') }}"><img src="{{ asset('dist_front/karya/img/conversation on love.jpg') }}" alt="" class="img-fluid"></a>
                   <div class="post-meta"> <span class="mx-1"></span> <span>1 Maret 2022</span></div>
-                  <h2><a href="">Conversation on Love</a></h2>                  
+                  <h2><a href="">Conversation on Love</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>Natasha Lunn</span></div>
                   <div class="icon-container">
                     <div class="icon-item">
