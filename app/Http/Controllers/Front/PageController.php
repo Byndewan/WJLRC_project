@@ -61,7 +61,7 @@ class PageController extends Controller
 
     public function detail_liputan()
     {
-        return view('detail_halamanront.detail_liputan');
+        return view('detail_halaman.detail_liputan');
     }
 
     public function mading()

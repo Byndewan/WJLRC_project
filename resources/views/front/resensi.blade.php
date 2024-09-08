@@ -42,7 +42,7 @@
         <div class="row g-5">
           <div class="col-lg-4">
             <div class="post-entry-1 lg">
-              <a href="{{ route('resensi_detail') }}"><img src="{{ asset('dist_front/resensi/img/komet.png') }}" alt="" class="img-fluid"></a>
+              <a href="{{ route('detail_resensi') }}"><img src="{{ asset('dist_front/resensi/img/komet.png') }}" alt="" class="img-fluid"></a>
               <div class="post-meta"><span class="mx-1"></span> <span>5 Juli 2022</span></div>
               <h2><a href="">Komet karya Tere Liye </a></h2>
               <span class="author mb-3 d-block">Azlia Nisrina Afifah</span>
