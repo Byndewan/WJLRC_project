@@ -26,4 +26,4 @@
           <li class="dropdown"><a href="{{ route('user_logout') }}"><span>Logout</span></a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+</nav>

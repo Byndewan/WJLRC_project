@@ -1,4 +1,4 @@
-@extends('front.layout.app')
+@extends('detail_halaman.layout.app')
 
 @section('title', 'Detail - mading')
 
@@ -204,7 +204,7 @@
     </section>
   </main><!-- End #main -->
 
-    
+
   </main>
 
   @endsection

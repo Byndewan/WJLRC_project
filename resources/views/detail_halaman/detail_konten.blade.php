@@ -1,9 +1,9 @@
-@extends('front.layout.app')
+@extends('detail_halaman.layout.app')
 
 @section('title', 'Detail - Konten')
 
 @section('main_content')
-    <div class="single-post"> 
+    <div class="single-post">
         <h1 class="mb-5">Tips membangun tim yang baik</h1>
             <h6 class="mb-5"> Ahmad Pasya</h6>
             <p><span class="firstcharacter">L</span>orem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia sed, suscipit distinctio, numquam omnis quo fuga ipsam quis inventore voluptatum recusandae culpa, unde doloribus saepe labore alias voluptate expedita? Dicta delectus beatae explicabo odio voluptatibus quas, saepe qui aperiam autem obcaecati, illo et! Incidunt voluptas culpa neque repellat sint, accusamus beatae, cumque autem tempore quisquam quam eligendi harum debitis.</p>
@@ -117,7 +117,7 @@
 
             <div class="post-entry-1 border-bottom">
             <h2 class="mb-2"><a href="#">5 cara efektip mengatur waktu dengan baik</a></h2>
-            <span class="author mb-3 d-block">Andika Bagja 
+            <span class="author mb-3 d-block">Andika Bagja
 
             </span>
             </div>
