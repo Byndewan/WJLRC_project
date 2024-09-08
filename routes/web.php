@@ -22,8 +22,6 @@ use App\Http\Controllers\RegistrationController;
 
 use App\Http\Controllers\Front\ContactController;
 
-
-
 // Front End
 Route::get('/', [HomeController::class, 'index'])->name('home')->middleware('user:web');
 Route::get('/pengertian', [PageController::class, 'index'])->name('pengertian')->middleware('user:web');
