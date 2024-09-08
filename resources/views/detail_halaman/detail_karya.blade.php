@@ -1,4 +1,4 @@
-@extends('front.layout.app')
+@extends('detail_halaman.layout.app')
 
 @section('title', 'Detail - Karya')
 
