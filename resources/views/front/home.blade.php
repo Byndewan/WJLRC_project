@@ -499,9 +499,9 @@
                 </div>
 
                 <div class="col-md-12 text-center">
-                  {{-- <div class="loading">Menunggu</div>
-                  <div class="sent-message">Pesan telah terkirim. Terima kasih!</div>
-                  <div class="error-message"></div> --}}
+                  <div class="loading">Menunggu</div>
+                  <div class="text-success">Pesan telah terkirim. Terima kasih!</div>
+                  <div class="text-danger"></div>
 
                   {{-- @if(session()->get('success'))
                     <div class="sent-message">Pesan telah terkirim. Terima kasih!</div>        
