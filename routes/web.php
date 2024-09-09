@@ -22,6 +22,8 @@ use App\Http\Controllers\RegistrationController;
 
 use App\Http\Controllers\Front\ContactController;
 
+
+
 // Front End
 Route::get('/', [HomeController::class, 'index'])->name('home')->middleware('user:web');
 Route::get('/pengertian', [PageController::class, 'index'])->name('pengertian')->middleware('user:web');
@@ -59,7 +61,7 @@ Route::get('/user/reset-password/{token}/{email}', [UserLoginController::class, 
 Route::post('/user/reset-password-submit', [UserLoginController::class, 'reset_password_submit'])->name('user_reset_password_submit');
 
 // detail halaman
-// Route::get('/karya/detail-karya', [HomeController::class, 'detail_karya'])->name('karya_detail')->middleware('user:web');
+
 Route::get('/karya/detail-karya', [HomeController::class, 'detail_karya'])->name('detail_karya')->middleware('user:web');
 Route::get('/program-online/konten/detail-konten', [PageController::class, 'detail_konten'])->name('detail_konten')->middleware('user:web');
 Route::get('/program-offline/liputan/detail-liputan', [PageController::class, 'detail_liputan'])->name('detail_liputan')->middleware('user:web');

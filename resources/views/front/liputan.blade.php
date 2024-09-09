@@ -75,9 +75,9 @@
                   <div class="post-meta" style="color: #b3b3b3;"><span>Azlia Nisrina Afifah</span></div>
                 </div>
                 <div class="post-entry-1">
-                  <a href=""><img src="{{ asset('dist_front/liputan/img/maulid_nabi.jpeg') }}" alt="" class="img-fluid"></a>
+                  <a href="{{ route('detail_liputan') }}"><img src="{{ asset('dist_front/liputan/img/maulid_nabi.jpeg') }}" alt="" class="img-fluid"></a>
                   <div class="post-meta"> <span class="mx-1"></span> <span>15 Maret 2022</span></div>
-                  <h2><a href="{{ route('detail_liputan') }}">Acara Maulid Nabi tahun 2023</a></h2>
+                  <h2><a href="">Acara Maulid Nabi tahun 2023</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>Azlia Nisrina Afifah</span></div>
                 </div>
               </div>
@@ -89,13 +89,13 @@
                   <div class="post-meta" style="color: #b3b3b3;"><span>Azlia Nisrina Afifah</span></div>
                 </div>
                 <div class="post-entry-1">
-                  <a href=""><img src="{{ asset('dist_front/liputan/img/maulid_nabi.jpeg') }}" alt="" class="img-fluid"></a>
+                  <a href="{{ route('detail_liputan') }}"><img src="{{ asset('dist_front/liputan/img/maulid_nabi.jpeg') }}" alt="" class="img-fluid"></a>
                   <div class="post-meta"> <span class="mx-1"></span> <span>17 Juli 2022</span></div>
                   <h2><a href="{{ route('detail_liputan') }}">Acara Maulid Nabi tahun 2023</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>Azlia Nisrina Afifah</span></div>
                 </div>
                 <div class="post-entry-1">
-                  <a href=""><img src="{{ asset('dist_front/liputan/img/maulid_nabi.jpeg') }}" alt="" class="img-fluid"></a>
+                  <a href="{{ route('detail_liputan') }}"><img src="{{ asset('dist_front/liputan/img/maulid_nabi.jpeg') }}" alt="" class="img-fluid"></a>
                   <div class="post-meta"> <span class="mx-1"></span> <span>15 Maret 2022</span></div>
                   <h2><a href="{{ route('detail_liputan') }}">Acara Maulid Nabi tahun 2023</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>Azlia Nisrina Afifah</span></div>
@@ -103,7 +103,7 @@
               </div>
               <div class="col-lg-4 border-start custom-border">
                 <div class="post-entry-1">
-                  <a href=""><img src="{{ asset('dist_front/liputan/img/maulid_nabi.jpeg') }}" alt="" class="img-fluid"></a>
+                  <a href="{{ route('detail_liputan') }}"><img src="{{ asset('dist_front/liputan/img/maulid_nabi.jpeg') }}" alt="" class="img-fluid"></a>
                   <div class="post-meta"> <span class="mx-1"></span> <span>5 Juli 2022</span></div>
                   <h2><a href="{{ route('detail_liputan') }}">Acara Maulid Nabi tahun 2023</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>Azlia Nisrina Afifah</span></div>
@@ -111,7 +111,7 @@
                 <div class="post-entry-1">
                   <a href="{{ route('detail_liputan') }}"><img src="{{ asset('dist_front/liputan/img/maulid_nabi.jpeg') }}" alt="" class="img-fluid"></a>
                   <div class="post-meta"> <span class="mx-1"></span> <span>1 Maret 2022</span></div>
-                  <h2><a href="">Acara Maulid Nabi tahun 2023</a></h2>                  
+                  <h2><a href="">Acara Maulid Nabi tahun 2023</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>Azlia Nisrina Afifah</span></div>
                 </div>
                 <div class="post-entry-1">
@@ -127,7 +127,7 @@
         </div> <!-- End .row -->
       </div>
     </section> <!-- End Post Grid Section -->
-    
+
   </main><!-- End #main -->
 
   @include('layout.footer')
