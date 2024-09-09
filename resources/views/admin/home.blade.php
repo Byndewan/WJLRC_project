@@ -33,7 +33,7 @@
             <h4>Total User</h4>
           </div>
           <div class="card-body">
-            1945
+            {{ $total_user }}
           </div>
         </div>
       </div>
