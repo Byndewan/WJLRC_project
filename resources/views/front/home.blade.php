@@ -443,7 +443,7 @@
         <div class="row gy-4">
 
           <div class="col-lg-4">
-            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="info-item d-flex" class="php-email-form" data-aos="fade-up" data-aos-delay="300">
               <i class="bi bi-geo-alt flex-shrink-0"></i>
               <div>
                 <h3>Alamat</h3>
@@ -469,13 +469,13 @@
 
           </div>
 
-      <div class="col-lg-8">
+        <div class="col-lg-8">
             @if(session()->get('success'))
-              <div class="sent-message">{{ session()->get('success') }}</div>
+              <div class="text-success">{{ session()->get('success') }}</div>
             @endif
 
             @if(session()->get('error'))
-              <div class="error-message">{{ session()->get('error') }}</div>
+              <div class="text-danger">{{ session()->get('error') }}</div>
             @endif
 
             <form action="{{ route('contact_send_email') }}" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
@@ -483,41 +483,28 @@
               <div class="row gy-4">
 
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Nama" required="">
+                  <input type="text" name="name" class="form-control" placeholder="Nama">
                 </div>
 
                 <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Email" required="">
+                  <input type="email" class="form-control" name="email" placeholder="Email">
                 </div>
 
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subjek" required="">
+                  <input type="text" class="form-control" name="subject" placeholder="Subjek">
                 </div>
 
                 <div class="col-md-12">
-                  <textarea class="form-control" name="comment" rows="6" placeholder="Pesan" required=""></textarea>
+                  <textarea class="form-control" name="comment" rows="6" placeholder="Pesan"></textarea>
                 </div>
 
                 <div class="col-md-12 text-center">
-                  <div class="loading">Menunggu</div>
-                  <div class="text-success">Pesan telah terkirim. Terima kasih!</div>
-                  <div class="text-danger"></div>
-
-                  {{-- @if(session()->get('success'))
-                    <div class="sent-message">Pesan telah terkirim. Terima kasih!</div>        
-                  @endif
-
-                  @if(session()->get('error'))          
-                    <div class="error-message"></div>
-                  @endif --}}
-
                   <button type="submit">Kirim Pesan</button>
                 </div>
 
               </div>
             </form>
           </div><!-- End Contact Form -->
-
 
         </div>
 
