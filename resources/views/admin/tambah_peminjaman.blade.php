@@ -40,6 +40,13 @@
                         <label>Tanggal Pengembalian</label>
                         <input type="datetime-local" class="form-control" name="tanggal_pengembalian">
                         </div>
+                        <div class="form-group">
+                            <label>Status</label>
+                            <select class="form-control" name="status">
+                            <option>Di Pinjam</option>
+                            <option>Di Kembalikan</option>
+                            </select>
+                        </div>
                         <div class="card-footer text-right">
                         <button class="btn btn-primary">Simpan</button>
                         </div>

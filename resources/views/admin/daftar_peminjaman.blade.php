@@ -21,6 +21,9 @@
                 <th>Foto</th>
                 <th>Nama</th>
                 <th>Kelas</th>
+                <th>Tanggal Peminjaman</th>
+                <th>Tanggal Pengembalian</th>
+                <th>Status</th>
                 <th>Action</th>
             </tr>
             </thead>
@@ -35,6 +38,9 @@
                     <td>
                     {{ $item->kelas }}
                     </td>
+                    <td>{{ $item->tanggal_peminjaman }}</td>
+                    <td>{{ $item->tanggal_pengembalian }}</td>
+                    <td><a class="btn btn-primary btn-action mr-1">{{ $item->status }}</a></td>
                     <td>
                     <a href="{{ route('admin_edit_peminjaman',$item->id) }}" class="btn btn-primary btn-action mr-1" data-toggle="tooltip" title="ubah"><i class="fas fa-pencil-alt"></i></a>
                     <a href="{{ route('admin_hapus_peminjaman',$item->id) }}" class="btn btn-danger btn-action" data-toggle="tooltip" title="Hapus" onClick="return confirm('Are you sure?');"><i class="fas fa-trash"></i></a>

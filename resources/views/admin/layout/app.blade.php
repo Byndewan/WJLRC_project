@@ -5,6 +5,8 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
   <title>@yield('title')</title>
 
+    @include('layout.logo')
+
     @include('admin.layout.styles')
 
     @include('admin.layout.scripts')
