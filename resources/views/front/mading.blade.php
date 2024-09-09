@@ -50,7 +50,7 @@
         <div class="row g-5">
           <div class="col-lg-4">
             <div class="post-entry-1 lg">
-              <a href=""><img src="{{ asset('dist_front/mading/img/Melangkah Berani Menggapai Impian.jpg') }}" alt="" class="img-fluid"></a>
+              <a href="{{ route('mading_detail') }}"><img src="{{ asset('dist_front/mading/img/Melangkah Berani Menggapai Impian.jpg') }}" alt="" class="img-fluid"></a>
               <div class="post-meta"><span class="mx-1"></span> <span>5 Juli 2022</span></div>
               <h2><a href="">Melangkah Berani Menggapai Impian</a></h2>
               <span class="author mb-3 d-block">Azlia Nisrina Afifah</span>
@@ -63,19 +63,19 @@
             <div class="row g-5">
               <div class="col-lg-4 border-start custom-border">
                 <div class="post-entry-1">
-                  <a href=""><img src="{{ asset('dist_front/mading/img/everything new.jpg') }}" alt="" class="img-fluid"></a>
+                  <a href="{{ route('mading_detail') }}"><img src="{{ asset('dist_front/mading/img/everything new.jpg') }}" alt="" class="img-fluid"></a>
                   <div class="post-meta"><span class="mx-1"></span> <span>5 Juli 2022</span></div>
                   <h2><a href="">Everything is New</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>Nameera Putri Prianti</span></div>
                 </div>
                 <div class="post-entry-1">
-                  <a href=""><img src="{{ asset('dist_front/mading/img/maulid_nabi .jpg') }}" alt="" class="img-fluid"></a>
+                  <a href="{{ route('mading_detail') }}"><img src="{{ asset('dist_front/mading/img/maulid_nabi .jpg') }}" alt="" class="img-fluid"></a>
                   <div class="post-meta"> <span class="mx-1"></span> <span>17 Juli 2022</span></div>
                   <h2><a href="">Maulid Nabi</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>Andika Bagja Gumelar</span></div>
                 </div>
                 <div class="post-entry-1">
-                  <a href=""><img src="{{ asset('dist_front/mading/img/wjlrc gallery.jpg') }}" alt="" class="img-fluid"></a>
+                  <a href="{{ route('mading_detail') }}"><img src="{{ asset('dist_front/mading/img/wjlrc gallery.jpg') }}" alt="" class="img-fluid"></a>
                   <div class="post-meta"> <span class="mx-1"></span> <span>15 Maret 2022</span></div>
                   <h2><a href="">WJLRC Gallery</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>Gista Aulia</span></div>
@@ -83,19 +83,19 @@
               </div>
               <div class="col-lg-4 border-start custom-border">
                 <div class="post-entry-1">
-                  <a href=""><img src="{{ asset('dist_front/mading/img/bbc news.jpg') }}" alt="" class="img-fluid"></a>
+                  <a href="{{ route('mading_detail') }}"><img src="{{ asset('dist_front/mading/img/bbc news.jpg') }}" alt="" class="img-fluid"></a>
                   <div class="post-meta <span class="mx-1"></span> <span>5 Juli 2022</span></div>
                   <h2><a href="">BBC News</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>Andiki Bagja Gumelar</span></div>
                 </div>
                 <div class="post-entry-1">
-                  <a href=""><img src="{{ asset('dist_front/mading/img/wjlrc gallery.jpg') }}" alt="" class="img-fluid"></a>
+                  <a href="{{ route('mading_detail') }}"><img src="{{ asset('dist_front/mading/img/wjlrc gallery.jpg') }}" alt="" class="img-fluid"></a>
                   <div class="post-meta"> <span class="mx-1"></span> <span>17 Juli 2022</span></div>
                   <h2><a href="">WJLRC Gallery</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>Cantika Sahara Putri</span></div>
                 </div>
                 <div class="post-entry-1">
-                  <a href=""><img src="{{ asset('dist_front/mading/img/wjlrc gallery.jpg') }}" alt="" class="img-fluid"></a>
+                  <a href="{{ route('mading_detail') }}"><img src="{{ asset('dist_front/mading/img/wjlrc gallery.jpg') }}" alt="" class="img-fluid"></a>
                   <div class="post-meta"> <span class="mx-1"></span> <span>15 Maret 2022</span></div>
                   <h2><a href="">WJLRC Gallery</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>Tania Nurhasanah</span></div>
@@ -103,19 +103,19 @@
               </div>
               <div class="col-lg-4 border-start custom-border">
                 <div class="post-entry-1">
-                  <a href=""><img src="{{ asset('dist_front/mading/img/wjlrc gallery.jpg') }}" alt="" class="img-fluid"></a>
+                  <a href="{{ route('mading_detail') }}"><img src="{{ asset('dist_front/mading/img/wjlrc gallery.jpg') }}" alt="" class="img-fluid"></a>
                   <div class="post-meta"> <span class="mx-1"></span> <span>5 Juli 2022</span></div>
                   <h2><a href="">WJLRC Gallery</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>Azlia Nisrina Afifah</span></div>
                 </div>
                 <div class="post-entry-1">
-                  <a href=""><img src="{{ asset('dist_front/mading/img/wjlrc gallery.jpg') }}" alt="" class="img-fluid"></a>
+                  <a href="{{ route('mading_detail') }}"><img src="{{ asset('dist_front/mading/img/wjlrc gallery.jpg') }}" alt="" class="img-fluid"></a>
                   <div class="post-meta"> <span class="mx-1"></span> <span>1 Maret 2022</span></div>
-                  <h2><a href="">WJLRC Gallery</a></h2>                  
+                  <h2><a href="">WJLRC Gallery</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>Azlia Nisrina Afifah</span></div>
                 </div>
                 <div class="post-entry-1">
-                  <a href=""><img src="{{ asset('dist_front/mading/img/wjlrc gallery.jpg') }}" alt="" class="img-fluid"></a>
+                  <a href="{{ route('mading_detail') }}"><img src="{{ asset('dist_front/mading/img/wjlrc gallery.jpg') }}" alt="" class="img-fluid"></a>
                   <div class="post-meta"><span class="mx-1"></span> <span>5 Juli 2022</span></div>
                   <h2><a href="">WJLRC Gallery</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>Azlia Nisrina Afifah</span></div>
@@ -128,7 +128,7 @@
         </div> <!-- End .row -->
       </div>
     </section> <!-- End Post Grid Section -->
-    
+
   </main><!-- End #main -->
 
   @include('layout.footer')

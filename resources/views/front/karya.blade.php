@@ -50,7 +50,7 @@
         <div class="row g-5">
           <div class="col-lg-4">
             <div class="post-entry-1 lg">
-              <a href=""><img src="{{ asset('dist_front/karya/img/komet.png') }}" alt="" class="img-fluid"></a>
+              <a href="{{ route('detail_karya') }}"><img src="{{ asset('dist_front/karya/img/komet.png') }}" alt="" class="img-fluid"></a>
               <div class="post-meta"><span class="mx-1"></span> <span>5 Juli 2022</span></div>
               <h2><a href="">Komet</a></h2>
               <span class="author mb-3 d-block">Tere Liye</span>
@@ -77,7 +77,7 @@
             <div class="row g-5">
               <div class="col-lg-4 border-start custom-border">
                 <div class="post-entry-1">
-                  <a href=""><img src="{{ asset('dist_front/karya/img/Bumi.png') }}" alt="" class="img-fluid"></a>
+                  <a href="{{ route('detail_karya') }}"><img src="{{ asset('dist_front/karya/img/Bumi.png') }}" alt="" class="img-fluid"></a>
                   <div class="post-meta"><span class="mx-1"></span> <span>5 Juli 2022</span></div>
                   <h2><a href="">Bumi</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>Tere Liye</span></div>
@@ -97,7 +97,7 @@
                   </div>
                 </div>
                 <div class="post-entry-1">
-                  <a href=""><img src="{{ asset('dist_front/karya/img/matahari.png') }}" alt="" class="img-fluid"></a>
+                  <a href="{{ route('detail_karya') }}"><img src="{{ asset('dist_front/karya/img/matahari.png') }}" alt="" class="img-fluid"></a>
                   <div class="post-meta"> <span class="mx-1"></span> <span>17 Juli 2022</span></div>
                   <h2><a href="">Matahari</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>Tere Liye</span></div>
@@ -117,7 +117,7 @@
                   </div>
                 </div>
                 <div class="post-entry-1">
-                  <a href=""><img src="{{ asset('dist_front/karya/img/bulan.png') }}" alt="" class="img-fluid"></a>
+                  <a href="{{ route('detail_karya') }}"><img src="{{ asset('dist_front/karya/img/bulan.png') }}" alt="" class="img-fluid"></a>
                   <div class="post-meta"> <span class="mx-1"></span> <span>15 Maret 2022</span></div>
                   <h2><a href="">Bulan</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>Tere Liye</span></div>
@@ -139,7 +139,7 @@
               </div>
               <div class="col-lg-4 border-start custom-border">
                 <div class="post-entry-1">
-                  <a href=""><img src="{{ asset('dist_front/karya/img/hilmy milan.jpg') }}" alt="" class="img-fluid"></a>
+                  <a href="{{ route('detail_karya') }}"><img src="{{ asset('dist_front/karya/img/hilmy milan.jpg') }}" alt="" class="img-fluid"></a>
                   <div class="post-meta <span class="mx-1"></span> <span>5 Juli 2022</span></div>
                   <h2><a href="">Hilmy Milan</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>Nadia Ristivani</span></div>
@@ -159,7 +159,7 @@
                   </div>
                 </div>
                 <div class="post-entry-1">
-                  <a href=""><img src="{{ asset('dist_front/karya/img/Love-From-A-to-Z.jpg') }}" alt="" class="img-fluid"></a>
+                  <a href="{{ route('detail_karya') }}"><img src="{{ asset('dist_front/karya/img/Love-From-A-to-Z.jpg') }}" alt="" class="img-fluid"></a>
                   <div class="post-meta"> <span class="mx-1"></span> <span>17 Juli 2022</span></div>
                   <h2><a href="">Love from A to Z</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>S.K Ali</span></div>
@@ -179,7 +179,7 @@
                   </div>
                 </div>
                 <div class="post-entry-1">
-                  <a href=""><img src="{{ asset('dist_front/karya/img/alpha girls.jpg') }}" alt="" class="img-fluid"></a>
+                  <a href="{{ route('detail_karya') }}"><img src="{{ asset('dist_front/karya/img/alpha girls.jpg') }}" alt="" class="img-fluid"></a>
                   <div class="post-meta"> <span class="mx-1"></span> <span>15 Maret 2022</span></div>
                   <h2><a href="">Alpha Girl's Guide</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>Henry Manampiring</span></div>
@@ -201,7 +201,7 @@
               </div>
               <div class="col-lg-4 border-start custom-border">
                 <div class="post-entry-1">
-                  <a href=""><img src="{{ asset('dist_front/karya/img/dork diaries.jpg') }}" alt="" class="img-fluid"></a>
+                  <a href="{{ route('detail_karya') }}"><img src="{{ asset('dist_front/karya/img/dork diaries.jpg') }}" alt="" class="img-fluid"></a>
                   <div class="post-meta"> <span class="mx-1"></span> <span>5 Juli 2022</span></div>
                   <h2><a href="">Dork Diaries</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>Rachel Renee</span></div>
@@ -221,9 +221,9 @@
                   </div>
                 </div>
                 <div class="post-entry-1">
-                  <a href=""><img src="{{ asset('dist_front/karya/img/conversation on love.jpg') }}" alt="" class="img-fluid"></a>
+                  <a href="{{ route('detail_karya') }}"><img src="{{ asset('dist_front/karya/img/conversation on love.jpg') }}" alt="" class="img-fluid"></a>
                   <div class="post-meta"> <span class="mx-1"></span> <span>1 Maret 2022</span></div>
-                  <h2><a href="">Conversation on Love</a></h2>                  
+                  <h2><a href="">Conversation on Love</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>Natasha Lunn</span></div>
                   <div class="icon-container">
                     <div class="icon-item">
@@ -241,7 +241,7 @@
                   </div>
                 </div>
                 <div class="post-entry-1">
-                  <a href=""><img src="{{ asset('dist_front/karya/img/geez ann.jpg') }}" alt="" class="img-fluid"></a>
+                  <a href="{{ route('detail_karya') }}"><img src="{{ asset('dist_front/karya/img/geez ann.jpg') }}" alt="" class="img-fluid"></a>
                   <div class="post-meta"><span class="mx-1"></span> <span>5 Juli 2022</span></div>
                   <h2><a href="">Geez and Ann</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>Rintik Sedu</span></div>
@@ -277,12 +277,12 @@
           <div class="col-md-9">
 
             <div class="d-lg-flex post-entry-2">
-              <a href="" class="me-4 thumbnail mb-4 mb-lg-0 d-inline-block">
+              <a href="{{ route('detail_karya') }}" class="me-4 thumbnail mb-4 mb-lg-0 d-inline-block">
                 <img src="{{ asset('dist_front/karya/img/love scenario.jpg') }}" alt="" class="img-fluid img-fluid-2">
               </a>
               <div>
                 <div class="post-meta"> <span class="mx-1"></span> <span>5 Juli 2022</span></div>
-                <h3><a href="">Love Scenario</a></h3>
+                <h3><a href="{{ route('detail_karya') }}">Love Scenario</a></h3>
                 <span class="author mb-3 d-block">Cantika Zahra</span>
                 <div class="icon-container">
                   <div class="icon-item">
@@ -305,7 +305,7 @@
             <div class="row">
               <div class="col-lg-4">
                 <div class="post-entry-1 border-bottom">
-                  <a href=""><img src="{{ asset('dist_front/karya/img/antares.jpg') }}" alt="" class="img-fluid"></a>
+                  <a href="{{ route('detail_karya') }}"><img src="{{ asset('dist_front/karya/img/antares.jpg') }}" alt="" class="img-fluid"></a>
                   <div class="post-meta"> <span>5 Juli 2022</span></div>
                   <h2 class="mb-2"><a href="">Antares</a></h2>
                   <span class="author mb-3 d-block">Rweinda</span>
@@ -328,7 +328,7 @@
               </div>
               <div class="col-lg-8">
                 <div class="post-entry-1">
-                  <a href=""><img src="{{ asset('dist_front/karya/img/dago setelah hujan.jpg') }}" alt="" class="img-fluid"></a>
+                  <a href="{{ route('detail_karya') }}"><img src="{{ asset('dist_front/karya/img/dago setelah hujan.jpg') }}" alt="" class="img-fluid"></a>
                   <div class="post-meta"> <span>5 Juli 2022</span></div>
                   <h2 class="mb-2"><a href="">Dago Setelah Hujan</a></h2>
                   <span class="author mb-3 d-block">Skyshpire</span>
@@ -354,7 +354,7 @@
 
           <div class="col-md-3">
             <div class="post-entry-1">
-              <a href=""><img src="{{ asset('dist_front/karya/img/galaksi.jpg') }}" alt="" class="img-fluid"></a>
+              <a href="{{ route('detail_karya') }}"><img src="{{ asset('dist_front/karya/img/galaksi.jpg') }}" alt="" class="img-fluid"></a>
               <div class="post-meta"><span class="mx-1"></span> <span>5 Juli 2022</span></div>
               <h2><a href="">Galaksi</a></h2>
               <span class="author mb-3 d-block">Poppy Pertiwi</span>
@@ -374,7 +374,7 @@
               </div>
             </div>
             <div class="post-entry-1">
-              <a href=""><img src="{{ asset('dist_front/karya/img/Dunia-Sophie.jpg') }}" alt="" class="img-fluid"></a>
+              <a href="{{ route('detail_karya') }}"><img src="{{ asset('dist_front/karya/img/Dunia-Sophie.jpg') }}" alt="" class="img-fluid"></a>
               <div class="post-meta"> <span class="mx-1"></span> <span>17 Juli 2022</span></div>
               <h2><a href="">Dunia Sophie</a></h2>
               <span class="author mb-3 d-block">Jostein Gaarder</span>
@@ -396,7 +396,7 @@
             <div class="post-entry-1">
               <a href=""><img src="{{ asset('dist_front/karya/img/filosofi teras.jpg') }}" alt="" class="img-fluid"></a>
               <div class="post-meta"> <span class="mx-1"></span> <span>15 Maret 2022</span></div>
-              <h2><a href="">Filosofi Teras</a></h2>
+              <h2><a href="{{ route('detail_karya') }}">Filosofi Teras</a></h2>
               <span class="author mb-3 d-block">Henry Manampiring</span>
               <div class="icon-container">
                 <div class="icon-item">
