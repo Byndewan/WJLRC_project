@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Buku;
 use App\Models\Peminjaman;
@@ -15,13 +16,14 @@ class AdminHomeController extends Controller
 {
     public function index()
     {
+        $total_user = User::all()->count();
         $total_buku = Buku::all()->count();
         $total_peminjaman = Peminjaman::all()->count();
         $total_karya = Karya::all()->count();
         $total_mading = Mading::all()->count();
         $total_admin = Admin::all()->count();
         $admin_data = Admin::orderBy('id','asc')->get();
-        return view('admin.home',compact('admin_data'))->with('total_admin',$total_admin)->with('total_mading',$total_mading)->with('total_karya',$total_karya)->with('total_peminjaman',$total_peminjaman)->with('total_buku',$total_buku);
+        return view('admin.home',compact('admin_data'))->with('total_admin',$total_admin)->with('total_mading',$total_mading)->with('total_karya',$total_karya)->with('total_peminjaman',$total_peminjaman)->with('total_buku',$total_buku)->with('total_user',$total_user);
     }
 
     public function tambah()

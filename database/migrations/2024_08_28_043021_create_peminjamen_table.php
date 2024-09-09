@@ -19,6 +19,7 @@ return new class extends Migration
             $table->text('judul');
             $table->dateTime('tanggal_peminjaman');
             $table->dateTime('tanggal_pengembalian');
+            $table->dateTime('status');
             $table->timestamps();
         });
     }

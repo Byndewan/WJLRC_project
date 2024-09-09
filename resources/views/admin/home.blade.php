@@ -23,6 +23,7 @@
       </div>
     </div>
 
+    {{-- USERS --}}
     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
       <div class="card card-statistic-1">
         <div class="card-icon bg-danger">
@@ -33,7 +34,7 @@
             <h4>Total User</h4>
           </div>
           <div class="card-body">
-            1945
+            {{ $total_user }}
           </div>
         </div>
       </div>

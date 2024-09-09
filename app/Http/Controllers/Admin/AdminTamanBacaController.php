@@ -84,7 +84,8 @@ class AdminTamanBacaController extends Controller
             'kelas' => 'required',
             'judul' => 'required',
             'tanggal_peminjaman' => 'required',
-            'tanggal_pengembalian' => 'required'
+            'tanggal_pengembalian' => 'required',
+            'status' => 'required',
         ]);
 
         $obj = new Peminjaman();
@@ -97,6 +98,7 @@ class AdminTamanBacaController extends Controller
         $obj->nama = $request->nama;
         $obj->kelas = $request->kelas;
         $obj->judul = $request->judul;
+        $obj->status = $request->status;
         $obj->save();
 
         return redirect()->route('admin_daftar_peminjaman')->with('success', 'Data is inserted successfully');
