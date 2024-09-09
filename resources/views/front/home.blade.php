@@ -62,7 +62,7 @@
   </header>
 
   <main class="main">
-    
+
     <!-- Hero Section -->
     <section id="hero" class="hero section">
 
@@ -70,8 +70,7 @@
 
       <div class="container">
         <div class="row justify-content-center" data-aos="zoom-out">
-          <div class="col-xl-7 col-lg-9 text-center">   
-              {{-- bagian heading --}}
+          <div class="col-xl-7 col-lg-9 text-center">
             <h1>WELCOME TO WJLRC WEBSITE</h1>
             <p>Tim kami di WJLRC berkomitmen untuk mencapai keunggulan dalam semua kegiatan ekstrakurikuler kami.</p>
           </div>
@@ -181,14 +180,15 @@
 
         <div class="row gy-4">
 
+          @foreach ($karya_data as $item)
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <a href="">
               <div class="team-member d-flex align-items-start">
-                <div class="pic"><img src="{{ asset('dist_front/landing_page/img/images.png') }}" class="img-fluid" alt=""></div>
+                <div class="pic"><img src="{{ asset('uploads/'.$item->photo) }}" class="img-fluid" alt=""></div>
                 <div class="member-info">
-                  <h4>Bumi</h4>
-                  <span style="color: #444444;">Tere Liye</span>
-                  <p style="color: #444444;">Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                  <h4>{{ $item->Judul }}</h4>
+                  <span style="color: #444444;">{{ $item->nama }}</span>
+                  <p style="color: #444444;">{{ $item->deskripsi }}</p>
                   <div class="icon-container">
                     <div class="icon-item">
                         <i class="bi bi-heart"></i>
@@ -207,14 +207,15 @@
               </div>
             </a>
           </div><!-- End Team Member -->
+          @endforeach
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+          {{-- <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <a href="">
               <div class="team-member d-flex align-items-start">
                 <div class="pic"><img src="{{ asset('dist_front/landing_page/img/images.png') }}" class="img-fluid" alt=""></div>
                 <div class="member-info">
                   <h4>Bulan</h4>
-                  <span style="color: #444444;">Tere Liye</span>                  
+                  <span style="color: #444444;">Tere Liye</span>
                   <p style="color: #444444;">Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
                   <div class="icon-container">
                     <div class="icon-item">
@@ -341,7 +342,7 @@
                 </div>
               </div>
             </a>
-          </div><!-- End Team Member -->
+          </div><!-- End Team Member --> --}}
 
           <a href="{{ route('karya') }}" style="display: flex; justify-content: center; text-decoration: underline; margin-top: 50px;">Lihat yang lainnya &#8594; </a>
 
@@ -353,6 +354,7 @@
 
 
     <!-- Team Section -->
+    @if ($tim_data->status == 'Show')
     <section id="team-2" class="team-2 section light-background" style="justify-content: center;">
 
       <!-- Section Title -->
@@ -383,14 +385,14 @@
             </div>
           </div><!-- End Team Member -->
 
-          
-        
+
+
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="team-2-member">
               <div class="member-img-2">
                 <img src="{{ asset('dist_front/landing_page/img/bu ketu.jpg') }}" class="img-fluid" alt="">
                 <div class="social-2">
-                  
+
                   <a href="{{ asset('http://wa.me/+628814580036') }}"><i class="bi bi-whatsapp"></i></a>
                   <a href="{{ asset('https://www.instagram.com/azlia_nisrina/?next=%2F') }}"><i class="bi bi-instagram"></i></a>
                   <a href="{{ asset('https://www.tiktok.com/@mydump_ana?lang=en') }}"><i class="bi bi-tiktok"></i></a>
@@ -422,12 +424,13 @@
             </div>
           </div><!-- End Team Member -->
 
-         
+
         </div>
 
       </div>
 
     </section><!-- /Team Section -->
+    @endif
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
@@ -499,6 +502,19 @@
                 </div>
 
                 <div class="col-md-12 text-center">
+                
+                  <div class="loading">Menunggu</div>
+                  <div class="text-success">Pesan telah terkirim. Terima kasih!</div>
+                  <div class="text-danger"></div>
+
+                  {{-- @if(session()->get('success'))
+                    <div class="sent-message">Pesan telah terkirim. Terima kasih!</div>
+                  @endif
+
+                  @if(session()->get('error'))
+                    <div class="error-message"></div>
+                  @endif --}}
+
                   <button type="submit">Kirim Pesan</button>
                 </div>
 

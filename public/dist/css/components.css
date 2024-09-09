@@ -756,7 +756,7 @@ tr:first-child > td > .fc-day-grid-event {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
   float: left;
   width: 100px;
-  margin: -35px -5px 0 30px;
+  margin: -35px 12em 0 10em;
   position: relative;
   z-index: 1;
 }
