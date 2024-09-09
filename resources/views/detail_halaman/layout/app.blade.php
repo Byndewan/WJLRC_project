@@ -7,6 +7,8 @@
   <title>@yield('title')</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+    
+    @include('detail_halaman.layout.logo')
 
     @include('detail_halaman.layout.styles')
 
