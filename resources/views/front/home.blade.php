@@ -180,7 +180,7 @@
 
         <div class="row gy-4">
 
-            @foreach ($data_karya as $item)
+          @foreach ($karya_data as $item)
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <a href="">
               <div class="team-member d-flex align-items-start">
@@ -354,6 +354,7 @@
 
 
     <!-- Team Section -->
+    @if ($tim_data->status == 'Show')
     <section id="team-2" class="team-2 section light-background" style="justify-content: center;">
 
       <!-- Section Title -->
@@ -429,6 +430,7 @@
       </div>
 
     </section><!-- /Team Section -->
+    @endif
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">

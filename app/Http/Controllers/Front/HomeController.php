@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 use App\Models\Karya;
+use App\Models\Tim;
 use Illuminate\Http\Request;
 use App\Models\HomePageItem;
 
@@ -11,13 +12,14 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view('front.home');
+        $tim_data = Tim::where('id','1')->first();
+        $karya_data = Karya::orderBy('id','asc')->get();
+        return view('front.home',compact('karya_data','tim_data'));
     }
 
     public function karya()
     {
-        $data_karya = Karya::orderBy('id','asc')->get();
-        return view('front.karya',compact('data_karya'));
+        return view('front.karya');
     }
 
     public function detail_karya()
