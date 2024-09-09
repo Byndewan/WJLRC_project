@@ -34,7 +34,7 @@ Route::get('/program-online', [PageController::class, 'program_online'])->name('
 Route::get('/program-offline', [PageController::class, 'program_offline'])->name('program_offline')->middleware('user:web');
 Route::get('/karya', [HomeController::class, 'karya'])->name('karya')->middleware('user:web');
 Route::get('/#contact', [ContactController::class, 'index'])->name('#contact')->middleware('user:web');
-Route::post('/#contact/send-email', [ContactController::class, 'send_email'])->name('contact_send_email')->middleware('user:web');
+Route::post('/contact/send-email', [ContactController::class, 'send_email'])->name('contact_send_email');
 Route::get('/#team-2', [HomeController::class, 'team'])->name('#team-2')->middleware('user:web');
 
 

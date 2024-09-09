@@ -36,12 +36,12 @@ class Websitemail extends Mailable
     /**
      * Get the body envelope.
      */
-    public function envelope(): Envelope
-    {
-        return new Envelope(
-            subject: 'Websitemail',
-        );
-    }
+    // public function envelope(): Envelope
+    // {
+    //     return new Envelope(
+    //         subject: 'Websitemail',
+    //     );
+    // }
 
     /**
      * Get the body content definition.
