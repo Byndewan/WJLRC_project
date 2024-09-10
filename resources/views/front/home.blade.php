@@ -502,19 +502,6 @@
                 </div>
 
                 <div class="col-md-12 text-center">
-                
-                  <div class="loading">Menunggu</div>
-                  <div class="text-success">Pesan telah terkirim. Terima kasih!</div>
-                  <div class="text-danger"></div>
-
-                  {{-- @if(session()->get('success'))
-                    <div class="sent-message">Pesan telah terkirim. Terima kasih!</div>
-                  @endif
-
-                  @if(session()->get('error'))
-                    <div class="error-message"></div>
-                  @endif --}}
-
                   <button type="submit">Kirim Pesan</button>
                 </div>
 
