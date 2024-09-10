@@ -26,25 +26,25 @@ use App\Http\Controllers\Front\ContactController;
 
 
 // Front End
-Route::get('/', [HomeController::class, 'index'])->name('home')->middleware('user:web');
-Route::get('/pengertian', [PageController::class, 'index'])->name('pengertian')->middleware('user:web');
-Route::get('/organigram', [PageController::class, 'organigram'])->name('organigram')->middleware('user:web');
-Route::get('/divisi', [PageController::class, 'divisi'])->name('divisi')->middleware('user:web');
-Route::get('/program-online', [PageController::class, 'program_online'])->name('program_online')->middleware('user:web');
-Route::get('/program-offline', [PageController::class, 'program_offline'])->name('program_offline')->middleware('user:web');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/pengertian', [PageController::class, 'index'])->name('pengertian');
+Route::get('/organigram', [PageController::class, 'organigram'])->name('organigram');
+Route::get('/divisi', [PageController::class, 'divisi'])->name('divisi');
+Route::get('/program-online', [PageController::class, 'program_online'])->name('program_online');
+Route::get('/program-offline', [PageController::class, 'program_offline'])->name('program_offline');
 Route::get('/karya', [HomeController::class, 'karya'])->name('karya')->middleware('user:web');
-Route::get('/#contact', [ContactController::class, 'index'])->name('#contact')->middleware('user:web');
+Route::get('/#contact', [ContactController::class, 'index'])->name('#contact');
 Route::post('/contact/send-email', [ContactController::class, 'send_email'])->name('contact_send_email');
-Route::get('/#team-2', [HomeController::class, 'team'])->name('#team-2')->middleware('user:web');
+Route::get('/#team-2', [HomeController::class, 'team'])->name('#team-2');
 
 
 // Front End : Program Online
-Route::get('/program-online/resensi', [PageController::class, 'resensi'])->name('resensi')->middleware('user:web');
-Route::get('/program-online/konten', [PageController::class, 'konten'])->name('konten')->middleware('user:web');
-Route::get('/program-online/liputan', [PageController::class, 'liputan'])->name('liputan')->middleware('user:web');
+Route::get('/program-online/resensi', [PageController::class, 'resensi'])->name('resensi');
+Route::get('/program-online/konten', [PageController::class, 'konten'])->name('konten');
+Route::get('/program-online/liputan', [PageController::class, 'liputan'])->name('liputan');
 
 // Front End : Program Offline
-Route::get('/program-offline/mading', [PageController::class, 'mading'])->name('mading')->middleware('user:web');
+Route::get('/program-offline/mading', [PageController::class, 'mading'])->name('mading');
 
 // Registration
 Route::get('/user/registration', [RegistrationController::class, 'registration'])->name('registration');
