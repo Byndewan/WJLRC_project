@@ -502,8 +502,6 @@
                 </div>
 
                 <div class="col-md-12 text-center">
-<<<<<<< HEAD
-=======
                 
                   <div class="loading">Menunggu</div>
                   <div class="text-success">Pesan telah terkirim. Terima kasih!</div>
@@ -517,7 +515,6 @@
                     <div class="error-message"></div>
                   @endif --}}
 
->>>>>>> a94acedc05f55266f3ab2fb14aa6e035a74cd21d
                   <button type="submit">Kirim Pesan</button>
                 </div>
 
