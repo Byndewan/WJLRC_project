@@ -66,7 +66,7 @@ Route::post('/user/reset-password-submit', [UserLoginController::class, 'reset_p
 Route::get('/karya/detail-karya', [HomeController::class, 'detail_karya'])->name('detail_karya')->middleware('user:web');
 Route::get('/program-online/konten/detail-konten', [PageController::class, 'detail_konten'])->name('detail_konten')->middleware('user:web');
 Route::get('/program-offline/liputan/detail-liputan', [PageController::class, 'detail_liputan'])->name('detail_liputan')->middleware('user:web');
-Route::get('/program-offline/mading/detail-mading', [PageController::class, 'mading_detail'])->name('detail_mading')->middleware('user:web');
+Route::get('/program-offline/mading/detail-mading', [PageController::class, 'detail_mading'])->name('mading_detail')->middleware('user:web');
 Route::get('/program-online/resensi/detail-resensi', [PageController::class, 'detail_resensi'])->name('resensi_detail')->middleware('user:web');
 
 /*Admin*/
