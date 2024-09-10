@@ -11,15 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('peminjamen', function (Blueprint $table) {
+        Schema::create('tims', function (Blueprint $table) {
             $table->id();
-            $table->text('photo');
-            $table->text('nama');
-            $table->text('kelas');
-            $table->text('judul');
-            $table->dateTime('tanggal_peminjaman');
-            $table->dateTime('tanggal_pengembalian');
-            $table->dateTime('status');
+            $table->text('status');
             $table->timestamps();
         });
     }
@@ -29,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('peminjamen');
+        Schema::dropIfExists('tims');
     }
 };

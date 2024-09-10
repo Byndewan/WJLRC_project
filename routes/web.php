@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\AdminResensiController;
 use App\Http\Controllers\Admin\AdminTamanBacaController;
 use App\Http\Controllers\Admin\AdminKontakController;
+use App\Http\Controllers\AdminTimController;
 
 /* Front Controllers */
 use App\Http\Controllers\Front\HomeController;
@@ -32,7 +33,7 @@ Route::get('/divisi', [PageController::class, 'divisi'])->name('divisi')->middle
 Route::get('/program-online', [PageController::class, 'program_online'])->name('program_online')->middleware('user:web');
 Route::get('/program-offline', [PageController::class, 'program_offline'])->name('program_offline')->middleware('user:web');
 Route::get('/karya', [HomeController::class, 'karya'])->name('karya')->middleware('user:web');
-Route::get('/#contact', [HomeController::class, 'kontak'])->name('#contact')->middleware('user:web');
+Route::get('/#contact', [ContactController::class, 'index'])->name('#contact')->middleware('user:web');
 Route::post('/#contact/send-email', [ContactController::class, 'send_email'])->name('contact_send_email')->middleware('user:web');
 Route::get('/#team-2', [HomeController::class, 'team'])->name('#team-2')->middleware('user:web');
 
@@ -95,6 +96,10 @@ Route::get('/admin/forgot-password', [AdminLoginController::class, 'forgot_passw
 Route::post('/admin/forgot-password-submit', [AdminLoginController::class, 'forgot_password_submit'])->name('admin_forgot_password_submit');
 Route::get('/admin/reset-password/{email}', [AdminLoginController::class, 'reset_password'])->name('admin_reset_password')->middleware('admin:admin');
 Route::post('/admin/reset-password-submit', [AdminLoginController::class, 'reset_password_submit'])->name('admin_reset_password_submit');
+
+// Bagian TEAM
+Route::get('/admin/area/team/{id}', [AdminTimController::class, 'team'])->name('area_tim')->middleware('admin:admin');
+Route::post('/admin/team-submit/{id}', [AdminTimController::class, 'store'])->name('admin_area_tim');
 
 /* CRUD Bagian Karya */
 Route::get('/admin/daftar-karya', [AdminKaryaController::class, 'daftar_karya'])->name('daftar_karya')->middleware('admin:admin');

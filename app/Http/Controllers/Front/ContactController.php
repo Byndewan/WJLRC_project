@@ -19,7 +19,7 @@ class ContactController extends Controller
     public function send_email(Request $request)
     {
         $request->validate([
-            'name' => 'required|name',
+            'name' => 'required',
             'email' => 'required|email',
             'subject' => required,
             'comment' => 'required'

@@ -75,7 +75,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Jabatan</label>
-                                    <select class="form-control" name="jabatan" value="{{ $row_data->jabatan }}">
+                                    <select class="form-control" name="jabatan" aria-valuenow="{{ $row_data->jabatan }}">
                                     <option>Pembina</option>
                                     <option>Ketua</option>
                                     <option>Wakil Ketua 1</option>
