@@ -20,10 +20,7 @@ use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Front\PageController;
 use App\Http\Controllers\UserLoginController;
 use App\Http\Controllers\RegistrationController;
-
 use App\Http\Controllers\Front\ContactController;
-
-
 
 // Front End
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -38,7 +35,6 @@ Route::get('/#contact', [ContactController::class, 'index'])->name('#contact');
 Route::post('/#contact/send-email', [ContactController::class, 'send_email'])->name('contact_send_email');
 Route::post('/contact/send-email', [ContactController::class, 'send_email'])->name('contact_send_email');
 Route::get('/#team-2', [HomeController::class, 'team'])->name('#team-2');
-
 
 // Front End : Program Online
 Route::get('/program-online/resensi', [PageController::class, 'resensi'])->name('resensi');
@@ -65,7 +61,8 @@ Route::post('/user/reset-password-submit', [UserLoginController::class, 'reset_p
 
 // detail halaman
 
-Route::get('/karya/detail-karya', [HomeController::class, 'detail_karya'])->name('detail_karya')->middleware('user:we
+Route::get('/karya/detail-karya', [HomeController::class, 'detail_karya'])->name('detail_karya')->middleware('user:web');
+Route::get('/karya/detail-karya', [HomeController::class, 'detail_karya'])->name('detail_karya')->middleware('user:web');
 Route::get('/program-online/konten/detail-konten', [PageController::class, 'detail_konten'])->name('detail_konten');
 Route::get('/program-offline/liputan/detail-liputan', [PageController::class, 'detail_liputan'])->name('detail_liputan');
 Route::get('/program-offline/mading/detail-mading', [PageController::class, 'detail_mading'])->name('detail_mading');
