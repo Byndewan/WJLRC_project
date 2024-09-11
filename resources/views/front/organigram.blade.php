@@ -58,9 +58,9 @@
                   <img src="{{ asset('uploads/'.$data_organigram_pembina->photo) }}" class="img-fluid" alt="">
                   <div class="social">
 
-                    <a href="{{ $data_organigram_pembina->icon1_url }}"><i class="{{ $data_organigram_pembina->icon1 }}"></i></a>
-                    <a href="{{ $data_organigram_pembina->icon2_url }}"><i class="{{ $data_organigram_pembina->icon2 }}"></i></a>
-                    <a href="{{ $data_organigram_pembina->icon3_url }}"><i class="{{ $data_organigram_pembina->icon3 }}"></i></a>
+                    <a href="{{ $data_organigram_pembina->icon_url1 }}"><i class="{{ $data_organigram_pembina->icon1 }}"></i></a>
+                    <a href="{{ $data_organigram_pembina->icon_url2 }}"><i class="{{ $data_organigram_pembina->icon2 }}"></i></a>
+                    <a href="{{ $data_organigram_pembina->icon_url3 }}"><i class="{{ $data_organigram_pembina->icon3 }}"></i></a>
                   </div>
                 </div>
                 <div class="member-info">
@@ -77,9 +77,9 @@
                     <div class="member-img">
                       <img src="{{ asset('uploads/'.$data_organigram_ketua->photo) }}" class="img-fluid" alt="">
                       <div class="social">
-                        <a href="{{ $data_organigram_ketua->icon1_url }}"><i class="{{ $data_organigram_ketua->icon1 }}"></i></a>
-                        <a href="{{ $data_organigram_ketua->icon2_url }}"><i class="{{ $data_organigram_ketua->icon2 }}"></i></a>
-                        <a href="{{ $data_organigram_ketua->icon3_url }}"><i class="{{ $data_organigram_ketua->icon3 }}"></i></a>
+                        <a href="{{ $data_organigram_ketua->icon_url1 }}"><i class="{{ $data_organigram_ketua->icon1 }}"></i></a>
+                        <a href="{{ $data_organigram_ketua->icon_url2 }}"><i class="{{ $data_organigram_ketua->icon2 }}"></i></a>
+                        <a href="{{ $data_organigram_ketua->icon_url3 }}"><i class="{{ $data_organigram_ketua->icon3 }}"></i></a>
                       </div>
                     </div>
                     <div class="member-info">
@@ -95,9 +95,9 @@
                     <img src="{{ asset('uploads/'.$data_organigram_WK1->photo) }}" class="img-fluid" alt="">
                     <div class="social">
 
-                      <a href="{{ $data_organigram_WK1->icon1_url }}"><i class="{{ $data_organigram_WK1->icon1 }}"></i></a>
-                      <a href="{{ $data_organigram_WK1->icon2_url }}"><i class="{{ $data_organigram_WK1->icon2 }}"></i></a>
-                      <a href="{{ $data_organigram_WK1->icon3_url }}"><i class="{{ $data_organigram_WK1->icon3 }}"></i></a>
+                      <a href="{{ $data_organigram_WK1->icon_url1 }}"><i class="{{ $data_organigram_WK1->icon1 }}"></i></a>
+                      <a href="{{ $data_organigram_WK1->icon_url2 }}"><i class="{{ $data_organigram_WK1->icon2 }}"></i></a>
+                      <a href="{{ $data_organigram_WK1->icon_url3 }}"><i class="{{ $data_organigram_WK1->icon3 }}"></i></a>
                     </div>
                   </div>
                   <div class="member-info">
@@ -113,9 +113,9 @@
                     <img src="{{ asset('uploads/'.$data_organigram_WK2->photo) }}" class="img-fluid" alt="">
                     <div class="social">
 
-                      <a href="{{ $data_organigram_WK2->icon1_url }}"><i class="{{ $data_organigram_WK2->icon1 }}"></i></a>
-                      <a href="{{ $data_organigram_WK2->icon2_url }}"><i class="{{ $data_organigram_WK2->icon2 }}"></i></a>
-                      <a href="{{ $data_organigram_WK2->icon3_url }}"><i class="{{ $data_organigram_WK2->icon3 }}"></i></a>
+                      <a href="{{ $data_organigram_WK2->icon_url1 }}"><i class="{{ $data_organigram_WK2->icon1 }}"></i></a>
+                      <a href="{{ $data_organigram_WK2->icon_url2 }}"><i class="{{ $data_organigram_WK2->icon2 }}"></i></a>
+                      <a href="{{ $data_organigram_WK2->icon_url3 }}"><i class="{{ $data_organigram_WK2->icon3 }}"></i></a>
                     </div>
                   </div>
                   <div class="member-info">
@@ -133,9 +133,9 @@
                 <img src="{{ asset('uploads/'.$data_organigram_B1->photo) }}" class="img-fluid" alt="">
                 <div class="social">
 
-                <a href="{{ $data_organigram_B1->icon1_url }}"><i class="{{ $data_organigram_B1->icon1 }}"></i></a>
-                <a href="{{ $data_organigram_B1->icon2_url }}"><i class="{{ $data_organigram_B1->icon2 }}"></i></a>
-                <a href="{{ $data_organigram_B1->icon3_url }}"><i class="{{ $data_organigram_B1->icon3 }}"></i></a>
+                <a href="{{ $data_organigram_B1->icon_url1 }}"><i class="{{ $data_organigram_B1->icon1 }}"></i></a>
+                <a href="{{ $data_organigram_B1->icon_url2 }}"><i class="{{ $data_organigram_B1->icon2 }}"></i></a>
+                <a href="{{ $data_organigram_B1->icon_url3 }}"><i class="{{ $data_organigram_B1->icon3 }}"></i></a>
                 </div>
               </div>
               <div class="member-info">
@@ -151,9 +151,9 @@
                 <img src="{{ asset('uploads/'.$data_organigram_B2->photo) }}" class="img-fluid" alt="">
                 <div class="social">
 
-                    <a href="{{ $data_organigram_B2->icon1_url }}"><i class="{{ $data_organigram_B2->icon1 }}"></i></a>
-                    <a href="{{ $data_organigram_B2->icon2_url }}"><i class="{{ $data_organigram_B2->icon2 }}"></i></a>
-                    <a href="{{ $data_organigram_B2->icon3_url }}"><i class="{{ $data_organigram_B2->icon3 }}"></i></a>
+                    <a href="{{ $data_organigram_B2->icon_url1 }}"><i class="{{ $data_organigram_B2->icon1 }}"></i></a>
+                    <a href="{{ $data_organigram_B2->icon_url2 }}"><i class="{{ $data_organigram_B2->icon2 }}"></i></a>
+                    <a href="{{ $data_organigram_B2->icon_url3 }}"><i class="{{ $data_organigram_B2->icon3 }}"></i></a>
                 </div>
               </div>
               <div class="member-info">
@@ -168,9 +168,9 @@
               <div class="member-img">
                 <img src="{{ asset('uploads/'.$data_organigram_S1->photo) }}" class="img-fluid" alt="">
                 <div class="social">
-                    <a href="{{ $data_organigram_S1->icon1_url }}"><i class="{{ $data_organigram_S1->icon1 }}"></i></a>
-                    <a href="{{ $data_organigram_S1->icon2_url }}"><i class="{{ $data_organigram_S1->icon2 }}"></i></a>
-                    <a href="{{ $data_organigram_S1->icon3_url }}"><i class="{{ $data_organigram_S1->icon3 }}"></i></a>
+                    <a href="{{ $data_organigram_S1->icon_url1 }}"><i class="{{ $data_organigram_S1->icon1 }}"></i></a>
+                    <a href="{{ $data_organigram_S1->icon_url2 }}"><i class="{{ $data_organigram_S1->icon2 }}"></i></a>
+                    <a href="{{ $data_organigram_S1->icon_url3 }}"><i class="{{ $data_organigram_S1->icon3 }}"></i></a>
                 </div>
               </div>
               <div class="member-info">
@@ -186,9 +186,9 @@
                 <img src="{{ asset('uploads/'.$data_organigram_S2->photo) }}" class="img-fluid" alt="">
                 <div class="social">
 
-                  <a href="{{ $data_organigram_S2->icon1_url }}"><i class="{{ $data_organigram_S2->icon1 }}"></i></a>
-                  <a href="{{ $data_organigram_S2->icon2_url }}"><i class="{{ $data_organigram_S2->icon2 }}"></i></a>
-                  <a href="{{ $data_organigram_S2->icon3_url }}"><i class="{{ $data_organigram_S2->icon3 }}"></i></a>
+                  <a href="{{ $data_organigram_S2->icon_url1 }}"><i class="{{ $data_organigram_S2->icon1 }}"></i></a>
+                  <a href="{{ $data_organigram_S2->icon_url2 }}"><i class="{{ $data_organigram_S2->icon2 }}"></i></a>
+                  <a href="{{ $data_organigram_S2->icon_url3 }}"><i class="{{ $data_organigram_S2->icon3 }}"></i></a>
                 </div>
               </div>
               <div class="member-info">
@@ -222,9 +222,9 @@
                 <img src="{{ asset('uploads/'.$data_organigram_AL2->photo) }}" class="img-fluid" alt="">
                 <div class="social">
 
-                  <a href="{{ $data_organigram_AL2->icon1_url }}"><i class="{{ $data_organigram_AL2->icon1 }}"></i></a>
-                  <a href="{{ $data_organigram_AL2->icon2_url }}"><i class="{{ $data_organigram_AL2->icon2 }}"></i></a>
-                  <a href="{{ $data_organigram_AL2->icon3_url }}"><i class="{{ $data_organigram_AL2->icon3 }}"></i></a>
+                  <a href="{{ $data_organigram_AL2->icon_url1 }}"><i class="{{ $data_organigram_AL2->icon1 }}"></i></a>
+                  <a href="{{ $data_organigram_AL2->icon_url2 }}"><i class="{{ $data_organigram_AL2->icon2 }}"></i></a>
+                  <a href="{{ $data_organigram_AL2->icon_url3 }}"><i class="{{ $data_organigram_AL2->icon3 }}"></i></a>
                 </div>
               </div>
               <div class="member-info">
@@ -240,9 +240,9 @@
                 <img src="{{ asset('uploads/'.$data_organigram_KM1->photo) }}" class="img-fluid" alt="">
                 <div class="social">
 
-                  <a href="{{ $data_organigram_KM1->icon1_url }}"><i class="{{ $data_organigram_KM1->icon1 }}"></i></a>
-                  <a href="{{ $data_organigram_KM1->icon2_url }}"><i class="{{ $data_organigram_KM1->icon2 }}"></i></a>
-                  <a href="{{ $data_organigram_KM1->icon3_url }}"><i class="{{ $data_organigram_KM1->icon3 }}"></i></a>
+                  <a href="{{ $data_organigram_KM1->icon_url1 }}"><i class="{{ $data_organigram_KM1->icon1 }}"></i></a>
+                  <a href="{{ $data_organigram_KM1->icon_url2 }}"><i class="{{ $data_organigram_KM1->icon2 }}"></i></a>
+                  <a href="{{ $data_organigram_KM1->icon_url3 }}"><i class="{{ $data_organigram_KM1->icon3 }}"></i></a>
                 </div>
               </div>
               <div class="member-info">
@@ -258,9 +258,9 @@
                 <img src="{{ asset('uploads/'.$data_organigram_KM2->photo) }}" class="img-fluid" alt="">
                 <div class="social">
 
-                  <a href="{{ $data_organigram_KM2->icon1_url }}"><i class="{{ $data_organigram_KM2->icon1 }}"></i></a>
-                  <a href="{{ $data_organigram_KM2->icon2_url }}"><i class="{{ $data_organigram_KM2->icon2 }}"></i></a>
-                  <a href="{{ $data_organigram_KM2->icon3_url }}"><i class="{{ $data_organigram_KM2->icon3 }}"></i></a>
+                  <a href="{{ $data_organigram_KM2->icon_url1 }}"><i class="{{ $data_organigram_KM2->icon1 }}"></i></a>
+                  <a href="{{ $data_organigram_KM2->icon_url2 }}"><i class="{{ $data_organigram_KM2->icon2 }}"></i></a>
+                  <a href="{{ $data_organigram_KM2->icon_url3 }}"><i class="{{ $data_organigram_KM2->icon3 }}"></i></a>
                 </div>
               </div>
               <div class="member-info">

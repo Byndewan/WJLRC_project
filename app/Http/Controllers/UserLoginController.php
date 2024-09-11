@@ -60,7 +60,7 @@ class UserLoginController extends Controller
         ];
 
        if(Auth::guard('web')->attempt($credential)) {
-        return redirect()->route('home');
+        return redirect()->route('karya');
        } else {
         return redirect()->route('user_login')->with('error', 'Infromation is not correct!');
        }
@@ -69,7 +69,7 @@ class UserLoginController extends Controller
     public function logout()
     {
         Auth::guard('web')->logout();
-        return redirect()->route('user_login');
+        return redirect()->route('home');
     }
 
     public function reset_password($token,$email)
