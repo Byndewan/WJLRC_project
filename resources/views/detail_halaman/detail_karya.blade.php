@@ -6,6 +6,20 @@
 <div class="single-post">
 <h1 class="mb-5">Habis Gelap Terbitlah terang </h1>
 <div class="post-meta"><span class="date">R.A Kartini<span class="mx-1">&bullet;</span> <span>21 Agustus 2024 </span></div>
+<div class="icon-container">
+    <div class="icon-item">
+        <i class="bi bi-heart"></i>
+        <p>2.3K</p>
+    </div>
+    <div class="icon-item">
+        <i class="bi bi-eye"></i>
+        <p>2.3K</p>
+    </div>
+    <div class="icon-item">
+        <i class="bi bi-chat"></i>
+        <p>2.3K</p>
+    </div>
+</div>   
 <figure class="my-4">
 <img src="assets/img/th.jpg" alt="" class="img-fluid">
 <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, odit? </figcaption>
@@ -37,8 +51,7 @@
 <div class="flex-grow-1 ms-2 ms-sm-3">
 <div class="comment-meta d-flex align-items-baseline">
 <h6 class="me-2">Kepanitian Maulid Nabi Muhamad SAW</h6>
-<span class="text-muted">M.abyan Ketua Pelaksana</span>
-<span class="text-muted">BAPAK KEPALA SEKOLAH YANG TERCINTA</span>
+<span class="text-muted">2d</span>
 </div>
 <div class="comment-body">
 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non minima ipsum at amet doloremque qui magni, placeat deserunt pariatur itaque laudantium impedit aliquam eligendi repellendus excepturi quibusdam nobis esse accusantium.
@@ -109,6 +122,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto laborum in corrup
 <!-- Popular -->
 <div class="tab-pane fade show active" id="pills-popular" role="tabpanel" aria-labelledby="pills-popular-tab">
 <div class="post-entry-1 border-bottom">
+<div class="post-meta"><span class="date">R.A Kartini<span class="mx-1">&bullet;</span> <span>21 Agustus 2024 </span></div>
 <h2 class="mb-2"><a href="#">the power of now</a></h2>
 <span class="author mb-3 d-block">Eckhart Tolle</span>
 </div>

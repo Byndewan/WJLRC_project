@@ -25,6 +25,14 @@ class RegistrationController extends Controller
     {
         $token = hash('sha256',time());
 
+        $request->validate([
+            'name' => 'required|unique:users',
+            'phone_number' => 'required|unique:users',
+            'email' => 'required|unique:users',
+            'password' => 'required',
+            'retype_password' => 'required|same:password'
+        ]);
+
         $user = new User();
         $user->name = $request->name;
         $user->phone_number = $request->phone_number;
@@ -41,7 +49,7 @@ class RegistrationController extends Controller
 
         // echo 'Email is sent';
 
-        return redirect()->route('login_button');
+        return redirect()->route('user_login')->with('success', 'Registration successful! You can now log in to your account.');
     }
 
     public function registration_verify($token,$email)

@@ -40,9 +40,17 @@
                         <form method="POST" action="{{ route('registration_submit') }}">
                             @csrf
                             <div class="form-group">
-                                <input type="text" class="form-control" name="name" placeholder="Name" value="" autofocus></div>
+                                <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="Name" value="" autofocus>
+                                @error('name')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>    
                             <div class="form-group">
-                                <input type="text" class="form-control" name="phone_number" placeholder="Phone Number" value=""></div>
+                                <input type="text" class="form-control @error('phone_number') is-invalid @enderror" name="phone_number" placeholder="Phone Number" value="">
+                                @error('phone_number')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
                             <div class="form-group">
                                 <input type="text" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Email Address" value="{{ old('email') }}">
                                 @error('email')
@@ -60,7 +68,7 @@
                             </div>
                             <div class="form-group">
                                 <input type="password" class="form-control @error('retype_password') is-invalid @enderror" name="retype_password" placeholder="Retype Password">
-                                @error('password')
+                                @error('retype_password')
                                     <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
