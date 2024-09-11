@@ -47,33 +47,7 @@
     <!-- ======= Post Grid Section ======= -->
     <section id="posts" class="posts">
       <div class="container" data-aos="fade-up">
-        <div class="row g-5">
-          <div class="col-lg-4">
-            <div class="post-entry-1 lg">
-              <a href="{{ route('detail_karya') }}"><img src="{{ asset('dist_front/karya/img/komet.png') }}" alt="" class="img-fluid"></a>
-              <div class="post-meta"><span class="mx-1"></span> <span>5 Juli 2022</span></div>
-              <h2><a href="">Komet</a></h2>
-              <span class="author mb-3 d-block">Tere Liye</span>
-              <div class="icon-container">
-                <div class="icon-item">
-                    <i class="bi bi-heart"></i>
-                    <p>2.3K</p>
-                </div>
-                <div class="icon-item">
-                    <i class="bi bi-eye"></i>
-                    <p>2.3K</p>
-                </div>
-                <div class="icon-item">
-                    <i class="bi bi-chat"></i>
-                    <p>2.3K</p>
-                </div>
-              </div>
-              <p class="mb-4 d-block">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus exercitationem? Nihil tempore odit ab minus eveniet praesentium, similique blanditiis molestiae ut saepe perspiciatis officia nemo, eos quae cumque. Accusamus fugiat architecto rerum animi atque eveniet, quo, praesentium dignissimos</p>
-            </div>
-
-          </div>
-
-          <div class="col-lg-8">
+          <div class="col-lg-12">
             <div class="row g-5">
               <div class="col-lg-4 border-start custom-border">
                 <div class="post-entry-1">
@@ -121,6 +95,130 @@
                   <div class="post-meta"> <span class="mx-1"></span> <span>15 Maret 2022</span></div>
                   <h2><a href="">Bulan</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>Tere Liye</span></div>
+                  <div class="icon-container">
+                    <div class="icon-item">
+                        <i class="bi bi-heart"></i>
+                        <p>2.3K</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="bi bi-eye"></i>
+                        <p>2.3K</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="bi bi-chat"></i>
+                        <p>2.3K</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 border-start custom-border">
+                <div class="post-entry-1">
+                  <a href="{{ route('detail_karya') }}"><img src="{{ asset('dist_front/karya/img/Bumi.png') }}" alt="" class="img-fluid"></a>
+                  <div class="post-meta"><span class="mx-1"></span> <span>5 Juli 2022</span></div>
+                  <h2><a href="">Bumi</a></h2>
+                  <div class="post-meta" style="color: #b3b3b3;"><span>Tere Liye</span></div>
+                  <div class="icon-container">
+                    <div class="icon-item">
+                        <i class="bi bi-heart"></i>
+                        <p>2.3K</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="bi bi-eye"></i>
+                        <p>2.3K</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="bi bi-chat"></i>
+                        <p>2.3K</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="post-entry-1">
+                  <a href="{{ route('detail_karya') }}"><img src="{{ asset('dist_front/karya/img/matahari.png') }}" alt="" class="img-fluid"></a>
+                  <div class="post-meta"> <span class="mx-1"></span> <span>17 Juli 2022</span></div>
+                  <h2><a href="">Matahari</a></h2>
+                  <div class="post-meta" style="color: #b3b3b3;"><span>Tere Liye</span></div>
+                  <div class="icon-container">
+                    <div class="icon-item">
+                        <i class="bi bi-heart"></i>
+                        <p>2.3K</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="bi bi-eye"></i>
+                        <p>2.3K</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="bi bi-chat"></i>
+                        <p>2.3K</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="post-entry-1">
+                  <a href="{{ route('detail_karya') }}"><img src="{{ asset('dist_front/karya/img/bulan.png') }}" alt="" class="img-fluid"></a>
+                  <div class="post-meta"> <span class="mx-1"></span> <span>15 Maret 2022</span></div>
+                  <h2><a href="">Bulan</a></h2>
+                  <div class="post-meta" style="color: #b3b3b3;"><span>Tere Liye</span></div>
+                  <div class="icon-container">
+                    <div class="icon-item">
+                        <i class="bi bi-heart"></i>
+                        <p>2.3K</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="bi bi-eye"></i>
+                        <p>2.3K</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="bi bi-chat"></i>
+                        <p>2.3K</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 border-start custom-border">
+                <div class="post-entry-1">
+                  <a href="{{ route('detail_karya') }}"><img src="{{ asset('dist_front/karya/img/hilmy milan.jpg') }}" alt="" class="img-fluid"></a>
+                  <div class="post-meta <span class="mx-1"></span> <span>5 Juli 2022</span></div>
+                  <h2><a href="">Hilmy Milan</a></h2>
+                  <div class="post-meta" style="color: #b3b3b3;"><span>Nadia Ristivani</span></div>
+                  <div class="icon-container">
+                    <div class="icon-item">
+                        <i class="bi bi-heart"></i>
+                        <p>2.3K</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="bi bi-eye"></i>
+                        <p>2.3K</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="bi bi-chat"></i>
+                        <p>2.3K</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="post-entry-1">
+                  <a href="{{ route('detail_karya') }}"><img src="{{ asset('dist_front/karya/img/Love-From-A-to-Z.jpg') }}" alt="" class="img-fluid"></a>
+                  <div class="post-meta"> <span class="mx-1"></span> <span>17 Juli 2022</span></div>
+                  <h2><a href="">Love from A to Z</a></h2>
+                  <div class="post-meta" style="color: #b3b3b3;"><span>S.K Ali</span></div>
+                  <div class="icon-container">
+                    <div class="icon-item">
+                        <i class="bi bi-heart"></i>
+                        <p>2.3K</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="bi bi-eye"></i>
+                        <p>2.3K</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="bi bi-chat"></i>
+                        <p>2.3K</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="post-entry-1">
+                  <a href="{{ route('detail_karya') }}"><img src="{{ asset('dist_front/karya/img/alpha girls.jpg') }}" alt="" class="img-fluid"></a>
+                  <div class="post-meta"> <span class="mx-1"></span> <span>15 Maret 2022</span></div>
+                  <h2><a href="">Alpha Girl's Guide</a></h2>
+                  <div class="post-meta" style="color: #b3b3b3;"><span>Henry Manampiring</span></div>
                   <div class="icon-container">
                     <div class="icon-item">
                         <i class="bi bi-heart"></i>
@@ -261,162 +359,75 @@
                   </div>
                 </div>
               </div>
+              <div class="col-lg-4 border-start custom-border">
+                <div class="post-entry-1">
+                  <a href="{{ route('detail_karya') }}"><img src="{{ asset('dist_front/karya/img/dork diaries.jpg') }}" alt="" class="img-fluid"></a>
+                  <div class="post-meta"> <span class="mx-1"></span> <span>5 Juli 2022</span></div>
+                  <h2><a href="">Dork Diaries</a></h2>
+                  <div class="post-meta" style="color: #b3b3b3;"><span>Rachel Renee</span></div>
+                  <div class="icon-container">
+                    <div class="icon-item">
+                        <i class="bi bi-heart"></i>
+                        <p>2.3K</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="bi bi-eye"></i>
+                        <p>2.3K</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="bi bi-chat"></i>
+                        <p>2.3K</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="post-entry-1">
+                  <a href="{{ route('detail_karya') }}"><img src="{{ asset('dist_front/karya/img/conversation on love.jpg') }}" alt="" class="img-fluid"></a>
+                  <div class="post-meta"> <span class="mx-1"></span> <span>1 Maret 2022</span></div>
+                  <h2><a href="">Conversation on Love</a></h2>
+                  <div class="post-meta" style="color: #b3b3b3;"><span>Natasha Lunn</span></div>
+                  <div class="icon-container">
+                    <div class="icon-item">
+                        <i class="bi bi-heart"></i>
+                        <p>2.3K</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="bi bi-eye"></i>
+                        <p>2.3K</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="bi bi-chat"></i>
+                        <p>2.3K</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="post-entry-1">
+                  <a href="{{ route('detail_karya') }}"><img src="{{ asset('dist_front/karya/img/geez ann.jpg') }}" alt="" class="img-fluid"></a>
+                  <div class="post-meta"><span class="mx-1"></span> <span>5 Juli 2022</span></div>
+                  <h2><a href="">Geez and Ann</a></h2>
+                  <div class="post-meta" style="color: #b3b3b3;"><span>Rintik Sedu</span></div>
+                  <div class="icon-container">
+                    <div class="icon-item">
+                        <i class="bi bi-heart"></i>
+                        <p>2.3K</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="bi bi-eye"></i>
+                        <p>2.3K</p>
+                    </div>
+                    <div class="icon-item">
+                        <i class="bi bi-chat"></i>
+                        <p>2.3K</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
                           </div>
           </div>
 
-        </div> <!-- End .row -->
+        {{-- </div> <!-- End .row --> --}}
       </div>
     </section> <!-- End Post Grid Section -->
-
-    <!-- ======= Culture Category Section ======= -->
-    <section class="category-section">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row">
-          <div class="col-md-9">
-
-            <div class="d-lg-flex post-entry-2">
-              <a href="{{ route('detail_karya') }}" class="me-4 thumbnail mb-4 mb-lg-0 d-inline-block">
-                <img src="{{ asset('dist_front/karya/img/love scenario.jpg') }}" alt="" class="img-fluid img-fluid-2">
-              </a>
-              <div>
-                <div class="post-meta"> <span class="mx-1"></span> <span>5 Juli 2022</span></div>
-                <h3><a href="{{ route('detail_karya') }}">Love Scenario</a></h3>
-                <span class="author mb-3 d-block">Cantika Zahra</span>
-                <div class="icon-container">
-                  <div class="icon-item">
-                      <i class="bi bi-heart"></i>
-                      <p>2.3K</p>
-                  </div>
-                  <div class="icon-item">
-                      <i class="bi bi-eye"></i>
-                      <p>2.3K</p>
-                  </div>
-                  <div class="icon-item">
-                      <i class="bi bi-chat"></i>
-                      <p>2.3K</p>
-                  </div>
-                </div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio placeat exercitationem magni voluptates dolore. Tenetur fugiat voluptates quas, nobis error deserunt aliquam temporibus sapiente, laudantium dolorum itaque libero eos deleniti?</p>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="post-entry-1 border-bottom">
-                  <a href="{{ route('detail_karya') }}"><img src="{{ asset('dist_front/karya/img/antares.jpg') }}" alt="" class="img-fluid"></a>
-                  <div class="post-meta"> <span>5 Juli 2022</span></div>
-                  <h2 class="mb-2"><a href="">Antares</a></h2>
-                  <span class="author mb-3 d-block">Rweinda</span>
-                  <div class="icon-container">
-                    <div class="icon-item">
-                        <i class="bi bi-heart"></i>
-                        <p>2.3K</p>
-                    </div>
-                    <div class="icon-item">
-                        <i class="bi bi-eye"></i>
-                        <p>2.3K</p>
-                    </div>
-                    <div class="icon-item">
-                        <i class="bi bi-chat"></i>
-                        <p>2.3K</p>
-                    </div>
-                  </div>
-                  <p class="mb-4 d-block">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus</p>
-                </div>
-              </div>
-              <div class="col-lg-8">
-                <div class="post-entry-1">
-                  <a href="{{ route('detail_karya') }}"><img src="{{ asset('dist_front/karya/img/dago setelah hujan.jpg') }}" alt="" class="img-fluid"></a>
-                  <div class="post-meta"> <span>5 Juli 2022</span></div>
-                  <h2 class="mb-2"><a href="">Dago Setelah Hujan</a></h2>
-                  <span class="author mb-3 d-block">Skyshpire</span>
-                  <div class="icon-container">
-                    <div class="icon-item">
-                        <i class="bi bi-heart"></i>
-                        <p>2.3K</p>
-                    </div>
-                    <div class="icon-item">
-                        <i class="bi bi-eye"></i>
-                        <p>2.3K</p>
-                    </div>
-                    <div class="icon-item">
-                        <i class="bi bi-chat"></i>
-                        <p>2.3K</p>
-                    </div>
-                  </div>
-                  <p class="mb-4 d-block">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="post-entry-1">
-              <a href="{{ route('detail_karya') }}"><img src="{{ asset('dist_front/karya/img/galaksi.jpg') }}" alt="" class="img-fluid"></a>
-              <div class="post-meta"><span class="mx-1"></span> <span>5 Juli 2022</span></div>
-              <h2><a href="">Galaksi</a></h2>
-              <span class="author mb-3 d-block">Poppy Pertiwi</span>
-              <div class="icon-container">
-                <div class="icon-item">
-                    <i class="bi bi-heart"></i>
-                    <p>2.3K</p>
-                </div>
-                <div class="icon-item">
-                    <i class="bi bi-eye"></i>
-                    <p>2.3K</p>
-                </div>
-                <div class="icon-item">
-                    <i class="bi bi-chat"></i>
-                    <p>2.3K</p>
-                </div>
-              </div>
-            </div>
-            <div class="post-entry-1">
-              <a href="{{ route('detail_karya') }}"><img src="{{ asset('dist_front/karya/img/Dunia-Sophie.jpg') }}" alt="" class="img-fluid"></a>
-              <div class="post-meta"> <span class="mx-1"></span> <span>17 Juli 2022</span></div>
-              <h2><a href="">Dunia Sophie</a></h2>
-              <span class="author mb-3 d-block">Jostein Gaarder</span>
-              <div class="icon-container">
-                <div class="icon-item">
-                    <i class="bi bi-heart"></i>
-                    <p>2.3K</p>
-                </div>
-                <div class="icon-item">
-                    <i class="bi bi-eye"></i>
-                    <p>2.3K</p>
-                </div>
-                <div class="icon-item">
-                    <i class="bi bi-chat"></i>
-                    <p>2.3K</p>
-                </div>
-              </div>
-            </div>
-            <div class="post-entry-1">
-              <a href=""><img src="{{ asset('dist_front/karya/img/filosofi teras.jpg') }}" alt="" class="img-fluid"></a>
-              <div class="post-meta"> <span class="mx-1"></span> <span>15 Maret 2022</span></div>
-              <h2><a href="{{ route('detail_karya') }}">Filosofi Teras</a></h2>
-              <span class="author mb-3 d-block">Henry Manampiring</span>
-              <div class="icon-container">
-                <div class="icon-item">
-                    <i class="bi bi-heart"></i>
-                    <p>2.3K</p>
-                </div>
-                <div class="icon-item">
-                    <i class="bi bi-eye"></i>
-                    <p>2.3K</p>
-                </div>
-                <div class="icon-item">
-                    <i class="bi bi-chat"></i>
-                    <p>2.3K</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Culture Category Section -->
 
   </main><!-- End #main -->
 

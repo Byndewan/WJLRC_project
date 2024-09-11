@@ -84,6 +84,30 @@ h6 {
   font-weight: 600;
 }
 
+.icon-container {
+  display: flex;
+  justify-content: flex-start; /* Untuk meratakan item secara horizontal di tengah */
+  align-items: flex-start; /* Untuk meratakan item secara vertikal di tengah */
+  margin-top: 5px;
+}
+
+.icon-item {
+  display: flex;
+  align-items: center;
+  margin-right: 12px; /* Memberikan jarak antar item */
+}
+
+.icon-item i {
+  font-size: 20px; /* Ukuran ikon */
+  margin-right: 5px; /* Jarak antara ikon dan teks */
+  color: #7b7a7a;
+}
+
+.icon-item p {
+  padding-top: 10px;
+  color: #7b7a7a;
+}
+
 /* Pulsating Play Button
 ------------------------------*/
 .pulsating-play-btn {
