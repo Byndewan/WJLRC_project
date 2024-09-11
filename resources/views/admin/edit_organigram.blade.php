@@ -75,19 +75,19 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Jabatan</label>
-                                    <select class="form-control" name="jabatan" aria-valuenow="{{ $row_data->jabatan }}">
-                                    <option>Pembina</option>
-                                    <option>Ketua</option>
-                                    <option>Wakil Ketua 1</option>
-                                    <option>Wakil Ketua 2</option>
-                                    <option>Bendahara 1</option>
-                                    <option>Bendahara 2</option>
-                                    <option>Sekretaris 1</option>
-                                    <option>Sekretaris 2</option>
-                                    <option>K. Area Literasi 1</option>
-                                    <option>K. Area Literasi 2</option>
-                                    <option>K. Mading 1</option>
-                                    <option>K. Mading 2</option>
+                                    <select class="form-control" name="jabatan">
+                                    <option value="{{ $row_data->jabatan }}" >Pembina</option>
+                                    <option value="{{ $row_data->jabatan }}" >Ketua</option>
+                                    <option value="{{ $row_data->jabatan }}" >Wakil Ketua 1</option>
+                                    <option value="{{ $row_data->jabatan }}" >Wakil Ketua 2</option>
+                                    <option value="{{ $row_data->jabatan }}" >Bendahara 1</option>
+                                    <option value="{{ $row_data->jabatan }}" >Bendahara 2</option>
+                                    <option value="{{ $row_data->jabatan }}" >Sekretaris 1</option>
+                                    <option value="{{ $row_data->jabatan }}" >Sekretaris 2</option>
+                                    <option value="{{ $row_data->jabatan }}" >K. Area Literasi 1</option>
+                                    <option value="{{ $row_data->jabatan }}" >K. Area Literasi 2</option>
+                                    <option value="{{ $row_data->jabatan }}" >K. Mading 1</option>
+                                    <option value="{{ $row_data->jabatan }}" >K. Mading 2</option>
                                     </select>
                                 </div>
                                 <div class="card-footer text-right">

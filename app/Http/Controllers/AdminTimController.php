@@ -9,7 +9,6 @@ class AdminTimController extends Controller
 {
     public function team($id)
     {
-        // $tim_data = Tim::where('id','asc')->first();
         $tim_data = Tim::where('id',$id)->first();
         return view('admin.tim', compact('tim_data'));
     }

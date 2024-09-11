@@ -26,25 +26,25 @@ use App\Http\Controllers\Front\ContactController;
 
 
 // Front End
-Route::get('/', [HomeController::class, 'index'])->name('home')->middleware('user:web');
-Route::get('/pengertian', [PageController::class, 'index'])->name('pengertian')->middleware('user:web');
-Route::get('/organigram', [PageController::class, 'organigram'])->name('organigram')->middleware('user:web');
-Route::get('/divisi', [PageController::class, 'divisi'])->name('divisi')->middleware('user:web');
-Route::get('/program-online', [PageController::class, 'program_online'])->name('program_online')->middleware('user:web');
-Route::get('/program-offline', [PageController::class, 'program_offline'])->name('program_offline')->middleware('user:web');
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/pengertian', [PageController::class, 'index'])->name('pengertian');
+Route::get('/organigram', [PageController::class, 'organigram'])->name('organigram');
+Route::get('/divisi', [PageController::class, 'divisi'])->name('divisi');
+Route::get('/program-online', [PageController::class, 'program_online'])->name('program_online');
+Route::get('/program-offline', [PageController::class, 'program_offline'])->name('program_offline');
 Route::get('/karya', [HomeController::class, 'karya'])->name('karya')->middleware('user:web');
-Route::get('/#contact', [ContactController::class, 'index'])->name('#contact')->middleware('user:web');
-Route::post('/#contact/send-email', [ContactController::class, 'send_email'])->name('contact_send_email')->middleware('user:web');
-Route::get('/#team-2', [HomeController::class, 'team'])->name('#team-2')->middleware('user:web');
+Route::get('/#contact', [ContactController::class, 'index'])->name('#contact');
+Route::post('/#contact/send-email', [ContactController::class, 'send_email'])->name('contact_send_email');
+Route::get('/#team-2', [HomeController::class, 'team'])->name('#team-2');
 
 
 // Front End : Program Online
-Route::get('/program-online/resensi', [PageController::class, 'resensi'])->name('resensi')->middleware('user:web');
-Route::get('/program-online/konten', [PageController::class, 'konten'])->name('konten')->middleware('user:web');
-Route::get('/program-online/liputan', [PageController::class, 'liputan'])->name('liputan')->middleware('user:web');
+Route::get('/program-online/resensi', [PageController::class, 'resensi'])->name('resensi');
+Route::get('/program-online/konten', [PageController::class, 'konten'])->name('konten');
+Route::get('/program-online/liputan', [PageController::class, 'liputan'])->name('liputan');
 
 // Front End : Program Offline
-Route::get('/program-offline/mading', [PageController::class, 'mading'])->name('mading')->middleware('user:web');
+Route::get('/program-offline/mading', [PageController::class, 'mading'])->name('mading');
 
 // Registration
 Route::get('/user/registration', [RegistrationController::class, 'registration'])->name('registration');
@@ -64,10 +64,10 @@ Route::post('/user/reset-password-submit', [UserLoginController::class, 'reset_p
 // detail halaman
 
 Route::get('/karya/detail-karya', [HomeController::class, 'detail_karya'])->name('detail_karya')->middleware('user:web');
-Route::get('/program-online/konten/detail-konten', [PageController::class, 'detail_konten'])->name('detail_konten')->middleware('user:web');
-Route::get('/program-offline/liputan/detail-liputan', [PageController::class, 'detail_liputan'])->name('detail_liputan')->middleware('user:web');
-Route::get('/program-offline/mading/detail-mading', [PageController::class, 'detail_mading'])->name('detail_mading')->middleware('user:web');
-Route::get('/program-online/resensi/detail-resensi', [PageController::class, 'detail_resensi'])->name('resensi_detail')->middleware('user:web');
+Route::get('/program-online/konten/detail-konten', [PageController::class, 'detail_konten'])->name('detail_konten');
+Route::get('/program-offline/liputan/detail-liputan', [PageController::class, 'detail_liputan'])->name('detail_liputan');
+Route::get('/program-offline/mading/detail-mading', [PageController::class, 'detail_mading'])->name('detail_mading');
+Route::get('/program-online/resensi/detail-resensi', [PageController::class, 'detail_resensi'])->name('resensi_detail');
 
 /*Admin*/
 Route::get('/admin/home', [AdminHomeController::class, 'index'])->name('admin_home')->middleware('admin:admin');
@@ -76,13 +76,13 @@ Route::post('/admin/login-submit', [AdminLoginController::class, 'login_submit']
 Route::get('/admin/forgot-password', [AdminLoginController::class, 'forgot_password'])->name('admin_forgot_password');
 Route::get('/admin/reset-password', [AdminLoginController::class, 'reset_password'])->name('admin_reset_password');
 
-Route::get('/admin/kontak', [AdminKontakController::class, 'index'])->name('admin_kontak')->middleware('admin:admin');
-
-
 /* Admin Section */
 Route::get('/admin/dashboard', [AdminHomeController::class, 'index'])->name('admin_home')->middleware('admin:admin');
 Route::get('/admin/tambah/admin', [AdminHomeController::class, 'tambah'])->name('admin_tambah_admin')->middleware('admin:admin');
 Route::post('/admin/tambah/admin/submit', [AdminHomeController::class, 'store'])->name('admin_tambah_admin_submit');
+Route::get('/admin/area/team/{id}', [AdminTimController::class, 'team'])->name('area_tim')->middleware('admin:admin');
+Route::post('/admin/team-submit/{id}', [AdminTimController::class, 'store'])->name('admin_area_tim');
+Route::get('/admin/kontak', [AdminKontakController::class, 'index'])->name('admin_kontak')->middleware('admin:admin');
 
 /* Navbar */
 Route::get('/admin/profile', [AdminProfileController::class, 'index'])->name('admin_profile')->middleware('admin:admin');
@@ -96,10 +96,6 @@ Route::get('/admin/forgot-password', [AdminLoginController::class, 'forgot_passw
 Route::post('/admin/forgot-password-submit', [AdminLoginController::class, 'forgot_password_submit'])->name('admin_forgot_password_submit');
 Route::get('/admin/reset-password/{email}', [AdminLoginController::class, 'reset_password'])->name('admin_reset_password')->middleware('admin:admin');
 Route::post('/admin/reset-password-submit', [AdminLoginController::class, 'reset_password_submit'])->name('admin_reset_password_submit');
-
-// Bagian TEAM
-Route::get('/admin/area/team/{id}', [AdminTimController::class, 'team'])->name('area_tim')->middleware('admin:admin');
-Route::post('/admin/team-submit/{id}', [AdminTimController::class, 'store'])->name('admin_area_tim');
 
 /* CRUD Bagian Karya */
 Route::get('/admin/daftar-karya', [AdminKaryaController::class, 'daftar_karya'])->name('daftar_karya')->middleware('admin:admin');

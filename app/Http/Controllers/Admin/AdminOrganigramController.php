@@ -42,6 +42,8 @@ class AdminOrganigramController extends Controller
         $obj->icon_url1 = $request->icon_url1;
         $obj->icon2 = $request->icon2;
         $obj->icon_url2 = $request->icon_url2;
+        $obj->icon3 = $request->icon3;
+        $obj->icon_url3 = $request->icon_url3;
         $obj->jabatan = $request->jabatan;
         $obj->save();
 
@@ -87,6 +89,8 @@ class AdminOrganigramController extends Controller
         $obj->icon_url1 = $request->icon_url1;
         $obj->icon2 = $request->icon2;
         $obj->icon_url2 = $request->icon_url2;
+        $obj->icon3 = $request->icon3;
+        $obj->icon_url3 = $request->icon_url3;
         $obj->jabatan = $request->jabatan;
         $obj->update();
 
