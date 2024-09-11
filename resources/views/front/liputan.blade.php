@@ -48,18 +48,7 @@
     <section id="posts" class="posts">
       <div class="container" data-aos="fade-up">
         <div class="row g-5">
-          <div class="col-lg-4">
-            <div class="post-entry-1 lg">
-              <a href="{{ route('detail_liputan') }}"><img src="{{ asset('dist_front/liputan/img/maulid_nabi.jpeg') }}" alt="" class="img-fluid"></a>
-              <div class="post-meta"><span class="mx-1"></span> <span>5 Juli 2023</span></div>
-              <h2><a href="">Acara Maulid Nabi tahun 2023</a></h2>
-              <span class="author mb-3 d-block">Azlia Nisrina Afifah</span>
-              <p class="mb-4 d-block">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus exercitationem? Nihil tempore odit ab minus eveniet praesentium, similique blanditiis molestiae ut saepe perspiciatis officia nemo, eos quae cumque. Accusamus fugiat architecto rerum animi atque eveniet, quo, praesentium dignissimos</p>
-            </div>
-
-          </div>
-
-          <div class="col-lg-8">
+          <div class="col-lg-12">
             <div class="row g-5">
               <div class="col-lg-4 border-start custom-border">
                 <div class="post-entry-1">
