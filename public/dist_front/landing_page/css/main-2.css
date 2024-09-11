@@ -202,7 +202,7 @@ h6 {
 
 /* PHP Email Form Messages
 ------------------------------*/
-.php-email-form .error-message {
+/* .php-email-form .text-danger {
   display: none;
   background: #df1529;
   color: #ffffff;
@@ -212,7 +212,7 @@ h6 {
   font-weight: 600;
 }
 
-.php-email-form .sent-message {
+.php-email-form .text-success {
   display: none;
   color: #ffffff;
   background: #059652;
@@ -240,9 +240,9 @@ h6 {
   border: 3px solid var(--accent-color);
   border-top-color: var(--surface-color);
   animation: php-email-form-loading 1s linear infinite;
-}
+} */
 
-@keyframes php-email-form-loading {
+/* @keyframes php-email-form-loading {
   0% {
     transform: rotate(0deg);
   }
@@ -250,7 +250,7 @@ h6 {
   100% {
     transform: rotate(360deg);
   }
-}
+} */
 
 /*--------------------------------------------------------------
 # Global Header

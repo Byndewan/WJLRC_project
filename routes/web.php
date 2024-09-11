@@ -34,7 +34,9 @@ Route::get('/program-online', [PageController::class, 'program_online'])->name('
 Route::get('/program-offline', [PageController::class, 'program_offline'])->name('program_offline');
 Route::get('/karya', [HomeController::class, 'karya'])->name('karya')->middleware('user:web');
 Route::get('/#contact', [ContactController::class, 'index'])->name('#contact');
+
 Route::post('/#contact/send-email', [ContactController::class, 'send_email'])->name('contact_send_email');
+Route::post('/contact/send-email', [ContactController::class, 'send_email'])->name('contact_send_email');
 Route::get('/#team-2', [HomeController::class, 'team'])->name('#team-2');
 
 
@@ -63,18 +65,15 @@ Route::post('/user/reset-password-submit', [UserLoginController::class, 'reset_p
 
 // detail halaman
 
-Route::get('/karya/detail-karya', [HomeController::class, 'detail_karya'])->name('detail_karya')->middleware('user:web');
-<<<<<<< HEAD
+Route::get('/karya/detail-karya', [HomeController::class, 'detail_karya'])->name('detail_karya')->middleware('user:we
 Route::get('/program-online/konten/detail-konten', [PageController::class, 'detail_konten'])->name('detail_konten');
 Route::get('/program-offline/liputan/detail-liputan', [PageController::class, 'detail_liputan'])->name('detail_liputan');
 Route::get('/program-offline/mading/detail-mading', [PageController::class, 'detail_mading'])->name('detail_mading');
 Route::get('/program-online/resensi/detail-resensi', [PageController::class, 'detail_resensi'])->name('resensi_detail');
-=======
 Route::get('/program-online/konten/detail-konten', [PageController::class, 'detail_konten'])->name('detail_konten')->middleware('user:web');
 Route::get('/program-offline/liputan/detail-liputan', [PageController::class, 'detail_liputan'])->name('detail_liputan')->middleware('user:web');
-Route::get('/program-offline/mading/detail-mading', [PageController::class, 'mading_detail'])->name('detail_mading')->middleware('user:web');
+Route::get('/program-offline/mading/detail-mading', [PageController::class, 'detail_mading'])->name('mading_detail')->middleware('user:web');
 Route::get('/program-online/resensi/detail-resensi', [PageController::class, 'detail_resensi'])->name('resensi_detail')->middleware('user:web');
->>>>>>> f934428b65fc8c78b98e0d8b5a116d24e7287c6e
 
 /*Admin*/
 Route::get('/admin/home', [AdminHomeController::class, 'index'])->name('admin_home')->middleware('admin:admin');
