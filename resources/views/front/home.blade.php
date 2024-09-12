@@ -299,7 +299,7 @@
               <div class="text-danger">{{ session()->get('error') }}</div>
             @endif
 
-            <form action="{{ route('contact_send_email') }}" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form action="{{ route('contact_send_email') }}" method="POST" data-aos="fade-up" data-aos-delay="200">
               @csrf
               <div class="row gy-4">
 
@@ -320,7 +320,7 @@
                 </div>
 
                 <div class="col-md-12 text-center">
-                  <button type="submit">Kirim Pesan</button>
+                  <button type="submit" class="btn btn-primary">Kirim Pesan</button>
                 </div>
 
               </div>

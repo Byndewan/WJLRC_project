@@ -53,6 +53,7 @@
   scroll-behavior: smooth;
 }
 
+
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
@@ -60,6 +61,14 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
+}
+
+.btn-primary {
+  background-color: #ff5757;
+}
+
+.btn-primary:hover {
+  background-color: #ff6f6f;
 }
 
 a {
