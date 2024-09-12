@@ -209,141 +209,6 @@
           </div><!-- End Team Member -->
           @endforeach
 
-          {{-- <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <a href="">
-              <div class="team-member d-flex align-items-start">
-                <div class="pic"><img src="{{ asset('dist_front/landing_page/img/images.png') }}" class="img-fluid" alt=""></div>
-                <div class="member-info">
-                  <h4>Bulan</h4>
-                  <span style="color: #444444;">Tere Liye</span>
-                  <p style="color: #444444;">Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
-                  <div class="icon-container">
-                    <div class="icon-item">
-                        <i class="bi bi-heart"></i>
-                        <p>2.3K</p>
-                    </div>
-                    <div class="icon-item">
-                        <i class="bi bi-eye"></i>
-                        <p>2.3K</p>
-                    </div>
-                    <div class="icon-item">
-                        <i class="bi bi-chat"></i>
-                        <p>2.3K</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <a href="">
-              <div class="team-member d-flex align-items-start">
-                <div class="pic"><img src="{{ asset('dist_front/landing_page/img/images.png') }}" class="img-fluid" alt=""></div>
-                <div class="member-info">
-                  <h4>Matahari</h4>
-                  <span style="color: #444444;">Tere Liye</span>
-                  <p style="color: #444444;">Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
-                  <div class="icon-container">
-                    <div class="icon-item">
-                        <i class="bi bi-heart"></i>
-                        <p>2.3K</p>
-                    </div>
-                    <div class="icon-item">
-                        <i class="bi bi-eye"></i>
-                        <p>2.3K</p>
-                    </div>
-                    <div class="icon-item">
-                        <i class="bi bi-chat"></i>
-                        <p>2.3K</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <a href="">
-              <div class="team-member d-flex align-items-start">
-                <div class="pic"><img src="{{ asset('dist_front/landing_page/img/images.png') }}" class="img-fluid" alt=""></div>
-                <div class="member-info">
-                  <h4>Komet</h4>
-                  <span style="color: #444444;">Tere Liye</span>
-                  <p style="color: #444444;">Aut maiores voluptates amet et quis praesentium qui senda para</p>
-                  <div class="icon-container">
-                    <div class="icon-item">
-                        <i class="bi bi-heart"></i>
-                        <p>2.3K</p>
-                    </div>
-                    <div class="icon-item">
-                        <i class="bi bi-eye"></i>
-                        <p>2.3K</p>
-                    </div>
-                    <div class="icon-item">
-                        <i class="bi bi-chat"></i>
-                        <p>2.3K</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <a href="">
-              <div class="team-member d-flex align-items-start">
-                <div class="pic"><img src="{{ asset('dist_front/landing_page/img/images.png') }}" class="img-fluid" alt=""></div>
-                <div class="member-info">
-                  <h4>Putih</h4>
-                  <span style="color: #444444;">Tere Liye</span>
-                  <p style="color: #444444;">Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
-                  <div class="icon-container">
-                    <div class="icon-item">
-                        <i class="bi bi-heart"></i>
-                        <p>2.3K</p>
-                    </div>
-                    <div class="icon-item">
-                        <i class="bi bi-eye"></i>
-                        <p>2.3K</p>
-                    </div>
-                    <div class="icon-item">
-                        <i class="bi bi-chat"></i>
-                        <p>2.3K</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <a href="">
-              <div class="team-member d-flex align-items-start">
-                <div class="pic"><img src="{{ asset('dist_front/landing_page/img/images.png') }}" class="img-fluid" alt=""></div>
-                <div class="member-info">
-                  <h4>Hitam</h4>
-                  <span style="color: #444444;">Tere Liye</span>
-                  <p style="color: #444444;">Dolorum tempora officiis odit laborum officiis et et accusamus</p>
-                  <div class="icon-container">
-                    <div class="icon-item">
-                        <i class="bi bi-heart"></i>
-                        <p>2.3K</p>
-                    </div>
-                    <div class="icon-item">
-                        <i class="bi bi-eye"></i>
-                        <p>2.3K</p>
-                    </div>
-                    <div class="icon-item">
-                        <i class="bi bi-chat"></i>
-                        <p>2.3K</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div><!-- End Team Member --> --}}
-
           <a href="{{ route('karya') }}" style="display: flex; justify-content: center; text-decoration: underline; margin-top: 50px;">Lihat yang lainnya &#8594; </a>
 
         </div>
@@ -355,82 +220,40 @@
     {{-- Team Section --}}
 
     <!-- Team Section -->
-    @if ($tim_data->status == 'Show')
+    {{-- $tim_show->status == 'Show' --}}
     <section id="team-2" class="team-2 section light-background" style="justify-content: center;">
-
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>TIM</h2>
         <p> WEBSITE DEVELOPER</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4" style="display: flex; justify-content: center;">
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="team-2-member">
-              <div class="member-img-2">
-                <img src="{{ asset('dist_front/landing_page/img/abyan ganteng.jpg') }}" class="img-fluid" alt="">
-                <div class="social-2">
-                  <a href="http://wa.me/+6281289115910"><i class="bi bi-whatsapp"></i></a>
-                  <a href="https://www.facebook.com/profile.php?id=100054510021298"><i class="bi bi-facebook"></i></a>
-                  <a href="https://www.instagram.com/byndewan_?igsh=bDNuaXhvZGI4enlq"><i class="bi bi-instagram"></i></a>
-                  <a href="https://https://www.tiktok.com/@yannskuyy12?_t=8oG5R7uZXeL&_r=1"><i class="bi bi-tiktok"></i></a>
-                </div>
-              </div>
-              <div class="member-info-2">
-                <h4>Muhammad Abyan</h4>
-                <span>WEB DEVELOPER</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="team-2-member">
-              <div class="member-img-2">
-                <img src="{{ asset('dist_front/landing_page/img/bu ketu.jpg') }}" class="img-fluid" alt="">
-                <div class="social-2">
-
-                  <a href="{{ asset('http://wa.me/+628814580036') }}"><i class="bi bi-whatsapp"></i></a>
-                  <a href="{{ asset('https://www.instagram.com/azlia_nisrina/?next=%2F') }}"><i class="bi bi-instagram"></i></a>
-                  <a href="{{ asset('https://www.tiktok.com/@mydump_ana?lang=en') }}"><i class="bi bi-tiktok"></i></a>
-                </div>
-              </div>
-              <div class="member-info-2">
-                <h4>Azlia Nisrina Afifah</h4>
-                <span>WEB DEVELOPER</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-            <div class="team-2-member">
-              <div class="member-img-2">
-                <img src="{{ asset('dist_front/landing_page/img/pasya.jpg') }}" class="img-fluid" alt="">
-                <div class="social-2">
-                  <a href="{{ asset('https://x.com/Ahmad_pasya46?t=aJLHGktIpDnkZaxyw5YBqA&s=09') }}"><i class="bi bi-twitter-x"></i></a>
-                  <a href="{{ asset('https://www.facebook.com/profile.php?id=100075874456994&mibextid=ZbWKwL') }}"><i class="bi bi-facebook"></i></a>
-                  <a href="{{ asset('https://www.instagram.com/pasya4996?igsh=MWNoM2Jwdms0MWJmdg==') }}"><i class="bi bi-instagram"></i></a>
-                  <a href="{{ asset('https://wa.me/+628812208502') }}"><i class="bi bi-whatsapp"></i></a>
-                 <a href="{{ asset('https://www.tiktok.com/@babyzee_20060422?_t=8oFkQBV06SW&_r=1') }}"><i class="bi bi-tiktok"></i></a>
-                </div>
-              </div>
-              <div class="member-info-2">
-                <h4>Ahmad Pasya</h4>
-                <span>WEB DEVELOPER</span>
-              </div>
-            </div>
-          </div><!-- End Team Member -->
-
-        </div>
-
       </div>
-
-    </section><!-- /Team Section -->
-    @endif
+      <!-- End Section Title -->
+      <div class="container">
+        <div class="row gy-4" style="display: flex; justify-content: center;">
+            @foreach ($tim_data as $item)
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="team-2-member">
+              <div class="member-img-2">
+                <img src="{{ asset('uploads'.$item->photo) }}" class="img-fluid" alt="">
+                <div class="social-2">
+                  <a href="{{ $item->icon1_url }}"><i class="{{ $item->icon1 }}"></i></a>
+                  <a href="{{ $item->icon2_url }}"><i class="{{ $item->icon2 }}"></i></a>
+                  <a href="{{ $item->icon3_url }}"><i class="{{ $item->icon3 }}"></i></a>
+                  <a href="{{ $item->icon4_url }}"><i class="{{ $item->icon4 }}"></i></a>
+                  <a href="{{ $item->icon5_url }}"><i class="{{ $item->icon5 }}"></i></a>
+                </div>
+              </div>
+              <div class="member-info-2">
+                <h4>{{ $item->nama }}</h4>
+                <span>{{ $item->profesi }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+          <!-- End Team Member -->
+    </section>
+    <!-- /Team Section -->
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
