@@ -22,10 +22,10 @@ return new class extends Migration
             $table->text('icon2_url');
             $table->text('icon3');
             $table->text('icon3_url');
-            $table->text('icon4')->nullable();
-            $table->text('icon4_url')->nullable();
-            $table->text('icon5')->nullable();
-            $table->text('icon5_url')->nullable();
+            $table->text('icon4');
+            $table->text('icon4_url');
+            $table->text('icon5');
+            $table->text('icon5_url');
             $table->text('status');
             $table->timestamps();
         });

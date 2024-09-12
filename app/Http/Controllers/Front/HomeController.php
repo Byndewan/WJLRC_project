@@ -12,10 +12,10 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $tim_show = Tim::where('id','1')->first();
+        $page_data = Tim::where('id','1')->first();
         $tim_data = Tim::orderBy('id','asc')->get();
         $karya_data = Karya::orderBy('id','asc')->get();
-        return view('front.home',compact('karya_data','tim_show','tim_data'));
+        return view('front.home',compact('karya_data','page_data','tim_data'));
     }
 
     public function karya()
