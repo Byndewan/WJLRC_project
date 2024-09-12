@@ -22,14 +22,6 @@
   <!-- Main CSS File -->
   <link href="{{ asset('dist_front/landing_page/css/main-2.css') }}" rel="stylesheet">
   <link href="{{ asset('dist_front/landing_page/css/main.css') }}" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: OnePage
-  * Template URL: https://bootstrapmade.com/onepage-multipurpose-bootstrap-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class= "index-page">
@@ -220,8 +212,7 @@
     {{-- Team Section --}}
 
     <!-- Team Section -->
-    {{-- $tim_show->status == 'Show' --}}
-    <section id="team-2" class="team-2 section light-background" style="justify-content: center;">
+    {{-- <section id="team-2" class="team-2 section light-background" style="justify-content: center;">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>TIM</h2>
@@ -249,10 +240,8 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
           <!-- End Team Member -->
-    </section>
+    </section> --}}
     <!-- /Team Section -->
 
     <!-- Contact Section -->
