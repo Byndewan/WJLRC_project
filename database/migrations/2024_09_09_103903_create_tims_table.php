@@ -13,6 +13,19 @@ return new class extends Migration
     {
         Schema::create('tims', function (Blueprint $table) {
             $table->id();
+            $table->text('photo');
+            $table->text('nama');
+            $table->text('profesi');
+            $table->text('icon1');
+            $table->text('icon1_url');
+            $table->text('icon2');
+            $table->text('icon2_url');
+            $table->text('icon3');
+            $table->text('icon3_url');
+            $table->text('icon4')->nullable();
+            $table->text('icon4_url')->nullable();
+            $table->text('icon5')->nullable();
+            $table->text('icon5_url')->nullable();
             $table->text('status');
             $table->timestamps();
         });

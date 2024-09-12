@@ -83,8 +83,6 @@ Route::get('/admin/reset-password', [AdminLoginController::class, 'reset_passwor
 Route::get('/admin/dashboard', [AdminHomeController::class, 'index'])->name('admin_home')->middleware('admin:admin');
 Route::get('/admin/tambah/admin', [AdminHomeController::class, 'tambah'])->name('admin_tambah_admin')->middleware('admin:admin');
 Route::post('/admin/tambah/admin/submit', [AdminHomeController::class, 'store'])->name('admin_tambah_admin_submit');
-Route::get('/admin/area/team/{id}', [AdminTimController::class, 'team'])->name('area_tim')->middleware('admin:admin');
-Route::post('/admin/team-submit/{id}', [AdminTimController::class, 'store'])->name('admin_area_tim');
 Route::get('/admin/kontak', [AdminKontakController::class, 'index'])->name('admin_kontak')->middleware('admin:admin');
 
 /* Navbar */
@@ -155,3 +153,11 @@ Route::post('/admin/tambah-peminjaman-submit', [AdminTamanBacaController::class,
 Route::get('/admin/edit/peminjaman/{id}', [AdminTamanBacaController::class, 'edit_data'])->name('admin_edit_peminjaman')->middleware('admin:admin');
 Route::post('/admin/edit-peminjaman-submit/{id}', [AdminTamanBacaController::class, 'update_data'])->name('admin_edit_peminjaman_submit');
 Route::get('/admin/peminjaman/delete/{id}', [AdminTamanBacaController::class, 'delete_data'])->name('admin_hapus_peminjaman')->middleware('admin:admin');
+
+/* CRUD Bagian Tim */
+Route::get('/admin/daftar/tim', [AdminTimController::class, 'daftar_tim'])->name('admin_daftar_tim')->middleware('admin:admin');
+Route::get('/admin/tambah/tim', [AdminTimController::class, 'tambah'])->name('admin_tambah_tim')->middleware('admin:admin');
+Route::post('/admin/tambah-tim-submit', [AdminTimController::class, 'store'])->name('admin_tambah_tim_submit');
+Route::get('/admin/edit/tim/{id}', [AdminTimController::class, 'edit'])->name('admin_edit_tim')->middleware('admin:admin');
+Route::post('/admin/edit-tim-submit/{id}', [AdminTimController::class, 'update'])->name('admin_edit_tim_submit');
+Route::get('/admin/tim/delete/{id}', [AdminTimController::class, 'delete'])->name('admin_hapus_tim')->middleware('admin:admin');
