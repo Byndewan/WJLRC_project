@@ -40,18 +40,7 @@
     <section id="posts" class="posts">
       <div class="container" data-aos="fade-up">
         <div class="row g-5">
-          <div class="col-lg-4">
-            <div class="post-entry-1 lg">
-              <a href="{{ route('resensi_detail') }}"><img src="{{ asset('dist_front/resensi/img/komet.png') }}" alt="" class="img-fluid"></a>
-              <div class="post-meta"><span class="mx-1"></span> <span>5 Juli 2022</span></div>
-              <h2><a href="">Komet karya Tere Liye </a></h2>
-              <span class="author mb-3 d-block">Azlia Nisrina Afifah</span>
-              <p class="mb-4 d-block">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus exercitationem? Nihil tempore odit ab minus eveniet praesentium, similique blanditiis molestiae ut saepe perspiciatis officia nemo, eos quae cumque. Accusamus fugiat architecto rerum animi atque eveniet, quo, praesentium dignissimos</p>
-            </div>
-
-          </div>
-
-          <div class="col-lg-8">
+          <div class="col-lg-12">
             <div class="row g-5">
               <div class="col-lg-4 border-start custom-border">
                 <div class="post-entry-1">
@@ -119,71 +108,6 @@
         </div>
       </div>
     </section>
-
-    <!-- ======= Culture Category Section ======= -->
-    <section class="category-section">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row">
-          <div class="col-md-9">
-
-            <div class="d-lg-flex post-entry-2">
-              <a href="{{ route('resensi_detail') }}" class="me-4 thumbnail mb-4 mb-lg-0 d-inline-block">
-                <img src="{{ asset('dist_front/resensi/img/love scenario.jpg') }}" alt="" class="img-fluid img-fluid-2">
-              </a>
-              <div>
-                <div class="post-meta"> <span class="mx-1"></span> <span>5 Juli 2022</span></div>
-                <h3><a href="#">Love Scenario karya Cantika Zahra</a></h3>
-                <span class="author mb-3 d-block">Azlia Nisrina Afifah</span>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio placeat exercitationem magni voluptates dolore. Tenetur fugiat voluptates quas, nobis error deserunt aliquam temporibus sapiente, laudantium dolorum itaque libero eos deleniti?</p>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="post-entry-1 border-bottom">
-                  <a href="{{ route('resensi_detail') }}"><img src="{{ asset('dist_front/resensi/img/antares.jpg') }}" alt="" class="img-fluid"></a>
-                  <div class="post-meta"> <span>5 Juli 2022</span></div>
-                  <h2 class="mb-2"><a href="">Antares karya Rweinda</a></h2>
-                  <span class="author mb-3 d-block">Azlia Nisrina Afifah</span>
-                  <p class="mb-4 d-block">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus</p>
-                </div>
-              </div>
-              <div class="col-lg-8">
-                <div class="post-entry-1">
-                  <a href="{{ route('resensi_detail') }}"><img src="{{ asset('dist_front/resensi/img/dago setelah hujan.jpg') }}" alt="" class="img-fluid"></a>
-                  <div class="post-meta"> <span>5 Juli 2022</span></div>
-                  <h2 class="mb-2"><a href="">Dago Setelah Hujan karya Skyshpire</a></h2>
-                  <span class="author mb-3 d-block">Azlia Nisrina Afifah</span>
-                  <p class="mb-4 d-block">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero temporibus repudiandae, inventore pariatur numquam cumque possimus</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-3">
-            <div class="post-entry-1">
-              <a href="{{ route('resensi_detail') }}"><img src="{{ asset('dist_front/resensi/img/galaksi.jpg') }}" alt="" class="img-fluid"></a>
-              <div class="post-meta"><span class="mx-1"></span> <span>5 Juli 2022</span></div>
-              <h2><a href="#">Galaksi karya Poppy Pertiwi</a></h2>
-              <span class="author mb-3 d-block">Azlia Nisrina Afifah</span>
-            </div>
-            <div class="post-entry-1">
-              <a href="{{ route('resensi_detail') }}"><img src="{{ asset('dist_front/resensi/img/Dunia-Sophie.jpg') }}" alt="" class="img-fluid"></a>
-              <div class="post-meta"> <span class="mx-1"></span> <span>17 Juli 2022</span></div>
-              <h2><a href="#">Dunia Sophie karya Jostein Gaarder</a></h2>
-              <span class="author mb-3 d-block">Azlia Nisrina Afifah</span>
-            </div>
-            <div class="post-entry-1">
-              <a href="{{ route('resensi_detail') }}"><img src="{{ asset('dist_front/resensi/img/filosofi teras.jpg') }}" alt="" class="img-fluid"></a>
-              <div class="post-meta"> <span class="mx-1"></span> <span>15 Maret 2022</span></div>
-              <h2><a href="#">Filosofi Teras karya Henry Manampiring</a></h2>
-              <span class="author mb-3 d-block">Azlia Nisrina Afifah</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Culture Category Section -->
 
   </main><!-- End #main -->
 

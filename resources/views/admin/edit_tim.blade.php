@@ -1,11 +1,11 @@
 @extends('admin.layout.app')
 
-@section('title', 'Edit Organigram')
+@section('title', 'Edit Tim')
 
-@section('heading', 'Edit Organigram')
+@section('heading', 'Edit Tim')
 
 @section('rightside_button')
-    <a href="{{ route('daftar_organigram') }}" class="btn btn-primary"><i class="fas fa-plus"></i> Lihat Semua</a>
+    <a href="{{ route('admin_daftar_tim') }}" class="btn btn-primary"><i class="fas fa-plus"></i> Lihat Semua</a>
 @endsection
 
 @section('main_content')
@@ -14,7 +14,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <form action="{{ route('admin_edit_organigram_submit',$row_data->id) }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('admin_edit_tim_submit',$row_data->id) }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="col-md-12">
@@ -34,12 +34,16 @@
                                     <input type="text" class="form-control" name="nama" value="{{ $row_data->nama }}">
                                 </div>
                                 <div class="form-group">
+                                    <label>Profesi</label>
+                                    <input type="text" class="form-control" name="profesi" value="{{ $row_data->profesi }}">
+                                </div>
+                                <div class="form-group">
                                     <label>Icon 1</label>
                                     <input type="text" class="form-control" name="icon1" value="{{ $row_data->icon1 }}">
                                 </div>
                                 <div class="form-group">
                                     <label>Icon URL 1</label>
-                                    <input type="text" class="form-control" name="icon_url1" value="{{ $row_data->icon_url1 }}">
+                                    <input type="text" class="form-control" name="icon_url1" value="{{ $row_data->icon1_url }}">
                                 </div>
                                 <div class="form-group">
                                     <label>Icon 2</label>
@@ -47,7 +51,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Icon URL 2</label>
-                                    <input type="text" class="form-control" name="icon_url2" value="{{ $row_data->icon_url2 }}">
+                                    <input type="text" class="form-control" name="icon_url2" value="{{ $row_data->icon2_url }}">
                                 </div>
                                 <div class="form-group">
                                     <label>Icon 3</label>
@@ -55,7 +59,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Icon URL 3</label>
-                                    <input type="text" class="form-control" name="icon_url3" value="{{ $row_data->icon_url3 }}">
+                                    <input type="text" class="form-control" name="icon_url3" value="{{ $row_data->icon3_url }}">
                                 </div>
                                 <div class="form-group">
                                     <label>Icon 4</label>
@@ -63,7 +67,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Icon URL 4</label>
-                                    <input type="text" class="form-control" name="icon_url4" value="{{ $row_data->icon_url4 }}">
+                                    <input type="text" class="form-control" name="icon_url4" value="{{ $row_data->icon4_url }}">
                                 </div>
                                 <div class="form-group">
                                     <label>Icon 5</label>
@@ -71,23 +75,13 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Icon URL 5</label>
-                                    <input type="text" class="form-control" name="icon_url5" value="{{ $row_data->icon_url5 }}">
+                                    <input type="text" class="form-control" name="icon_url5" value="{{ $row_data->icon5_url }}">
                                 </div>
                                 <div class="form-group">
-                                    <label>Jabatan</label>
-                                    <select class="form-control" name="jabatan">
-                                    <option value="{{ $row_data->jabatan }}" >Pembina</option>
-                                    <option value="{{ $row_data->jabatan }}" >Ketua</option>
-                                    <option value="{{ $row_data->jabatan }}" >Wakil Ketua 1</option>
-                                    <option value="{{ $row_data->jabatan }}" >Wakil Ketua 2</option>
-                                    <option value="{{ $row_data->jabatan }}" >Bendahara 1</option>
-                                    <option value="{{ $row_data->jabatan }}" >Bendahara 2</option>
-                                    <option value="{{ $row_data->jabatan }}" >Sekretaris 1</option>
-                                    <option value="{{ $row_data->jabatan }}" >Sekretaris 2</option>
-                                    <option value="{{ $row_data->jabatan }}" >K. Area Literasi 1</option>
-                                    <option value="{{ $row_data->jabatan }}" >K. Area Literasi 2</option>
-                                    <option value="{{ $row_data->jabatan }}" >K. Mading 1</option>
-                                    <option value="{{ $row_data->jabatan }}" >K. Mading 2</option>
+                                    <label>Status</label>
+                                    <select class="form-control" name="status">
+                                    <option value="Show" @if($row_data->status == 'Show' ) selected @endif >Show</option>
+                                    <option value="Hide" @if($row_data->status == 'Hide' ) selected @endif >Hide</option>
                                     </select>
                                 </div>
                                 <div class="card-footer text-right">

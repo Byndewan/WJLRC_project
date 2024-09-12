@@ -15,8 +15,8 @@
                         <div class="form-group">
                             <label>Status</label>
                             <select class="form-control" name="status">
-                            <option value="Show" @if($tim_data->status == 'Show') selected @endif >Show</option>
-                            <option value="Hide" @if($tim_data->status == 'Hide') selected @endif >Hide</option>
+                            <option value="Show" @if($tim_data->status == 'Show') selected @endif > Show </option>
+                            <option value="Hide" @if($tim_data->status == 'Hide') selected @endif > Hide </option>
                             </select>
                         </div>
                         <div class="card-footer text-right">
