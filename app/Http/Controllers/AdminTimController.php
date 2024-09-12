@@ -47,10 +47,10 @@ class AdminTimController extends Controller
         $obj->icon2_url = $request->icon2_url;
         $obj->icon3 = $request->icon3;
         $obj->icon3_url = $request->icon3_url;
-        $obj->icon3 = $request->icon4;
-        $obj->icon3_url = $request->icon4_url;
-        $obj->icon3 = $request->icon5;
-        $obj->icon3_url = $request->icon5_url;
+        $obj->icon4 = $request->icon4;
+        $obj->icon4_url = $request->icon4_url;
+        $obj->icon5 = $request->icon5;
+        $obj->icon5_url = $request->icon5_url;
         $obj->status = $request->status;
         $obj->save();
 
@@ -91,10 +91,10 @@ class AdminTimController extends Controller
         $obj->icon2_url = $request->icon2_url;
         $obj->icon3 = $request->icon3;
         $obj->icon3_url = $request->icon3_url;
-        $obj->icon3 = $request->icon4;
-        $obj->icon3_url = $request->icon4_url;
-        $obj->icon3 = $request->icon5;
-        $obj->icon3_url = $request->icon5_url;
+        $obj->icon4 = $request->icon4;
+        $obj->icon4_url = $request->icon4_url;
+        $obj->icon5 = $request->icon5;
+        $obj->icon5_url = $request->icon5_url;
         $obj->status = $request->status;
         $obj->update();
 

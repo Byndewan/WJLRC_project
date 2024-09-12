@@ -212,7 +212,8 @@
     {{-- Team Section --}}
 
     <!-- Team Section -->
-    {{-- <section id="team-2" class="team-2 section light-background" style="justify-content: center;">
+    {{-- @if ($page_data->status == 'Show' ) --}}
+    <section id="team-2" class="team-2 section light-background" style="justify-content: center;">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>TIM</h2>
@@ -225,7 +226,7 @@
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
             <div class="team-2-member">
               <div class="member-img-2">
-                <img src="{{ asset('uploads'.$item->photo) }}" class="img-fluid" alt="">
+                <img src="{{ asset('uploads/'.$item->photo) }}" class="img-fluid" alt="">
                 <div class="social-2">
                   <a href="{{ $item->icon1_url }}"><i class="{{ $item->icon1 }}"></i></a>
                   <a href="{{ $item->icon2_url }}"><i class="{{ $item->icon2 }}"></i></a>
@@ -240,8 +241,13 @@
               </div>
             </div>
           </div>
+          @endforeach
+        </div>
+      </div>
           <!-- End Team Member -->
-    </section> --}}
+    </section>
+    {{-- @endif --}}
+
     <!-- /Team Section -->
 
     <!-- Contact Section -->
@@ -343,3 +349,4 @@
 </body>
 
 </html>
+
