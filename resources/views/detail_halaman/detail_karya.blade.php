@@ -20,10 +20,10 @@
         <p>2.3K</p>
     </div>
 </div>   
-<figure class="my-4">
-<img src="assets/img/th.jpg" alt="" class="img-fluid">
-<figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, odit? </figcaption>
-</figure>
+    <figure class="my-4">
+        <img src="assets/img/th.jpg" alt="" class="img-fluid">
+        <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, odit? </figcaption>
+    </figure>
 <p>Sunt reprehenderit, hic vel optio odit est dolore, distinctio iure itaque enim pariatur ducimus. Rerum soluta, perspiciatis voluptatum cupiditate praesentium repellendus quas expedita exercitationem tempora aliquam quaerat in eligendi adipisci harum non omnis reprehenderit quidem beatae modi. Ea fugiat enim libero, ipsam dicta explicabo nihil, tempore, nulla repellendus eos necessitatibus eligendi corporis cum? Eaque harum, eligendi itaque numquam aliquam soluta.</p>
 <p>Explicabo perspiciatis, laborum provident voluptates illum in nulla consectetur atque quaerat excepturi quisquam, veniam velit ex pariatur quos consequuntur? Excepturi reiciendis perferendis, cupiditate dolorem eos illum amet. Beatae voluptates nemo esse ratione voluptate, nesciunt fugit magnam veritatis voluptas dignissimos doloribus maiores? Aliquam, dolores natus exercitationem corrupti blanditiis, consequuntur nihil nobis sed voluptatibus maiores sunt, illo provident aliquid laborum. Vitae, ut.</p>
 <p>Reprehenderit aut sed doloribus blanditiis, aspernatur magni? In molestias rem, similique ut esse repudiandae quod recusandae dolores neque earum omnis at, suscipit fuga? Minima qui veniam deserunt quisquam error amet at ratione nesciunt porro quis placeat repudiandae voluptatibus officiis fuga necessitatibus, expedita officia adipisci eaque labore accusamus? Nesciunt repellat illo exercitationem facilis similique quaerat, quis sequi? Praesentium nulla ipsam dolor.</p>
@@ -46,11 +46,11 @@
 
 <!-- Popular -->
 <div class="tab-pane fade show active" id="pills-popular" role="tabpanel" aria-labelledby="pills-popular-tab">
-<div class="post-entry-1 border-bottom">
-<div class="post-meta"><span class="date">R.A Kartini<span class="mx-1">&bullet;</span> <span>21 Agustus 2024 </span></div>
-<h2 class="mb-2"><a href="#">the power of now</a></h2>
-<span class="author mb-3 d-block">Eckhart Tolle</span>
-</div>
+    <div class="post-entry-1 border-bottom">
+        <div class="post-meta"><span class="date">R.A Kartini<span class="mx-1">&bullet;</span> <span>21 Agustus 2024 </span></div>
+        <h2 class="mb-2"><a href="#">the power of now</a></h2>
+        <span class="author mb-3 d-block">Eckhart Tolle</span>
+    </div>
 
 <div class="post-entry-1 border-bottom">
 <h2 class="mb-2"><a href="#">The 7 Habits of Highly Effective
@@ -81,78 +81,6 @@ Mengubah Hidup</a></h2>
 <span class="author mb-3 d-block">Ahmad Pasya</span>
 </div>
 </div> <!-- End Popular -->
-
-<!-- Trending -->
-<div class="tab-pane fade" id="pills-trending" role="tabpanel" aria-labelledby="pills-trending-tab">
-<div class="post-entry-1 border-bottom">
-<h2 class="mb-2"><a href="#">17 Pictures of Medium Length Hair in Layers That Will Inspire Your New Haircut</a></h2>
-<span class="author mb-3 d-block">Jenny Wilson</span>
-</div>
-<div class="post-entry-1 border-bottom">
-<h2 class="mb-2"><a href="#">9 Half-up/half-down Hairstyles for Long and Medium Hair</a></h2>
-<span class="author mb-3 d-block">Jenny Wilson</span>
-</div>
-
-<div class="post-entry-1 border-bottom">
-<h2 class="mb-2"><a href="#">Life Insurance And Pregnancy: A Working Mom’s Guide</a></h2>
-<span class="author mb-3 d-block">Jenny Wilson</span>
-</div>
-
-<div class="post-entry-1 border-bottom">
-<h2 class="mb-2"><a href="#">How to Avoid Distraction and Stay Focused During Video Calls?</a></h2>
-<span class="author mb-3 d-block">Jenny Wilson</span>
-</div>
-<div class="post-entry-1 border-bottom">
-<h2 class="mb-2"><a href="#">The Best Homemade Masks for Face (keep the Pimples Away)</a></h2>
-<span class="author mb-3 d-block">Jenny Wilson</span>
-</div>
-
-<div class="post-entry-1 border-bottom">
-<h2 class="mb-2"><a href="#">10 Life-Changing Hacks Every Working Mom Should Know</a></h2>
-<span class="author mb-3 d-block">Jenny Wilson</span>
-</div>
-</div> <!-- End Trending -->
-
-<!-- Latest -->
-<div class="tab-pane fade" id="pills-latest" role="tabpanel" aria-labelledby="pills-latest-tab">
-<div class="post-entry-1 border-bottom">
-<h2 class="mb-2"><a href="#">Life Insurance And Pregnancy: A Working Mom’s Guide</a></h2>
-<span class="author mb-3 d-block">Jenny Wilson</span>
-</div>
-
-<div class="post-entry-1 border-bottom">
-<h2 class="mb-2"><a href="#">The Best Homemade Masks for Face (keep the Pimples Away)</a></h2>
-<span class="author mb-3 d-block">Jenny Wilson</span>
-</div>
-
-<div class="post-entry-1 border-bottom">
-<h2 class="mb-2"><a href="#">10 Life-Changing Hacks Every Working Mom Should Know</a></h2>
-<span class="author mb-3 d-block">Jenny Wilson</span>
-</div>
-
-<div class="post-entry-1 border-bottom">
-<h2 class="mb-2"><a href="#">How to Avoid Distraction and Stay Focused During Video Calls?</a></h2>
-<span class="author mb-3 d-block">Jenny Wilson</span>
-</div>
-
-<div class="post-entry-1 border-bottom">
-<!-- <div class="post-meta">
-<span class="date">5 Juli 2024</span>
-</div> -->
-<h2 class="mb-2"><a href="#">17 Pictures of Medium Length Hair in Layers That Will Inspire Your New Haircut</a></h2>
-<span class="author mb-3 d-block">Jenny Wilson</span>
-</div>
-
-<div class="post-entry-1 border-bottom">
-<h2 class="mb-2"><a href="#">9 Half-up/half-down Hairstyles for Long and Medium Hair</a></h2>
-<span class="author mb-3 d-block">Jenny Wilson</span>
-</div>
-
-</div> <!-- End Latest -->
-</div>
-</div>
-</div><!-- End Categories -->
-</div>
 </div>
 </div>
 </section>
