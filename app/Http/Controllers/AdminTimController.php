@@ -9,8 +9,8 @@ class AdminTimController extends Controller
 {
     public function daftar_tim()
     {
-        $tim_data = Tim::orderBy('id','asc')->get();
-        return view('admin.daftar_tim', compact('tim_data'));
+        $data_tim = Tim::orderBy('id','asc')->get();
+        return view('admin.daftar_tim', compact('data_tim'));
     }
 
     public function tambah()
@@ -60,7 +60,7 @@ class AdminTimController extends Controller
     public function edit($id)
     {
         $row_data = Tim::where('id',$id)->first();
-        return view('admin.edit_tim', compact('row_data','tim_data'));
+        return view('admin.edit_tim', compact('row_data'));
     }
 
     public function update(Request $request,$id)
@@ -107,5 +107,16 @@ class AdminTimController extends Controller
         $row_data->delete();
 
         return redirect()->back()->with('success', 'Data is deleted successfully');
+    }
+
+    public function search(Request $request){
+        if ($request->has('search')) {
+            $data_tim = Tim::where('nama','LIKE','%'.$request->search.'%')->get();
+        } else {
+            $data_tim = Tim::all();
+        }
+
+        return view('admin.daftar_tim',['data_tim' => $data_tim]);
+
     }
 }

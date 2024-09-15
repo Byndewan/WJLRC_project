@@ -11,8 +11,13 @@
 
 @section('main_content')
 <div class="section-body">
-    @include('admin.layout.search')
     <div class="col-md-12 col-12 col-sm-12">
+        <form action="/admin/daftar-konten/search" class="form-inline" method="GET">
+            <input class="form-control" type="search" placeholder="Cari Nama Konten" name="search" data-width="200">
+            <div class="input-group-append">
+            <button class="btn" data-height="42" type="submit"><i class="fas fa-search"></i>Cari</button>
+          </div>
+        </form>
         <div class="card">
         <div class="card-body p-0">
             <div class="table-responsive">
@@ -28,7 +33,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                    @foreach ($konten_data as $item)
+                    @foreach ($data_konten as $item)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>

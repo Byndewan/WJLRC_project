@@ -178,9 +178,7 @@
               <div class="team-member d-flex align-items-start">
                 <div class="pic"><img src="{{ asset('uploads/'.$item->photo) }}" class="img-fluid" alt=""></div>
                 <div class="member-info">
-                  <h4>{{ $item->Judul }}</h4>
-                  <span style="color: #444444;">{{ $item->nama }}</span>
-                  <p style="color: #444444;">{{ $item->deskripsi }}</p>
+                  <span style="color: #444444;">{{ $item->judul }}</span>
                   <div class="icon-container">
                     <div class="icon-item">
                         <i class="bi bi-heart"></i>
@@ -212,7 +210,7 @@
     {{-- Team Section --}}
 
     <!-- Team Section -->
-    {{-- @if ($page_data->status == 'Show' ) --}}
+    @if ($page_data->status == 'Show' )
     <section id="team-2" class="team-2 section light-background" style="justify-content: center;">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -245,8 +243,8 @@
         </div>
       </div>
           <!-- End Team Member -->
-    </section>
-    {{-- @endif --}}
+        </section>
+        @endif
 
     <!-- /Team Section -->
 
@@ -268,7 +266,7 @@
               <i class="bi bi-geo-alt flex-shrink-0"></i>
               <div>
                 <h3>Alamat</h3>
-                <p>Jl. Babakan Tiga No.82, Ciwidey, Kec.Ciwidey, Kabupaten Bandung, Jawa Barat 40973</p>
+                <p>{{ $data_kontak->alamat }}</p>
               </div>
             </div><!-- End Info Item -->
 
@@ -276,7 +274,7 @@
               <i class="bi bi-telephone flex-shrink-0"></i>
               <div>
                 <h3>No Telepon</h3>
-                <p>+62 881-4580-036</p>
+                <p>{{ $data_kontak->notlp }}</p>
               </div>
             </div><!-- End Info Item -->
 
@@ -284,7 +282,7 @@
               <i class="bi bi-envelope flex-shrink-0"></i>
               <div>
                 <h3>Email</h3>
-                <p>wjlrcsmkbbc@gmail.com</p>
+                <p>{{ $data_kontak->email }}</p>
               </div>
             </div><!-- End Info Item -->
 

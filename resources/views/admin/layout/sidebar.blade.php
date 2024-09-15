@@ -50,10 +50,10 @@
           </ul>
         </li>
 
-        <li class="dropdown {{ Request::is('admin/kontak') ? "active" : " " }}">
+        <li class="dropdown {{ Request::is('/admin/daftar/kontak') ? "active" : " " }}">
             <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-hand-point-right"></i> <span>Kontak</span></a>
             <ul class="dropdown-menu">
-              <li class="{{ Request::is('admin/kontak') ? "active" : " " }}"><a class="nav-link" href="{{ route('admin_kontak') }}">Kontak</a></li>
+              <li class="{{ Request::is('/admin/daftar/kontak') ? "active" : " " }}"><a class="nav-link" href="{{ route('admin_daftar_kontak') }}">Kontak</a></li>
             </ul>
         </li>
 

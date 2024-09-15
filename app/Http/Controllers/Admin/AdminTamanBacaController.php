@@ -12,8 +12,8 @@ class AdminTamanBacaController extends Controller
 
     public function daftar_buku()
     {
-        $buku_data = Buku::orderBy('id','asc')->get();
-        return view('admin.daftar_buku', compact('buku_data'));
+        $data_buku = Buku::orderBy('id','asc')->get();
+        return view('admin.daftar_buku', compact('data_buku'));
     }
 
     public function tambah()
@@ -65,12 +65,21 @@ class AdminTamanBacaController extends Controller
         return redirect()->back()->with('success', 'Data is deleted successfully');
     }
 
+    public function search(Request $request){
+        if ($request->has('search')) {
+            $data_buku = Buku::where('judul','LIKE','%'.$request->search.'%')->get();
+        } else {
+            $data_buku = Buku::all();
+        }
 
+        return view('admin.daftar_buku',['data_buku' => $data_buku]);
+
+    }
 
     public function daftar_peminjaman()
     {
-        $peminjaman_data = Peminjaman::orderBy('id','asc')->get();
-        return view('admin.daftar_peminjaman', compact('peminjaman_data'));
+        $data_peminjaman = Peminjaman::orderBy('id','asc')->get();
+        return view('admin.daftar_peminjaman', compact('data_peminjaman'));
     }
     public function tambah_data()
     {
@@ -149,5 +158,16 @@ class AdminTamanBacaController extends Controller
         $row_data->delete();
 
         return redirect()->back()->with('success', 'Data is deleted successfully');
+    }
+
+    public function search_peminjaman(Request $request){
+        if ($request->has('search')) {
+            $data_peminjaman = Peminjaman::where('nama','LIKE','%'.$request->search.'%')->get();
+        } else {
+            $data_peminjaman = Peminjaman::all();
+        }
+
+        return view('admin.daftar_peminjaman',['data_peminjaman' => $data_peminjaman]);
+
     }
 }

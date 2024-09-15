@@ -10,8 +10,8 @@ class AdminMadingController extends Controller
 {
     public function daftar_mading()
     {
-        $mading_data = Mading::orderBy('id','asc')->get();
-        return view('admin.daftar_mading', compact('mading_data'));
+        $data_mading = Mading::orderBy('id','asc')->get();
+        return view('admin.daftar_mading', compact('data_mading'));
     }
 
     public function tambah()
@@ -87,5 +87,16 @@ class AdminMadingController extends Controller
         $row_data->delete();
 
         return redirect()->back()->with('success', 'Data is deleted successfully');
+    }
+
+    public function search(Request $request){
+        if ($request->has('search')) {
+            $data_mading = Mading::where('judul','LIKE','%'.$request->search.'%')->get();
+        } else {
+            $data_mading = Mading::all();
+        }
+
+        return view('admin.daftar_mading',['data_mading' => $data_mading]);
+
     }
 }
