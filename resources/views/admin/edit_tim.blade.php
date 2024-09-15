@@ -43,7 +43,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Icon URL 1</label>
-                                    <input type="text" class="form-control" name="icon_url1" value="{{ $row_data->icon1_url }}">
+                                    <input type="text" class="form-control" name="icon1_url" value="{{ $row_data->icon1_url }}">
                                 </div>
                                 <div class="form-group">
                                     <label>Icon 2</label>
@@ -51,7 +51,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Icon URL 2</label>
-                                    <input type="text" class="form-control" name="icon_url2" value="{{ $row_data->icon2_url }}">
+                                    <input type="text" class="form-control" name="icon2_url" value="{{ $row_data->icon2_url }}">
                                 </div>
                                 <div class="form-group">
                                     <label>Icon 3</label>
@@ -59,7 +59,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Icon URL 3</label>
-                                    <input type="text" class="form-control" name="icon_url3" value="{{ $row_data->icon3_url }}">
+                                    <input type="text" class="form-control" name="icon3_url" value="{{ $row_data->icon3_url }}">
                                 </div>
                                 <div class="form-group">
                                     <label>Icon 4</label>
@@ -67,7 +67,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Icon URL 4</label>
-                                    <input type="text" class="form-control" name="icon_url4" value="{{ $row_data->icon4_url }}">
+                                    <input type="text" class="form-control" name="icon4_url" value="{{ $row_data->icon4_url }}">
                                 </div>
                                 <div class="form-group">
                                     <label>Icon 5</label>
@@ -75,7 +75,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Icon URL 5</label>
-                                    <input type="text" class="form-control" name="icon_url5" value="{{ $row_data->icon5_url }}">
+                                    <input type="text" class="form-control" name="icon5_url" value="{{ $row_data->icon5_url }}">
                                 </div>
                                 <div class="form-group">
                                     <label>Status</label>

@@ -10,8 +10,8 @@ class AdminOrganigramController extends Controller
 {
     public function daftar_organigram()
     {
-        $all_data = Organigram::orderBy('id','asc')->get();
-        return view('admin.daftar_organigram', compact('all_data'));
+        $data_organigram = Organigram::orderBy('id','asc')->get();
+        return view('admin.daftar_organigram', ['data_organigram' => $data_organigram]);
     }
 
     public function tambah()
@@ -103,5 +103,16 @@ class AdminOrganigramController extends Controller
         $row_data->delete();
 
         return redirect()->back()->with('success', 'Data is deleted successfully');
+    }
+
+    public function search(Request $request){
+        if ($request->has('search')) {
+            $data_organigram = Organigram::where('nama','LIKE','%'.$request->search.'%')->get();
+        } else {
+            $data_organigram = Organigram::all();
+        }
+
+        return view('admin.daftar_organigram',['data_organigram' => $data_organigram]);
+
     }
 }

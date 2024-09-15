@@ -30,14 +30,6 @@
                                     <input type="file" class="form-control" name="photo">
                                 </div>
                                 <div class="form-group">
-                                    <label>Nama</label>
-                                    <input type="text" class="form-control" name="nama" value="{{ $row_data->nama }}">
-                                </div>
-                                <div class="form-group">
-                                    <label>Kelas</label>
-                                    <input type="text" class="form-control" name="kelas" value="{{ $row_data->kelas }}">
-                                </div>
-                                <div class="form-group">
                                     <label>Judul</label>
                                     <input type="text" class="form-control" name="judul" value="{{ $row_data->judul }}">
                                 </div>
@@ -47,7 +39,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Tanggal</label>
-                                    <input type="datetime-local" class="form-control" value="" name="tanggal" value="{{ $row_data->tanggal }}">
+                                    <input type="date" class="form-control" value="" name="tanggal" value="{{ $row_data->tanggal }}">
                                 </div>
                                 <div class="form-group">
                                     <label>Deskripsi</label>

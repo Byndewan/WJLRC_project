@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\SearchController;
+
 /* Admin Controllers */
 use App\Http\Controllers\AdminLoginController;
 use App\Http\Controllers\Admin\AdminHomeController;
@@ -105,6 +107,7 @@ Route::post('/admin/tambah-karya-submit', [AdminKaryaController::class, 'store']
 Route::get('/admin/edit/karya/{id}', [AdminKaryaController::class, 'edit'])->name('admin_edit_karya')->middleware('admin:admin');
 Route::post('/admin/edit-karya-submit/{id}', [AdminKaryaController::class, 'update'])->name('admin_edit_karya_submit');
 Route::get('/admin/karya/delete/{id}', [AdminKaryaController::class, 'delete'])->name('admin_hapus_karya')->middleware('admin:admin');
+Route::get('/admin/daftar-karya/search', [AdminKaryaController::class, 'search']);
 
 /* CRUD Bagian Organigram */
 Route::get('/admin/daftar-organigram', [AdminOrganigramController::class, 'daftar_organigram'])->name('daftar_organigram')->middleware('admin:admin');
@@ -113,6 +116,7 @@ Route::post('/admin/tambah-organigram-submit', [AdminOrganigramController::class
 Route::get('/admin/edit/organigram/{id}', [AdminOrganigramController::class, 'edit'])->name('admin_edit_organigram')->middleware('admin:admin');
 Route::post('/admin/edit-organigram-submit/{id}', [AdminOrganigramController::class, 'update'])->name('admin_edit_organigram_submit');
 Route::get('/admin/organigram/delete/{id}', [AdminOrganigramController::class, 'delete'])->name('admin_hapus_organigram')->middleware('admin:admin');
+Route::get('/admin/daftar-organigram/search', [AdminOrganigramController::class, 'search']);
 
 /* CRUD Bagian Resensi */
 Route::get('/admin/daftar-resensi', [AdminResensiController::class, 'daftar_resensi'])->name('daftar_resensi')->middleware('admin:admin');
@@ -121,6 +125,7 @@ Route::post('/admin/tambah-resensi-submit', [AdminResensiController::class, 'sto
 Route::get('/admin/edit/resensi/{id}', [AdminResensiController::class, 'edit'])->name('admin_edit_resensi')->middleware('admin:admin');
 Route::post('/admin/edit-resensi-submit/{id}', [AdminResensiController::class, 'update'])->name('admin_edit_resensi_submit');
 Route::get('/admin/resensi/delete/{id}', [AdminResensiController::class, 'delete'])->name('admin_hapus_resensi')->middleware('admin:admin');
+Route::get('/admin/daftar-resensi/search', [AdminResensiController::class, 'search']);
 
 /* CRUD Bagian Konten */
 Route::get('/admin/daftar-konten', [AdminKontenController::class, 'daftar_konten'])->name('daftar_konten')->middleware('admin:admin');
@@ -129,6 +134,7 @@ Route::post('/admin/tambah-konten-submit', [AdminKontenController::class, 'store
 Route::get('/admin/edit/konten/{id}', [AdminKontenController::class, 'edit'])->name('admin_edit_konten')->middleware('admin:admin');
 Route::post('/admin/edit-konten-submit/{id}', [AdminKontenController::class, 'update'])->name('admin_edit_konten_submit');
 Route::get('/admin/konten/delete/{id}', [AdminKontenController::class, 'delete'])->name('admin_hapus_konten')->middleware('admin:admin');
+Route::get('/admin/daftar-konten/search', [AdminKontenController::class, 'search']);
 
 /* CRUD Bagian Mading */
 Route::get('/admin/daftar-mading', [AdminMadingController::class, 'daftar_mading'])->name('daftar_mading')->middleware('admin:admin');
@@ -137,6 +143,7 @@ Route::post('/admin/tambah-mading-submit', [AdminMadingController::class, 'store
 Route::get('/admin/edit/mading/{id}', [AdminMadingController::class, 'edit'])->name('admin_edit_mading')->middleware('admin:admin');
 Route::post('/admin/edit-mading-submit/{id}', [AdminMadingController::class, 'update'])->name('admin_edit_mading_submit');
 Route::get('/admin/mading/delete/{id}', [AdminMadingController::class, 'delete'])->name('admin_hapus_mading')->middleware('admin:admin');
+Route::get('/admin/daftar-mading/search', [AdminMadingController::class, 'search']);
 
 /* CRUD Bagian Taman Baca ( BUKU ) */
 Route::get('/admin/daftar/buku', [AdminTamanBacaController::class, 'daftar_buku'])->name('admin_daftar_buku')->middleware('admin:admin');
@@ -145,6 +152,7 @@ Route::post('/admin/tambah-buku-submit', [AdminTamanBacaController::class, 'stor
 Route::get('/admin/edit/buku/{id}', [AdminTamanBacaController::class, 'edit'])->name('admin_edit_buku')->middleware('admin:admin');
 Route::post('/admin/edit-buku-submit/{id}', [AdminTamanBacaController::class, 'update'])->name('admin_edit_buku_submit');
 Route::get('/admin/buku/delete/{id}', [AdminTamanBacaController::class, 'delete'])->name('admin_hapus_buku')->middleware('admin:admin');
+Route::get('/admin/daftar-buku/search', [AdminTamanBacaController::class, 'search']);
 
 /* CRUD Bagian Taman Baca ( PEMINJAMAN ) */
 Route::get('/admin/daftar/peminjaman', [AdminTamanBacaController::class, 'daftar_peminjaman'])->name('admin_daftar_peminjaman')->middleware('admin:admin');
@@ -153,6 +161,15 @@ Route::post('/admin/tambah-peminjaman-submit', [AdminTamanBacaController::class,
 Route::get('/admin/edit/peminjaman/{id}', [AdminTamanBacaController::class, 'edit_data'])->name('admin_edit_peminjaman')->middleware('admin:admin');
 Route::post('/admin/edit-peminjaman-submit/{id}', [AdminTamanBacaController::class, 'update_data'])->name('admin_edit_peminjaman_submit');
 Route::get('/admin/peminjaman/delete/{id}', [AdminTamanBacaController::class, 'delete_data'])->name('admin_hapus_peminjaman')->middleware('admin:admin');
+Route::get('/admin/daftar-peminjaman/search_peminjaman', [AdminTamanBacaController::class, 'search_peminjaman']);
+
+/* CRUD Bagian Kontak */
+Route::get('/admin/daftar/kontak', [AdminkontakController::class, 'daftar_kontak'])->name('admin_daftar_kontak')->middleware('admin:admin');
+Route::get('/admin/tambah/kontak', [AdminkontakController::class, 'tambah'])->name('admin_tambah_kontak')->middleware('admin:admin');
+Route::post('/admin/tambah-kontak-submit', [AdminkontakController::class, 'store'])->name('admin_tambah_kontak_submit');
+Route::get('/admin/edit/kontak/{id}', [AdminkontakController::class, 'edit'])->name('admin_edit_kontak')->middleware('admin:admin');
+Route::post('/admin/edit-kontak-submit/{id}', [AdminkontakController::class, 'update'])->name('admin_edit_kontak_submit');
+Route::get('/admin/kontak/delete/{id}', [AdminkontakController::class, 'delete'])->name('admin_hapus_kontak')->middleware('admin:admin');
 
 /* CRUD Bagian Tim */
 Route::get('/admin/daftar/tim', [AdminTimController::class, 'daftar_tim'])->name('admin_daftar_tim')->middleware('admin:admin');
@@ -161,3 +178,4 @@ Route::post('/admin/tambah-tim-submit', [AdminTimController::class, 'store'])->n
 Route::get('/admin/edit/tim/{id}', [AdminTimController::class, 'edit'])->name('admin_edit_tim')->middleware('admin:admin');
 Route::post('/admin/edit-tim-submit/{id}', [AdminTimController::class, 'update'])->name('admin_edit_tim_submit');
 Route::get('/admin/tim/delete/{id}', [AdminTimController::class, 'delete'])->name('admin_hapus_tim')->middleware('admin:admin');
+Route::get('/admin/daftar-tim/search', [AdminTimController::class, 'search']);

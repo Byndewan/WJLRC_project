@@ -10,9 +10,14 @@
 
 @section('main_content')
 <div class="section-body">
-    @include('admin.layout.search')
     <div class="col-md-12 col-12 col-sm-12">
-        <div class="card">
+        <form action="/admin/daftar-karya/search" class="form-inline" method="GET">
+              <input class="form-control" type="search" placeholder="Cari Judul Karya" name="search" data-width="200">
+              <div class="input-group-append">
+              <button class="btn" data-height="42" type="submit"><i class="fas fa-search"></i>Cari</button>
+            </div>
+          </form>
+        <div class="card my-2">
             <div class="card-body">
                 <div class="table-responsive">
                     <table class="table table-striped mb-0 table-bordered">
@@ -20,30 +25,24 @@
                         <tr>
                             <th>No</th>
                             <th>Photo</th>
-                            <th>Nama</th>
-                            <th>Kelas</th>
-                            <th>Judul</th>
+                            <th>judul</th>
                             <th>Aksi</th>
                         </tr>
                         </thead>
                         <tbody>
-                            @foreach ($karya_data as $item)
+                            @foreach ($data_karya as $karya_data)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>
-                                <a href="#" class="font-weight-600 text-body"><img src="{{ asset('uploads/'.$item->photo) }}" alt="avatar" width="120"></a>
+                                <a href="#" class="font-weight-600 text-body"><img src="{{ asset('uploads/'.$karya_data->photo) }}" alt="avatar" width="120"></a>
                             </td>
                             <td>
                             <a href="#" class="font-weight-600 text-body">
-                            {{ $item->nama }}</a>
+                                {{ $karya_data->judul }}</a>
                             </td>
                             <td>
-                            {{ $item->kelas }}
-                            </td>
-                            <td>{{ $item->judul }}</td>
-                            <td>
-                            <a href="{{ route('admin_edit_karya',$item->id) }}" class="btn btn-primary btn-action mr-1" data-toggle="tooltip"><i class="fas fa-pencil-alt"></i> Edit</a>
-                            <a href="{{ route('admin_hapus_karya',$item->id) }}" class="btn btn-danger btn-action" data-toggle="tooltip" onClick="return confirm('Are you sure?');"><i class="fas fa-trash"></i> Delete</a>
+                            <a href="{{ route('admin_edit_karya',$karya_data->id) }}" class="btn btn-primary btn-action mr-1" data-toggle="tooltip"><i class="fas fa-pencil-alt"></i> Edit</a>
+                            <a href="{{ route('admin_hapus_karya',$karya_data->id) }}" class="btn btn-danger btn-action" data-toggle="tooltip" onClick="return confirm('Are you sure?');"><i class="fas fa-trash"></i> Delete</a>
                             </td>
                         </tr>
                         @endforeach

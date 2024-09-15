@@ -5,14 +5,15 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Karya;
+use Hash;
 
 class AdminKaryaController extends Controller
 {
 
     public function daftar_karya()
         {
-            $karya_data = Karya::orderBy('id','asc')->get();
-            return view('admin.daftar_karya', compact('karya_data'));
+            $data_karya = Karya::orderBy('id','asc')->get();
+            return view('admin.daftar_karya',['data_karya' => $data_karya]);
         }
 
     public function tambah()
@@ -23,8 +24,6 @@ class AdminKaryaController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nama' => 'required',
-            'kelas' => 'required',
             'judul' => 'required',
             'penulis' => 'required',
             'tanggal' => 'required',
@@ -38,8 +37,6 @@ class AdminKaryaController extends Controller
         $request->file('photo')->move(public_path('uploads/'),$final_name);
         $obj->photo = $final_name;
 
-        $obj->nama = $request->nama;
-        $obj->kelas = $request->kelas;
         $obj->judul = $request->judul;
         $obj->penulis = $request->penulis;
         $obj->tanggal = $request->tanggal;
@@ -58,8 +55,6 @@ class AdminKaryaController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'nama' => 'required',
-            'kelas' => 'required',
             'judul' => 'required',
             'penulis' => 'required',
             'tanggal' => 'required',
@@ -73,8 +68,6 @@ class AdminKaryaController extends Controller
         $request->file('photo')->move(public_path('uploads/'),$final_name);
         $obj->photo = $final_name;
 
-        $obj->nama = $request->nama;
-        $obj->kelas = $request->kelas;
         $obj->judul = $request->judul;
         $obj->penulis = $request->penulis;
         $obj->tanggal = $request->tanggal;
@@ -90,5 +83,16 @@ class AdminKaryaController extends Controller
         $row_data->delete();
 
         return redirect()->back()->with('success', 'Data is deleted successfully');
+    }
+
+    public function search(Request $request){
+        if ($request->has('search')) {
+            $data_karya = Karya::where('judul','LIKE','%'.$request->search.'%')->get();
+        } else {
+            $data_karya = Karya::all();
+        }
+
+        return view('admin.daftar_karya',['data_karya' => $data_karya]);
+
     }
 }
