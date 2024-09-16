@@ -24,24 +24,26 @@
             </ul>
           </li>
 
-        <li class="dropdown {{ Request::is('admin/daftar-resensi') ? "active" : " " }}">
-          <a href="#" class="nav-link has-dropdown"><i class="fas fa-hand-point-right"></i> <span>Resensi</span></a>
+        <li class="dropdown {{ Request::is('admin/daftar-resensi') | Request::is('admin/daftar-konten') | Request::is('admin/daftar-liputan') ? "active" : " " }}">
+          <a href="#" class="nav-link has-dropdown"><i class="fas fa-hand-point-right"></i> <span>Program Online</span></a>
           <ul class="dropdown-menu">
             <li class="{{ Request::is('admin/daftar-resensi') ? "active" : " " }}"><a class="nav-link" href="{{ route('daftar_resensi') }}">Daftar Resensi</a></li>
           </ul>
-        </li>
-        <li class="dropdown {{ Request::is('admin/daftar-konten') ? "active" : " " }}">
-          <a href="#" class="nav-link has-dropdown"><i class="fas fa-hand-point-right"></i> <span>Konten</span></a>
           <ul class="dropdown-menu">
             <li class="{{ Request::is('admin/daftar-konten') ? "active" : " " }}"><a class="nav-link" href="{{ route('daftar_konten') }}">Daftar Konten</a></li>
           </ul>
+          <ul class="dropdown-menu">
+            <li class="{{ Request::is('admin/daftar-liputan') ? "active" : " " }}"><a class="nav-link" href="{{ route('daftar_liputan') }}">Daftar Liputan</a></li>
+          </ul>
         </li>
+
         <li class="dropdown {{ Request::is('admin/daftar-mading') ? "active" : " " }}">
-          <a href="#" class="nav-link has-dropdown"><i class="fas fa-hand-point-right"></i> <span>Mading</span></a>
+          <a href="#" class="nav-link has-dropdown"><i class="fas fa-hand-point-right"></i> <span>Program Offline</span></a>
           <ul class="dropdown-menu">
             <li class="{{ Request::is('admin/daftar-mading') ? "active" : " " }}"><a class="nav-link" href="{{ route('daftar_mading') }}">Daftar Mading</a></li>
           </ul>
         </li>
+
         <li class="dropdown {{ Request::is('admin/daftar/buku')||Request::is('admin/daftar/peminjaman') ? "active" : " " }}">
           <a href="#" class="nav-link has-dropdown"><i class="fas fa-hand-point-right"></i> <span>Laporan Taman Baca</span></a>
           <ul class="dropdown-menu">

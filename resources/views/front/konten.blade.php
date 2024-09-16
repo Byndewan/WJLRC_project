@@ -48,6 +48,10 @@
     <section id="posts" class="posts">
       <div class="container" data-aos="fade-up">
         <div class="row g-5">
+            <form class="example" action="/program-online/konten/search" method="GET">
+                <input type="search" placeholder="Cari Judul Konten" name="search_konten">
+                <button type="submit"><i class="fa fa-search"></i> Cari</button>
+            </form>
           <div class="col-lg-12">
             <div class="row g-5">
               <div class="col-lg-4 border-start custom-border">

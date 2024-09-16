@@ -22,6 +22,8 @@
   <!-- Main CSS File -->
   <link href="{{ asset('dist_front/liputan/css/main.css') }}" rel="stylesheet">
   <link href="{{ asset('dist_front/liputan/css-2/main.css') }}" rel="stylesheet">
+    <!-- Load icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- =======================================================
   * Template Name: OnePage
@@ -45,20 +47,15 @@
   <main id="main">
 
     <!-- ======= Post Grid Section ======= -->
-    <section id="posts" class="posts">
-      <div class="container" data-aos="fade-up">
+<section id="posts" class="posts">
+    <div class="container" data-aos="fade-up">
         <div class="row g-5">
-
-          <!-- Load icon library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<!-- The form -->
-<form class="example" action="action_page.php">
-  <input type="text" placeholder="Search.." name="search">
-  <button type="submit"><i class="fa fa-search"></i></button>
-
-          <div class="col-lg-12">
+            <div class="col-lg-12">
             <div class="row g-5">
+                <form class="example" action="/program-online/liputan/search" method="GET">
+                    <input type="search" placeholder="Cari Judul Liputan" name="search_liputan">
+                    <button type="submit"><i class="fa fa-search"></i> Cari</button>
+                </form>
               <div class="col-lg-4 border-start custom-border">
                 <div class="post-entry-1">
                   <a href="{{ route('detail_liputan') }}"><img src="{{ asset('dist_front/liputan/img/maulid_nabi.jpeg') }}" alt="" class="img-fluid"></a>
@@ -121,10 +118,9 @@
               </div>
             </div>
           </div>
-
         </div> <!-- End .row -->
-      </div>
-    </section> <!-- End Post Grid Section -->
+    </div>
+</section> <!-- End Post Grid Section -->
 
   </main><!-- End #main -->
 

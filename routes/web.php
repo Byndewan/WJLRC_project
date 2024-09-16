@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminLiputanController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\SearchController;
@@ -44,9 +45,11 @@ Route::get('/program-online/resensi/search', [PageController::class, 'search_res
 Route::get('/program-online/konten', [PageController::class, 'konten'])->name('konten');
 Route::get('/program-online/konten/search', [PageController::class, 'search_konten']);
 Route::get('/program-online/liputan', [PageController::class, 'liputan'])->name('liputan');
+Route::get('/program-online/liputan/search', [PageController::class, 'search_liputan']);
 
 // Front End : Program Offline
 Route::get('/program-offline/mading', [PageController::class, 'mading'])->name('mading');
+Route::get('/program-online/mading/search', [PageController::class, 'search_mading']);
 
 // Registration
 Route::get('/user/registration', [RegistrationController::class, 'registration'])->name('registration');
@@ -71,10 +74,10 @@ Route::get('/program-online/konten/detail-konten', [PageController::class, 'deta
 Route::get('/program-offline/liputan/detail-liputan', [PageController::class, 'detail_liputan'])->name('detail_liputan');
 Route::get('/program-offline/mading/detail-mading', [PageController::class, 'detail_mading'])->name('detail_mading');
 Route::get('/program-online/resensi/detail-resensi', [PageController::class, 'detail_resensi'])->name('resensi_detail');
-Route::get('/program-online/konten/detail-konten', [PageController::class, 'detail_konten'])->name('detail_konten')->middleware('user:web');
-Route::get('/program-offline/liputan/detail-liputan', [PageController::class, 'detail_liputan'])->name('detail_liputan')->middleware('user:web');
-Route::get('/program-offline/mading/detail-mading', [PageController::class, 'detail_mading'])->name('mading_detail')->middleware('user:web');
-Route::get('/program-online/resensi/detail-resensi', [PageController::class, 'detail_resensi'])->name('resensi_detail')->middleware('user:web');
+Route::get('/program-online/konten/detail-konten', [PageController::class, 'detail_konten'])->name('detail_konten');
+Route::get('/program-offline/liputan/detail-liputan', [PageController::class, 'detail_liputan'])->name('detail_liputan');
+Route::get('/program-offline/mading/detail-mading', [PageController::class, 'detail_mading'])->name('mading_detail');
+Route::get('/program-online/resensi/detail-resensi', [PageController::class, 'detail_resensi'])->name('resensi_detail');
 
 /*Admin*/
 Route::get('/admin/home', [AdminHomeController::class, 'index'])->name('admin_home')->middleware('admin:admin');
@@ -99,7 +102,7 @@ Route::get('/admin/logout', [AdminLoginController::class, 'index'])->name('admin
 Route::post('/admin/login-submit', [AdminLoginController::class, 'login_submit'])->name('admin_login_submit');
 Route::get('/admin/forgot-password', [AdminLoginController::class, 'forgot_password'])->name('admin_forgot_password');
 Route::post('/admin/forgot-password-submit', [AdminLoginController::class, 'forgot_password_submit'])->name('admin_forgot_password_submit');
-Route::get('/admin/reset-password/{email}', [AdminLoginController::class, 'reset_password'])->name('admin_reset_password')->middleware('admin:admin');
+Route::get('/admin/reset-password/{email}', [AdminLoginController::class, 'reset_password'])->name('admin_reset_password');
 Route::post('/admin/reset-password-submit', [AdminLoginController::class, 'reset_password_submit'])->name('admin_reset_password_submit');
 
 /* CRUD Bagian Karya */
@@ -137,6 +140,15 @@ Route::get('/admin/edit/konten/{id}', [AdminKontenController::class, 'edit'])->n
 Route::post('/admin/edit-konten-submit/{id}', [AdminKontenController::class, 'update'])->name('admin_edit_konten_submit');
 Route::get('/admin/konten/delete/{id}', [AdminKontenController::class, 'delete'])->name('admin_hapus_konten')->middleware('admin:admin');
 Route::get('/admin/daftar-konten/search', [AdminKontenController::class, 'search']);
+
+/* CRUD Bagian Liputan */
+Route::get('/admin/daftar-liputan', [AdminLiputanController::class, 'daftar_liputan'])->name('daftar_liputan')->middleware('admin:admin');
+Route::get('/admin/tambah/liputan', [AdminLiputanController::class, 'tambah'])->name('admin_tambah_liputan')->middleware('admin:admin');
+Route::post('/admin/tambah-liputan-submit', [AdminLiputanController::class, 'store'])->name('admin_tambah_liputan_submit');
+Route::get('/admin/edit/liputan/{id}', [AdminLiputanController::class, 'edit'])->name('admin_edit_liputan')->middleware('admin:admin');
+Route::post('/admin/edit-liputan-submit/{id}', [AdminLiputanController::class, 'update'])->name('admin_edit_liputan_submit');
+Route::get('/admin/liputan/delete/{id}', [AdminLiputanController::class, 'delete'])->name('admin_hapus_liputan')->middleware('admin:admin');
+Route::get('/admin/daftar-liputan/search', [AdminLiputanController::class, 'search']);
 
 /* CRUD Bagian Mading */
 Route::get('/admin/daftar-mading', [AdminMadingController::class, 'daftar_mading'])->name('daftar_mading')->middleware('admin:admin');
