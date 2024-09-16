@@ -23,6 +23,9 @@
   <link href="{{ asset('dist_front/resensi/css/main.css') }}" rel="stylesheet">
   <link href="{{ asset('dist_front/resensi/css-2/main.css') }}" rel="stylesheet">
 
+  <!-- Load icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body class="index-page">
@@ -40,6 +43,7 @@
     <section id="posts" class="posts">
       <div class="container" data-aos="fade-up">
         <div class="row g-5">
+        @include('layout.search')
           <div class="col-lg-12">
             <div class="row g-5">
               <div class="col-lg-4 border-start custom-border">
