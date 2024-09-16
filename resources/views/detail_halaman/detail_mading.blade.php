@@ -5,132 +5,71 @@
 @section('main_content')
 
             <!-- ======= Single Post Content ======= -->
-            <div class="single-post">
-              <div class="post-meta"><span class="date">Mading</span> <span class="mx-1">&bullet;</span> <span>16 September 2024.</span></div>
-              <h1 class="mb-4">Everything's New</h1>
-              <div class="mb-5"><span class="date"></span><span>Ahmad Pasya</span></div>
-              <p><span class="firstcharacter">L</span>orem ipsum dolor sit, amet consectetur adipisicing elit. Ratione officia sed, suscipit distinctio, numquam omnis quo fuga ipsam quis inventore voluptatum recusandae culpa, unde doloribus saepe labore alias voluptate expedita? Dicta delectus beatae explicabo odio voluptatibus quas, saepe qui aperiam autem obcaecati, illo et! Incidunt voluptas culpa neque repellat sint, accusamus beatae, cumque autem tempore quisquam quam eligendi harum debitis.</p>
-
+            <div class="single-post" style="margin-bottom: 50px;">
+              <div class="post-meta"><span>Jul 5th '22</span></div>
+              <h1 class="mb-5">WJLRC Gallery</h1>
+              <p class="post-meta" style="margin-bottom : 20px; font-size: 15px;">Reva Saluha</p>
               <figure class="my-4">
-                <img src="{{ asset('dist//img/mading.jpg') }}" alt="" class="img-fluid">
-                <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, odit? </figcaption>
+                <img src="{{ asset('dist_detail/assets/img/wjlrc gallery.jpg') }}" alt="" class="img-fluid" style="max-width: 900px">
+                <figcaption>Tidak Apa Apa </figcaption>
               </figure>
-              <p>Sunt reprehenderit, hic vel optio odit est dolore, distinctio iure itaque enim pariatur ducimus. Rerum soluta, perspiciatis voluptatum cupiditate praesentium repellendus quas expedita exercitationem tempora aliquam quaerat in eligendi adipisci harum non omnis reprehenderit quidem beatae modi. Ea fugiat enim libero, ipsam dicta explicabo nihil, tempore, nulla repellendus eos necessitatibus eligendi corporis cum? Eaque harum, eligendi itaque numquam aliquam soluta.</p>
-              <p>Explicabo perspiciatis, laborum provident voluptates illum in nulla consectetur atque quaerat excepturi quisquam, veniam velit ex pariatur quos consequuntur? Excepturi reiciendis perferendis, cupiditate dolorem eos illum amet. Beatae voluptates nemo esse ratione voluptate, nesciunt fugit magnam veritatis voluptas dignissimos doloribus maiores? Aliquam, dolores natus exercitationem corrupti blanditiis, consequuntur nihil nobis sed voluptatibus maiores sunt, illo provident aliquid laborum. Vitae, ut.</p>
-              <p>Reprehenderit aut sed doloribus blanditiis, aspernatur magni? In molestias rem, similique ut esse repudiandae quod recusandae dolores neque earum omnis at, suscipit fuga? Minima qui veniam deserunt quisquam error amet at ratione nesciunt porro quis placeat repudiandae voluptatibus officiis fuga necessitatibus, expedita officia adipisci eaque labore accusamus? Nesciunt repellat illo exercitationem facilis similique quaerat, quis sequi? Praesentium nulla ipsam dolor.</p>
-              <p>Dolorum, incidunt! Adipisci harum itaque maxime dolores doloremque porro eligendi quis, doloribus vel sit rerum sunt obcaecati nam suscipit nulla vitae alias blanditiis aliquam debitis atque illo modi et placeat. Ratione iure eveniet provident. Culpa laboriosam sed ad quia. Corrupti, earum, perferendis dolore cupiditate sint nihil maiores iusto tempora nobis porro itaque est. Ut laborum culpa assumenda pariatur et perferendis?</p>
-              <p>Est soluta veritatis laboriosam, consequuntur temporibus asperiores, fugit id a ullam sed, expedita sequi doloribus fugiat. Odio et necessitatibus enim nam, iste reprehenderit cupiditate omnis ut iure aliquid obcaecati, repellendus nemo provident eveniet tempora minus! Voluptates aut laboriosam, maiores nihil accusantium, a dolorum quaerat tenetur illo eum culpa cum laudantium sunt doloremque modi possimus magni? Perferendis cum repudiandae corrupti porro.</p>
-              <figure class="my-4">
-                <img src="assets/img/Memperingati Maulid Nabi Muhammad Saw 2024 Vektor, Hari Lahir Nabi Muhammad, Maulid Nabi, Muhammad PNG dan Vektor dengan Background Transparan untuk Unduh Gratis.url" alt="" class="img-fluid">
-                <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, odit? </figcaption>
-              </figure>
-              <p>Quis molestiae, dolorem consequuntur labore perferendis enim accusantium commodi optio, sequi magnam ad consectetur iste omnis! Voluptatibus, quia officia esse necessitatibus magnam tempore reprehenderit quo aspernatur! Assumenda, minus dolorem repellendus corporis corrupti quia temporibus repudiandae in. Sit rem aut, consectetur repudiandae perferendis nemo alias, iure ipsam omnis quam soluta, nobis animi quis aliquam blanditiis at. Dicta nemo vero sequi exercitationem.</p>
-              <p>Architecto ex id at illum aperiam corporis, quidem magnam doloribus non eligendi delectus laborum porro molestiae beatae eveniet dolor odit optio soluta dolores! Eaque odit a nihil recusandae, error repellendus debitis ex autem ab commodi, maiores officiis doloribus provident optio, architecto assumenda! Nihil cum laboriosam eos dolore aliquid perferendis amet doloremque quibusdam odio soluta vero odit, ipsa, quisquam quod nulla.</p>
-              <p>Consequuntur corrupti fugiat quod! Ducimus sequi nemo illo ad necessitatibus amet nobis corporis et quasi. Optio cum neque fuga. Ad excepturi magnam quisquam ex voluptatibus vitae aut nam quidem doloribus, architecto perspiciatis sit consequatur pariatur alias animi expedita quas? Et doloribus voluptatibus perferendis qui fugiat voluptatum autem facere aspernatur quidem quae assumenda iste, sit similique, necessitatibus laborum magni. Ea, dolores!</p>
-              <p>Possimus temporibus rerum illo quia repudiandae provident sed quas atque. Ipsam adipisci accusamus iste optio illo aliquam molestias? Voluptatibus, veniam recusandae facilis nobis perspiciatis rem similique, nisi ad explicabo ipsa voluptatum, inventore molestiae natus adipisci? Fuga delectus quia assumenda totam aspernatur. Nobis hic ea rem, quaerat voluptate vero illum laboriosam omnis aspernatur labore, natus ex iusto ducimus exercitationem a officia.</p>
+              <p>Sudah tiga tahun lamanya aku berkecimpung di dunia literasi. Selama itu pula aku baru dapat menghasilkan dua novel yang tak kunjung menjadi 'novel', serta beberapa cerita pendek yang semuanya aku publikasikan di platform Wattpad.</p>
+              <p>Setahun belakangan ini aku absen dari dunia kepenulisan. Aku sudah mencoba berbagai usaha untuk melawan writer block, tapi nyatanya belum ada satupun karya yang dapat selesai dan selalu stuck di tengah jalan. Bahkan, beberapa bulan terakhir ini aku benar-benar tidak menulis cerita sama sekali.</p>
+              <p>Entahlah, aku rasa mimpiku menjadi seorang penulis terkenal hanya sekedar impian saja. Pada akhirnya mimpi itu berhenti sebelum aku berhasil menerbitkan satu novel. Tidak apa-apa, mungkin ada jalan lain yang membawaku menuju kesuksesan. Lagi pula aku masih muda, masih panjang perjalanan hidupku.</p>
+              <p>Aku belum menemukan minat lain selain menulis cerita. Hari-hariku hanya diisi dengan belajar, belajar, dan belajar. Eh, satu yang ketinggalan. Belajar, belajar, dan belajar untuk berhenti mencintainya. </p>
+              <p>Di sisa-sisa kelas sepuluh aku memasuki fase kebosanan sepanjang hari. Bagaimana tidak bosan, hari-hari yang aku lakukan tidur, makan, tidur, makan. Meski sebenarnya ada kegiatan event di sekolahan, hanya saja tidak ada event satu pun yang berhasil menarik perhatianku. Juga, bersyukurnya semester kedua ini tidak ada satu mata pelajaran yang mengharuskan aku remedial.</p>
+              <p>Kelas sebelas nanti aku berencana untuk menulis cerita kembali—jika tidak ada yang membangunkan mimpi indahku. Tidak, aku hanya bercanda. Rencanaku di kelas sebelas nanti adalah melupakannya dan memulai lembaran baru. Siapa -nya yang ku maksud?</p>
+              <p>Thoriq Perdana. Anak X IPA 3 yang berhasil menjadi gebetan pertamaku di SMA. Bukan cuman yang pertama sih, sampai sekarang belum ada yang bisa mengalahkan pesona seorang Thoriq, bukan Thoriq halilintar, ya.</p>
+              <p>Berawal dari satu gugus saat LDKS (Latihan Dasar Kepemimpinan Siswa) yang kala itu aku mewakili ekstrakurikuler English Club, dan dia mewakili ekstrakurikuler futsal. 
+“Salam kenal, aku—”
+</p>
+              <p>Aku memotong omongannya, mencoba menebak. Mukanya tidak asing bagiku. Beberapa kali aku pernah melihat dia, dan tak sengaja juga sempat mendengar seseorang menyebut namanya.  “Thoriq anak IPA 3 bukan?”</p>
+              <p>Dia mengangguk setuju. “Salam kenal, ya. Keren banget masuk English Club. Aku sempat lihat kamu pas ke depan buat bacain pidato dalam bahasa Inggris.”</p>
             </div><!-- End Single Post Content -->
 
           </div>
           <div class="col-md-3">
-            <!-- ======= Sidebar ======= -->
-            <div class="aside-block">
+
               <div class="tab-content" id="pills-tabContent">
 
-                <!-- Popular -->
                 <div class="tab-pane fade show active" id="pills-popular" role="tabpanel" aria-labelledby="pills-popular-tab">
                   <div class="post-entry-1 border-bottom">
-                    <h2 class="mb-2"><a href="#">BBC NEWS</a></h2>
-                    <span class="author mb-3 d-block">Mujib</span>
+                    <div class="post-meta"><span>Jul 5th '22</span></div>
+                    <h2 class="mb-2"><a href="#">How to Avoid Distraction and Stay Focused During Video Calls?</a></h2>
+                    <span class="author mb-3 d-block">Jenny Wilson</span>
                   </div>
 
                   <div class="post-entry-1 border-bottom">
-                    <h2 class="mb-2"><a href="#">WJLRC Galery</a></h2>
-                    <span class="author mb-3 d-block">Mujib</span>
+                    <div class="post-meta"><span>Jul 5th '22</span></div>
+                    <h2 class="mb-2"><a href="#">17 Pictures of Medium Length Hair in Layers That Will Inspire Your New Haircut</a></h2>
+                    <span class="author mb-3 d-block">Jenny Wilson</span>
                   </div>
 
                   <div class="post-entry-1 border-bottom">
-                    <h2 class="mb-2"><a href="#">Everytinhk NEW</a></h2>
-                    <span class="author mb-3 d-block">Mujib</span>
+                    <div class="post-meta"><span>Jul 5th '22</span></div>
+                    <h2 class="mb-2"><a href="#">9 Half-up/half-down Hairstyles for Long and Medium Hair</a></h2>
+                    <span class="author mb-3 d-block">Jenny Wilson</span>
+                  </div>
+
+                  <div class="post-entry-1 border-bottom">
+                    <div class="post-meta"><span>Jul 5th '22</span></div>
+                    <h2 class="mb-2"><a href="#">Life Insurance And Pregnancy: A Working Mom’s Guide</a></h2>
+                    <span class="author mb-3 d-block">Jenny Wilson</span>
+                  </div>
+
+                  <div class="post-entry-1 border-bottom">
+                    <div class="post-meta"><span>Jul 5th '22</span></div>
+                    <h2 class="mb-2"><a href="#">The Best Homemade Masks for Face (keep the Pimples Away)</a></h2>
+                    <span class="author mb-3 d-block">Jenny Wilson</span>
+                  </div>
+
+                  <div class="post-entry-1 border-bottom">
+                    <div class="post-meta"><span>Jul 5th '22</span></div>
+                    <h2 class="mb-2"><a href="#">10 Life-Changing Hacks Every Working Mom Should Know</a></h2>
+                    <span class="author mb-3 d-block">Jenny Wilson</span>
                   </div>
                 </div> <!-- End Popular -->
 
-                <!-- Trending -->
-                <div class="tab-pane fade" id="pills-trending" role="tabpanel" aria-labelledby="pills-trending-tab">
-                  <div class="post-entry-1 border-bottom">
-                    <h2 class="mb-2"><a href="#">17 Pictures of Medium Length Hair in Layers That Will Inspire Your New Haircut</a></h2>
-                    <span class="author mb-3 d-block">Jenny Wilson</span>
-                  </div>
-                  <div class="post-entry-1 border-bottom">
-                    <h2 class="mb-2"><a href="#">9 Half-up/half-down Hairstyles for Long and Medium Hair</a></h2>
-                    <span class="author mb-3 d-block">Jenny Wilson</span>
-                  </div>
-
-                  <div class="post-entry-1 border-bottom">
-                    <h2 class="mb-2"><a href="#">Life Insurance And Pregnancy: A Working Mom’s Guide</a></h2>
-                    <span class="author mb-3 d-block">Jenny Wilson</span>
-                  </div>
-
-                  <div class="post-entry-1 border-bottom">
-                    <h2 class="mb-2"><a href="#">How to Avoid Distraction and Stay Focused During Video Calls?</a></h2>
-                    <span class="author mb-3 d-block">Jenny Wilson</span>
-                  </div>
-                  <div class="post-entry-1 border-bottom">
-                    <h2 class="mb-2"><a href="#">The Best Homemade Masks for Face (keep the Pimples Away)</a></h2>
-                    <span class="author mb-3 d-block">Jenny Wilson</span>
-                  </div>
-
-                  <div class="post-entry-1 border-bottom">
-                    <h2 class="mb-2"><a href="#">10 Life-Changing Hacks Every Working Mom Should Know</a></h2>
-                    <span class="author mb-3 d-block">Jenny Wilson</span>
-                  </div>
-                </div> <!-- End Trending -->
-
-                <!-- Latest -->
-                <div class="tab-pane fade" id="pills-latest" role="tabpanel" aria-labelledby="pills-latest-tab">
-                  <div class="post-entry-1 border-bottom">
-                    <h2 class="mb-2"><a href="#">Life Insurance And Pregnancy: A Working Mom’s Guide</a></h2>
-                    <span class="author mb-3 d-block">Jenny Wilson</span>
-                  </div>
-
-                  <div class="post-entry-1 border-bottom">
-                    <h2 class="mb-2"><a href="#">The Best Homemade Masks for Face (keep the Pimples Away)</a></h2>
-                    <span class="author mb-3 d-block">Jenny Wilson</span>
-                  </div>
-
-                  <div class="post-entry-1 border-bottom">
-                    <h2 class="mb-2"><a href="#">10 Life-Changing Hacks Every Working Mom Should Know</a></h2>
-                    <span class="author mb-3 d-block">Jenny Wilson</span>
-                  </div>
-
-                  <div class="post-entry-1 border-bottom">
-                    <h2 class="mb-2"><a href="#">How to Avoid Distraction and Stay Focused During Video Calls?</a></h2>
-                    <span class="author mb-3 d-block">Jenny Wilson</span>
-                  </div>
-
-                  <div class="post-entry-1 border-bottom">
-                    <!-- <div class="post-meta">
-                      <span class="date">5 Juli 2024</span>
-                    </div> -->
-                    <h2 class="mb-2"><a href="#">17 Pictures of Medium Length Hair in Layers That Will Inspire Your New Haircut</a></h2>
-                    <span class="author mb-3 d-block">Jenny Wilson</span>
-                  </div>
-
-                  <div class="post-entry-1 border-bottom">
-                    <h2 class="mb-2"><a href="#">9 Half-up/half-down Hairstyles for Long and Medium Hair</a></h2>
-                    <span class="author mb-3 d-block">Jenny Wilson</span>
-                  </div>
-
-                </div> <!-- End Latest -->
               </div>
             </div>
-            </div><!-- End Categories -->
-          </div>
-        </div>
-      </div>
-    </section>
-  </main><!-- End #main -->
-
-
-  </main>
-
   @endsection
