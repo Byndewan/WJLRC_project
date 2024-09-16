@@ -43,7 +43,10 @@
     <section id="posts" class="posts">
       <div class="container" data-aos="fade-up">
         <div class="row g-5">
-        @include('layout.search')
+            <form class="example" action="/program-online/resensi/search" method="GET">
+                <input type="search" placeholder="Cari Judul Resensi" name="search_resensi">
+                <button type="submit"><i class="fa fa-search"></i> Cari</button>
+            </form>
           <div class="col-lg-12">
             <div class="row g-5">
               <div class="col-lg-4 border-start custom-border">

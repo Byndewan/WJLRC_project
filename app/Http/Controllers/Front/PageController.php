@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\Konten;
+use App\Models\Resensi;
 use Illuminate\Http\Request;
 use App\Models\Organigram;
 
@@ -49,7 +51,18 @@ class PageController extends Controller
 
     public function resensi()
     {
-        return view('front.resensi');
+        $data_resensi = Resensi::orderBy('id','asc')->get();
+        return view('front.resensi', ['data_resensi' => $data_resensi]);
+    }
+
+    public function search_resensi(Request $request){
+        if ($request->has('search')) {
+            $data_resensi = Resensi::where('judul','LIKE','%'.$request->search.'%')->get();
+        } else {
+            $data_resensi = Resensi::all();
+        }
+
+        return view('front.resensi',['data_resensi' => $data_resensi]);
     }
 
     public function detail_resensi()
@@ -59,7 +72,18 @@ class PageController extends Controller
 
     public function konten()
     {
-        return view('front.konten');
+        $data_konten = Konten::orderBy('id','asc')->get();
+        return view('front.konten', ['data_konten' => $data_konten]);
+    }
+
+    public function search_konten(Request $request){
+        if ($request->has('search')) {
+            $data_konten = Konten::where('judul','LIKE','%'.$request->search.'%')->get();
+        } else {
+            $data_konten = Konten::all();
+        }
+
+        return view('front.konten',['data_konten' => $data_konten]);
     }
 
     public function detail_konten()

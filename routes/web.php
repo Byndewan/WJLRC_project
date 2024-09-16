@@ -40,7 +40,9 @@ Route::get('/#team-2', [HomeController::class, 'team'])->name('#team-2');
 
 // Front End : Program Online
 Route::get('/program-online/resensi', [PageController::class, 'resensi'])->name('resensi');
+Route::get('/program-online/resensi/search', [PageController::class, 'search_resensi']);
 Route::get('/program-online/konten', [PageController::class, 'konten'])->name('konten');
+Route::get('/program-online/konten/search', [PageController::class, 'search_konten']);
 Route::get('/program-online/liputan', [PageController::class, 'liputan'])->name('liputan');
 
 // Front End : Program Offline
