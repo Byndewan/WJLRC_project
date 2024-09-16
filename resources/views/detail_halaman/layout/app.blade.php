@@ -69,7 +69,7 @@
       <div class="container copyright text-center mt-4">
         <p> <span>Copyright WJLRC 2024</span> <strong class="px-1 sitename"></strong> <span></span></p>
         <div class="credits">
-          <a href="https://bootstrapmade.com/"></a>
+          <a href="#"></a>
         </div>
       </div>
     </footer>
@@ -80,7 +80,7 @@
     <!-- Preloader -->
     <div id="preloader"></div>
 
-    @include('detail_halaman.layout.script')
+    @include('detail_halaman.layout.scripts')
 
     @include('detail_halaman.layout.script_footer')
 
