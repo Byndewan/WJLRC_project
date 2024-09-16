@@ -11,7 +11,7 @@ class AdminResensiController extends Controller
     public function daftar_resensi()
     {
         $data_resensi = Resensi::orderBy('id','asc')->get();
-        return view('admin.daftar_resensi', ['data_resensi', $data_resensi]);
+        return view('admin.daftar_resensi', compact('data_resensi'));
     }
 
     public function tambah()

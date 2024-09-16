@@ -52,12 +52,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!-- The form -->
-<form class="example" action="action_page.php">
-  <input type="text" placeholder="Search.." name="search">
-  <button type="submit"><i class="fa fa-search"></i></button>
-  
           <div class="col-lg-12">
             <div class="row g-5">
+                <form class="example" action="/program-online/mading/search" method="GET">
+                    <input type="search" placeholder="Cari Judul Mading" name="search_mading">
+                    <button type="submit"><i class="fa fa-search"></i> Cari</button>
+                </form>
               <div class="col-lg-4 border-start custom-border">
                 <div class="post-entry-1">
                   <a href="{{ route('mading_detail') }}"><img src="{{ asset('dist_front/mading/img/everything new.jpg') }}" alt="" class="img-fluid"></a>

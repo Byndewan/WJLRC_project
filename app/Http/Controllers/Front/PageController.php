@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
 use App\Models\Konten;
+use App\Models\Liputan;
+use App\Models\Mading;
 use App\Models\Resensi;
 use Illuminate\Http\Request;
 use App\Models\Organigram;
@@ -39,11 +41,15 @@ class PageController extends Controller
 
     public function program_online()
     {
-        return view('front.program_online');
+        $data_konten = Konten::orderBy('id','asc')->limit(4)->get();
+        $data_resensi = Resensi::orderBy('id','asc')->limit(4)->get();
+        $data_liputan = Liputan::orderBy('id','asc')->limit(4)->get();
+        return view('front.program_online', compact('data_resensi','data_konten','data_liputan'));
     }
 
     public function program_offline()
     {
+        // $data_mading = Mading::orderBy('id','asc')->limit(4)->get();
         return view('front.program_offline');
     }
 
@@ -93,7 +99,18 @@ class PageController extends Controller
 
     public function liputan()
     {
-        return view('front.liputan');
+        $data_liputan = Liputan::orderBy('id','asc')->get();
+        return view('front.liputan', ['data_liputan' => $data_liputan]);
+    }
+
+    public function search_liputan(Request $request){
+        if ($request->has('search')) {
+            $data_liputan = Liputan::where('judul','LIKE','%'.$request->search.'%')->get();
+        } else {
+            $data_liputan = Liputan::all();
+        }
+
+        return view('front.liputan',['data_liputan' => $data_liputan]);
     }
 
     public function detail_liputan()
@@ -103,7 +120,18 @@ class PageController extends Controller
 
     public function mading()
     {
-        return view('front.mading');
+        $data_mading = Mading::orderBy('id','asc')->get();
+        return view('front.mading', ['data_mading' => $data_mading]);
+    }
+
+    public function search_mading(Request $request){
+        if ($request->has('search')) {
+            $data_mading = Mading::where('judul','LIKE','%'.$request->search.'%')->get();
+        } else {
+            $data_mading = Mading::all();
+        }
+
+        return view('front.mading',['data_mading' => $data_mading]);
     }
 
     public function detail_mading()

@@ -14,7 +14,7 @@
         <div class="col-12 col-md-6 col-lg-6">
             <div class="card">
                 <div class="card-body">
-                    <form method="POST" action="{{ route('admin_tambah_resensi_submit') }}" enctype="multipart/form-data">
+                    <form method="POST" action="{{ route('admin_tambah_konten_submit') }}" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label>File</label>
