@@ -297,7 +297,7 @@
               <div class="text-danger">{{ session()->get('error') }}</div>
             @endif
 
-            <form action="{{ route('contact_send_email') }}" method="POST" data-aos="fade-up" data-aos-delay="200">
+            <form action="{{ route('contact_send_email') }}" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
               @csrf
               <div class="row gy-4">
 
