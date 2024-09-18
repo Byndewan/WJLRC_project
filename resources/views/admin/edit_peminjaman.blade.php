@@ -43,11 +43,11 @@
                                     </div>
                                     <div class="form-group">
                                     <label>Tanggal Peminjaman</label>
-                                    <input type="datetime-local" class="form-control" name="tanggal_peminjaman">{{ $row_data->tanggal_peminjaman }}
+                                    <input type="datetime-local" class="form-control" name="tanggal_peminjaman" value="{{ $row_data->tanggal_peminjaman }}">
                                     </div>
                                     <div class="form-group">
                                     <label>Tanggal Pengembalian</label>
-                                    <input type="datetime-local" class="form-control" name="tanggal_pengembalian">{{ $row_data->tanggal_pengembalian }}
+                                    <input type="datetime-local" class="form-control" name="tanggal_pengembalian" value="{{ $row_data->tanggal_pengembalian }}">
                                     </div>
                                     <div class="form-group">
                                         <label>Status</label>

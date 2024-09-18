@@ -16,18 +16,20 @@ class HomeController extends Controller
         $page_data = Tim::where( 'id','3')->first();
         $data_kontak = Kontak::where('id','1')->first();
         $tim_data = Tim::orderBy('id','asc')->get();
-        $karya_data = Karya::orderBy('id','asc')->limit(4)->get();
+        $karya_data = Karya::orderBy('id','asc')->limit(6)->get();
         return view('front.home',compact('karya_data','page_data','tim_data'))->with('data_kontak', $data_kontak);
     }
 
     public function karya()
     {
-        return view('front.karya');
+        $data_karya = Karya::orderBy('id','asc')->get();
+        return view('front.karya', compact('data_karya'));
     }
 
-    public function detail_karya()
+    public function detail_karya($id)
     {
-        return view('detail_halaman.detail_karya');
+        $data_karya = Karya::where('id',$id)->first();
+        return view('detail_halaman.detail_karya')->with('data_karya', $data_karya);
     }
 
     public function contact()

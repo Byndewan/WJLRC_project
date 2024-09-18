@@ -49,8 +49,8 @@ class PageController extends Controller
 
     public function program_offline()
     {
-        // $data_mading = Mading::orderBy('id','asc')->limit(4)->get();
-        return view('front.program_offline');
+        $data_mading = Mading::orderBy('id','asc')->limit(4)->get();
+        return view('front.program_offline', compact('data_mading'));
     }
 
     //program online
@@ -71,9 +71,11 @@ class PageController extends Controller
         return view('front.resensi',['data_resensi' => $data_resensi]);
     }
 
-    public function detail_resensi()
+    public function detail_resensi($id)
     {
-        return view('detail_halaman.detail_resensi');
+        $resensi_data = Resensi::orderBy('id','asc')->get();
+        $data_resensi = Resensi::where('id',$id)->first();
+        return view('detail_halaman.detail_resensi', compact('data_resensi','resensi_data'));
     }
 
     public function konten()
@@ -92,9 +94,11 @@ class PageController extends Controller
         return view('front.konten',['data_konten' => $data_konten]);
     }
 
-    public function detail_konten()
+    public function detail_konten($id)
     {
-        return view('detail_halaman.detail_konten');
+        $konten_data = Konten::orderBy('id','asc')->get();
+        $data_konten = Konten::where('id',$id)->first();
+        return view('detail_halaman.detail_konten', compact('data_konten','konten_data'));
     }
 
     public function liputan()
@@ -113,9 +117,11 @@ class PageController extends Controller
         return view('front.liputan',['data_liputan' => $data_liputan]);
     }
 
-    public function detail_liputan()
+    public function detail_liputan($id)
     {
-        return view('detail_halaman.detail_liputan');
+        $liputan_data = Liputan::orderBy('id','asc')->get();
+        $data_liputan = Liputan::where('id',$id)->first();
+        return view('detail_halaman.detail_liputan', compact('data_liputan','liputan_data'));
     }
 
     public function mading()
@@ -134,8 +140,10 @@ class PageController extends Controller
         return view('front.mading',['data_mading' => $data_mading]);
     }
 
-    public function detail_mading()
+    public function detail_mading($id)
     {
-        return view('detail_halaman.detail_mading');
+        $mading_data = Mading::orderBy('id','asc')->get();
+        $data_mading = Mading::where('id',$id)->first();
+        return view('detail_halaman.detail_mading', compact('data_mading','mading_data'));
     }
 }
