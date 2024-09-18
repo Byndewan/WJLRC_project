@@ -83,6 +83,8 @@
                             <div class="reply-meta d-flex align-items-baseline">
                                 <h6 class="mb-0 me-2">{{ $reply->user->name }}</h6>
                                 <span class="text-muted">{{ $reply->created_at ? $reply->created_at->diffForHumans() : 'No date' }}</span>
+                                <span class="text-muted">{{ $reply->created_at->diffForHumans() }}</span>
+
                             </div>
                             <div class="reply-body">
                                 {{ $reply->body }}
@@ -110,6 +112,10 @@
                 </div>
                 <div class="col-12">
                     <input type="submit" class="btn btn-primary" value="comment">
+                    <textarea name="body" class="form-control" id="comment-message" placeholder="Enter your comment" cols="30" rows="10"></textarea>
+                </div>
+                <div class="col-12">
+                    <input type="submit" class="btn btn-primary" value="Post comment">
                 </div>
             </div>
         </form>

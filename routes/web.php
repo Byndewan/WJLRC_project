@@ -79,6 +79,7 @@ Route::post('/karya/detail-karya', [HomeController::class, 'detail_karya'])->nam
 Route::middleware('auth')->group(function () {
 Route::post('/comments', [HomeController::class, 'store_comment']);
 Route::post('/comments/{comment}/replies', [ReplyController::class, 'store']);
+Route::get('/karya/detail-karya', [CommentController::class, 'index'])->name('comment');
 });
 
 /*Admin*/

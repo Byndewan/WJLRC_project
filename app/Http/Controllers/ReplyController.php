@@ -8,6 +8,7 @@ use Auth;
 
 class ReplyController extends Controller
 {
+
     public function store(Request $request, $comment_id)
     {
         $request->validate([

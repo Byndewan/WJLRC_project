@@ -7,11 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\User;
 use App\Models\Reply;
 
+
 class Reply extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['id', 'user_id', 'body'];
+    protected $fillable = ['comment_id', 'user_id', 'body'];
+
 
     public function user()
     {
