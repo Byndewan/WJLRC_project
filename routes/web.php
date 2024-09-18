@@ -75,10 +75,10 @@ Route::get('/program-offline/mading/detail-mading', [PageController::class, 'det
 Route::get('/program-online/resensi/detail-resensi', [PageController::class, 'detail_resensi'])->name('resensi_detail')->middleware('user:web');
 
 // comment
-Route::get('/karya/detail-karya', [CommentController::class, 'index'])->name('comment');
+Route::post('/karya/detail-karya', [HomeController::class, 'detail_karya'])->name('comment');
 Route::middleware('auth')->group(function () {
-    Route::post('/comments', [CommentController::class, 'store']);
-    Route::post('/comments/{comment}/replies', [ReplyController::class, 'store']);
+Route::post('/comments', [HomeController::class, 'store_comment']);
+Route::post('/comments/{comment}/replies', [ReplyController::class, 'store']);
 });
 
 /*Admin*/

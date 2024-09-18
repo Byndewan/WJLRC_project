@@ -22,7 +22,8 @@ class CommentController extends Controller
 
         Comment::create([
             'user_id' => Auth::id(),
-            'body' => $request->body
+            'body' => $request->input('body'),
+            'created_at' => now(),
         ]);
 
         return redirect()->back();

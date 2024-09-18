@@ -5,12 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\User;
+use App\Models\Reply;
 
 class Reply extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['comment_id', 'user_id', 'body'];
+    protected $fillable = ['id', 'user_id', 'body'];
 
     public function user()
     {
@@ -20,5 +21,10 @@ class Reply extends Model
     public function comment()
     {
         return $this->belongsTo(Comment::class);
+    }
+
+    public function replies()
+    {
+        return $this->hasMany(Reply::class);
     }
 }

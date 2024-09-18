@@ -19,7 +19,7 @@
                     </div>
                     <div class="icon-item">
                         <i class="bi bi-chat"></i>
-                        <p>2.3K</p>
+                        <p>{{ $comments->count() }}</p>
                     </div>
               </div>
               <figure class="my-4">
@@ -82,7 +82,7 @@
                         <div class="flex-grow-1 ms-2 ms-sm-3">
                             <div class="reply-meta d-flex align-items-baseline">
                                 <h6 class="mb-0 me-2">{{ $reply->user->name }}</h6>
-                                <span class="text-muted">{{ $reply->created_at->diffForHumans() }}</span>
+                                <span class="text-muted">{{ $reply->created_at ? $reply->created_at->diffForHumans() : 'No date' }}</span>
                             </div>
                             <div class="reply-body">
                                 {{ $reply->body }}
@@ -106,10 +106,10 @@
             <div class="row">
                 <div class="col-12 mb-3">
                     <label for="comment-message">Message</label>
-                    <textarea name="body" class="form-control" id="comment-message" placeholder="Enter your comment" cols="30" rows="10"></textarea>
+                    <textarea name="comment" class="form-control" id="comment-message" placeholder="Enter your comment" cols="30" rows="10"></textarea>
                 </div>
                 <div class="col-12">
-                    <input type="submit" class="btn btn-primary" value="Post comment">
+                    <input type="submit" class="btn btn-primary" value="comment">
                 </div>
             </div>
         </form>
