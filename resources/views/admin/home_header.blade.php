@@ -2,7 +2,7 @@
 
 @section('title', 'Edit Organigram')
 
-@section('heading', 'Edit Organigram')
+@section('heading', 'Edit home header')
 
 @section('rightside_button')
     <a href="{{ route('daftar_organigram') }}" class="btn btn-primary"><i class="fas fa-plus"></i> Lihat Semua</a>
