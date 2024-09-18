@@ -54,13 +54,6 @@ class AdminKaryaController extends Controller
 
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'judul' => 'required',
-            'penulis' => 'required',
-            'tanggal' => 'required',
-            'deskripsi' => 'required',
-        ]);
-
         $obj = Karya::where('id',$id)->first();
 
         $ext = $request->file('photo')->extension();

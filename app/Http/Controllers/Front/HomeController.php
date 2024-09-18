@@ -28,8 +28,9 @@ class HomeController extends Controller
 
     public function detail_karya($id)
     {
+        $karya_data = Karya::orderBy('id','asc')->get();
         $data_karya = Karya::where('id',$id)->first();
-        return view('detail_halaman.detail_karya')->with('data_karya', $data_karya);
+        return view('detail_halaman.detail_karya', compact('karya_data'))->with('data_karya', $data_karya);
     }
 
     public function contact()
