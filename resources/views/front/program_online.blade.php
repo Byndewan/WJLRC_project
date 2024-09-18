@@ -79,7 +79,7 @@
 
             @foreach ($data_resensi as $item)
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-            <a href="">
+            <a href="{{ route('resensi_detail',$item->id) }}">
               <div class="team-member">
                 <div class="member-img">
                   <img src="{{ asset('uploads/'.$item->photo) }}" class="img-fluid" alt="">
@@ -117,7 +117,7 @@
 
         @foreach ($data_konten as $item)
         <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-          <a href="">
+          <a href="{{ route('detail_konten',$item->id) }}">
             <div class="team-member">
               <div class="member-img">
                 <img src="{{ asset('uploads/'.$item->photo) }}" class="img-fluid" alt="">
@@ -154,7 +154,7 @@
 
         @foreach ($data_liputan as $item)
         <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-          <a href="">
+          <a href="{{ route('detail_liputan',$item->id) }}">
             <div class="team-member">
               <div class="member-img">
                 <img src="{{ asset('uploads/'.$item->photo) }}" class="img-fluid" alt="">

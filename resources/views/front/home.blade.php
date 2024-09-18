@@ -174,7 +174,7 @@
 
           @foreach ($karya_data as $item)
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <a href="">
+            <a href="{{ route('detail_karya',$item->id) }}">
               <div class="team-member d-flex align-items-start">
                 <div class="pic"><img src="{{ asset('uploads/'.$item->photo) }}" class="img-fluid" alt=""></div>
                 <div class="member-info">

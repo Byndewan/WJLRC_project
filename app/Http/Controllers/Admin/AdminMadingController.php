@@ -23,6 +23,7 @@ class AdminMadingController extends Controller
     {
         $request->validate([
             'judul' => 'required',
+            'nama' => 'required',
             'tanggal' => 'required',
             'deskripsi' => 'required',
         ]);
@@ -35,6 +36,7 @@ class AdminMadingController extends Controller
         $obj->photo = $final_name;
 
         $obj->judul = $request->judul;
+        $obj->nama = $request->nama;
         $obj->tanggal = $request->tanggal;
         $obj->deskripsi = $request->deskripsi;
         $obj->save();
@@ -50,11 +52,6 @@ class AdminMadingController extends Controller
 
     public function update(Request $request,$id)
     {
-        $request->validate([
-            'judul' => 'required',
-            'tanggal' => 'required',
-            'deskripsi' => 'required',
-        ]);
 
         $obj = Mading::where('id',$id)->first();
 
@@ -74,6 +71,7 @@ class AdminMadingController extends Controller
         }
 
         $obj->judul = $request->judul;
+        $obj->nama = $request->nama;
         $obj->tanggal = $request->tanggal;
         $obj->deskripsi = $request->deskripsi;
         $obj->update();

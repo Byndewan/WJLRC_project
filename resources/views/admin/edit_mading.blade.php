@@ -19,12 +19,16 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label>File</label>
+                                    <label>Foto</label>
                                     <input type="file" class="form-control" name="photo" value="{{ $row_data->photo }}">
                                 </div>
                                 <div class="form-group">
                                     <label>Judul</label>
                                     <input type="text" class="form-control" name="judul" value="{{ $row_data->judul }}">
+                                </div>
+                                <div class="form-group">
+                                    <label>Nama</label>
+                                    <input type="text" class="form-control" name="nama" value="{{ $row_data->nama }}">
                                 </div>
                                 <div class="form-group">
                                     <label>Tanggal</label>

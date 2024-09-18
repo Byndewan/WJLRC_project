@@ -24,6 +24,8 @@
                         <thead>
                             <tr>
                                 <th>No</th>
+                                <th>Foto</th>
+                                <th>Nama</th>
                                 <th>Judul Mading</th>
                                 <th>Action</th>
                             </tr>
@@ -32,6 +34,10 @@
                                 @foreach ($data_mading as $item)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
+                                    <td>
+                                        <a href="#" class="font-weight-600 text-body"><img src="{{ asset('uploads/'.$item->photo) }}" alt="avatar" width="140"></a>
+                                    </td>
+                                    <td>{{ $item->nama }}</td>
                                     <td>{{ $item->judul }}</td>
                                     <td>
                                         <a href="{{ route('admin_edit_mading',$item->id) }}" class="btn btn-primary btn-action mr-1" title="ubah" data-toggle="tooltip"><i class="fas fa-pencil-alt"></i></a>

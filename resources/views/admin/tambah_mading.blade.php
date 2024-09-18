@@ -17,12 +17,16 @@
                     <form method="POST" action="{{ route('admin_tambah_mading_submit') }}" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
-                            <label>File</label>
+                            <label>Foto</label>
                             <input type="file" class="form-control" name="photo">
                         </div>
                         <div class="form-group">
                             <label>Judul</label>
                             <input type="text" class="form-control" name="judul">
+                        </div>
+                        <div class="form-group">
+                            <label>Nama</label>
+                            <input type="text" class="form-control" name="nama">
                         </div>
                         <div class="form-group">
                             <label>Tanggal</label>

@@ -107,6 +107,8 @@ class AdminTamanBacaController extends Controller
         $obj->nama = $request->nama;
         $obj->kelas = $request->kelas;
         $obj->judul = $request->judul;
+        $obj->tanggal_peminjaman = $request->tanggal_peminjaman;
+        $obj->tanggal_pengembalian = $request->tanggal_pengembalian;
         $obj->status = $request->status;
         $obj->save();
 
@@ -147,6 +149,9 @@ class AdminTamanBacaController extends Controller
         $obj->nama = $request->nama;
         $obj->kelas = $request->kelas;
         $obj->judul = $request->judul;
+        $obj->tanggal_peminjaman = $request->tanggal_peminjaman;
+        $obj->tanggal_pengembalian = $request->tanggal_pengembalian;
+        $obj->status = $request->status;
         $obj->update();
 
         return redirect()->route('admin_daftar_peminjaman')->with('success', 'Data is updated successfully');
