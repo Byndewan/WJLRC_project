@@ -22,6 +22,10 @@ use App\Http\Controllers\UserLoginController;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\Front\ContactController;
 
+// Comment 
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\ReplyController;
+
 // Front End
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/pengertian', [PageController::class, 'index'])->name('pengertian');
@@ -60,8 +64,6 @@ Route::get('/user/reset-password/{token}/{email}', [UserLoginController::class, 
 Route::post('/user/reset-password-submit', [UserLoginController::class, 'reset_password_submit'])->name('user_reset_password_submit');
 
 // detail halaman
-
-Route::get('/karya/detail-karya', [HomeController::class, 'detail_karya'])->name('detail_karya')->middleware('user:web');
 Route::get('/karya/detail-karya', [HomeController::class, 'detail_karya'])->name('detail_karya')->middleware('user:web');
 Route::get('/program-online/konten/detail-konten', [PageController::class, 'detail_konten'])->name('detail_konten');
 Route::get('/program-offline/liputan/detail-liputan', [PageController::class, 'detail_liputan'])->name('detail_liputan');
@@ -71,6 +73,13 @@ Route::get('/program-online/konten/detail-konten', [PageController::class, 'deta
 Route::get('/program-offline/liputan/detail-liputan', [PageController::class, 'detail_liputan'])->name('detail_liputan')->middleware('user:web');
 Route::get('/program-offline/mading/detail-mading', [PageController::class, 'detail_mading'])->name('mading_detail')->middleware('user:web');
 Route::get('/program-online/resensi/detail-resensi', [PageController::class, 'detail_resensi'])->name('resensi_detail')->middleware('user:web');
+
+// comment
+Route::get('/karya/detail-karya', [CommentController::class, 'index'])->name('comment');
+Route::middleware('auth')->group(function () {
+    Route::post('/comments', [CommentController::class, 'store']);
+    Route::post('/comments/{comment}/replies', [ReplyController::class, 'store']);
+});
 
 /*Admin*/
 Route::get('/admin/home', [AdminHomeController::class, 'index'])->name('admin_home')->middleware('admin:admin');

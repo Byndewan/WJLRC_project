@@ -7,4 +7,4 @@
 <script src="{{ asset('dist_detail/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
 <script src="{{ asset('dist_detail/assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
 
-<script src="{{ asset('dist_detail/js/main.js') }}"></script>
+<script src="{{ asset('dist_detail/assets/js/main.js') }}"></script>

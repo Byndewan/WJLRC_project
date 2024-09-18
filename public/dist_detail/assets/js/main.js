@@ -216,3 +216,122 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+// Comment 
+// function toggleReplies(button) {
+//   // Temukan elemen replies yang berdekatan dengan tombol
+//   // var replies = button.closest('.comment-main').nextElementSibling;
+//   var replies = button.closest('.comment').querySelector('.replies');
+
+//   // Temukan ikon chevron yang ada di dalam tombol
+//   var chevronIcon = button.querySelector('i');
+
+//   // Cek apakah replies ditampilkan atau disembunyikan, dan lakukan toggle
+//   if (replies.style.display === "none" || replies.style.display === "") {
+//       replies.style.display = "block";
+//       button.innerHTML = "Hide Replies "; // Ubah teks tombol
+//       chevronIcon.classList.remove("fa-chevron-down");
+//       chevronIcon.classList.add("fa-chevron-up");
+//   } else {
+//       replies.style.display = "none";
+//       button.innerHTML = "Show Replies "; // Ubah teks tombol
+//       chevronIcon.classList.remove("fa-chevron-up");
+//       chevronIcon.classList.add("fa-chevron-down");
+//   }
+
+//   // Tambahkan ikon ke dalam tombol setelah mengganti teks
+//   button.appendChild(chevronIcon);
+// }
+
+// function addReplyForm(button) {
+//   // Temukan elemen komentar di mana form akan ditambahkan
+//   var comment = button.closest('.comment');
+  
+//   // Cek apakah form reply sudah ada, jika ada maka tidak menambah form baru
+//   var form = comment.querySelector('.reply-form');
+//   if (form) return;
+
+//   // HTML untuk form reply
+//   var formHtml = `
+//       <form class="reply-form mt-3">
+//           <textarea class="form-control mb-2" placeholder="Add a reply..." required></textarea>
+//           <button class="btn btn-primary" type="submit">Submit</button>
+//       </form>
+//   `;
+
+//   // Tambahkan form sebelum bagian replies
+//   comment.insertAdjacentHTML('beforeend', formHtml);
+//  }
+
+function toggleReplies(button) {
+  // Cari elemen '.replies' yang berada dalam elemen '.comment'
+  var replies = button.closest('.comment').querySelector('.replies');
+  
+  // Cek apakah elemen replies ditemukan
+  if (!replies) {
+      console.error('Replies element not found');
+      return;
+  }
+  
+  // Cari ikon chevron dalam tombol
+  var chevronIcon = button.querySelector('i');
+  
+  // Cek apakah ikon ditemukan
+  if (!chevronIcon) {
+      console.error('Chevron icon not found');
+      return;
+  }
+
+  // Cek apakah replies ditampilkan atau disembunyikan
+  if (replies.style.display === "none" || replies.style.display === "") {
+      replies.style.display = "block"; // Tampilkan replies
+      button.innerHTML = "Hide Replies "; // Ubah teks tombol
+      chevronIcon.classList.remove("fa-chevron-down");
+      chevronIcon.classList.add("fa-chevron-up");
+  } else {
+      replies.style.display = "none"; // Sembunyikan replies
+      button.innerHTML = "Show Replies "; // Ubah teks tombol
+      chevronIcon.classList.remove("fa-chevron-up");
+      chevronIcon.classList.add("fa-chevron-down");
+  }
+
+  // Tambahkan ikon ke dalam tombol setelah mengubah teks
+  button.appendChild(chevronIcon);
+}
+
+function addReplyForm(button) {
+  // Cari elemen comment yang berdekatan dengan tombol
+  var comment = button.closest('.comment');
+  
+  // Cek apakah form reply sudah ada
+  var form = comment.querySelector('.reply-form');
+  if (form) return;
+
+  // HTML form reply
+  var formHtml = `
+      <form class="reply-form mt-3">
+          <textarea class="form-control mb-2" placeholder="Add a reply..." required></textarea>
+          <button class="btn btn-primary" type="submit">Submit</button>
+          <button type="button" class="btn btn-secondary cancel-reply">Cancel</button>
+      </form>
+  `;
+
+  // Tambahkan form setelah bagian comment actions
+  comment.insertAdjacentHTML('beforeend', formHtml);
+
+  // Tambahkan event listener untuk tombol Cancel
+  var cancelButton = comment.querySelector('.cancel-reply');
+  cancelButton.addEventListener('click', function() {
+      removeReplyForm(cancelButton);
+  });
+}
+
+function removeReplyForm(cancelButton) {
+  // Cari form reply yang terkait
+  var form = cancelButton.closest('.reply-form');
+  
+  // Hapus form
+  if (form) {
+    form.remove();
+  }
+}
