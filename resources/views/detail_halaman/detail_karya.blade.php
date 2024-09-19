@@ -31,7 +31,6 @@
 
             <!-- ======= Comments ======= -->
             <div class="comments">
-<<<<<<< HEAD
                 <h5 class="comment-title py-4">2 Comments</h5>
                 <div class="comment d-flex mb-4">
                   <div class="flex-shrink-0">
