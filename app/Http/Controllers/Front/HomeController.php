@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Karya;
 use App\Models\Kontak;
 use App\Models\Tim;
+use Auth;
 use Illuminate\Http\Request;
 use App\Models\HomePageItem;
 use App\Models\Comment;
@@ -59,14 +60,14 @@ class HomeController extends Controller
         $request->validate([
             'body' => 'required'
         ]);
-    
+
         Reply::create([
             'comment_id' => $comment_id,
             'user_id' => Auth::id(),
             'body' => $request->input('body'),
             'created_at' => now(),
         ]);
-    
+
         return redirect()->back();
     }
 
