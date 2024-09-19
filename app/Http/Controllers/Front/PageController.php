@@ -9,16 +9,19 @@ use App\Models\Mading;
 use App\Models\Resensi;
 use Illuminate\Http\Request;
 use App\Models\Organigram;
+use App\Models\HomePageItem;
 
 class PageController extends Controller
 {
     public function index()
     {
-        return view('front.pengertian');
+        $data_page = HomePageItem::where('id','1')->first();
+        return view('front.pengertian')->with('data_page',$data_page);
     }
 
     public function organigram()
     {
+        $data_page = HomePageItem::where('id','1')->first();
         $data_organigram_pembina = Organigram::where('id','1')->first();
         $data_organigram_ketua = Organigram::where('id','2')->first();
         $data_organigram_WK1 = Organigram::where('id','3')->first();
@@ -31,34 +34,38 @@ class PageController extends Controller
         $data_organigram_AL2 = Organigram::where('id','10')->first();
         $data_organigram_KM1 = Organigram::where('id','11')->first();
         $data_organigram_KM2 = Organigram::where('id','12')->first();
-        return view('front.organigram', compact('data_organigram_pembina','data_organigram_ketua','data_organigram_WK1','data_organigram_WK2','data_organigram_B1','data_organigram_B2','data_organigram_S1','data_organigram_S2','data_organigram_AL1','data_organigram_AL2','data_organigram_KM1','data_organigram_KM2'));
+        return view('front.organigram' , compact('data_organigram_pembina','data_organigram_ketua','data_organigram_WK1','data_organigram_WK2','data_organigram_B1','data_organigram_B2','data_organigram_S1','data_organigram_S2','data_organigram_AL1','data_organigram_AL2','data_organigram_KM1','data_organigram_KM2','data_page'));
     }
 
     public function divisi()
     {
-        return view('front.divisi');
+        $data_page = HomePageItem::where('id','1')->first();
+        return view('front.divisi')->with('data_page',$data_page);
     }
 
     public function program_online()
     {
+        $data_page = HomePageItem::where('id','1')->first();
         $data_konten = Konten::orderBy('id','asc')->limit(4)->get();
         $data_resensi = Resensi::orderBy('id','asc')->limit(4)->get();
         $data_liputan = Liputan::orderBy('id','asc')->limit(4)->get();
-        return view('front.program_online', compact('data_resensi','data_konten','data_liputan'));
+        return view('front.program_online', compact('data_resensi','data_konten','data_liputan','data_page'));
     }
 
     public function program_offline()
     {
+        $data_page = HomePageItem::where('id','1')->first();
         $data_mading = Mading::orderBy('id','asc')->limit(4)->get();
-        return view('front.program_offline', compact('data_mading'));
+        return view('front.program_offline', compact('data_mading','data_page'));
     }
 
     //program online
 
     public function resensi()
     {
+        $data_page = HomePageItem::where('id','1')->first();
         $data_resensi = Resensi::orderBy('id','asc')->get();
-        return view('front.resensi', ['data_resensi' => $data_resensi]);
+        return view('front.resensi', 'data_page', ['data_resensi' => $data_resensi]);
     }
 
     public function search_resensi(Request $request){
@@ -73,15 +80,17 @@ class PageController extends Controller
 
     public function detail_resensi($id)
     {
+        $data_page = HomePageItem::where('id','1')->first();
         $resensi_data = Resensi::orderBy('id','asc')->get();
         $data_resensi = Resensi::where('id',$id)->first();
-        return view('detail_halaman.detail_resensi', compact('data_resensi','resensi_data'));
+        return view('detail_halaman.detail_resensi', compact('data_resensi','resensi_data','data_page'));
     }
 
     public function konten()
     {
+        $data_page = HomePageItem::where('id','1')->first();
         $data_konten = Konten::orderBy('id','asc')->get();
-        return view('front.konten', ['data_konten' => $data_konten]);
+        return view('front.konten', 'data_page', ['data_konten' => $data_konten]);
     }
 
     public function search_konten(Request $request){
@@ -96,15 +105,17 @@ class PageController extends Controller
 
     public function detail_konten($id)
     {
+        $data_page = HomePageItem::where('id','1')->first();
         $konten_data = Konten::orderBy('id','asc')->get();
         $data_konten = Konten::where('id',$id)->first();
-        return view('detail_halaman.detail_konten', compact('data_konten','konten_data'));
+        return view('detail_halaman.detail_konten', compact('data_page','data_konten','konten_data'));
     }
 
     public function liputan()
     {
+        $data_page = HomePageItem::where('id','1')->first();
         $data_liputan = Liputan::orderBy('id','asc')->get();
-        return view('front.liputan', ['data_liputan' => $data_liputan]);
+        return view('front.liputan','data_page', ['data_liputan' => $data_liputan]);
     }
 
     public function search_liputan(Request $request){
@@ -119,15 +130,17 @@ class PageController extends Controller
 
     public function detail_liputan($id)
     {
+        $data_page = HomePageItem::where('id','1')->first();
         $liputan_data = Liputan::orderBy('id','asc')->get();
         $data_liputan = Liputan::where('id',$id)->first();
-        return view('detail_halaman.detail_liputan', compact('data_liputan','liputan_data'));
+        return view('detail_halaman.detail_liputan', compact('data_liputan','liputan_data', 'data_page'));
     }
 
     public function mading()
     {
+        $data_page = HomePageItem::where('id','1')->first();
         $data_mading = Mading::orderBy('id','asc')->get();
-        return view('front.mading', ['data_mading' => $data_mading]);
+        return view('front.mading', 'data_page', ['data_mading' => $data_mading]);
     }
 
     public function search_mading(Request $request){
@@ -142,8 +155,9 @@ class PageController extends Controller
 
     public function detail_mading($id)
     {
+        $data_page = HomePageItem::where('id','1')->first();
         $mading_data = Mading::orderBy('id','asc')->get();
         $data_mading = Mading::where('id',$id)->first();
-        return view('detail_halaman.detail_mading', compact('data_mading','mading_data'));
+        return view('detail_halaman.detail_mading', compact('data_mading','mading_data','data_page'));
     }
 }

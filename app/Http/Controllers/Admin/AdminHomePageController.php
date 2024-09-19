@@ -32,8 +32,8 @@ class AdminHomePageController extends Controller
 
     public function footer()
     {
-        $data_page = HomePageItem::where('id',1)->first();
-        return view('admin.home_footer_show', compact('data_page'));
+        $data_page = HomePageItem::where('id','1')->first();
+        return view('admin.home_footer_show',['data_page', $data_page]);
     }
 
     public function footer_update(Request $request)
