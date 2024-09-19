@@ -14,6 +14,8 @@ use App\Http\Controllers\Admin\AdminResensiController;
 use App\Http\Controllers\Admin\AdminTamanBacaController;
 use App\Http\Controllers\Admin\AdminKontakController;
 use App\Http\Controllers\AdminTimController;
+use App\Http\Controllers\Admin\AdminHomePageController;
+
 
 /* Front Controllers */
 use App\Http\Controllers\Front\HomeController;
@@ -107,6 +109,13 @@ Route::get('/admin/forgot-password', [AdminLoginController::class, 'forgot_passw
 Route::post('/admin/forgot-password-submit', [AdminLoginController::class, 'forgot_password_submit'])->name('admin_forgot_password_submit');
 Route::get('/admin/reset-password/{email}', [AdminLoginController::class, 'reset_password'])->name('admin_reset_password')->middleware('admin:admin');
 Route::post('/admin/reset-password-submit', [AdminLoginController::class, 'reset_password_submit'])->name('admin_reset_password_submit');
+
+// Web Dynamic
+Route::get('/admin/home-banner', [AdminHomePageController::class, 'index'])->name('admin_home_banner')->middleware('admin:admin');
+Route::post('/admin/home-banner-update', [AdminHomePageController::class, 'store'])->name('admin_home_banner_update')->middleware('admin:admin');
+Route::get('/admin/home-footer', [AdminHomePageController::class, 'footer'])->name('admin_home_footer')->middleware('admin:admin');
+Route::post('/admin/home-footer-update', [AdminHomePageController::class, 'footer_update'])->name('admin_home_footer_update')->middleware('admin:admin');
+
 
 /* CRUD Bagian Karya */
 Route::get('/admin/daftar-karya', [AdminKaryaController::class, 'daftar_karya'])->name('daftar_karya')->middleware('admin:admin');
