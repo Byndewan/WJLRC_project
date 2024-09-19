@@ -63,8 +63,8 @@
       <div class="container">
         <div class="row justify-content-center" data-aos="zoom-out">
           <div class="col-xl-7 col-lg-9 text-center">
-            <h1>WELCOME TO WJLRC WEBSITE</h1>
-            <p>Tim kami di WJLRC berkomitmen untuk mencapai keunggulan dalam semua kegiatan ekstrakurikuler kami.</p>
+            <h1>{{ $data_page->banner_title }}</h1>
+            <p>{{ $data_page->banner_subtitle }}</p>
           </div>
         </div>
         <div class="text-center" data-aos="zoom-out" data-aos-delay="100">

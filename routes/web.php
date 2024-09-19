@@ -17,6 +17,8 @@ use App\Http\Controllers\Admin\AdminResensiController;
 use App\Http\Controllers\Admin\AdminTamanBacaController;
 use App\Http\Controllers\Admin\AdminKontakController;
 use App\Http\Controllers\AdminTimController;
+use App\Http\Controllers\Admin\AdminHomePageController;
+
 
 /* Front Controllers */
 use App\Http\Controllers\Front\HomeController;
@@ -24,6 +26,10 @@ use App\Http\Controllers\Front\PageController;
 use App\Http\Controllers\UserLoginController;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\Front\ContactController;
+
+// Comment 
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\ReplyController;
 
 // Front End
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -67,11 +73,31 @@ Route::get('/user/reset-password/{token}/{email}', [UserLoginController::class, 
 Route::post('/user/reset-password-submit', [UserLoginController::class, 'reset_password_submit'])->name('user_reset_password_submit');
 
 // detail halaman
+<<<<<<< HEAD
 Route::get('/karya/detail-karya/{id}', [HomeController::class, 'detail_karya'])->name('detail_karya')->middleware('user:web');
 Route::get('/program-online/resensi/detail-resensi/{id}', [PageController::class, 'detail_resensi'])->name('resensi_detail');
 Route::get('/program-online/konten/detail-konten/{id}', [PageController::class, 'detail_konten'])->name('detail_konten');
 Route::get('/program-offline/liputan/detail-liputan/{id}', [PageController::class, 'detail_liputan'])->name('detail_liputan');
 Route::get('/program-offline/mading/detail-mading/{id}', [PageController::class, 'detail_mading'])->name('detail_mading');
+=======
+Route::get('/karya/detail-karya', [HomeController::class, 'detail_karya'])->name('detail_karya')->middleware('user:web');
+Route::get('/program-online/konten/detail-konten', [PageController::class, 'detail_konten'])->name('detail_konten');
+Route::get('/program-offline/liputan/detail-liputan', [PageController::class, 'detail_liputan'])->name('detail_liputan');
+Route::get('/program-offline/mading/detail-mading', [PageController::class, 'detail_mading'])->name('detail_mading');
+Route::get('/program-online/resensi/detail-resensi', [PageController::class, 'detail_resensi'])->name('resensi_detail');
+Route::get('/program-online/konten/detail-konten', [PageController::class, 'detail_konten'])->name('detail_konten')->middleware('user:web');
+Route::get('/program-offline/liputan/detail-liputan', [PageController::class, 'detail_liputan'])->name('detail_liputan')->middleware('user:web');
+Route::get('/program-offline/mading/detail-mading', [PageController::class, 'detail_mading'])->name('mading_detail')->middleware('user:web');
+Route::get('/program-online/resensi/detail-resensi', [PageController::class, 'detail_resensi'])->name('resensi_detail')->middleware('user:web');
+>>>>>>> f021373848b96d41fa8804e99dc16e1c96465377
+
+// comment
+Route::post('/karya/detail-karya', [HomeController::class, 'detail_karya'])->name('comment');
+Route::middleware('auth')->group(function () {
+Route::post('/comments', [HomeController::class, 'store_comment']);
+Route::post('/comments/{comment}/replies', [ReplyController::class, 'store']);
+Route::get('/karya/detail-karya', [CommentController::class, 'index'])->name('comment');
+});
 
 /*Admin*/
 Route::get('/admin/home', [AdminHomeController::class, 'index'])->name('admin_home')->middleware('admin:admin');
@@ -98,6 +124,13 @@ Route::get('/admin/forgot-password', [AdminLoginController::class, 'forgot_passw
 Route::post('/admin/forgot-password-submit', [AdminLoginController::class, 'forgot_password_submit'])->name('admin_forgot_password_submit');
 Route::get('/admin/reset-password/{email}', [AdminLoginController::class, 'reset_password'])->name('admin_reset_password');
 Route::post('/admin/reset-password-submit', [AdminLoginController::class, 'reset_password_submit'])->name('admin_reset_password_submit');
+
+// Web Dynamic
+Route::get('/admin/home-banner', [AdminHomePageController::class, 'index'])->name('admin_home_banner')->middleware('admin:admin');
+Route::post('/admin/home-banner-update', [AdminHomePageController::class, 'store'])->name('admin_home_banner_update')->middleware('admin:admin');
+Route::get('/admin/home-footer', [AdminHomePageController::class, 'footer'])->name('admin_home_footer')->middleware('admin:admin');
+Route::post('/admin/home-footer-update', [AdminHomePageController::class, 'footer_update'])->name('admin_home_footer_update')->middleware('admin:admin');
+
 
 /* CRUD Bagian Karya */
 Route::get('/admin/daftar-karya', [AdminKaryaController::class, 'daftar_karya'])->name('daftar_karya')->middleware('admin:admin');

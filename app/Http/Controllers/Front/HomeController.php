@@ -8,16 +8,26 @@ use App\Models\Kontak;
 use App\Models\Tim;
 use Illuminate\Http\Request;
 use App\Models\HomePageItem;
+use App\Models\Comment;
+use App\Models\Reply;
 
 class HomeController extends Controller
 {
     public function index()
     {
+<<<<<<< HEAD
         $page_data = Tim::where( 'id','3')->first();
         $data_kontak = Kontak::where('id','1')->first();
         $tim_data = Tim::orderBy('id','asc')->get();
         $karya_data = Karya::orderBy('id','asc')->limit(6)->get();
         return view('front.home',compact('karya_data','page_data','tim_data'))->with('data_kontak', $data_kontak);
+=======
+        $data_page = HomePageItem::where('id',1)->first();
+        $page_data = Tim::where('id','1')->first();
+        $tim_data = Tim::orderBy('id','asc')->get();
+        $karya_data = Karya::orderBy('id','asc')->get();
+        return view('front.home',compact('karya_data','page_data','data_page','tim_data'));
+>>>>>>> f021373848b96d41fa8804e99dc16e1c96465377
     }
 
     public function karya()
@@ -28,9 +38,45 @@ class HomeController extends Controller
 
     public function detail_karya($id)
     {
+<<<<<<< HEAD
         $karya_data = Karya::orderBy('id','asc')->get();
         $data_karya = Karya::where('id',$id)->first();
         return view('detail_halaman.detail_karya', compact('karya_data'))->with('data_karya', $data_karya);
+=======
+        $comments = Comment::with('replies.user', 'user')->get();
+        return view('detail_halaman.detail_karya', compact('comments'));
+    }
+
+    public function store_comment(Request $request)
+    {
+        $request->validate([
+            'body' => 'required'
+        ]);
+
+        Comment::create([
+            'user_id' => Auth::id(),
+            'body' => $request->input('body'),
+            'created_at' => now(),
+        ]);
+
+        return redirect()->back();
+    }
+
+    public function store(Request $request, $comment_id)
+    {
+        $request->validate([
+            'body' => 'required'
+        ]);
+    
+        Reply::create([
+            'comment_id' => $comment_id,
+            'user_id' => Auth::id(),
+            'body' => $request->input('body'),
+            'created_at' => now(),
+        ]);
+    
+        return redirect()->back();
+>>>>>>> f021373848b96d41fa8804e99dc16e1c96465377
     }
 
     public function contact()

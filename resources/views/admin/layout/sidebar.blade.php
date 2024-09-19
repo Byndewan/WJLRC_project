@@ -66,6 +66,20 @@
             </ul>
         </li>
 
+        <li class="dropdown {{ Request::is('admin/home-banner') ? "active" : " " }}">
+            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-hand-point-right"></i> <span>Home Banner</span></a>
+            <ul class="dropdown-menu">
+              <li class="{{ Request::is('admin/home-banner') ? "active" : " " }}"><a class="nav-link" href="{{ route('admin_home_banner') }}">Home Banner</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown {{ Request::is('admin/home-footer') ? "active" : " " }}">
+            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-hand-point-right"></i> <span>Home Footer</span></a>
+            <ul class="dropdown-menu">
+              <li class="{{ Request::is('admin/home-footer') ? "active" : " " }}"><a class="nav-link" href="{{ route('admin_home_footer') }}">Home Footer</a></li>
+            </ul>
+        </li>
+
       <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
       </div>
     </aside>
