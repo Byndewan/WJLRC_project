@@ -120,7 +120,7 @@
                   </div>
                 </div>
               </div><!-- End Comments Form -->
-=======
+              
     <h5 class="comment-title py-4">{{ $comments->count() }} Comments</h5>
 
     @foreach ($comments as $comment)
