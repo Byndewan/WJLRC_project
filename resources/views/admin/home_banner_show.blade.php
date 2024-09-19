@@ -4,7 +4,6 @@
 
 @section('heading', 'Edit Home Banner')
 
-
 @section('main_content')
 <div class="section-body">
     <div class="row">
