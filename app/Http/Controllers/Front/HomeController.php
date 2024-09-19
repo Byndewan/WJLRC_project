@@ -15,19 +15,16 @@ class HomeController extends Controller
 {
     public function index()
     {
-<<<<<<< HEAD
         $page_data = Tim::where( 'id','3')->first();
         $data_kontak = Kontak::where('id','1')->first();
         $tim_data = Tim::orderBy('id','asc')->get();
         $karya_data = Karya::orderBy('id','asc')->limit(6)->get();
         return view('front.home',compact('karya_data','page_data','tim_data'))->with('data_kontak', $data_kontak);
-=======
         $data_page = HomePageItem::where('id',1)->first();
         $page_data = Tim::where('id','1')->first();
         $tim_data = Tim::orderBy('id','asc')->get();
         $karya_data = Karya::orderBy('id','asc')->get();
         return view('front.home',compact('karya_data','page_data','data_page','tim_data'));
->>>>>>> f021373848b96d41fa8804e99dc16e1c96465377
     }
 
     public function karya()
@@ -38,11 +35,9 @@ class HomeController extends Controller
 
     public function detail_karya($id)
     {
-<<<<<<< HEAD
         $karya_data = Karya::orderBy('id','asc')->get();
         $data_karya = Karya::where('id',$id)->first();
         return view('detail_halaman.detail_karya', compact('karya_data'))->with('data_karya', $data_karya);
-=======
         $comments = Comment::with('replies.user', 'user')->get();
         return view('detail_halaman.detail_karya', compact('comments'));
     }
@@ -76,7 +71,6 @@ class HomeController extends Controller
         ]);
     
         return redirect()->back();
->>>>>>> f021373848b96d41fa8804e99dc16e1c96465377
     }
 
     public function contact()
