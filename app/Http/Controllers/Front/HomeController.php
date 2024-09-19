@@ -19,12 +19,9 @@ class HomeController extends Controller
         $data_kontak = Kontak::where('id','1')->first();
         $tim_data = Tim::orderBy('id','asc')->get();
         $karya_data = Karya::orderBy('id','asc')->limit(6)->get();
-        return view('front.home',compact('karya_data','page_data','tim_data'))->with('data_kontak', $data_kontak);
         $data_page = HomePageItem::where('id',1)->first();
-        $page_data = Tim::where('id','1')->first();
-        $tim_data = Tim::orderBy('id','asc')->get();
-        $karya_data = Karya::orderBy('id','asc')->get();
-        return view('front.home',compact('karya_data','page_data','data_page','tim_data'));
+        return view('front.home',compact('karya_data','page_data','data_page','tim_data'))->with('data_kontak', $data_kontak);
+        // return view('front.home',compact('karya_data','page_data','tim_data'));
     }
 
     public function karya()
