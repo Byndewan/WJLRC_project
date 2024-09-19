@@ -65,17 +65,19 @@ class PageController extends Controller
     {
         $data_page = HomePageItem::where('id','1')->first();
         $data_resensi = Resensi::orderBy('id','asc')->get();
-        return view('front.resensi', 'data_page', ['data_resensi' => $data_resensi]);
+        return view('front.resensi', ['data_resensi' => $data_resensi])->with('data_page',$data_page);
     }
 
     public function search_resensi(Request $request){
+        $data_page = HomePageItem::where('id','1')->first();
+
         if ($request->has('search')) {
             $data_resensi = Resensi::where('judul','LIKE','%'.$request->search.'%')->get();
         } else {
             $data_resensi = Resensi::all();
         }
 
-        return view('front.resensi',['data_resensi' => $data_resensi]);
+        return view('front.resensi',['data_resensi' => $data_resensi])->with('data_page',$data_page);
     }
 
     public function detail_resensi($id)
@@ -90,17 +92,19 @@ class PageController extends Controller
     {
         $data_page = HomePageItem::where('id','1')->first();
         $data_konten = Konten::orderBy('id','asc')->get();
-        return view('front.konten', 'data_page', ['data_konten' => $data_konten]);
+        return view('front.konten', ['data_konten' => $data_konten])->with('data_page',$data_page);
     }
 
     public function search_konten(Request $request){
+        $data_page = HomePageItem::where('id','1')->first();
+        
         if ($request->has('search')) {
             $data_konten = Konten::where('judul','LIKE','%'.$request->search.'%')->get();
         } else {
             $data_konten = Konten::all();
         }
 
-        return view('front.konten',['data_konten' => $data_konten]);
+        return view('front.konten',['data_konten' => $data_konten])->with('data_page',$data_page);
     }
 
     public function detail_konten($id)
@@ -115,17 +119,19 @@ class PageController extends Controller
     {
         $data_page = HomePageItem::where('id','1')->first();
         $data_liputan = Liputan::orderBy('id','asc')->get();
-        return view('front.liputan','data_page', ['data_liputan' => $data_liputan]);
+        return view('front.liputan', ['data_liputan' => $data_liputan])->with('data_page',$data_page);
     }
 
     public function search_liputan(Request $request){
+        $data_page = HomePageItem::where('id','1')->first();
+
         if ($request->has('search')) {
             $data_liputan = Liputan::where('judul','LIKE','%'.$request->search.'%')->get();
         } else {
             $data_liputan = Liputan::all();
         }
 
-        return view('front.liputan',['data_liputan' => $data_liputan]);
+        return view('front.liputan',['data_liputan' => $data_liputan])->with('data_page',$data_page);
     }
 
     public function detail_liputan($id)
@@ -140,17 +146,19 @@ class PageController extends Controller
     {
         $data_page = HomePageItem::where('id','1')->first();
         $data_mading = Mading::orderBy('id','asc')->get();
-        return view('front.mading', 'data_page', ['data_mading' => $data_mading]);
+        return view('front.mading', ['data_mading' => $data_mading])->with('data_page',$data_page);
     }
 
     public function search_mading(Request $request){
+        $data_page = HomePageItem::where('id','1')->first();
+
         if ($request->has('search')) {
             $data_mading = Mading::where('judul','LIKE','%'.$request->search.'%')->get();
         } else {
             $data_mading = Mading::all();
         }
 
-        return view('front.mading',['data_mading' => $data_mading]);
+        return view('front.mading',['data_mading' => $data_mading])->with('data_page',$data_page);
     }
 
     public function detail_mading($id)

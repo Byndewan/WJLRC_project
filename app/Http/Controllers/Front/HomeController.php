@@ -27,15 +27,18 @@ class HomeController extends Controller
 
     public function karya()
     {
+        $data_page = HomePageItem::where('id','1')->first();
         $data_karya = Karya::orderBy('id','asc')->get();
-        return view('front.karya', compact('data_karya'));
+        return view('front.karya', compact('data_karya', 'data_page'));
     }
 
     public function detail_karya($id)
     {
+        $data_page = HomePageItem::where('id','1')->first();
         $karya_data = Karya::orderBy('id','asc')->get();
         $data_karya = Karya::where('id',$id)->first();
-        return view('detail_halaman.detail_karya', compact('karya_data'))->with('data_karya', $data_karya);
+        return view('detail_halaman.detail_karya', compact('karya_data', 'data_page'))->with('data_karya', $data_karya);
+
         $comments = Comment::with('replies.user', 'user')->get();
         return view('detail_halaman.detail_karya', compact('comments'));
     }
