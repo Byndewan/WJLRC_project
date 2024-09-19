@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Karya;
 use App\Models\Kontak;
 use App\Models\Tim;
+use Auth;
 use Illuminate\Http\Request;
 use App\Models\HomePageItem;
 use App\Models\Comment;
@@ -19,6 +20,12 @@ class HomeController extends Controller
         $data_kontak = Kontak::where('id','1')->first();
         $tim_data = Tim::orderBy('id','asc')->get();
         $karya_data = Karya::orderBy('id','asc')->limit(6)->get();
+        return view('front.home',compact('karya_data','page_data','tim_data'))->with('data_kontak', $data_kontak);
+        $data_page = HomePageItem::where('id',1)->first();
+        $page_data = Tim::where('id','1')->first();
+        $tim_data = Tim::orderBy('id','asc')->get();
+        $karya_data = Karya::orderBy('id','asc')->get();
+        return view('front.home',compact('karya_data','page_data','data_page','tim_data'));
         $data_page = HomePageItem::where('id',1)->first();
         return view('front.home',compact('karya_data','page_data','data_page','tim_data'))->with('data_kontak', $data_kontak);
         // return view('front.home',compact('karya_data','page_data','tim_data'));
@@ -59,14 +66,14 @@ class HomeController extends Controller
         $request->validate([
             'body' => 'required'
         ]);
-    
+
         Reply::create([
             'comment_id' => $comment_id,
             'user_id' => Auth::id(),
             'body' => $request->input('body'),
             'created_at' => now(),
         ]);
-    
+
         return redirect()->back();
     }
 

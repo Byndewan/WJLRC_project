@@ -27,7 +27,7 @@ use App\Http\Controllers\UserLoginController;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\Front\ContactController;
 
-// Comment 
+// Comment
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ReplyController;
 
@@ -73,7 +73,6 @@ Route::get('/user/reset-password/{token}/{email}', [UserLoginController::class, 
 Route::post('/user/reset-password-submit', [UserLoginController::class, 'reset_password_submit'])->name('user_reset_password_submit');
 
 // detail halaman
-
 Route::get('/karya/detail-karya/{id}', [HomeController::class, 'detail_karya'])->name('detail_karya')->middleware('user:web');
 Route::get('/program-online/resensi/detail-resensi/{id}', [PageController::class, 'detail_resensi'])->name('resensi_detail');
 Route::get('/program-online/konten/detail-konten/{id}', [PageController::class, 'detail_konten'])->name('detail_konten');
