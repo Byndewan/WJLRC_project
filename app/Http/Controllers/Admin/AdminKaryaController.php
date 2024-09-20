@@ -5,11 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Karya;
-<<<<<<< HEAD
 use Hash;
-=======
 use App\Models\Comment;
->>>>>>> f021373848b96d41fa8804e99dc16e1c96465377
 
 class AdminKaryaController extends Controller
 {
