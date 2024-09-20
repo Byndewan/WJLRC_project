@@ -18,6 +18,7 @@ use App\Http\Controllers\Admin\AdminTamanBacaController;
 use App\Http\Controllers\Admin\AdminKontakController;
 use App\Http\Controllers\AdminTimController;
 use App\Http\Controllers\Admin\AdminHomePageController;
+use App\Http\Controllers\Admin\AdminCategoryController;
 
 
 /* Front Controllers */
@@ -208,3 +209,21 @@ Route::get('/admin/edit/tim/{id}', [AdminTimController::class, 'edit'])->name('a
 Route::post('/admin/edit-tim-submit/{id}', [AdminTimController::class, 'update'])->name('admin_edit_tim_submit');
 Route::get('/admin/tim/delete/{id}', [AdminTimController::class, 'delete'])->name('admin_hapus_tim')->middleware('admin:admin');
 Route::get('/admin/daftar-tim/search', [AdminTimController::class, 'search']);
+
+// CRUD Bagian Kategori
+Route::get('/admin/daftar-kategori', [AdminCategoryController::class, 'daftar_kategori'])->name('daftar_kategori')->middleware('admin:admin');
+Route::get('/admin/tambah/kategori', [AdminCategoryController::class, 'tambah'])->name('tambah_kategori')->middleware('admin:admin');
+Route::post('/admin/tambah-kategori-submit', [AdminCategoryController::class, 'store'])->name('tambah_kategori_submit');
+Route::get('/admin/edit/kategori/{id}', [AdminCategoryController::class, 'edit'])->name('edit_kategori')->middleware('admin:admin');
+Route::post('/admin/edit-kategori-submit/{id}', [AdminCategoryController::class, 'update'])->name('edit_kategori_submit');
+Route::get('/admin/kategori/delete/{id}', [AdminCategoryController::class, 'delete'])->name('hapus_kategori')->middleware('admin:admin');
+Route::get('/admin/daftar-kategori/search_kategori', [AdminCategoryController::class, 'search']);
+
+// CRUD Tag
+Route::get('/admin/daftar-tag', [AdminCategoryController::class, 'daftar_tag'])->name('daftar_tag')->middleware('admin:admin');
+Route::get('/admin/tambah/tag', [AdminCategoryController::class, 'tambah'])->name('tambah_tag')->middleware('admin:admin');
+Route::post('/admin/tambah-tag-submit', [AdminCategoryController::class, 'store'])->name('tambah_tag_submit');
+Route::get('/admin/edit/tag/{id}', [AdminCategoryController::class, 'edit'])->name('edit_tag')->middleware('admin:admin');
+Route::post('/admin/edit-tag-submit/{id}', [AdminCategoryController::class, 'update'])->name('edit_tag_submit');
+Route::get('/admin/tag/delete/{id}', [AdminCategoryController::class, 'delete'])->name('hapus_tag')->middleware('admin:admin');
+Route::get('/admin/daftar-tag/search_tag', [AdminCategoryController::class, 'search']);
