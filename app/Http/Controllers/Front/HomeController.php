@@ -38,7 +38,7 @@ class HomeController extends Controller
         $data_page = HomePageItem::where('id', '1')->first();
         $data_karya = Karya::where('id', '1')->first();
         $karya_data = Karya::orderBy('id', 'asc')->get();
-        return view('front.karya', compact('karya_data','data_page','karya_data','categories'))->with('data_karya');
+        return view('front.karya', compact('karya_data','data_page','karya_data'))->with('data_karya');
     }
 
     public function kategori(Request $request)
