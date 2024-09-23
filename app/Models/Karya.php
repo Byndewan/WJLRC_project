@@ -9,7 +9,21 @@ use App\Models\Tag;
 
 class Karya extends Model
 {
-    // protected $fillable = ['judul', 'penulis', 'deskripsi', 'tanggal'];
+    use HasFactory;
+
+    protected $fillable = [
+        'body',
+        'like'
+    ];
+
+    public function likes(){
+        return $this->belongsToMany(User::class,'karya_like')->withTimestamps();
+    }
+
+    public function comments(){
+        return $this->hasMany(Comment::class);
+    }
+}
 
     public function kategori()
     {
