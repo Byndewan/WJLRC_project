@@ -8,4 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Karya extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'body',
+        'like'
+    ];
+
+    public function likes(){
+        return $this->belongsToMany(User::class,'karya_like')->withTimestamps();
+    }
+
+    public function comments(){
+        return $this->hasMany(Comment::class);
+    }
 }

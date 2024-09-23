@@ -25,40 +25,80 @@ class HomeController extends Controller
         return view('front.home', compact('karya_data', 'page_data', 'tim_data', 'data_page'))->with('data_kontak', $data_kontak);
     }
 
+
+
+
+
+
+
+
+
+
+
+
     public function karya()
     {
+        $karya = Karya::orderBy('created_at', 'desc');
+
+        
         $data_page = HomePageItem::where('id', 1)->first();
         $data_karya = Karya::orderBy('id', 'asc')->get();
-        return view('front.karya', compact('data_karya','data_page'));
+        return view('front.karya', compact('data_karya','data_page','karya'));
     }
 
-    public function detail_karya($id)
+
+
+
+
+
+
+
+
+
+    public function detail_karya(Karya $karya, Request $request, $id)
     {
-        $comments = Comment::with('replies.user', 'user')->get();
-        $data_karya = Karya::where('id', '1')->first();
-        $data_page = HomePageItem::where('id', 1)->first();
-        $karya_data = Karya::orderBy('id', 'asc')->get();
+
+        $karya = Karya::orderBy('created_at', 'desc');
+
+        $karya = Karya::where('id', $id)->first();
+
         $data_page = HomePageItem::where('id','1')->first();
         $karya_data = Karya::orderBy('id','asc')->get();
         $data_karya = Karya::where('id',$id)->first();
-        return view('detail_halaman.detail_karya', compact('karya_data', 'data_page','comments'))->with('data_karya', $data_karya);
+        return view('detail_halaman.detail_karya', compact('karya_data', 'data_page','karya'))->with('data_karya', $data_karya);
     }
 
-    public function store(Request $request, $comment_id)
-    {
-        $request->validate([
-            'body' => 'required',
-        ]);
 
-        Reply::create([
-            'comment_id' => $comment_id,
-            'user_id' => Auth::id(),
-            'body' => $request->input('body'),
-            'created_at' => now(),
-        ]);
 
-        return redirect()->back();
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // public function store(Request $request, $comment_id)
+    // {
+    //     $request->validate([
+    //         'body' => 'required',
+    //     ]);
+
+    //     Reply::create([
+    //         'comment_id' => $comment_id,
+    //         'user_id' => Auth::id(),
+    //         'body' => $request->input('body'),
+    //         'created_at' => now(),
+    //     ]);
+
+    //     return redirect()->back();
+    // }
 
     public function contact()
     {
