@@ -30,7 +30,7 @@ class HomeController extends Controller
     {
         $karya = Karya::orderBy('created_at', 'desc');
 
-        
+
         $data_page = HomePageItem::where('id', 1)->first();
         $data_karya = Karya::orderBy('id', 'asc')->get();
         return view('front.karya', compact('data_karya','data_page','karya'));
@@ -62,7 +62,7 @@ class HomeController extends Controller
 
         return view('front.karya', compact('karya_data','data_page'));
     }
-        
+
 
     public function detail_karya($id)
     {
@@ -76,7 +76,7 @@ class HomeController extends Controller
     public function search_karya(Request $request)
     {
         $data_page = HomePageItem::where('id', '1')->first();
-      
+
         if ($request->has('search')) {
             $karya_data = Karya::where('judul','LIKE','%'.$request->search.'%')->get();
         } else {
