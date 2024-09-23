@@ -20,7 +20,7 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label>Kategori</label>
-                                    <input type="text" class="form-control" name="kategori" value="{{ $data_row->kategori }}">
+                                    <input type="text" class="form-control" name="nama_kategori" value="{{ $data_row->nama_kategori }}">
                                 </div>
                                 <div class="form-group">
                                     <label>Keterangan</label>

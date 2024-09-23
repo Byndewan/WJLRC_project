@@ -10,6 +10,7 @@ use Auth;
 use Illuminate\Http\Request;
 use App\Models\HomePageItem;
 use App\Models\Comment;
+use App\Models\Category;
 use App\Models\Reply;
 
 class HomeController extends Controller
@@ -27,17 +28,38 @@ class HomeController extends Controller
 
     public function karya()
     {
-        $data_page = HomePageItem::where('id', 1)->first();
-        $data_karya = Karya::orderBy('id', 'asc')->get();
-        return view('front.karya', compact('data_karya','data_page'));
+
+
+
+        $karya_data = Category::where('id', 1)->get();
+        // $categories = Category::all();
+
+
+        $data_page = HomePageItem::where('id', '1')->first();
+        $data_karya = Karya::where('id', '1')->first();
+        $karya_data = Karya::orderBy('id', 'asc')->get();
+        return view('front.karya', compact('karya_data','data_page','karya_data','categories'))->with('data_karya');
     }
+
+    public function kategori(Request $request)
+    {
+        $karya_data = Category::orderBy('id','asc')->get();
+        $data_page = HomePageItem::where('id', '1')->first();
+
+        if ($request->has('nama_kategori')) {
+            $kategori_id = $request->input('karya_data');
+            $karya_data = Category::where('id', $kategori_id)->get();
+        } else {
+            $karya_data = Category::all();
+        }
+
+        return view('front.karya', compact('karya_data','data_page'));
+    }
+        
 
     public function detail_karya($id)
     {
         $comments = Comment::with('replies.user', 'user')->get();
-        $data_karya = Karya::where('id', '1')->first();
-        $data_page = HomePageItem::where('id', 1)->first();
-        $karya_data = Karya::orderBy('id', 'asc')->get();
         $data_page = HomePageItem::where('id','1')->first();
         $karya_data = Karya::orderBy('id','asc')->get();
         $data_karya = Karya::where('id',$id)->first();
@@ -58,6 +80,20 @@ class HomeController extends Controller
         ]);
 
         return redirect()->back();
+    }
+
+    public function search_karya(Request $request)
+    {
+        $data_page = HomePageItem::where('id', '1')->first();
+        // $karya_data = Category::all();
+
+        if ($request->has('search')) {
+            $karya_data = Karya::where('judul','LIKE','%'.$request->search.'%')->get();
+        } else {
+            $karya_data = Karya::all();
+        }
+
+        return view('front.karya',['karya_data' => $karya_data])->with('data_page',$data_page);
     }
 
     public function contact()

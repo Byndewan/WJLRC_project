@@ -16,6 +16,8 @@ return new class extends Migration
             $table->text('photo');
             $table->text('judul');
             $table->text('penulis');
+            $table->unsignedBigInteger('kategori_id');
+            $table->foreign('kategori_id')->references('id')->on('categories')->onDelete('cascade');
             $table->date('tanggal');
             $table->text('deskripsi');
             $table->timestamps();
@@ -27,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('karyas');
+        Schema::dropIfExists('artikel');
     }
 };

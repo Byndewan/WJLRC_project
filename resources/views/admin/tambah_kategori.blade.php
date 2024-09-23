@@ -18,7 +18,7 @@
                         @csrf
                         <div class="form-group">
                             <label>Kategori</label>
-                            <input type="text" class="form-control" name="kategori">
+                            <input type="text" class="form-control" name="nama_kategori">
                         </div>
                         <div class="form-group">
                             <label>Keterangan</label>

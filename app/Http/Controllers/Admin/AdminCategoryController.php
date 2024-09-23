@@ -22,13 +22,13 @@ public function tambah()
 public function store(Request $request)
 {
     $request->validate([
-        'kategori' => 'required',
+        'nama_kategori' => 'required',
         'keterangan' => 'required'
     ]);
 
     $obj = new Category();
 
-    $obj->kategori = $request->kategori;
+    $obj->nama_kategori = $request->nama_kategori;
     $obj->keterangan = $request->keterangan;
     $obj->save();
 
@@ -45,7 +45,7 @@ public function update(Request $request, $id)
 {
     $obj = Category::where('id', $id)->first();
 
-    $obj->kategori = $request->kategori;
+    $obj->nama_kategori = $request->nama_kategori;
     $obj->keterangan = $request->keterangan;
     $obj->update();
 

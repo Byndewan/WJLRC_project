@@ -10,16 +10,13 @@
         <li class="{{ Request::is('admin/dashboard') ? "active" : "" }}">
           <a class="nav-link" href="{{ route('admin_home') }}"><i class="fas fa-hand-point-right"></i><span>Dashboard</span></a>
         </li>
-        <li class="dropdown {{ Request::is('admin/daftar-karya') | Request::is('admin/daftar-kategori') ? "active" : " " }}">
+        <li class="dropdown {{ Request::is('admin/daftar-karya') | Request::is('admin/daftar-kategori') | Request::is('admin/daftar-tag') ? "active" : " " }}">
           <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-hand-point-right"></i> <span>Karya</span></a>
           <ul class="dropdown-menu">
             <li class="{{ Request::is('admin/daftar-karya') ? "active" : " " }}"><a class="nav-link " href="{{ route('daftar_karya') }}">Daftar Karya</a></li>
           </ul>
           <ul class="dropdown-menu">
             <li class="{{ Request::is('admin/daftar-kategori') ? "active" : " " }}"><a class="nav-link " href="{{ route('daftar_kategori') }}">Daftar Kategori</a></li>
-          </ul>
-          <ul class="dropdown-menu">
-            <li class="{{ Request::is('admin/daftar-tag') ? "active" : " " }}"><a class="nav-link " href="{{ route('daftar_tag') }}">Daftar Kategori</a></li>
           </ul>
         </li>
 
