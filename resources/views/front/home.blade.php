@@ -191,8 +191,8 @@
                                     <div class="pic"><img src="{{ asset('uploads/' . $item->photo) }}"
                                             class="img-fluid" alt=""></div>
                                     <div class="member-info">
-                                        <span style="color: #444444;">{{ $item->judul }}</span>
-                                        <span style="color: #444444;">{{ $item->penulis }}</span>
+                                        <span style="color: #444444; font-size: 28px;">{{ $item->judul }}</span>
+                                        <span style="color: #444444; font-size: 17px">{{ $item->penulis }}</span>
                                         {{-- <div class="icon-container">
                                             <div class="icon-item">
                                                 <i class="bi bi-heart"></i>
