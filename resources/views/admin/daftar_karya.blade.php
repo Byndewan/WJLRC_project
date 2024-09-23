@@ -26,23 +26,28 @@
                             <th>No</th>
                             <th>Photo</th>
                             <th>judul</th>
+                            <th>kategori</th>
                             <th>Aksi</th>
                         </tr>
                         </thead>
                         <tbody>
-                            @foreach ($data_karya as $karya_data)
+                            @foreach ($data_karya as $item)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>
-                                <a href="#" class="font-weight-600 text-body"><img src="{{ asset('uploads/'.$karya_data->photo) }}" alt="avatar" width="120"></a>
+                                <a href="#" class="font-weight-600 text-body"><img src="{{ asset('uploads/'.$item->photo) }}" alt="avatar" width="120"></a>
                             </td>
                             <td>
                             <a href="#" class="font-weight-600 text-body">
-                                {{ $karya_data->judul }}</a>
+                                {{ $item->judul }}</a>
                             </td>
                             <td>
-                            <a href="{{ route('admin_edit_karya',$karya_data->id) }}" class="btn btn-primary btn-action mr-1" data-toggle="tooltip"><i class="fas fa-pencil-alt"></i> Edit</a>
-                            <a href="{{ route('admin_hapus_karya',$karya_data->id) }}" class="btn btn-danger btn-action" data-toggle="tooltip" onClick="return confirm('Are you sure?');"><i class="fas fa-trash"></i> Delete</a>
+                            <a href="#" class="font-weight-600 text-body">
+                                {{ $item->kategori->nama_kategori }}</a>
+                            </td>
+                            <td>
+                            <a href="{{ route('admin_edit_karya',$item->id) }}" class="btn btn-primary btn-action mr-1" data-toggle="tooltip"><i class="fas fa-pencil-alt"></i> Edit</a>
+                            <a href="{{ route('admin_hapus_karya',$item->id) }}" class="btn btn-danger btn-action" data-toggle="tooltip" onClick="return confirm('Are you sure?');"><i class="fas fa-trash"></i> Delete</a>
                             </td>
                         </tr>
                         @endforeach

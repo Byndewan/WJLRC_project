@@ -33,7 +33,7 @@
                 @foreach ($data_kategori as $item)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
-                    <td>{{ $item->kategori }}</td>
+                    <td>{{ $item->nama_kategori }}</td>
                     <td>
                     {{ $item->keterangan }}
                     </td>
