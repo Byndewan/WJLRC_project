@@ -26,11 +26,12 @@ class HomeController extends Controller
         return view('front.home', compact('karya_data', 'page_data', 'tim_data', 'data_page'))->with('data_kontak', $data_kontak);
     }
 
+
     public function karya()
     {
         $karya = Karya::orderBy('created_at', 'desc');
 
-        
+        $karya_data = Karya::orderBy('id','asc')->get();
         $data_page = HomePageItem::where('id', 1)->first();
         $data_karya = Karya::orderBy('id', 'asc')->get();
         return view('front.karya', compact('data_karya','data_page','karya'));
