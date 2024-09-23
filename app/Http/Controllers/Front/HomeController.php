@@ -28,9 +28,6 @@ class HomeController extends Controller
 
     public function karya()
     {
-
-
-
         $karya_data = Category::where('id', 1)->get();
         // $categories = Category::all();
 
