@@ -42,7 +42,7 @@
                                 <span>{{ $item->tanggal }}</span></div>
                             <h2 class="mb-2"><a href="{{ route('detail_karya', $item->id) }}">{{ $item->judul }}</a></h2>
 
-                            <span class="author mb-3 d-block">{{ $item->nama }}</span>
+                            <span class="author mb-3 d-block">{{ $item->penulis }}</span>
                         </div>
                     </div> <!-- End Popular -->
                 </a>
