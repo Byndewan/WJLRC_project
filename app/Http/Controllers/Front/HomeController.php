@@ -64,14 +64,14 @@ class HomeController extends Controller
     }
         
 
-    public function detail_karya($id)
-    {
-        $comments = Comment::with('replies.user', 'user')->get();
-        $data_page = HomePageItem::where('id','1')->first();
-        $karya_data = Karya::orderBy('id','asc')->get();
-        $data_karya = Karya::where('id',$id)->first();
-        return view('detail_halaman.detail_karya', compact('karya_data', 'data_page','karya'))->with('data_karya', $data_karya);
-    }
+    // public function detail_karya($id)
+    // {
+    //     $comments = Comment::with('replies.user', 'user')->get();
+    //     $data_page = HomePageItem::where('id','1')->first();
+    //     $karya_data = Karya::orderBy('id','asc')->get();
+    //     $data_karya = Karya::where('id',$id)->first();
+    //     return view('detail_halaman.detail_karya', compact('karya_data', 'data_page','karya'))->with('data_karya', $data_karya);
+    // }
 
     public function search_karya(Request $request)
     {

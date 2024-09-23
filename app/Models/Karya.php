@@ -23,15 +23,17 @@ class Karya extends Model
     public function comments(){
         return $this->hasMany(Comment::class);
     }
-}
 
     public function kategori()
     {
         return $this->belongsTo(Category::class, 'kategori_id', 'id');
     }
+}
+
+    
 
     // public function tags()
     // {
     //     return $this->belongsToMany(Tag::class);
     // }
-};
+
