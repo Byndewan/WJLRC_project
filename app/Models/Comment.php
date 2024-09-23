@@ -9,7 +9,7 @@ class Comment extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['user_id', 'body', 'created_at', 'updated_at'];
+    protected $fillable = ['id', 'body', 'created_at', 'updated_at'];
 
     public function user()
     {
@@ -18,6 +18,6 @@ class Comment extends Model
 
     public function replies()
     {
-        return $this->hasMany(Reply::class);
+        return $this->hasMany(Comment::class, 'parent_id', 'id');
     }
 };

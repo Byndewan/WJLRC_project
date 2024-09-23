@@ -217,7 +217,7 @@
 
 })();
 
-// Comment 
+// Comment
 // function toggleReplies(button) {
 //   // Temukan elemen replies yang berdekatan dengan tombol
 //   // var replies = button.closest('.comment-main').nextElementSibling;
@@ -244,9 +244,27 @@
 // }
 
 // function addReplyForm(button) {
+    function addReplyForm(element, commentId) {
+        const form = document.getElementById(`reply-form-${commentId}`);
+        const formData = new FormData(form);
+        fetch(`/comments/${commentId}/replies`, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Handle response data
+        })
+        .catch(error => {
+            // Handle error
+        });
+    }
 //   // Temukan elemen komentar di mana form akan ditambahkan
 //   var comment = button.closest('.comment');
-  
+
 //   // Cek apakah form reply sudah ada, jika ada maka tidak menambah form baru
 //   var form = comment.querySelector('.reply-form');
 //   if (form) return;
@@ -266,16 +284,16 @@
 function toggleReplies(button) {
   // Cari elemen '.replies' yang berada dalam elemen '.comment'
   var replies = button.closest('.comment').querySelector('.replies');
-  
+
   // Cek apakah elemen replies ditemukan
   if (!replies) {
       console.error('Replies element not found');
       return;
   }
-  
+
   // Cari ikon chevron dalam tombol
   var chevronIcon = button.querySelector('i');
-  
+
   // Cek apakah ikon ditemukan
   if (!chevronIcon) {
       console.error('Chevron icon not found');
@@ -299,37 +317,73 @@ function toggleReplies(button) {
   button.appendChild(chevronIcon);
 }
 
-function addReplyForm(button) {
-  // Cari elemen comment yang berdekatan dengan tombol
-  var comment = button.closest('.comment');
-  
-  // Cek apakah form reply sudah ada
-  var form = comment.querySelector('.reply-form');
-  if (form) return;
+function addReplyForm(button, commentId, csrfToken) {
+    var comment = button.closest('.comment');
 
-  // HTML form reply
-  var formHtml = `
-      <form class="reply-form mt-3">
-          <textarea class="form-control mb-2" placeholder="Add a reply..." required></textarea>
-          <button class="btn btn-primary" type="submit">Submit</button>
-          <button type="button" class="btn btn-secondary cancel-reply">Cancel</button>
+    // Cek apakah form reply sudah ada
+    var form = comment.querySelector('.reply-form');
+    if (form) return;
+
+    // HTML form reply
+    var formHtml = `
+      <form id="reply-form-${commentId}" class="reply-form mt-3">
+        <textarea name="reply" class="form-control mb-2" placeholder="Add a reply..." required></textarea>
+        <button class="btn btn-primary" type="button" id="submit-reply">Submit</button>
+        <button type="button" class="btn btn-secondary cancel-reply">Cancel</button>
       </form>
-  `;
+    `;
 
-  // Tambahkan form setelah bagian comment actions
-  comment.insertAdjacentHTML('beforeend', formHtml);
+    // Tambahkan form setelah bagian comment actions
+    comment.insertAdjacentHTML('beforeend', formHtml);
 
-  // Tambahkan event listener untuk tombol Cancel
-  var cancelButton = comment.querySelector('.cancel-reply');
-  cancelButton.addEventListener('click', function() {
+    // Get the form element
+    var form = comment.querySelector('.reply-form');
+
+    // Get the submit button element
+    var submitButton = document.getElementById('submit-reply');
+
+    // Add event listener for submit button click
+    submitButton.addEventListener('click', function() {
+        console.log('Tombol submit diklik');
+
+        // Buat instance FormData baru
+        var formData = new FormData(form);
+
+        console.log('Data form:', formData);
+
+        fetch(`/comments/${commentId}/replies`, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'X-CSRF-TOKEN': csrfToken
+          }
+        })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          } else {
+            return response.json();
+          }
+        })
+        .then(data => {
+          console.log('Data respons:', data);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+      });
+
+    // Tambahkan event listener untuk tombol Cancel
+    var cancelButton = comment.querySelector('.cancel-reply');
+    cancelButton.addEventListener('click', function() {
       removeReplyForm(cancelButton);
-  });
-}
+    });
+  }
 
 function removeReplyForm(cancelButton) {
   // Cari form reply yang terkait
   var form = cancelButton.closest('.reply-form');
-  
+
   // Hapus form
   if (form) {
     form.remove();

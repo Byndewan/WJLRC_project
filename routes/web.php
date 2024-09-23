@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminLiputanController;
+use App\Http\Controllers\KaryaLikeController;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Counter;
 
@@ -50,9 +51,7 @@ Route::get('/organigram', [PageController::class, 'organigram'])->name('organigr
 Route::get('/divisi', [PageController::class, 'divisi'])->name('divisi');
 Route::get('/program-online', [PageController::class, 'program_online'])->name('program_online');
 Route::get('/program-offline', [PageController::class, 'program_offline'])->name('program_offline');
-Route::get('/karya', [HomeController::class, 'karya'])
-    ->name('karya')
-    ->middleware('user:web');
+Route::get('/karya', [HomeController::class, 'karya'])->name('karya')->middleware('user:web');
 Route::get('/#contact', [ContactController::class, 'index'])->name('#contact');
 
 Route::post('/#contact/send-email', [ContactController::class, 'send_email'])->name('contact_send_email');
@@ -89,21 +88,23 @@ Route::get('/user/reset-password/{token}/{email}', [UserLoginController::class, 
 Route::post('/user/reset-password-submit', [UserLoginController::class, 'reset_password_submit'])->name('user_reset_password_submit');
 
 // detail halaman
-Route::get('/karya/detail-karya/{id}', [HomeController::class, 'detail_karya'])
-    ->name('detail_karya')
-    ->middleware('user:web');
+Route::get('/karya/detail-karya/{id}', [HomeController::class, 'detail_karya'])->name('detail_karya')->middleware(['user:web']);
+
+
+Route::post('detail-karya/{karya}/like',[KaryaLikeController::class,'like'])->middleware('user:web')->name('karya.like');
+Route::post('detail-karya/{karya}/unlike',[KaryaLikeController::class,'unlike'])->middleware('user:web')->name('karya.unlike');
+
+
+
+
 Route::get('/program-online/resensi/detail-resensi/{id}', [PageController::class, 'detail_resensi'])->name('resensi_detail');
 Route::get('/program-online/konten/detail-konten/{id}', [PageController::class, 'detail_konten'])->name('detail_konten');
 Route::get('/program-offline/liputan/detail-liputan/{id}', [PageController::class, 'detail_liputan'])->name('detail_liputan');
 Route::get('/program-offline/mading/detail-mading/{id}', [PageController::class, 'detail_mading'])->name('detail_mading');
 
 // comment
-Route::post('/karya/detail-karya/{id}', [CommentController::class, 'index'])->name('comment.index');
+Route::post('/karya/detail-karya/{karya}/comments', [CommentController::class, 'store'])->name('karya.comment.store');
 
-Route::middleware('auth')->group(function () {
-    Route::post('/comments/{comment}/replies', [ReplyController::class, 'store']);
-    Route::post('/comments', [CommentController::class, 'store']);
-});
 
 /*Admin*/
 Route::get('/admin/home', [AdminHomeController::class, 'index'])
