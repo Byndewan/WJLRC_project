@@ -8,6 +8,7 @@
         <div class="post-meta"><span class="date">Business</span> <span class="mx-1">&bullet;</span>
             <span>{{ $data_karya->tanggal }}</span>
         </div>
+        <div class="post-meta"><span class="date">{{ $data_karya->kategori->nama_kategori }}</span> <span class="mx-1">&bullet;</span><span>{{ $data_karya->tanggal }}</span></div>
         <h1 class="mb-5">{{ $data_karya->judul }}</h1>
         <p class="post-meta" style="margin-bottom : 20px; font-size: 15px;">{{ $data_karya->nama }}</p>
         <div class="icon-container">
@@ -43,9 +44,11 @@
                             <div class="post-meta"><span class="date">Sport</span> <span class="mx-1">&bullet;</span>
                                 <span>{{ $item->tanggal }}</span>
                             </div>
+                            <div class="post-meta"><span class="date">{{ $item->kategori->nama_kategori }}</span> <span class="mx-1">&bullet;</span>
+                                <span>{{ $item->tanggal }}</span></div>
                             <h2 class="mb-2"><a href="{{ route('detail_karya', $item->id) }}">{{ $item->judul }}</a></h2>
 
-                            <span class="author mb-3 d-block">{{ $item->nama }}</span>
+                            <span class="author mb-3 d-block">{{ $item->penulis }}</span>
                         </div>
                     </div> <!-- End Popular -->
                 </a>
@@ -145,7 +148,6 @@
             </form>
         </div>
     </div> <!-- End Comment Form -->
-
     <div class="aside-block">
         <h3 class="aside-title">Tags</h3>
         <ul class="aside-tags list-unstyled">
@@ -159,4 +161,5 @@
             <li><a href="#">Travel</a></li>
         </ul>
     </div><!-- End Tags -->
+    </div>
 @endsection

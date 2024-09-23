@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AdminLiputanController;
 use App\Http\Controllers\KaryaLikeController;
 use Illuminate\Support\Facades\Route;
+use App\Livewire\Counter;
 
 use App\Http\Controllers\SearchController;
 
@@ -19,6 +20,8 @@ use App\Http\Controllers\Admin\AdminTamanBacaController;
 use App\Http\Controllers\Admin\AdminKontakController;
 use App\Http\Controllers\AdminTimController;
 use App\Http\Controllers\Admin\AdminHomePageController;
+use App\Http\Controllers\Admin\AdminCategoryController;
+use App\Http\Controllers\Admin\AdminTagController;
 
 /* Front Controllers */
 use App\Http\Controllers\Front\HomeController;
@@ -26,10 +29,20 @@ use App\Http\Controllers\Front\PageController;
 use App\Http\Controllers\UserLoginController;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\Front\ContactController;
+// use App\Http\Controllers\Front\CategoryController;
+
+// Livewire
+use App\Livewire\KaryaLivewire;
+use App\Livewire\Filter;
 
 // Comment
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ReplyController;
+
+
+// Route::get('/counter', Counter::class);
+// Route::get('/karya-livewire', [KaryaLivewire::class, 'render']);
+// Route::get('/filter', [Filter::class, 'render']);
 
 // Front End
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -44,6 +57,8 @@ Route::get('/#contact', [ContactController::class, 'index'])->name('#contact');
 Route::post('/#contact/send-email', [ContactController::class, 'send_email'])->name('contact_send_email');
 Route::post('/contact/send-email', [ContactController::class, 'send_email'])->name('contact_send_email');
 Route::get('/#team-2', [HomeController::class, 'team'])->name('#team-2');
+Route::get('/karya/search', [HomeController::class, 'search_karya']);
+Route::get('/karya/categories', [HomeController::class, 'kategori']);
 
 // Front End : Program Online
 Route::get('/program-online/resensi', [PageController::class, 'resensi'])->name('resensi');
@@ -311,3 +326,13 @@ Route::get('/admin/tim/delete/{id}', [AdminTimController::class, 'delete'])
     ->name('admin_hapus_tim')
     ->middleware('admin:admin');
 Route::get('/admin/daftar-tim/search', [AdminTimController::class, 'search']);
+
+// CRUD Bagian Kategori
+Route::get('/admin/daftar-kategori', [AdminCategoryController::class, 'daftar_kategori'])->name('daftar_kategori')->middleware('admin:admin');
+Route::get('/admin/tambah/kategori', [AdminCategoryController::class, 'tambah'])->name('tambah_kategori')->middleware('admin:admin');
+Route::post('/admin/tambah-kategori-submit', [AdminCategoryController::class, 'store'])->name('tambah_kategori_submit');
+Route::get('/admin/edit/kategori/{id}', [AdminCategoryController::class, 'edit'])->name('edit_kategori')->middleware('admin:admin');
+Route::post('/admin/edit-kategori-submit/{id}', [AdminCategoryController::class, 'update'])->name('edit_kategori_submit');
+Route::get('/admin/kategori/delete/{id}', [AdminCategoryController::class, 'delete'])->name('hapus_kategori')->middleware('admin:admin');
+Route::get('/admin/daftar-kategori/search_kategori', [AdminCategoryController::class, 'search']);
+

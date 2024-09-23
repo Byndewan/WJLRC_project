@@ -22,6 +22,8 @@
   <!-- Main CSS File -->
   <link href="{{ asset('dist_front/karya/css/main.css') }}" rel="stylesheet">
   <link href="{{ asset('dist_front/karya/css-2/main.css') }}" rel="stylesheet" >
+<!-- Load icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- =======================================================
   * Template Name: OnePage
@@ -49,14 +51,22 @@
       <div class="container" data-aos="fade-up">
           <div class="col-lg-12">
             <div class="row g-5">
-                @foreach ($data_karya as $item)
+            <div>
+            <form class="example" action="/karya/search" method="GET">
+                <input type="search" placeholder="Cari Karya" name="search">
+                <button type="submit"><i class="fa fa-search"></i> Cari</button>
+            </form>
+            </div>
+            @foreach ($karya_data as $item)
               <div class="col-lg-4 border-start custom-border">
                 <div class="post-entry-1">
                   <a href="{{ route('detail_karya',$item->id) }}"><img src="{{ asset('uploads/'.$item->photo) }}" alt="" class="img-fluid"></a>
-                  <div class="post-meta"><span class="date">Business</span> <span class="mx-1">&bullet;</span> <span>{{ $item->tanggal }}</span></div>
+                    <div class="post-meta"><span class="date">{{ $item->kategori->nama_kategori }}</span> <span class="mx-1">&bullet;</span> <span>{{ $item->tanggal }}</span></div>
                   <h2><a href="{{ route('detail_karya',$item->id) }}">{{ $item->judul }}</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>{{ $item->nama }}</span></div>
                   {{-- <div class="icon-container">
+                  <div class="post-meta" style="color: #b3b3b3;"><span>{{ $item->penulis }}</span></div>
+                  <div class="icon-container">
                     <div class="icon-item">
                         <i class="bi bi-heart"></i>
                         <p>2.3K</p>

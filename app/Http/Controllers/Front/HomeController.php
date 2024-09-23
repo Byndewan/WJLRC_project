@@ -10,6 +10,7 @@ use Auth;
 use Illuminate\Http\Request;
 use App\Models\HomePageItem;
 use App\Models\Comment;
+use App\Models\Category;
 use App\Models\Reply;
 
 class HomeController extends Controller
@@ -25,17 +26,6 @@ class HomeController extends Controller
         return view('front.home', compact('karya_data', 'page_data', 'tim_data', 'data_page'))->with('data_kontak', $data_kontak);
     }
 
-
-
-
-
-
-
-
-
-
-
-
     public function karya()
     {
         $karya = Karya::orderBy('created_at', 'desc');
@@ -46,59 +36,55 @@ class HomeController extends Controller
         return view('front.karya', compact('data_karya','data_page','karya'));
     }
 
-
-
-
-
-
-
-
-
-
     public function detail_karya(Karya $karya, Request $request, $id)
     {
 
         $karya = Karya::orderBy('created_at', 'desc');
-
         $karya = Karya::where('id', $id)->first();
+        $karya_data = Category::where('id', 1)->get();
+        $data_page = HomePageItem::where('id', '1')->first();
+        $data_karya = Karya::where('id', '1')->first();
+        $karya_data = Karya::orderBy('id', 'asc')->get();
+        return view('front.karya', compact('karya_data','data_page','karya_data'))->with('data_karya');
+    }
 
+    public function kategori(Request $request)
+    {
+        $karya_data = Category::orderBy('id','asc')->get();
+        $data_page = HomePageItem::where('id', '1')->first();
+
+        if ($request->has('nama_kategori')) {
+            $kategori_id = $request->input('karya_data');
+            $karya_data = Category::where('id', $kategori_id)->get();
+        } else {
+            $karya_data = Category::all();
+        }
+
+        return view('front.karya', compact('karya_data','data_page'));
+    }
+        
+
+    public function detail_karya($id)
+    {
+        $comments = Comment::with('replies.user', 'user')->get();
         $data_page = HomePageItem::where('id','1')->first();
         $karya_data = Karya::orderBy('id','asc')->get();
         $data_karya = Karya::where('id',$id)->first();
         return view('detail_halaman.detail_karya', compact('karya_data', 'data_page','karya'))->with('data_karya', $data_karya);
     }
 
+    public function search_karya(Request $request)
+    {
+        $data_page = HomePageItem::where('id', '1')->first();
+      
+        if ($request->has('search')) {
+            $karya_data = Karya::where('judul','LIKE','%'.$request->search.'%')->get();
+        } else {
+            $karya_data = Karya::all();
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // public function store(Request $request, $comment_id)
-    // {
-    //     $request->validate([
-    //         'body' => 'required',
-    //     ]);
-
-    //     Reply::create([
-    //         'comment_id' => $comment_id,
-    //         'user_id' => Auth::id(),
-    //         'body' => $request->input('body'),
-    //         'created_at' => now(),
-    //     ]);
-
-    //     return redirect()->back();
-    // }
+        return view('front.karya',['karya_data' => $karya_data])->with('data_page',$data_page);
+    }
 
     public function contact()
     {
