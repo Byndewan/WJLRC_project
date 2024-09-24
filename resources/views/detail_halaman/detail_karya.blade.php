@@ -4,10 +4,6 @@
 
 @section('main_content')
     <!-- ======= Single Post Content ======= -->
-    <div class="single-post">
-        <div class="post-meta"><span class="date">Business</span> <span class="mx-1">&bullet;</span>
-            <span>{{ $data_karya->tanggal }}</span>
-        </div>
         <div class="post-meta"><span class="date">{{ $data_karya->kategori->nama_kategori }}</span> <span class="mx-1">&bullet;</span><span>{{ $data_karya->tanggal }}</span></div>
         <h1 class="mb-5">{{ $data_karya->judul }}</h1>
         <p class="post-meta" style="margin-bottom : 20px; font-size: 15px;">{{ $data_karya->nama }}</p>
