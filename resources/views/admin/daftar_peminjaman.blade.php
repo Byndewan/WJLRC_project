@@ -26,9 +26,9 @@
                 <th>No</th>
                 <th>Foto</th>
                 <th>Nama</th>
+                <th>Kelas</th>
                 <th>Judul</th>
                 <th>Status</th>
-                <th>Kelas</th>
                 <th>Tanggal Peminjaman</th>
                 <th>Tanggal Pengembalian</th>
                 <th>Action</th>
@@ -42,11 +42,11 @@
                     <a href="#" class="font-weight-600 text-body"><img src="{{ asset('uploads/'.$item->photo) }}" alt="avatar" width="60" class="mr-1"></a>
                     </td>
                     <td>{{ $item->nama }}</td>
+                    <td>
+                        {{ $item->kelas }}
+                    </td>
                     <td>{{ $item->judul }}</td>
                     <td><a class="btn btn-primary btn-action mr-1">{{ $item->status }}</a></td>
-                    <td>
-                    {{ $item->kelas }}
-                    </td>
                     <td>{{ $item->tanggal_peminjaman }}</td>
                     <td>{{ $item->tanggal_pengembalian }}</td>
                     <td>
