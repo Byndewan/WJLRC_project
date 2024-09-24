@@ -31,8 +31,7 @@ class HomeController extends Controller
     {
         $karya = Karya::orderBy('created_at', 'desc');
 
-
-        $karya_data = Karya::orderBy('id','asc')->get();
+        $karya_data = Karya::orderBy('id', 'asc')->get();
 
         $data_page = HomePageItem::where('id', 1)->first();
         $data_karya = Karya::orderBy('id', 'asc')->get();
@@ -54,8 +53,8 @@ class HomeController extends Controller
         $karya = Karya::where('id', $id)->first();
         $data_page = HomePageItem::where('id', '1')->first();
         $karya_data = Karya::orderBy('id', 'asc')->get();
-
         return view('detail_halaman.detail_karya', compact('karya_data','data_page','karya_data','karya','karya_kategori'))->with('data_karya');
+
     }
 
     public function kategori(Request $request)
