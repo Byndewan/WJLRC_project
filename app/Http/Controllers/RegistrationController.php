@@ -11,12 +11,12 @@ use Auth;
 
 class RegistrationController extends Controller
 {
-    public function registration() 
+    public function registration()
     {
         return view('registration');
     }
 
-    public function registration_success() 
+    public function registration_success()
     {
         return view('login_button');
     }
@@ -62,7 +62,7 @@ class RegistrationController extends Controller
 
         $user->token = '';
         $user->update();
-        
+
         echo 'Registration verification is successful';
-    } 
+    }
 }
