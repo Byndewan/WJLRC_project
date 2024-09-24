@@ -24,7 +24,7 @@
         </div>
     </div>
         <figure class="my-4">
-            <img src="{{ asset('uploads/' . $karya_kategori->photo) }}" alt="" class="img-fluid" style="max-width: 600px">
+            <img src="{{ asset('uploads/' . $karya_kategori->photo) }}" alt="" class="img-fluid" style="max-width: 900px">
             <figcaption>{{ $karya_kategori->judul }} </figcaption>
         </figure>
         <p>{!! nl2br($karya_kategori->deskripsi) !!}</p>
