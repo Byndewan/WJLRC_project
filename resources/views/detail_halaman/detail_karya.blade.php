@@ -5,10 +5,7 @@
 @section('main_content')
     <!-- ======= Single Post Content ======= -->
     <div class="single-post">
-        <div class="post-meta"><span class="date">Business</span> <span class="mx-1">&bullet;</span>
-            <span>{{ $data_karya->tanggal }}</span>
-        </div>
-        <div class="post-meta"><span class="date">{{ $data_karya->kategori->nama_kategori }}</span> <span class="mx-1">&bullet;</span><span>{{ $data_karya->tanggal }}</span></div>
+        <div class="post-meta"><span class="date">{{ $karya_data->nama_kategori }}</span> <span class="mx-1">&bullet;</span><span>{{ $data_karya->tanggal }}</span></div>
         <h1 class="mb-5">{{ $data_karya->judul }}</h1>
         <p class="post-meta" style="margin-bottom : 20px; font-size: 15px;">{{ $data_karya->nama }}</p>
         <div class="icon-container">
@@ -148,18 +145,5 @@
             </form>
         </div>
     </div> <!-- End Comment Form -->
-    <div class="aside-block">
-        <h3 class="aside-title">Tags</h3>
-        <ul class="aside-tags list-unstyled">
-            <li><a href="#">Business</a></li>
-            <li><a href="#">Culture</a></li>
-            <li><a href="#">Sport</a></li>
-            <li><a href="#">Food</a></li>
-            <li><a href="#">Politics</a></li>
-            <li><a href="#">Celebrity</a></li>
-            <li><a href="#">Startups</a></li>
-            <li><a href="#">Travel</a></li>
-        </ul>
-    </div><!-- End Tags -->
     </div>
 @endsection
