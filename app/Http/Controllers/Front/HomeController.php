@@ -39,14 +39,14 @@ class HomeController extends Controller
 
     public function detail_karya(Karya $karya, Request $request, $id)
     {
-
+        $data_kategori = Category::orderBy('id','asc')->get();
         $karya = Karya::orderBy('created_at', 'desc');
         $karya = Karya::where('id', $id)->first();
         $karya_data = Category::where('id', 1)->get();
         $data_page = HomePageItem::where('id', '1')->first();
         $data_karya = Karya::where('id', '1')->first();
         $karya_data = Karya::orderBy('id', 'asc')->get();
-        return view('front.karya', compact('karya_data','data_page','karya_data'))->with('data_karya');
+        return view('detail_halaman.detail_karya', compact('karya','data_page','karya_data','data_kategori'))->with('data_karya');
     }
 
     public function kategori(Request $request)
@@ -63,21 +63,11 @@ class HomeController extends Controller
 
         return view('front.karya', compact('karya_data','data_page'));
     }
-        
-
-    // public function detail_karya($id)
-    // {
-    //     $comments = Comment::with('replies.user', 'user')->get();
-    //     $data_page = HomePageItem::where('id','1')->first();
-    //     $karya_data = Karya::orderBy('id','asc')->get();
-    //     $data_karya = Karya::where('id',$id)->first();
-    //     return view('detail_halaman.detail_karya', compact('karya_data', 'data_page','karya'))->with('data_karya', $data_karya);
-    // }
 
     public function search_karya(Request $request)
     {
         $data_page = HomePageItem::where('id', '1')->first();
-      
+
         if ($request->has('search')) {
             $karya_data = Karya::where('judul','LIKE','%'.$request->search.'%')->get();
         } else {
