@@ -96,4 +96,5 @@
             </form>
         </div>
     </div> <!-- End Comment Form -->
+    </div>
 @endsection
