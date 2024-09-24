@@ -193,16 +193,6 @@
                                     <div class="member-info">
                                         <span style="color: #444444; font-size: 28px;">{{ $item->judul }}</span>
                                         <span style="color: #444444; font-size: 17px">{{ $item->penulis }}</span>
-                                        {{-- <div class="icon-container">
-                                            <div class="icon-item">
-                                                <i class="bi bi-heart"></i>
-                                                <p>2.3K</p>
-                                            </div>
-                                            <div class="icon-item">
-                                                <i class="bi bi-chat"></i>
-                                                <p>{{ $karya->comments->count() }}</p>
-                                            </div>
-                                        </div> --}}
                                     </div>
                                 </div>
                             </a>

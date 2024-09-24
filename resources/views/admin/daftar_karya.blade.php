@@ -9,7 +9,7 @@
 @endsection
 
 @section('main_content')
-<div class="section-body">
+    <div class="section-body">
     <div class="col-md-12 col-12 col-sm-12">
         <form action="/admin/daftar-karya/search" class="form-inline" method="GET">
               <input class="form-control" type="search" placeholder="Cari Judul Karya" name="search" data-width="200">
