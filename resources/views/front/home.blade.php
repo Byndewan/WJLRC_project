@@ -30,11 +30,8 @@
 
     <header id="header" class="header d-flex align-items-center sticky-top">
         <div class="container-fluid container-xl position-relative d-flex align-items-center">
-
             <a href="{{ route('home') }}" class="logo d-flex align-items-center me-auto">
-                <!-- Uncomment the line below if you also wish to use an image logo -->
                 <img src="{{ asset('dist_front/landing_page/img/LOGO_WJLRC-removebg-preview.png') }}" alt="">
-                <!-- <h1 class="sitename">WJLRC</h1> -->
             </a>
 
             <nav id="navmenu" class="navmenu">
@@ -45,7 +42,12 @@
                     <li><a href="#team">Karya</a></li>
                     <li><a href="#team-2">Tim</a></li>
                     <li><a href="#contact">Kontak</a></li>
-                    <li><a href="{{ route('user_logout') }}">Logout</a></li>
+                    @guest
+                      <li class="dropdown"><a href="{{ route('user_login') }}"><span>Login</span></a></li>
+                    @endguest
+                    @auth
+                        <li class="dropdown"><a href="{{ route('user_logout') }}"><span>Logout</span></a></li>
+                    @endauth
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>

@@ -11,12 +11,23 @@
         <p class="post-meta" style="margin-bottom : 20px; font-size: 15px;">{{ $karya_kategori->nama }}</p>
     </div>
         <div class="icon-container">
+
             <div class="icon-item">
-                    <form action="{{ route('karya.like', $karya->id) }}" method="POST">
-                        @csrf
-                        <button type="submit" class="fw-light nav-link fs-6"> <span class="bi bi-heart me-1"></span> {{ $karya->likes()->count() }}</button>
-                    </form>
+
+                @if (Auth::user()->likeskarya($karya))
+                <form action="{{ route('karya.unlike', $karya->id) }}" method="POST">
+                    @csrf
+                    <button type="submit" class="fw-light nav-link fs-6"> <span class="bi bi-heart-fill hati"></span> {{ $karya->likes()->count() }}</button>
+                </form>
+                @else
+                <form action="{{ route('karya.like', $karya->id) }}" method="POST">
+                    @csrf
+                    <button type="submit" class="fw-light nav-link fs-6"> <span class="bi bi-heart"></span> {{ $karya->likes()->count() }}</button>
+                </form>
+                @endif
             </div>
+
+
             <div class="icon-item">
                 <i><span class="bi bi-chat"></span></i>
                 <p>{{ $karya->comments->count() }}</p>
@@ -55,7 +66,7 @@
 
     <h5 class="comment-title py-4">{{ $karya->comments->count() }} Comments</h5>
 
-    @foreach ($karya->comments as $comment)
+    @forelse ($karya->comments as $comment)
         <div class="comment">
             <div class="comment-main d-flex mb-4">
                 <div class="flex-shrink-0">
@@ -71,7 +82,9 @@
                 </div>
             </div>
         </div> <!-- End Comment -->
-    @endforeach
+        @empty
+        <p class="text-center mt-4"><strong>Belum Ada Komentar</strong></p>
+    @endforelse
     </div> <!-- End Comments Section -->
 
     <!-- Comment Form -->
