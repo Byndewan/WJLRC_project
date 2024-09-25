@@ -45,7 +45,7 @@
                     <td>
                         {{ $item->kelas }}
                     </td>
-                    <td>{{ $item->judul }}</td>
+                    <td>{{ $item->judul->judul }}</td>
                     <td><a class="btn btn-primary btn-action mr-1">{{ $item->status }}</a></td>
                     <td>{{ $item->tanggal_peminjaman }}</td>
                     <td>{{ $item->tanggal_pengembalian }}</td>
