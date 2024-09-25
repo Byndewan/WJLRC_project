@@ -32,7 +32,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Tanggal</label>
-                                    <input type="date" class="form-control" name="tanggal" value="{{ $row_data->tanggal }}">
+                                    <input type="datetime-local" class="form-control" name="tanggal" value="{{ $row_data->tanggal }}">
                                 </div>
                                 <div class="form-group">
                                     <label>Deskripsi</label>

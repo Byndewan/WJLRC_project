@@ -53,7 +53,7 @@
               <div class="col-lg-4 border-start custom-border">
                 <div class="post-entry-1">
                   <a href="{{ route('resensi_detail',$item->id) }}"><img src="{{ asset('uploads/'.$item->photo) }}" alt="" class="img-fluid"></a>
-                  <div class="post-meta"><span class="mx-1"></span> <span>{{ $item->tangal }}</span></div>
+                  <div class="post-meta"><span class="mx-1"></span> <span>{{ $item->tanggal }}</span></div>
                   <h2><a href="">{{ $item->judul }}</a></h2>
                   <div class="post-meta" style="color: #b3b3b3;"><span>{{ $item->nama }}</span></div>
                 </div>
