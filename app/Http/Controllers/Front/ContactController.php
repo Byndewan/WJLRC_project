@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 // use App\Models\HomePageItem;
 use App\Models\User;
 use App\Mail\Websitemail;
+use Auth;
 
 class ContactController extends Controller
 {
