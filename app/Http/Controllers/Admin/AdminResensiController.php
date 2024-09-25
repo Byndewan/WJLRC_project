@@ -22,6 +22,7 @@ class AdminResensiController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'photo' => 'required',
             'nama' => 'required',
             'kelas' => 'required',
             'judul' => 'required',
