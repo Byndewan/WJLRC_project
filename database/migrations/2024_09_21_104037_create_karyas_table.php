@@ -18,7 +18,7 @@ return new class extends Migration
             $table->text('penulis');
             $table->unsignedBigInteger('kategori_id');
             $table->foreign('kategori_id')->references('id')->on('categories')->onDelete('cascade');
-            $table->date('tanggal');
+            $table->datetime('tanggal');
             $table->text('deskripsi');
             $table->timestamps();
         });
