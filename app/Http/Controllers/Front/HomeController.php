@@ -3,27 +3,28 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
-use App\Models\Karya;
-use App\Models\Kontak;
-use App\Models\Tim;
-use Auth;
+use App\Models\StatusTim;
 use Illuminate\Http\Request;
 use App\Models\HomePageItem;
-use App\Models\Comment;
 use App\Models\Category;
+use App\Models\Comment;
+use App\Models\Kontak;
 use App\Models\Reply;
+use App\Models\Karya;
+use App\Models\Tim;
+use Auth;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        $page_data = Tim::where('id', '3')->first();
+        $page_data = StatusTim::where('id',1)->first();
         $data_kontak = Kontak::where('id', '1')->first();
         $tim_data = Tim::orderBy('id', 'asc')->get();
         $karya_data = Karya::orderBy('id', 'asc')->limit(6)->get();
         $data_page = HomePageItem::where('id', '1')->first();
 
-        return view('front.home', compact('karya_data', 'page_data', 'tim_data', 'data_page'))->with('data_kontak', $data_kontak);
+        return view('front.home', compact('karya_data', 'tim_data', 'data_page','page_data'))->with('data_kontak', $data_kontak);
     }
 
 

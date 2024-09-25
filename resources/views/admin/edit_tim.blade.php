@@ -77,13 +77,6 @@
                                     <label>Icon URL 5</label>
                                     <input type="text" class="form-control" name="icon5_url" value="{{ $row_data->icon5_url }}">
                                 </div>
-                                <div class="form-group">
-                                    <label>Status</label>
-                                    <select class="form-control" name="status">
-                                    <option value="Show" @if($row_data->status == 'Show' ) selected @endif >Show</option>
-                                    <option value="Hide" @if($row_data->status == 'Hide' ) selected @endif >Hide</option>
-                                    </select>
-                                </div>
                                 <div class="card-footer text-right">
                                     <button class="btn btn-primary">Edit</button>
                                 </div>

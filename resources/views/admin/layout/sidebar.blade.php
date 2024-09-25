@@ -65,7 +65,11 @@
         <li class="dropdown {{ Request::is('admin/daftar/tim') ? "active" : " " }}">
             <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-hand-point-right"></i> <span>Team</span></a>
             <ul class="dropdown-menu">
-              <li class="{{ Request::is('admin/daftar/tim') ? "active" : " " }}"><a class="nav-link" href="{{ route('admin_daftar_tim') }}">Team</a></li>
+              <li class="{{ Request::is('admin/daftar/tim') ? "active" : " " }}"><a class="nav-link"
+                href="{{ route('admin_daftar_tim') }}">Team</a></li>
+            </ul>
+            <ul class="dropdown-menu">
+              <li class="{{ Request::is('admin/status/tim') ? "active" : " " }}"><a class="nav-link" href="{{ route('admin_status_tim') }}">Status Team</a></li>
             </ul>
         </li>
 

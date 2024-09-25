@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminLiputanController;
+use App\Http\Controllers\AdminStatusTimController;
 use App\Http\Controllers\KaryaLikeController;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Counter;
@@ -326,6 +327,24 @@ Route::get('/admin/tim/delete/{id}', [AdminTimController::class, 'delete'])
     ->name('admin_hapus_tim')
     ->middleware('admin:admin');
 Route::get('/admin/daftar-tim/search', [AdminTimController::class, 'search']);
+
+
+
+
+
+
+// Tim Status
+Route::get('/admin/status/tim', [AdminStatusTimController::class, 'index'])
+    ->name('admin_status_tim')
+    ->middleware('admin:admin');
+Route::post('/admin/status/tim/update', [AdminStatusTimController::class, 'store'])
+    ->name('admin_status_tim_update')
+    ->middleware('admin:admin');
+
+
+
+
+
 
 // CRUD Bagian Kategori
 Route::get('/admin/daftar-kategori', [AdminCategoryController::class, 'daftar_kategori'])->name('daftar_kategori')->middleware('admin:admin');
