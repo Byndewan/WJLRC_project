@@ -18,6 +18,6 @@ class KaryaLikeController extends Controller
         $liker = auth()->user();
 
         $liker->likes()->detach($karya);
-        return redirect()->route('detail_karya',$karya->id)->with('success', 'Kamu Menyukai Karya Ini');
+        return redirect()->route('detail_karya',$karya->id);
     }
 }
