@@ -9,6 +9,7 @@
         <div class="post-meta"><span class="date">{{ $karya_kategori->kategori->nama_kategori }}</span> <span class="mx-1">&bullet;</span><span>{{ $karya_kategori->tanggal }}</span></div>
         <h1 class="mb-5">{{ $karya_kategori->judul }}</h1>
         <p class="post-meta" style="margin-bottom : 20px; font-size: 15px;">{{ $karya_kategori->nama }}</p>
+        <p class="post-meta" style="margin-bottom : 20px; font-size: 15px;">{{ $karya_kategori->penulis }}</p>
     </div>
         <div class="icon-container">
 

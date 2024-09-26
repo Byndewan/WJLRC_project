@@ -64,7 +64,7 @@ class PageController extends Controller
     public function resensi()
     {
         $data_page = HomePageItem::where('id','1')->first();
-        $data_resensi = Resensi::orderBy('id','asc')->get();
+        $data_resensi = Resensi::orderBy('created_at','desc')->get();
         return view('front.resensi', ['data_resensi' => $data_resensi])->with('data_page',$data_page);
     }
 
