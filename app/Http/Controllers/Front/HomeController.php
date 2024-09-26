@@ -21,7 +21,7 @@ class HomeController extends Controller
         $page_data = StatusTim::where('id',1)->first();
         $data_kontak = Kontak::where('id', '1')->first();
         $tim_data = Tim::orderBy('id', 'asc')->get();
-        $karya_data = Karya::orderBy('id', 'asc')->limit(6)->get();
+        $karya_data = Karya::orderBy('created_at','desc')->limit(6)->get();
         $data_page = HomePageItem::where('id', '1')->first();
 
         return view('front.home', compact('karya_data', 'tim_data', 'data_page','page_data'))->with('data_kontak', $data_kontak);

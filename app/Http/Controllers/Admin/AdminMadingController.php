@@ -10,7 +10,7 @@ class AdminMadingController extends Controller
 {
     public function daftar_mading()
     {
-        $data_mading = Mading::orderBy('id','asc')->get();
+        $data_mading = Mading::orderBy('created_at','desc')->get();
         return view('admin.daftar_mading', compact('data_mading'));
     }
 
