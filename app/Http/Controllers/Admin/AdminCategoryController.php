@@ -10,7 +10,7 @@ class AdminCategoryController extends Controller
 {
     public function daftar_kategori()
     {
-        $data_kategori = Category::orderBy('id','asc')->get();
+        $data_kategori = Category::orderBy('created_at','desc')->get();
         return view('admin.daftar_kategori',['data_kategori' => $data_kategori]);
     }
 

@@ -12,7 +12,7 @@ class AdminTamanBacaController extends Controller
 
     public function daftar_buku()
     {
-        $data_buku = Buku::orderBy('id','asc')->get();
+        $data_buku = Buku::orderBy('created_at','desc')->get();
         return view('admin.daftar_buku', compact('data_buku'));
     }
 
