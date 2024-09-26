@@ -22,7 +22,7 @@
       <section class="single-post-content">
         <div class="container">
           <div class="row">
-            <div class="col-md-9 post-content" data-aos="fade-up">
+            <div class="col-md-9" data-aos="fade-up">
 
             @yield('main_content')
 

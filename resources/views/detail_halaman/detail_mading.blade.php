@@ -11,7 +11,6 @@
               <p class="post-meta" style="margin-bottom : 20px; font-size: 15px;">{{ $data_mading->nama }}</p>
               <figure class="my-4">
                 <img src="{{ asset('uploads/'.$data_mading->photo) }}" alt="" class="img-fluid" style="max-width: 900px">
-                <figcaption>{{ $data_mading->judul }}</figcaption>
               </figure>
               <p>{!! nl2br($data_mading->deskripsi) !!}</p>
             </div><!-- End Single Post Content -->

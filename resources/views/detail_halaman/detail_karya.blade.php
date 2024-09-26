@@ -37,7 +37,6 @@
     </div>
         <figure class="my-4">
             <img src="{{ asset('uploads/' . $karya_kategori->photo) }}" alt="" class="img-fluid" style="max-width: 900px">
-            <figcaption>{{ $karya_kategori->judul }} </figcaption>
         </figure>
         <p>{!! nl2br($karya_kategori->deskripsi) !!}</p>
     </div><!-- End Single Post Content -->
@@ -104,7 +103,7 @@
                             rows="10"></textarea>
                     </div>
                     <div class="col-12">
-                        <input type="submit" class="btn btn-primary" value="Comment">
+                        <input style="margin-bottom: 30px;" type="submit" class="btn btn-primary" value="Comment">
                     </div>
                 </div>
             </form>
