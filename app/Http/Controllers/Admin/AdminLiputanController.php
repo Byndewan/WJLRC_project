@@ -10,7 +10,7 @@ class AdminLiputanController extends Controller
 {
     public function daftar_liputan()
     {
-        $data_liputan = Liputan::orderBy('id','asc')->get();
+        $data_liputan = Liputan::orderBy('created_at','desc')->get();
         return view('admin.daftar_liputan', compact('data_liputan'));
     }
 

@@ -10,7 +10,7 @@ class AdminResensiController extends Controller
 {
     public function daftar_resensi()
     {
-        $data_resensi = Resensi::orderBy('id','asc')->get();
+        $data_resensi = Resensi::orderBy('created_at','desc')->get();
         return view('admin.daftar_resensi', compact('data_resensi'));
     }
 
