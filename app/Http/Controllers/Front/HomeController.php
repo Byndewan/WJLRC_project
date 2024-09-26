@@ -13,7 +13,7 @@ use App\Models\Reply;
 use App\Models\Karya;
 use App\Models\Tim;
 use Auth;
-
+ 
 class HomeController extends Controller
 {
     public function index()
@@ -32,7 +32,7 @@ class HomeController extends Controller
     {
         $karya = Karya::orderBy('created_at', 'desc');
 
-        $karya_data = Karya::orderBy('id', 'asc')->get();
+        $karya_data = Karya::orderBy('created_at','desc')->get();
 
         $data_page = HomePageItem::where('id', 1)->first();
         $data_karya = Karya::orderBy('id', 'asc')->get();
