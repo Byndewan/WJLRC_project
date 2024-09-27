@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\KaryaLike;
 use Illuminate\Http\Request;
 use App\Models\Karya;
 use App\Models\Comment;
@@ -16,6 +17,9 @@ class AdminKaryaController extends Controller
         {
             // $data_karya-Karya::latest()->get();
             // $data_karya = Karya::orderBy('id','asc')->get();
+            // $karya_comment = Comment::where('id', '1')->first();
+
+            // $data_karya = Comment::with('body')->get();
             $data_karya = Karya::with('kategori')->get();
                 //    dd($data_karya);
             return view('admin.daftar_karya', compact('data_karya'));
