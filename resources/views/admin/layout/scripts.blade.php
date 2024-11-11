@@ -12,7 +12,3 @@
 <script src="{{ asset('dist/modules/summernote/summernote-bs4.js') }}"></script>
 <script src="{{ asset('dist/modules/chocolat/dist/js/jquery.chocolat.min.js') }}"></script>
 <script src="{{ asset('dist/js/page/index-0.js') }}"></script>
-<script src="{{ asset('dist/js/page/utilities-contact.js') }}"></script>
-<script src="{{ asset('dist/js/iziToast.min.js') }}"></script>
-{{-- <script src="{{ asset('dist/js/jquery.amsify.suggestags.js') }}"></script> --}}
-

@@ -19,6 +19,8 @@ height: 100%;
 .br{
     border-radius: 0.5rem;
 }
+<<<<<<< HEAD
+=======
 
 .bg {
     background-image: url("../img/login/hero-bg-abstract.webp");
@@ -36,3 +38,4 @@ height: 100%;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
+>>>>>>> 92a017870e9646e091a83cf9105066685839d4a1

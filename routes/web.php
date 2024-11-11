@@ -1,5 +1,7 @@
 <?php
 
+<<<<<<< HEAD
+=======
 use App\Http\Controllers\Admin\AdminLiputanController;
 use App\Http\Controllers\AdminStatusTimController;
 use App\Http\Controllers\KaryaLikeController;
@@ -9,113 +11,23 @@ use App\Livewire\Counter;
 use App\Http\Controllers\SearchController;
 
 /* Admin Controllers */
+>>>>>>> 92a017870e9646e091a83cf9105066685839d4a1
 use App\Http\Controllers\AdminLoginController;
-use App\Http\Controllers\Admin\AdminHomeController;
-use App\Http\Controllers\Admin\AdminKaryaController;
-use App\Http\Controllers\Admin\AdminKontenController;
-use App\Http\Controllers\Admin\AdminMadingController;
-use App\Http\Controllers\Admin\AdminOrganigramController;
-use App\Http\Controllers\Admin\AdminProfileController;
-use App\Http\Controllers\Admin\AdminResensiController;
-use App\Http\Controllers\Admin\AdminTamanBacaController;
-use App\Http\Controllers\Admin\AdminKontakController;
-use App\Http\Controllers\AdminTimController;
-use App\Http\Controllers\Admin\AdminHomePageController;
-use App\Http\Controllers\Admin\AdminCategoryController;
-use App\Http\Controllers\Admin\AdminTagController;
-
-/* Front Controllers */
-use App\Http\Controllers\Front\HomeController;
-use App\Http\Controllers\Front\PageController;
-use App\Http\Controllers\UserLoginController;
-use App\Http\Controllers\RegistrationController;
-use App\Http\Controllers\Front\ContactController;
-// use App\Http\Controllers\Front\CategoryController;
-
-// Livewire
-use App\Livewire\KaryaLivewire;
-use App\Livewire\Filter;
-
-// Comment
-use App\Http\Controllers\CommentController;
-use App\Http\Controllers\ReplyController;
-
-
-// Route::get('/counter', Counter::class);
-// Route::get('/karya-livewire', [KaryaLivewire::class, 'render']);
-// Route::get('/filter', [Filter::class, 'render']);
-
-// Front End
-Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/pengertian', [PageController::class, 'index'])->name('pengertian');
-Route::get('/organigram', [PageController::class, 'organigram'])->name('organigram');
-Route::get('/divisi', [PageController::class, 'divisi'])->name('divisi');
-Route::get('/program-online', [PageController::class, 'program_online'])->name('program_online');
-Route::get('/program-offline', [PageController::class, 'program_offline'])->name('program_offline');
-Route::get('/karya', [HomeController::class, 'karya'])->name('karya')->middleware('user:web');
-Route::get('/#contact', [ContactController::class, 'index'])->name('#contact');
-
-Route::post('/#contact/send-email', [ContactController::class, 'send_email'])->name('contact_send_email');
-Route::post('/contact/send-email', [ContactController::class, 'send_email'])->name('contact_send_email');
-Route::get('/#team-2', [HomeController::class, 'team'])->name('#team-2');
-Route::get('/karya/search', [HomeController::class, 'search_karya']);
-Route::get('/karya/categories', [HomeController::class, 'kategori']);
-
-// Front End : Program Online
-Route::get('/program-online/resensi', [PageController::class, 'resensi'])->name('resensi');
-Route::get('/program-online/resensi/search', [PageController::class, 'search_resensi']);
-Route::get('/program-online/konten', [PageController::class, 'konten'])->name('konten');
-Route::get('/program-online/konten/search', [PageController::class, 'search_konten']);
-Route::get('/program-online/liputan', [PageController::class, 'liputan'])->name('liputan');
-Route::get('/program-online/liputan/search', [PageController::class, 'search_liputan']);
-
-// Front End : Program Offline
-Route::get('/program-offline/mading', [PageController::class, 'mading'])->name('mading');
-Route::get('/program-online/mading/search', [PageController::class, 'search_mading']);
-
-// Registration
-Route::get('/user/registration', [RegistrationController::class, 'registration'])->name('registration');
-Route::post('/user/registration-submit', [RegistrationController::class, 'registration_submit'])->name('registration_submit');
-Route::get('/user/registration-to-login', [RegistrationController::class, 'registration_success'])->name('login_button');
-Route::get('/registration/verify/{token}/{email}', [RegistrationController::class, 'registration_verify']);
-
-// User Login
-Route::get('/user/login', [UserLoginController::class, 'index'])->name('user_login');
-Route::post('/user/login-submit', [UserLoginController::class, 'login_submit'])->name('user_login_submit');
-Route::get('/user/logout', [UserLoginController::class, 'logout'])->name('user_logout');
-Route::get('/user/forget-password', [UserLoginController::class, 'forget_password'])->name('user_forget_password');
-Route::post('/user/forget-password-submit', [UserLoginController::class, 'forget_password_submit'])->name('user_forget_password_submit');
-Route::get('/user/reset-password/{token}/{email}', [UserLoginController::class, 'reset_password'])->name('user_reset_password');
-Route::post('/user/reset-password-submit', [UserLoginController::class, 'reset_password_submit'])->name('user_reset_password_submit');
-
-// detail halaman
-Route::get('/karya/detail-karya/{id}', [HomeController::class, 'detail_karya'])->name('detail_karya')->middleware(['user:web']);
-
-
-Route::post('detail-karya/{karya}/like',[KaryaLikeController::class,'like'])->middleware('user:web')->name('karya.like');
-Route::post('detail-karya/{karya}/unlike',[KaryaLikeController::class,'unlike'])->middleware('user:web')->name('karya.unlike');
-
-
-
-
-Route::get('/program-online/resensi/detail-resensi/{id}', [PageController::class, 'detail_resensi'])->name('resensi_detail');
-Route::get('/program-online/konten/detail-konten/{id}', [PageController::class, 'detail_konten'])->name('detail_konten');
-Route::get('/program-offline/liputan/detail-liputan/{id}', [PageController::class, 'detail_liputan'])->name('detail_liputan');
-Route::get('/program-offline/mading/detail-mading/{id}', [PageController::class, 'detail_mading'])->name('detail_mading');
-
-// comment
-Route::post('/karya/detail-karya/{karya}/comments', [CommentController::class, 'store'])->name('karya.comment.store');
-
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminLoginControler;
+use App\Http\Controllers\AdminRegisterController;
+use App\Http\Controllers\Admin\AdminHOmeController;
 
 /*Admin*/
-Route::get('/admin/home', [AdminHomeController::class, 'index'])
-    ->name('admin_home')
-    ->middleware('admin:admin');
+Route::get('/admin/home', [AdminHomeController::class, 'index'])->name('admin_home')->middleware('admin:admin');
 Route::get('/admin/login', [AdminLoginController::class, 'index'])->name('admin_login');
 Route::post('/admin/login-submit', [AdminLoginController::class, 'login_submit'])->name('admin_login_submit');
+Route::get('/admin/registration', [AdminRegisterController::class, 'index'])->name('admin_register');
 Route::get('/admin/forgot-password', [AdminLoginController::class, 'forgot_password'])->name('admin_forgot_password');
 Route::get('/admin/reset-password', [AdminLoginController::class, 'reset_password'])->name('admin_reset_password');
 
+<<<<<<< HEAD
+=======
 /* Admin Section */
 Route::get('/admin/dashboard', [AdminHomeController::class, 'index'])
     ->name('admin_home')
@@ -355,3 +267,4 @@ Route::post('/admin/edit-kategori-submit/{id}', [AdminCategoryController::class,
 Route::get('/admin/kategori/delete/{id}', [AdminCategoryController::class, 'delete'])->name('hapus_kategori')->middleware('admin:admin');
 Route::get('/admin/daftar-kategori/search_kategori', [AdminCategoryController::class, 'search']);
 
+>>>>>>> 92a017870e9646e091a83cf9105066685839d4a1

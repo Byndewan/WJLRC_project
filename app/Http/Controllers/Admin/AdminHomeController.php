@@ -3,22 +3,23 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+<<<<<<< HEAD
+=======
 use App\Models\Konten;
 use App\Models\Liputan;
 use App\Models\Resensi;
 use App\Models\User;
+>>>>>>> 92a017870e9646e091a83cf9105066685839d4a1
 use Illuminate\Http\Request;
-use App\Models\Buku;
-use App\Models\Peminjaman;
-use App\Models\Karya;
 use App\Models\Admin;
-use App\Models\Mading;
-use Hash;
 
 class AdminHomeController extends Controller
 {
     public function index()
     {
+<<<<<<< HEAD
+        return view('admin.home');
+=======
         $total_admin = Admin::all()->count();
         $total_user = User::all()->count();
         $total_mading = Mading::all()->count();
@@ -62,5 +63,6 @@ class AdminHomeController extends Controller
         $obj->save();
 
         return redirect()->route('admin_home')->with('success', 'Data is inserted successfully');
+>>>>>>> 92a017870e9646e091a83cf9105066685839d4a1
     }
 }

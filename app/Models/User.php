@@ -40,7 +40,10 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'password' => 'hashed',
     ];
+<<<<<<< HEAD
+=======
 
     public function likes(){
         return $this->belongsToMany(Karya::class,'karya_like')->withTimestamps();
@@ -50,4 +53,5 @@ class User extends Authenticatable
         return $this->likes()->where('karya_id',$karya->id)->exists();
     }
     
+>>>>>>> 92a017870e9646e091a83cf9105066685839d4a1
 }

@@ -76,19 +76,13 @@ a:not(.btn-social-icon):not(.btn-social):not(.page-link) .fab {
   margin-left: 4px; }
 
 .bg-primary {
-background-color: #6777ef !important; }
+  background-color: #495057 !important; }
 
 .bg-secondary {
-background-color: #cdd3d8 !important; }
+  background-color: #cdd3d8 !important; }
 
-.bg-book-1 {
-background-color: #66BB6A !important; }
-
-.bg-book-2 {
-    background-color: #AB47BC !important; }
-
-.bg-karya {
-    background-color: #c69e69 !important; }
+.bg-success {
+  background-color: #63ed7a !important; }
 
 .bg-resensi {
     background-color: #ec4242 !important; }
@@ -100,19 +94,19 @@ background-color: #66BB6A !important; }
     background-color: #348bee !important; }
 
 .bg-info {
-background-color: #3abaf4 !important; }
+  background-color: #3abaf4 !important; }
 
 .bg-warning {
-background-color: #ffa426 !important; }
+  background-color: #ffa426 !important; }
 
 .bg-danger {
-background-color: #fc544b !important; }
+  background-color: #fc544b !important; }
 
 .bg-light {
-background-color: #e3eaef !important; }
+  background-color: #e3eaef !important; }
 
 .bg-dark {
-background-color: #191d21 !important; }
+  background-color: #191d21 !important; }
 
 .text-primary, .text-primary-all *, .text-primary-all *:before, .text-primary-all *:after {
   color: #6777ef !important; }
@@ -185,7 +179,7 @@ select.form-control:not([size]):not([multiple]),
   height: 42px; }
 
 textarea.form-control {
-  height: 1000px !important; }
+  height: 64px !important; }
 
 .custom-control {
   line-height: 1.6rem; }
@@ -1523,9 +1517,9 @@ h6 .badge {
   right: 5px;
   position: absolute;
   z-index: 890;
-  background-color: #ff5757!important; }
+  background-color: transparent; }
   .navbar.active {
-    background-color: #ff5757;
+    background-color: #6777ef;
     box-shadow: rgba(103, 119, 239, 0.2) rgba(0, 0, 0, 0.03); }
 
 .navbar-bg {
@@ -1535,7 +1529,7 @@ h6 .badge {
   left: 0;
   width: 100%;
   height: 115px;
-  background-color: #ff5757;
+  background-color: #6777ef;
   z-index: -1; }
 
 .navbar {
