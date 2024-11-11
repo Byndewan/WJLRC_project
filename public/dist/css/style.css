@@ -84,6 +84,15 @@ a:not(.btn-social-icon):not(.btn-social):not(.page-link) .fab {
 .bg-success {
   background-color: #63ed7a !important; }
 
+.bg-resensi {
+    background-color: #ec4242 !important; }
+
+.bg-liputan {
+    background-color: #f02929 !important; }
+
+.bg-konten {
+    background-color: #348bee !important; }
+
 .bg-info {
   background-color: #3abaf4 !important; }
 

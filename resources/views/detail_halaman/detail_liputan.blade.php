@@ -5,7 +5,7 @@
 @section('main_content')
             <!-- ======= Single Post Content ======= -->
             <div class="single-post" style="margin-bottom: 50px;">
-              <div class="post-meta"><span class="mx-1">&bullet;</span> <span>{{ $data_liputan->tanggal }}</span></div>
+              <div class="post-meta"><span>{{ $data_liputan->tanggal }}</span></div>
               <h1 class="mb-5">{{ $data_liputan->judul }}</h1>
               <p class="post-meta" style="margin-bottom : 20px; font-size: 15px;">{{ $data_liputan->nama }}</p>
               <figure class="my-4">

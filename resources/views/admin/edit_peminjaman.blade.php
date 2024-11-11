@@ -38,8 +38,12 @@
                                     <input type="text" class="form-control" name="kelas" value="{{ $row_data->kelas }}">
                                     </div>
                                     <div class="form-group">
-                                    <label>Judul Buku Yang Dipinjam</label>
-                                    <input type="text" class="form-control" name="judul" value="{{ $row_data->judul }}">
+                                    <label>Judul Buku Yang Di Pinjam</label>
+                                        <select name="judul_id" class="form-control">
+                                            @foreach ($judul as $item)
+                                                <option value={{$item->id}}>{{$item->judul}}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                     <div class="form-group">
                                     <label>Tanggal Peminjaman</label>

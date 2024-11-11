@@ -48,7 +48,42 @@
             <li><a class="nav-link" href="peminjaman.html">Peminjaman</a></li>
           </ul>
         </li>
+<<<<<<< HEAD
         <li><a class="nav-link" href="utilities-contact.html"><i class="fas fa-hand-point-right"></i> <span>Kontak</span></a></li>
+=======
+
+        <li class="dropdown {{ Request::is('/admin/daftar/kontak') ? "active" : " " }}">
+            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-hand-point-right"></i> <span>Kontak</span></a>
+            <ul class="dropdown-menu">
+              <li class="{{ Request::is('/admin/daftar/kontak') ? "active" : " " }}"><a class="nav-link" href="{{ route('admin_daftar_kontak') }}">Kontak</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown {{ Request::is('admin/daftar/tim') ? "active" : " " }}">
+            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-hand-point-right"></i> <span>Team</span></a>
+            <ul class="dropdown-menu">
+              <li class="{{ Request::is('admin/daftar/tim') ? "active" : " " }}"><a class="nav-link"
+                href="{{ route('admin_daftar_tim') }}">Team</a></li>
+            </ul>
+            <ul class="dropdown-menu">
+              <li class="{{ Request::is('admin/status/tim') ? "active" : " " }}"><a class="nav-link" href="{{ route('admin_status_tim') }}">Status Team</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown {{ Request::is('admin/home-banner') ? "active" : " " }}">
+            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-hand-point-right"></i> <span>Home Banner</span></a>
+            <ul class="dropdown-menu">
+              <li class="{{ Request::is('admin/home-banner') ? "active" : " " }}"><a class="nav-link" href="{{ route('admin_home_banner') }}">Home Banner</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown {{ Request::is('admin/home-footer') ? "active" : " " }}">
+            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-hand-point-right"></i> <span>Home Footer</span></a>
+            <ul class="dropdown-menu">
+              <li class="{{ Request::is('admin/home-footer') ? "active" : " " }}"><a class="nav-link" href="{{ route('admin_home_footer') }}">Home Footer</a></li>
+            </ul>
+        </li>
+>>>>>>> 92a017870e9646e091a83cf9105066685839d4a1
 
       <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
       </div>

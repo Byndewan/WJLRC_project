@@ -68,13 +68,6 @@
                         <label>Icon URL</label>
                         <input type="text" class="form-control" name="icon5_url">
                     </div>
-                    <div class="form-group">
-                        <label>Status</label>
-                        <select class="form-control" name="status">
-                        <option>Show</option>
-                        <option>Hide</option>
-                        </select>
-                    </div>
                     <div class="card-footer text-right">
                         <button class="btn btn-primary">Simpan</button>
                     </div>

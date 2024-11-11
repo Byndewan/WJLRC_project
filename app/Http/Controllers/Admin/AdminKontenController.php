@@ -10,7 +10,7 @@ class AdminKontenController extends Controller
 {
     public function daftar_konten()
     {
-        $data_konten = Konten::orderBy('id','asc')->get();
+        $data_konten = Konten::orderBy('created_at','desc')->get();
         return view('admin.daftar_konten', compact('data_konten'));
     }
 

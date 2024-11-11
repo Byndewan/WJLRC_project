@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\KaryaLike;
 use Illuminate\Http\Request;
 use App\Models\Karya;
 use App\Models\Comment;
@@ -16,6 +17,9 @@ class AdminKaryaController extends Controller
         {
             // $data_karya-Karya::latest()->get();
             // $data_karya = Karya::orderBy('id','asc')->get();
+            // $karya_comment = Comment::where('id', '1')->first();
+
+            // $data_karya = Comment::with('body')->get();
             $data_karya = Karya::with('kategori')->get();
                 //    dd($data_karya);
             return view('admin.daftar_karya', compact('data_karya'));
@@ -66,10 +70,20 @@ class AdminKaryaController extends Controller
 
     $obj = Karya::where('id',$id)->first();
 
-    $ext = $request->file('photo')->extension();
-    $final_name = 'karya_'.time().'.'.$ext;
-    $request->file('photo')->move(public_path('uploads/'),$final_name);
-    $obj->photo = $final_name;
+        if($request->hasFile('photo')){
+            $request->validate([
+                'photo' => 'required|image|mimes:jpg,jpeg,png,gif'
+            ]);
+
+            unlink(public_path('uploads/'.$obj->photo));
+
+            $ext = $request->file('photo')->extension();
+            $final_name = 'karyax`_'.time().'.'.$ext;
+
+            $request->file('photo')->move(public_path('uploads/'),$final_name);
+
+            $obj->photo = $final_name;
+        }
 
     $obj->judul = $request->judul;
     $obj->penulis = $request->penulis;

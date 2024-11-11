@@ -95,6 +95,7 @@
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   </div>
   <div class="row">
     <div class="col-lg-8 col-md-12 col-12 col-sm-12">
@@ -105,16 +106,59 @@
             <div class="btn-group">
               <a href="#" class="btn btn-primary">Week</a>
               <a href="#" class="btn">Month</a>
+=======
+
+    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="card card-statistic-1">
+          <div class="card-icon bg-resensi">
+            <i class="fas fa-address-book"></i>
+          </div>
+          <div class="card-wrap">
+            <div class="card-header">
+              <h4>Total Resensi</h4>
+            </div>
+            <div class="card-body">
+              {{ $total_resensi }}
+>>>>>>> 92a017870e9646e091a83cf9105066685839d4a1
             </div>
           </div>
         </div>
-        <div class="card-body">
-          <canvas id="myChart" height="182"></canvas>
-          <div class="statistic-details mt-sm-4">
+      </div>
+
+
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="card card-statistic-1">
+          <div class="card-icon bg-konten">
+            <i class="fas fa-file-image"></i>
+          </div>
+          <div class="card-wrap">
+            <div class="card-header">
+              <h4>Total Konten</h4>
+            </div>
+            <div class="card-body">
+              {{ $total_konten }}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="card card-statistic-1">
+          <div class="card-icon bg-liputan">
+            <i class="fas fa-newspaper"></i>
+          </div>
+          <div class="card-wrap">
+            <div class="card-header">
+              <h4>Total Liputan</h4>
+            </div>
+            <div class="card-body">
+              {{ $total_liputan }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+
   </div>
 
 @endsection

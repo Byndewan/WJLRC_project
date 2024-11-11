@@ -51,7 +51,6 @@ class AdminTimController extends Controller
         $obj->icon4_url = $request->icon4_url;
         $obj->icon5 = $request->icon5;
         $obj->icon5_url = $request->icon5_url;
-        $obj->status = $request->status;
         $obj->save();
 
         return redirect()->route('admin_daftar_tim')->with('success', 'Data is inserted successfully');
@@ -95,7 +94,6 @@ class AdminTimController extends Controller
         $obj->icon4_url = $request->icon4_url;
         $obj->icon5 = $request->icon5;
         $obj->icon5_url = $request->icon5_url;
-        $obj->status = $request->status;
         $obj->update();
 
         return redirect()->route('admin_daftar_tim')->with('success', 'Data is updated successfully');

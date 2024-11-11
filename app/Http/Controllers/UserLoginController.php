@@ -18,7 +18,7 @@ class UserLoginController extends Controller
 
     public function forget_password()
     {
-        return view('user_forget_password'); 
+        return view('user_forget_password');
     }
 
     public function forget_password_submit(Request $request)
@@ -36,7 +36,7 @@ class UserLoginController extends Controller
 
         $user_data->token = $token;
         $user_data->update();
-        
+
         $reset_link = url('user/reset-password/'.$token.'/'.$request->email);
         $subject = 'Reset Password';
         $message = 'Please click on the following link: <br>';
@@ -60,11 +60,11 @@ class UserLoginController extends Controller
         ];
 
        if(Auth::guard('web')->attempt($credential)) {
-        return redirect()->route('karya');
+        return redirect()->route('home');
        } else {
         return redirect()->route('user_login')->with('error', 'Infromation is not correct!');
        }
-    }    
+    }
 
     public function logout()
     {

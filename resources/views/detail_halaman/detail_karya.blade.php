@@ -4,20 +4,30 @@
 
 @section('main_content')
     <!-- ======= Single Post Content ======= -->
+    <div>
     <div class="single-post">
-        <div class="post-meta"><span class="date">Business</span> <span class="mx-1">&bullet;</span>
-            <span>{{ $data_karya->tanggal }}</span>
-        </div>
-        <div class="post-meta"><span class="date">{{ $data_karya->kategori->nama_kategori }}</span> <span class="mx-1">&bullet;</span><span>{{ $data_karya->tanggal }}</span></div>
-        <h1 class="mb-5">{{ $data_karya->judul }}</h1>
-        <p class="post-meta" style="margin-bottom : 20px; font-size: 15px;">{{ $data_karya->nama }}</p>
+        <div class="post-meta"><span class="date">{{ $karya_kategori->kategori->nama_kategori }}</span> <span class="mx-1">&bullet;</span><span>{{ $karya_kategori->tanggal }}</span></div>
+        <h1 class="mb-5">{{ $karya_kategori->judul }}</h1>
+        <p class="post-meta" style="margin-bottom : 20px; font-size: 15px;">{{ $karya_kategori->nama }}</p>
+    </div>
         <div class="icon-container">
+
             <div class="icon-item">
-                    <form action="{{ route('karya.like', $karya->id) }}" method="POST">
-                        @csrf
-                        <button type="submit" class="fw-light nav-link fs-6"> <span class="bi bi-heart me-1"></span> {{ $karya->likes()->count() }}</button>
-                    </form>
+
+                @if (Auth::user()->likeskarya($karya))
+                <form action="{{ route('karya.unlike', $karya->id) }}" method="POST">
+                    @csrf
+                    <button type="submit" class="fw-light nav-link fs-6"> <span class="bi bi-heart-fill hati"></span> {{ $karya->likes()->count() }}</button>
+                </form>
+                @else
+                <form action="{{ route('karya.like', $karya->id) }}" method="POST">
+                    @csrf
+                    <button type="submit" class="fw-light nav-link fs-6"> <span class="bi bi-heart"></span> {{ $karya->likes()->count() }}</button>
+                </form>
+                @endif
             </div>
+
+
             <div class="icon-item">
                 <i><span class="bi bi-chat"></span></i>
                 <p>{{ $karya->comments->count() }}</p>
@@ -25,10 +35,10 @@
         </div>
     </div>
         <figure class="my-4">
-            <img src="{{ asset('uploads/' . $data_karya->photo) }}" alt="" class="img-fluid" style="max-width: 900px">
-            <figcaption>{{ $data_karya->judul }} </figcaption>
+            <img src="{{ asset('uploads/' . $karya_kategori->photo) }}" alt="" class="img-fluid" style="max-width: 900px">
+            <figcaption>{{ $karya_kategori->judul }} </figcaption>
         </figure>
-        <p>{!! nl2br($data_karya->deskripsi) !!}</p>
+        <p>{!! nl2br($karya_kategori->deskripsi) !!}</p>
     </div><!-- End Single Post Content -->
 
     <!-- Comments Section -->
@@ -41,9 +51,6 @@
                     <div class="tab-pane fade show active" id="pills-popular" role="tabpanel"
                         aria-labelledby="pills-popular-tab">
                         <div class="post-entry-1 border-bottom">
-                            <div class="post-meta"><span class="date">Sport</span> <span class="mx-1">&bullet;</span>
-                                <span>{{ $item->tanggal }}</span>
-                            </div>
                             <div class="post-meta"><span class="date">{{ $item->kategori->nama_kategori }}</span> <span class="mx-1">&bullet;</span>
                                 <span>{{ $item->tanggal }}</span></div>
                             <h2 class="mb-2"><a href="{{ route('detail_karya', $item->id) }}">{{ $item->judul }}</a></h2>
@@ -59,7 +66,7 @@
 
     <h5 class="comment-title py-4">{{ $karya->comments->count() }} Comments</h5>
 
-    @foreach ($karya->comments as $comment)
+    @forelse ($karya->comments as $comment)
         <div class="comment">
             <div class="comment-main d-flex mb-4">
                 <div class="flex-shrink-0">
@@ -72,58 +79,12 @@
                     <div class="comment-body">
                         {{ $comment->body }}
                     </div>
-                    {{-- <div class="comment-actions d-flex">
-                        <button class="reply-toggle" onclick="toggleReplies(this)">
-                            Show Replies <i class="fas fa-chevron-down"></i>
-                        </button>
-                        <button class="reply-button" onclick="addReplyForm(this, {{ $comment->id }})">
-                            Reply
-                        </button>
-                        <form id="reply-form-{{ $comment->id }}" style="display: none;">
-                            @csrf
-                            <input type="hidden" name="comment_id" value="{{ $comment->id }}">
-                            <textarea name="body" required></textarea>
-                            <button class="reply-button" onclick="(this, {{ $comment->id }})">
-                                Reply
-                            </button>
-                        </form>
-                    </div> --}}
-
-                    <!-- Replies Section -->
-                    {{-- <div>
-                        <div class="replies bg-light p-3 mt-3 rounded " style="display: none;">
-                            <h6 class="comment-replies-title mb-4 text-muted text-uppercase">
-                                {{ $comment->replies->count() }}
-                                replies</h6>
-                            @foreach ($comment->replies as $reply)
-                                <div class="reply d-flex mb-4">
-                                    <div class="flex-shrink-0">
-                                        <div class="avatar avatar-sm rounded-circle">
-                                            <img class="avatar-img"
-                                                src="{{ asset('dist_detail/assets/img/team/team-1.jpg') }}" alt=""
-                                                class="img-fluid">
-                                        </div>
-                                    </div>
-                                    <div class="flex-grow-1 ms-2 ms-sm-3">
-                                        <div class="reply-meta d-flex align-items-baseline">
-                                            <h6 class="mb-0 me-2">{{ $reply->user->name }}</h6>
-                                            <span
-                                                class="text-muted">{{ $reply->created_at ? $reply->created_at->diffForHumans() : 'No date' }}</span>
-                                            <span class="text-muted">{{ $reply->created_at->diffForHumans() }}</span>
-
-                                        </div>
-                                        <div class="reply-body">
-                                            {{ $reply->body }}
-                                        </div>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div> <!-- End Replies -->
-                    </div> --}}
                 </div>
             </div>
         </div> <!-- End Comment -->
-    @endforeach
+        @empty
+        <p class="text-center mt-4"><strong>Belum Ada Komentar</strong></p>
+    @endforelse
     </div> <!-- End Comments Section -->
 
     <!-- Comment Form -->
@@ -148,18 +109,5 @@
             </form>
         </div>
     </div> <!-- End Comment Form -->
-    <div class="aside-block">
-        <h3 class="aside-title">Tags</h3>
-        <ul class="aside-tags list-unstyled">
-            <li><a href="#">Business</a></li>
-            <li><a href="#">Culture</a></li>
-            <li><a href="#">Sport</a></li>
-            <li><a href="#">Food</a></li>
-            <li><a href="#">Politics</a></li>
-            <li><a href="#">Celebrity</a></li>
-            <li><a href="#">Startups</a></li>
-            <li><a href="#">Travel</a></li>
-        </ul>
-    </div><!-- End Tags -->
     </div>
 @endsection

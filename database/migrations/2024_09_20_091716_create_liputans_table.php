@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->text('photo');
             $table->text('judul');
-            $table->date('tanggal');
+            $table->datetime('tanggal');
             $table->text('nama');
             $table->text('deskripsi');
             $table->timestamps();

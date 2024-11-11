@@ -26,7 +26,6 @@ return new class extends Migration
             $table->text('icon4_url');
             $table->text('icon5');
             $table->text('icon5_url');
-            $table->text('status');
             $table->timestamps();
         });
     }

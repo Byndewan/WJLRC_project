@@ -63,19 +63,7 @@
                   <a href="{{ route('detail_karya',$item->id) }}"><img src="{{ asset('uploads/'.$item->photo) }}" alt="" class="img-fluid"></a>
                     <div class="post-meta"><span class="date">{{ $item->kategori->nama_kategori }}</span> <span class="mx-1">&bullet;</span> <span>{{ $item->tanggal }}</span></div>
                   <h2><a href="{{ route('detail_karya',$item->id) }}">{{ $item->judul }}</a></h2>
-                  <div class="post-meta" style="color: #b3b3b3;"><span>{{ $item->nama }}</span></div>
-                  {{-- <div class="icon-container">
                   <div class="post-meta" style="color: #b3b3b3;"><span>{{ $item->penulis }}</span></div>
-                  <div class="icon-container">
-                    <div class="icon-item">
-                        <i class="bi bi-heart"></i>
-                        <p>2.3K</p>
-                    </div>
-                    <div class="icon-item">
-                        <i class="bi bi-chat"></i>
-                        <p>{{ $karya->comments->count() }}</p>
-                    </div>
-                  </div> --}}
                 </div>
             </div>
         @endforeach
