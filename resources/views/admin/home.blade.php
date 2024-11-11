@@ -1,10 +1,8 @@
 @extends('admin.layout.app')
 
-@section('title', 'Admin - Dashboard')
-
 @section('heading', 'Dashboard')
 
-@section('main_content')
+@section('main-content')
 
 <div class="row">
     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
@@ -17,13 +15,11 @@
             <h4>Total Admin</h4>
           </div>
           <div class="card-body">
-            {{ $total_admin }}
+            10
           </div>
         </div>
       </div>
     </div>
-
-    {{-- USERS --}}
     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
       <div class="card card-statistic-1">
         <div class="card-icon bg-danger">
@@ -34,12 +30,11 @@
             <h4>Total User</h4>
           </div>
           <div class="card-body">
-            {{ $total_user }}
+            42
           </div>
         </div>
       </div>
     </div>
-
     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
       <div class="card card-statistic-1">
         <div class="card-icon bg-warning">
@@ -50,12 +45,11 @@
             <h4>Total Mading</h4>
           </div>
           <div class="card-body">
-            {{ $total_mading }}
+            1,201
           </div>
         </div>
       </div>
     </div>
-
     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
       <div class="card card-statistic-1">
         <div class="card-icon bg-karya">
@@ -66,12 +60,11 @@
             <h4>Total karya</h4>
           </div>
           <div class="card-body">
-            {{ $total_karya }}
+            47
           </div>
         </div>
       </div>
     </div>
-
     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
       <div class="card card-statistic-1">
         <div class="card-icon bg-book-1">
@@ -79,15 +72,14 @@
         </div>
         <div class="card-wrap">
           <div class="card-header">
-            <h4>Total Buku Yang di Pinjam</h4>
+            <h4>Taman Baca</h4>
           </div>
           <div class="card-body">
-            {{ $total_peminjaman }}
+            47
           </div>
         </div>
       </div>
     </div>
-
     <div class="col-lg-3 col-md-6 col-sm-6 col-12">
       <div class="card card-statistic-1">
         <div class="card-icon bg-book-2">
@@ -98,12 +90,11 @@
             <h4>Total Buku</h4>
           </div>
           <div class="card-body">
-            {{ $total_buku }}
+            47
           </div>
         </div>
       </div>
     </div>
-
   </div>
   <div class="row">
     <div class="col-lg-8 col-md-12 col-12 col-sm-12">
@@ -125,4 +116,5 @@
       </div>
     </div>
   </div>
+
 @endsection

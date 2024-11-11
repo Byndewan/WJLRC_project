@@ -40,9 +40,6 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+        'password' => 'hashed',
     ];
-
-    public function likes(){
-        return $this->belongsToMany(Karya::class,'karya_like')->withTimestamps();
-    }
 }

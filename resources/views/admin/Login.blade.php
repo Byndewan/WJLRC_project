@@ -18,10 +18,10 @@
 </script>
 <!-- /END GA --></head>
 
-<body class="bg">
+<body>
   <div id="app">
     <div class="main-wrapper">
-            <div class="container form-group br" style="margin-top: 6rem;">
+            <div class="container form-group br" style="margin-top: 6rem">
             <section class="vh-100 modal-body section">
                 <div class="container container-login">
                     <div class="container-fluid h-custom">
@@ -35,7 +35,6 @@
                             @if (session()->get('success'))
                                 <div class="text-success">{{ session()->get('success') }}</div>
                             @endif
-
                         <form method="POST" action="{{ route('admin_login_submit') }}">
                             @csrf
                             <div class="form-group">
@@ -61,7 +60,7 @@
                             <div class="form-group">
                                 <div>
                                     <a href="{{ route('admin_forgot_password') }}" class="text-body">
-                                        Forgot Password?
+                                        Forget Password?
                                     </a>
                                 </div>
                             </div>
@@ -72,7 +71,7 @@
                 </div>
             </section>
         </div>
-        <div class="modal-footer mb-3 mb-md-0 d-flex flex-column flex-md-row text-center justify-content-center py-4 px-4 px-xl-5" style="color: #fff">
+        <div class="modal-footer mb-3 mb-md-0 d-flex flex-column flex-md-row text-center justify-content-center py-4 px-4 px-xl-5">
         Copyright © 2024. WJLRC 2024.
         </div>
     </div>

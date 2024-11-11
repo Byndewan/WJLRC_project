@@ -1,0 +1,40 @@
+{{-- <form method="POST" action="{{ route('admin_login_submit') }}">
+                @csrf
+                <!-- Email input -->
+                <div data-mdb-input-init class="form-outline mb-4">
+                  <label class="form-label @error('email') is-invalid @enderror">Email address</label>
+                  <input type="email" name="email" class="form-control form-control-lg"
+                    placeholder="Enter email address" value="{{ old('email') }}" autofocus/>
+                    @error('email')
+                        <div class="text-danger">{{ $message }}</div>
+                    @enderror
+                    @if (session()->get('error'))
+                        <div class="text-danger">{{ session()->get('error') }}</div>
+                    @endif
+                </div>
+
+                <!-- Password input -->
+                <div data-mdb-input-init class="form-outline mb-3">
+                  <label class="form-label @error('password') is-invalid @enderror">Password</label>
+                  <input type="password" name="password" class="form-control form-control-lg"
+                    placeholder="Enter password" />
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center">
+                  <!-- Checkbox -->
+                  <div class="form-check">
+                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                    <label class="form-check-label" for="form2Example3">
+                      Remember me
+                    </label>
+                  </div>
+                  <a href="{{ route('admin_forgot_password') }}" class="text-body">Forgot password?</a>
+                </div>
+
+                <div class="text-center text-lg-start mt-4 pt-2">
+                  <button  type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg"
+                    style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+                  <p class="small fw-bold mt-2 pt-1 pb-5 mb-0">Don't have an account? <a href="{{ route('admin_register') }}"
+                      class="link-danger">Register</a></p>
+                </div>
+              </form> --}}
