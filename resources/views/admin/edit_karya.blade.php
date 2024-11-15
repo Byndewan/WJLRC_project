@@ -30,14 +30,6 @@
                                     <input type="file" class="form-control" name="photo">
                                 </div>
                                 <div class="form-group">
-                                    <label>Nama</label>
-                                    <input type="text" class="form-control" name="nama" value="{{ $row_data->nama }}">
-                                </div>
-                                <div class="form-group">
-                                    <label>Kelas</label>
-                                    <input type="text" class="form-control" name="kelas" value="{{ $row_data->kelas }}">
-                                </div>
-                                <div class="form-group">
                                     <label>Judul</label>
                                     <input type="text" class="form-control" name="judul" value="{{ $row_data->judul }}">
                                 </div>
@@ -46,8 +38,16 @@
                                     <input type="text" class="form-control" name="penulis" value="{{ $row_data->penulis }}">
                                 </div>
                                 <div class="form-group">
+                                <label>Kategori</label>
+                                    <select name="kategori_id" class="form-control">
+                                        @foreach ($kategori as $item)
+                                            <option value={{$item->id}}>{{$item->nama_kategori}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="form-group">
                                     <label>Tanggal</label>
-                                    <input type="datetime-local" class="form-control" value="" name="tanggal" value="{{ $row_data->tanggal }}">
+                                    <input type="datetime-local" class="form-control" name="tanggal" value="{{ $row_data->tanggal }}">
                                 </div>
                                 <div class="form-group">
                                     <label>Deskripsi</label>

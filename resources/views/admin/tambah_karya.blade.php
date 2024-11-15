@@ -21,14 +21,6 @@
                             <input type="file" class="form-control" name="photo">
                         </div>
                         <div class="form-group">
-                            <label>Nama</label>
-                            <input type="text" class="form-control" name="nama">
-                        </div>
-                        <div class="form-group">
-                            <label>Kelas</label>
-                            <input type="text" class="form-control" name="kelas">
-                        </div>
-                        <div class="form-group">
                             <label>Judul</label>
                             <input type="text" class="form-control" name="judul">
                         </div>
@@ -36,14 +28,14 @@
                             <label>Penulis</label>
                             <input type="text" class="form-control" name="penulis">
                         </div>
-                        <!-- <div class="form-group">
-                            <label>Select</label>
-                            <select class="form-control">
-                            <option>Option 1</option>
-                            <option>Option 2</option>
-                            <option>Option 3</option>
+                        <div class="form-group">
+                        <label>Kategori</label>
+                            <select name="kategori_id" class="form-control">
+                                @foreach ($kategori as $item)
+                                    <option value={{$item->id}}>{{$item->nama_kategori}}</option>
+                                @endforeach
                             </select>
-                        </div> -->
+                        </div>
                         <div class="form-group">
                             <label>Tanggal</label>
                             <input type="datetime-local" class="form-control" value="" name="tanggal">

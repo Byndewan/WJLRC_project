@@ -84,65 +84,22 @@ hari rabu dan sabtu, jam 12 siang di Perpustakaan SMK Budi Bakti Ciwidey.
 
     <div class="row gy-4">
 
+        @foreach ($data_mading as $item)
       <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-        <a href="">
+        <a href="{{ route('detail_mading',$item->id) }}">
           <div class="team-member">
             <div class="member-img">
-              <img src="{{ asset('dist_front/program_offline/img/Melangkah Berani Menggapai Impian.jpg') }}" class="img-fluid-2" alt="">
+              <img src="{{ asset('uploads/'.$item->photo) }}" class="img-fluid-2" alt="">
             </div>
             <div class="member-info">
-              <h4>Melangkah Berani Menggapai Impian</h4>
-              <span>Azlia Nisrina Afifah</span>
-              <p style="margin-top: 6px; font-size: 14px; color: #444444;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil rem fugit exercitationem laborum minima eveniet impedit quis voluptatum? Fugit vero at eveniet quod ducimus minima libero quos tenetur similique blanditiis?</p>
+              <h4>{{ $item->judul }}</h4>
+              <span>{{ $item->nama }}</span>
+              {{-- <p style="margin-top: 6px; font-size: 14px; color: #444444;">{{ $item->deskripsi }}</p> --}}
             </div>
           </div>
         </a>
       </div><!-- End Team Member -->
-
-      <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-        <a href="">
-          <div class="team-member">
-            <div class="member-img">
-              <img src="{{ asset('dist_front/program_offline/img/bbc news.jpg') }}" class="img-fluid-2" alt="">
-            </div>
-            <div class="member-info">
-              <h4>BBC News</h4>
-              <span>Nameera Putri Prianti</span>
-              <p style="margin-top: 6px; font-size: 14px; color: #444444;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil rem fugit exercitationem laborum minima eveniet impedit quis voluptatum? Fugit vero at eveniet quod ducimus minima libero quos tenetur similique blanditiis?</p>
-            </div>
-          </div>
-        </a>
-      </div><!-- End Team Member -->
-
-      <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-        <a href="">
-          <div class="team-member">
-            <div class="member-img">
-              <img src="{{ asset('dist_front/program_offline/img/wjlrc gallery.jpg') }}" class="img-fluid-2" alt="">
-            </div>
-            <div class="member-info">
-              <h4>WJLRC Gallery</h4>
-              <span>Andika Bagja Gumelar</span>
-              <p style="margin-top: 6px; font-size: 14px; color: #444444;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil rem fugit exercitationem laborum minima eveniet impedit quis voluptatum? Fugit vero at eveniet quod ducimus minima libero quos tenetur similique blanditiis?</p>
-            </div>
-          </div>
-        </a>
-      </div><!-- End Team Member -->
-
-      <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-        <a href="">
-          <div class="team-member">
-            <div class="member-img">
-              <img src="{{ asset('dist_front/program_offline/img/everything new.jpg') }}" class="img-fluid-2" alt="">
-            </div>
-            <div class="member-info">
-              <h4>Everything is New</h4>
-              <span>Gista Aulia</span>
-              <p style="margin-top: 6px; font-size: 14px; color: #444444;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil rem fugit exercitationem laborum minima eveniet impedit quis voluptatum? Fugit vero at eveniet quod ducimus minima libero quos tenetur similique blanditiis?</p>
-            </div>
-          </div>
-        </a>
-      </div><!-- End Team Member -->
+      @endforeach
 
       <a href="{{ route('mading') }}" class="justify-content-center" style="display: flex; text-decoration: underline;" >Lihat yang lainnya &#8594;</a>
 
@@ -200,7 +157,7 @@ pertama.
    </main>
 
    @include('layout.footer')
-  
+
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

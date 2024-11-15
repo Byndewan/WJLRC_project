@@ -10,8 +10,8 @@ class AdminMadingController extends Controller
 {
     public function daftar_mading()
     {
-        $mading_data = Mading::orderBy('id','asc')->get();
-        return view('admin.daftar_mading', compact('mading_data'));
+        $data_mading = Mading::orderBy('created_at','desc')->get();
+        return view('admin.daftar_mading', compact('data_mading'));
     }
 
     public function tambah()
@@ -23,6 +23,7 @@ class AdminMadingController extends Controller
     {
         $request->validate([
             'judul' => 'required',
+            'nama' => 'required',
             'tanggal' => 'required',
             'deskripsi' => 'required',
         ]);
@@ -35,6 +36,7 @@ class AdminMadingController extends Controller
         $obj->photo = $final_name;
 
         $obj->judul = $request->judul;
+        $obj->nama = $request->nama;
         $obj->tanggal = $request->tanggal;
         $obj->deskripsi = $request->deskripsi;
         $obj->save();
@@ -50,11 +52,6 @@ class AdminMadingController extends Controller
 
     public function update(Request $request,$id)
     {
-        $request->validate([
-            'judul' => 'required',
-            'tanggal' => 'required',
-            'deskripsi' => 'required',
-        ]);
 
         $obj = Mading::where('id',$id)->first();
 
@@ -74,6 +71,7 @@ class AdminMadingController extends Controller
         }
 
         $obj->judul = $request->judul;
+        $obj->nama = $request->nama;
         $obj->tanggal = $request->tanggal;
         $obj->deskripsi = $request->deskripsi;
         $obj->update();
@@ -87,5 +85,16 @@ class AdminMadingController extends Controller
         $row_data->delete();
 
         return redirect()->back()->with('success', 'Data is deleted successfully');
+    }
+
+    public function search(Request $request){
+        if ($request->has('search')) {
+            $data_mading = Mading::where('judul','LIKE','%'.$request->search.'%')->get();
+        } else {
+            $data_mading = Mading::all();
+        }
+
+        return view('admin.daftar_mading',['data_mading' => $data_mading]);
+
     }
 }

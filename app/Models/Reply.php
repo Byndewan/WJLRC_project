@@ -4,9 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\User;
-use App\Models\Reply;
-
 
 class Reply extends Model
 {
@@ -29,4 +26,4 @@ class Reply extends Model
     {
         return $this->hasMany(Reply::class);
     }
-}
+};

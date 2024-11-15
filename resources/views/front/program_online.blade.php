@@ -77,65 +77,22 @@
 
         <div class="row gy-4">
 
+            @foreach ($data_resensi as $item)
           <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-            <a href="">
+            <a href="{{ route('resensi_detail',$item->id) }}">
               <div class="team-member">
                 <div class="member-img">
-                  <img src="{{ asset('dist_front/program_online/img/Bumi.png') }}" class="img-fluid" alt="">
+                  <img src="{{ asset('uploads/'.$item->photo) }}" class="img-fluid" alt="">
                 </div>
                 <div class="member-info">
-                  <h4>Bumi</h4>
-                  <span>Azlia Nisrina Afifah</span>
-                  <p style="margin-top: 6px; font-size: 14px; color: #444444;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil rem fugit exercitationem laborum minima eveniet impedit quis voluptatum? Fugit vero at eveniet quod ducimus minima libero quos tenetur similique blanditiis?</p>
+                  <h4>{{ $item->judul }}</h4>
+                  <span>{{ $item->penulis }}</span>
+                  {{-- <p style="margin-top: 6px; font-size: 14px; color: #444444;">{{ nl2br($item->deskripsi) }}</p> --}}
                 </div>
               </div>
             </a>
           </div><!-- End Team Member -->
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-            <a href="">
-              <div class="team-member">
-                <div class="member-img">
-                  <img src="{{ asset('dist_front/program_online/img/bulan.png') }}" class="img-fluid" alt="">
-                </div>
-                <div class="member-info">
-                  <h4>Bulan</h4>
-                  <span>Azlia Nisrina Afifah</span>
-                  <p style="margin-top: 6px; font-size: 14px; color: #444444;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil rem fugit exercitationem laborum minima eveniet impedit quis voluptatum? Fugit vero at eveniet quod ducimus minima libero quos tenetur similique blanditiis?</p>
-                </div>
-              </div>
-            </a>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-            <a href="">
-              <div class="team-member">
-                <div class="member-img">
-                  <img src="{{ asset('dist_front/program_online/img/matahari.png') }}" class="img-fluid" alt="">
-                </div>
-                <div class="member-info">
-                  <h4>Matahari</h4>
-                  <span>Azlia Nisrina Afifah</span>
-                  <p style="margin-top: 6px; font-size: 14px; color: #444444;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil rem fugit exercitationem laborum minima eveniet impedit quis voluptatum? Fugit vero at eveniet quod ducimus minima libero quos tenetur similique blanditiis?</p>
-                </div>
-              </div>
-            </a>
-          </div><!-- End Team Member -->
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-            <a href="">
-              <div class="team-member">
-                <div class="member-img">
-                  <img src="{{ asset('dist_front/program_online/img/komet.png') }}" style="max-width: 100%;" class="img-fluid" alt="">
-                </div>
-                <div class="member-info">
-                  <h4>Komet</h4>
-                  <span>Azlia Nisrina Afifah</span>
-                  <p style="margin-top: 6px; font-size: 14px; color: #444444;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil rem fugit exercitationem laborum minima eveniet impedit quis voluptatum? Fugit vero at eveniet quod ducimus minima libero quos tenetur similique blanditiis?</p>
-                </div>
-              </div>
-            </a>
-          </div><!-- End Team Member -->
+          @endforeach
 
           <a href="{{ route('resensi') }}" class="justify-content-center" style="display: flex; text-decoration: underline;" >Lihat yang lainnya &#8594;</a>
 
@@ -158,66 +115,22 @@
 
       <div class="row gy-4">
 
+        @foreach ($data_konten as $item)
         <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-          <a href="">
+          <a href="{{ route('detail_konten',$item->id) }}">
             <div class="team-member">
               <div class="member-img">
-                <img src="{{ asset('dist_front/program_online/img/konten-1.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ asset('uploads/'.$item->photo) }}" class="img-fluid" alt="">
               </div>
               <div class="member-info">
-                <h4>Tips membangun kerja sama tim yang baik</h4>
-                <span>Desma Khoirunisa</span>
-                <p style="margin-top: 6px; font-size: 14px; color: #444444;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil rem fugit exercitationem laborum minima eveniet impedit quis voluptatum? Fugit vero at eveniet quod ducimus minima libero quos tenetur similique blanditiis?</p>
+                <h4>{{ $item->judul }}</h4>
+                <span>{{ $item->penulis }}</span>
+                {{-- <p style="margin-top: 6px; font-size: 14px; color: #444444;">{{ nl2br($item->deskripsi) }}</p> --}}
               </div>
             </div>
           </a>
         </div><!-- End Team Member -->
-
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-          <a href="">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="{{ asset('dist_front/program_online/img/konten-2.jpg') }}" class="img-fluid" alt="">
-              </div>
-              <div class="member-info">
-                <h4>Apa itu literasi?</h4>
-                <span>Nameera Putri Prianti</span>
-                <p style="margin-top: 6px; font-size: 14px; color: #444444;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil rem fugit exercitationem laborum minima eveniet impedit quis voluptatum? Fugit vero at eveniet quod ducimus minima libero quos tenetur similique blanditiis?</p>
-              </div>
-            </div>
-          </a>
-        </div><!-- End Team Member -->
-
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
-          <a href="">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="{{ asset('dist_front/program_online/img/konten-3.jpg') }}" class="img-fluid" alt="">
-              </div>
-              <div class="member-info">
-                <h4>5 Cara Efektif Mengatur Waktu dengan Baik</h4>
-                <span>Andika Bagja Gumelar</span>
-                <p style="margin-top: 6px; font-size: 14px; color: #444444;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil rem fugit exercitationem laborum minima eveniet impedit quis voluptatum? Fugit vero at eveniet quod ducimus minima libero quos tenetur similique blanditiis?</p>
-              </div>
-            </div>
-          </a>
-        </div><!-- End Team Member -->
-
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
-          <a href="">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="{{ asset('dist_front/program_online/img/konten-4.jpg') }}" style="max-width: 100%;" class="img-fluid" alt="">
-              </div>
-              <div class="member-info">
-                <h4>Bagaimana sih cara menghitung perkalian dengan mudah?
-                </h4>
-                <span>Gista Aulia</span>
-                <p style="margin-top: 6px; font-size: 14px; color: #444444;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil rem fugit exercitationem laborum minima eveniet impedit quis voluptatum? Fugit vero at eveniet quod ducimus minima libero quos tenetur similique blanditiis?</p>
-              </div>
-            </div>
-          </a>
-        </div><!-- End Team Member -->
+        @endforeach
 
         <a href="{{ route('konten') }}" class="justify-content-center" style="display: flex; text-decoration: underline;" >Lihat yang lainnya &#8594;</a>
 
@@ -239,65 +152,22 @@
 
       <div class="row gy-4">
 
+        @foreach ($data_liputan as $item)
         <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-          <a href="">
+          <a href="{{ route('detail_liputan',$item->id) }}">
             <div class="team-member">
               <div class="member-img">
-                <img src="{{ asset('dist_front/program_online/img/maulid_nabi.jpeg') }}" class="img-fluid" alt="">
+                <img src="{{ asset('uploads/'.$item->photo) }}" class="img-fluid" alt="">
               </div>
               <div class="member-info">
-                <h4>Acara Maulid Nabi 2023</h4>
-                <span>Azlia Nisrina Afifah</span>
-                <p style="margin-top: 6px; font-size: 14px; color: #444444;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil rem fugit exercitationem laborum minima eveniet impedit quis voluptatum? Fugit vero at eveniet quod ducimus minima libero quos tenetur similique blanditiis?</p>
+                <h4>{{ $item->judul }}</h4>
+                <span>{{ $item->nama }}</span>
+                {{-- <p style="margin-top: 6px; font-size: 14px; color: #444444;">{{ nl2br($item->deskripsi) }}</p> --}}
               </div>
             </div>
           </a>
         </div><!-- End Team Member -->
-
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-          <a href="">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="{{ asset('dist_front/program_online/img/maulid_nabi.jpeg') }}" class="img-fluid" alt="">
-              </div>
-              <div class="member-info">
-                <h4>Acara Maulid Nabi 2023</h4>
-                <span>Azlia Nisrina Afifah</span>
-                <p style="margin-top: 6px; font-size: 14px; color: #444444;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil rem fugit exercitationem laborum minima eveniet impedit quis voluptatum? Fugit vero at eveniet quod ducimus minima libero quos tenetur similique blanditiis?</p>
-              </div>
-            </div>
-          </a>
-        </div><!-- End Team Member -->
-
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-          <a href="">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="{{ asset('dist_front/program_online/img/maulid_nabi.jpeg') }}" class="img-fluid" alt="">
-              </div>
-              <div class="member-info">
-                <h4>Acara Maulid Nabi 2023</h4>
-                <span>Azlia Nisrina Afifah</span>
-                <p style="margin-top: 6px; font-size: 14px; color: #444444;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil rem fugit exercitationem laborum minima eveniet impedit quis voluptatum? Fugit vero at eveniet quod ducimus minima libero quos tenetur similique blanditiis?</p>
-              </div>
-            </div>
-          </a>
-        </div><!-- End Team Member -->
-
-        <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-          <a href="">
-            <div class="team-member">
-              <div class="member-img">
-                <img src="{{ asset('dist_front/program_online/img/maulid_nabi.jpeg') }}" class="img-fluid" alt="">
-              </div>
-              <div class="member-info">
-                <h4>Acara Maulid Nabi 2023</h4>
-                <span>Azlia Nisrina Afifah</span>
-                <p style="margin-top: 6px; font-size: 14px; color: #444444;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil rem fugit exercitationem laborum minima eveniet impedit quis voluptatum? Fugit vero at eveniet quod ducimus minima libero quos tenetur similique blanditiis?</p>
-              </div>
-            </div>
-          </a>
-        </div><!-- End Team Member -->
+        @endforeach
 
         <a href="{{ route('liputan') }}" class="justify-content-center" style="display: flex; text-decoration: underline;" >Lihat yang lainnya &#8594;</a>
 
@@ -306,8 +176,8 @@
     </div>
 
   </section><!-- /Team Section -->
-  
-  
+
+
 
   </main>
 

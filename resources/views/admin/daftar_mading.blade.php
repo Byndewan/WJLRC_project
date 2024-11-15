@@ -10,8 +10,13 @@
 
 @section('main_content')
 <div class="section-body">
-    @include('admin.layout.search')
     <div class="col-md-12 col-12 col-sm-12">
+        <form action="/admin/daftar-mading/search" class="form-inline" method="GET">
+            <input class="form-control" type="search" placeholder="Cari Nama Mading" name="search" data-width="200">
+            <div class="input-group-append">
+            <button class="btn" data-height="42" type="submit"><i class="fas fa-search"></i>Cari</button>
+          </div>
+        </form>
         <div class="card">
             <div class="card-body p-0">
                 <div class="table-responsive">
@@ -19,14 +24,20 @@
                         <thead>
                             <tr>
                                 <th>No</th>
+                                <th>Foto</th>
+                                <th>Nama</th>
                                 <th>Judul Mading</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
-                                @foreach ($mading_data as $item)
+                                @foreach ($data_mading as $item)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
+                                    <td>
+                                        <a href="#" class="font-weight-600 text-body"><img src="{{ asset('uploads/'.$item->photo) }}" alt="avatar" width="140"></a>
+                                    </td>
+                                    <td>{{ $item->nama }}</td>
                                     <td>{{ $item->judul }}</td>
                                     <td>
                                         <a href="{{ route('admin_edit_mading',$item->id) }}" class="btn btn-primary btn-action mr-1" title="ubah" data-toggle="tooltip"><i class="fas fa-pencil-alt"></i></a>

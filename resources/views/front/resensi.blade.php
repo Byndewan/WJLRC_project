@@ -23,6 +23,9 @@
   <link href="{{ asset('dist_front/resensi/css/main.css') }}" rel="stylesheet">
   <link href="{{ asset('dist_front/resensi/css-2/main.css') }}" rel="stylesheet">
 
+  <!-- Load icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body class="index-page">
@@ -40,67 +43,22 @@
     <section id="posts" class="posts">
       <div class="container" data-aos="fade-up">
         <div class="row g-5">
+            <form class="example" action="/program-online/resensi/search" method="GET">
+                <input type="search" placeholder="Cari Judul Resensi" name="search">
+                <button type="submit"><i class="fa fa-search"></i> Cari</button>
+            </form>
           <div class="col-lg-12">
             <div class="row g-5">
+                @foreach ($data_resensi as $item)
               <div class="col-lg-4 border-start custom-border">
                 <div class="post-entry-1">
-                  <a href="{{ route('resensi_detail') }}"><img src="{{ asset('dist_front/resensi/img/Bumi.png') }}" alt="" class="img-fluid"></a>
-                  <div class="post-meta"><span class="mx-1"></span> <span>5 Juli 2022</span></div>
-                  <h2><a href="">Bumi karya Tere Liye</a></h2>
-                  <div class="post-meta" style="color: #b3b3b3;"><span>Azlia Nisrina Afifah</span></div>
+                  <a href="{{ route('resensi_detail',$item->id) }}"><img src="{{ asset('uploads/'.$item->photo) }}" alt="" class="img-fluid"></a>
+                  <div class="post-meta"><span class="mx-1"></span> <span>{{ $item->tanggal }}</span></div>
+                  <h2><a href="">{{ $item->judul }}</a></h2>
+                  <div class="post-meta" style="color: #b3b3b3;"><span>{{ $item->nama }}</span></div>
                 </div>
-                <div class="post-entry-1">
-                  <a href="{{ route('resensi_detail') }}"><img src="{{ asset('dist_front/resensi/img/matahari.png') }}" alt="" class="img-fluid"></a>
-                  <div class="post-meta"> <span class="mx-1"></span> <span>17 Juli 2022</span></div>
-                  <h2><a href="">Matahari karya Tere Liye</a></h2>
-                  <div class="post-meta" style="color: #b3b3b3;"><span>Azlia Nisrina Afifah</span></div>
                 </div>
-                <div class="post-entry-1">
-                  <a href="{{ route('resensi_detail') }}"><img src="{{ asset('dist_front/resensi/img/bulan.png') }}" alt="" class="img-fluid"></a>
-                  <div class="post-meta"> <span class="mx-1"></span> <span>15 Maret 2022</span></div>
-                  <h2><a href="">Bulan karya Tere Liye</a></h2>
-                  <div class="post-meta" style="color: #b3b3b3;"><span>Azlia Nisrina Afifah</span></div>
-                </div>
-              </div>
-              <div class="col-lg-4 border-start custom-border">
-                <div class="post-entry-1">
-                  <a href="{{ route('resensi_detail') }}"><img src="{{ asset('dist_front/resensi/img/hilmy milan.jpg') }}" alt="" class="img-fluid"></a>
-                  <div class="post-meta <span class="mx-1"></span> <span>5 Juli 2022</span></div>
-                  <h2><a href="">Hilmy Milan karya Nadia Ristivani</a></h2>
-                  <div class="post-meta" style="color: #b3b3b3;"><span>Azlia Nisrina Afifah</span></div>
-                </div>
-                <div class="post-entry-1">
-                  <a href="{{ route('resensi_detail') }}"><img src="{{ asset('dist_front/resensi/img/Love-From-A-to-Z.jpg') }}" alt="" class="img-fluid"></a>
-                  <div class="post-meta"> <span class="mx-1"></span> <span>17 Juli 2022</span></div>
-                  <h2><a href="">Love from A to Z karya S.K Ali</a></h2>
-                  <div class="post-meta" style="color: #b3b3b3;"><span>Azlia Nisrina Afifah</span></div>
-                </div>
-                <div class="post-entry-1">
-                  <a href="{{ route('resensi_detail') }}"><img src="{{ asset('dist_front/resensi/img/alpha girls.jpg') }}" alt="" class="img-fluid"></a>
-                  <div class="post-meta"> <span class="mx-1"></span> <span>15 Maret 2022</span></div>
-                  <h2><a href="">Alpha Girl's Guide karya Henry Manampiring</a></h2>
-                  <div class="post-meta" style="color: #b3b3b3;"><span>Azlia Nisrina Afifah</span></div>
-                </div>
-              </div>
-              <div class="col-lg-4 border-start custom-border">
-                <div class="post-entry-1">
-                  <a href="{{ route('resensi_detail') }}"><img src="{{ asset('dist_front/resensi/img/dork diaries.jpg') }}" alt="" class="img-fluid"></a>
-                  <div class="post-meta"> <span class="mx-1"></span> <span>5 Juli 2022</span></div>
-                  <h2><a href="">Dork Diaries karya Rachel Renee</a></h2>
-                  <div class="post-meta" style="color: #b3b3b3;"><span>Azlia Nisrina Afifah</span></div>
-                </div>
-                <div class="post-entry-1">
-                  <a href="{{ route('resensi_detail') }}"><img src="{{ asset('dist_front/resensi/img/conversation on love.jpg') }}" alt="" class="img-fluid"></a>
-                  <div class="post-meta"> <span class="mx-1"></span> <span>1 Maret 2022</span></div>
-                  <h2><a href="">Conversation on Love karya Natasha Lunn</a></h2>
-                  <div class="post-meta" style="color: #b3b3b3;"><span>Azlia Nisrina Afifah</span></div>
-                </div>
-                <div class="post-entry-1">
-                  <a href="{{ route('resensi_detail') }}"><img src="{{ asset('dist_front/resensi/img/geez ann.jpg') }}" alt="" class="img-fluid"></a>
-                  <div class="post-meta"><span class="mx-1"></span> <span>5 Juli 2022</span></div>
-                  <h2><a href="">Geez and Ann karya Rintik Sedu</a></h2>
-                  <div class="post-meta" style="color: #b3b3b3;"><span>Azlia Nisrina Afifah</span></div>
-                </div>
+                @endforeach
               </div>
               </div>
           </div>

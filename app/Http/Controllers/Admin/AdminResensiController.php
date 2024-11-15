@@ -10,8 +10,8 @@ class AdminResensiController extends Controller
 {
     public function daftar_resensi()
     {
-        $all_data = Resensi::orderBy('id','asc')->get();
-        return view('admin.daftar_resensi', compact('all_data'));
+        $data_resensi = Resensi::orderBy('created_at','desc')->get();
+        return view('admin.daftar_resensi', compact('data_resensi'));
     }
 
     public function tambah()
@@ -22,6 +22,7 @@ class AdminResensiController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'photo' => 'required',
             'nama' => 'required',
             'kelas' => 'required',
             'judul' => 'required',
@@ -99,5 +100,16 @@ class AdminResensiController extends Controller
         $row_data->delete();
 
         return redirect()->back()->with('success', 'Data is deleted successfully');
+    }
+
+    public function search(Request $request){
+        if ($request->has('search')) {
+            $data_resensi = Resensi::where('nama', 'LIKE','%'.$request->search.'%')->get();
+        } else {
+            $data_resensi = Resensi::all();
+        }
+
+        return view('admin.daftar_resensi',['data_resensi' => $data_resensi]);
+
     }
 }

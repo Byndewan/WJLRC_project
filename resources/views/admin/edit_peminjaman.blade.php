@@ -38,16 +38,20 @@
                                     <input type="text" class="form-control" name="kelas" value="{{ $row_data->kelas }}">
                                     </div>
                                     <div class="form-group">
-                                    <label>Judul Buku Yang Dipinjam</label>
-                                    <input type="text" class="form-control" name="judul" value="{{ $row_data->judul }}">
+                                    <label>Judul Buku Yang Di Pinjam</label>
+                                        <select name="judul_id" class="form-control">
+                                            @foreach ($judul as $item)
+                                                <option value={{$item->id}}>{{$item->judul}}</option>
+                                            @endforeach
+                                        </select>
                                     </div>
                                     <div class="form-group">
                                     <label>Tanggal Peminjaman</label>
-                                    <input type="datetime-local" class="form-control" name="tanggal_peminjaman">{{ $row_data->tanggal_peminjaman }}
+                                    <input type="datetime-local" class="form-control" name="tanggal_peminjaman" value="{{ $row_data->tanggal_peminjaman }}">
                                     </div>
                                     <div class="form-group">
                                     <label>Tanggal Pengembalian</label>
-                                    <input type="datetime-local" class="form-control" name="tanggal_pengembalian">{{ $row_data->tanggal_pengembalian }}
+                                    <input type="datetime-local" class="form-control" name="tanggal_pengembalian" value="{{ $row_data->tanggal_pengembalian }}">
                                     </div>
                                     <div class="form-group">
                                         <label>Status</label>

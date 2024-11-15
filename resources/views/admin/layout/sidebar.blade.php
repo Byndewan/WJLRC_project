@@ -10,10 +10,13 @@
         <li class="{{ Request::is('admin/dashboard') ? "active" : "" }}">
           <a class="nav-link" href="{{ route('admin_home') }}"><i class="fas fa-hand-point-right"></i><span>Dashboard</span></a>
         </li>
-        <li class="dropdown {{ Request::is('admin/daftar-karya') ? "active" : " " }}">
+        <li class="dropdown {{ Request::is('admin/daftar-karya') | Request::is('admin/daftar-kategori') | Request::is('admin/daftar-tag') ? "active" : " " }}">
           <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-hand-point-right"></i> <span>Karya</span></a>
           <ul class="dropdown-menu">
             <li class="{{ Request::is('admin/daftar-karya') ? "active" : " " }}"><a class="nav-link " href="{{ route('daftar_karya') }}">Daftar Karya</a></li>
+          </ul>
+          <ul class="dropdown-menu">
+            <li class="{{ Request::is('admin/daftar-kategori') ? "active" : " " }}"><a class="nav-link " href="{{ route('daftar_kategori') }}">Daftar Kategori</a></li>
           </ul>
         </li>
 
@@ -24,24 +27,26 @@
             </ul>
           </li>
 
-        <li class="dropdown {{ Request::is('admin/daftar-resensi') ? "active" : " " }}">
-          <a href="#" class="nav-link has-dropdown"><i class="fas fa-hand-point-right"></i> <span>Resensi</span></a>
+        <li class="dropdown {{ Request::is('admin/daftar-resensi') | Request::is('admin/daftar-konten') | Request::is('admin/daftar-liputan') ? "active" : " " }}">
+          <a href="#" class="nav-link has-dropdown"><i class="fas fa-hand-point-right"></i> <span>Program Online</span></a>
           <ul class="dropdown-menu">
             <li class="{{ Request::is('admin/daftar-resensi') ? "active" : " " }}"><a class="nav-link" href="{{ route('daftar_resensi') }}">Daftar Resensi</a></li>
           </ul>
-        </li>
-        <li class="dropdown {{ Request::is('admin/daftar-konten') ? "active" : " " }}">
-          <a href="#" class="nav-link has-dropdown"><i class="fas fa-hand-point-right"></i> <span>Konten</span></a>
           <ul class="dropdown-menu">
             <li class="{{ Request::is('admin/daftar-konten') ? "active" : " " }}"><a class="nav-link" href="{{ route('daftar_konten') }}">Daftar Konten</a></li>
           </ul>
+          <ul class="dropdown-menu">
+            <li class="{{ Request::is('admin/daftar-liputan') ? "active" : " " }}"><a class="nav-link" href="{{ route('daftar_liputan') }}">Daftar Liputan</a></li>
+          </ul>
         </li>
+
         <li class="dropdown {{ Request::is('admin/daftar-mading') ? "active" : " " }}">
-          <a href="#" class="nav-link has-dropdown"><i class="fas fa-hand-point-right"></i> <span>Mading</span></a>
+          <a href="#" class="nav-link has-dropdown"><i class="fas fa-hand-point-right"></i> <span>Program Offline</span></a>
           <ul class="dropdown-menu">
             <li class="{{ Request::is('admin/daftar-mading') ? "active" : " " }}"><a class="nav-link" href="{{ route('daftar_mading') }}">Daftar Mading</a></li>
           </ul>
         </li>
+
         <li class="dropdown {{ Request::is('admin/daftar/buku')||Request::is('admin/daftar/peminjaman') ? "active" : " " }}">
           <a href="#" class="nav-link has-dropdown"><i class="fas fa-hand-point-right"></i> <span>Laporan Taman Baca</span></a>
           <ul class="dropdown-menu">
@@ -50,17 +55,35 @@
           </ul>
         </li>
 
-        <li class="dropdown {{ Request::is('admin/kontak') ? "active" : " " }}">
+        <li class="dropdown {{ Request::is('/admin/daftar/kontak') ? "active" : " " }}">
             <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-hand-point-right"></i> <span>Kontak</span></a>
             <ul class="dropdown-menu">
-              <li class="{{ Request::is('admin/kontak') ? "active" : " " }}"><a class="nav-link" href="{{ route('admin_kontak') }}">Kontak</a></li>
+              <li class="{{ Request::is('/admin/daftar/kontak') ? "active" : " " }}"><a class="nav-link" href="{{ route('admin_daftar_kontak') }}">Kontak</a></li>
             </ul>
         </li>
 
         <li class="dropdown {{ Request::is('admin/daftar/tim') ? "active" : " " }}">
             <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-hand-point-right"></i> <span>Team</span></a>
             <ul class="dropdown-menu">
-              <li class="{{ Request::is('admin/daftar/tim') ? "active" : " " }}"><a class="nav-link" href="{{ route('admin_daftar_tim') }}">Team</a></li>
+              <li class="{{ Request::is('admin/daftar/tim') ? "active" : " " }}"><a class="nav-link"
+                href="{{ route('admin_daftar_tim') }}">Team</a></li>
+            </ul>
+            <ul class="dropdown-menu">
+              <li class="{{ Request::is('admin/status/tim') ? "active" : " " }}"><a class="nav-link" href="{{ route('admin_status_tim') }}">Status Team</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown {{ Request::is('admin/home-banner') ? "active" : " " }}">
+            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-hand-point-right"></i> <span>Home Banner</span></a>
+            <ul class="dropdown-menu">
+              <li class="{{ Request::is('admin/home-banner') ? "active" : " " }}"><a class="nav-link" href="{{ route('admin_home_banner') }}">Home Banner</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown {{ Request::is('admin/home-footer') ? "active" : " " }}">
+            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-hand-point-right"></i> <span>Home Footer</span></a>
+            <ul class="dropdown-menu">
+              <li class="{{ Request::is('admin/home-footer') ? "active" : " " }}"><a class="nav-link" href="{{ route('admin_home_footer') }}">Home Footer</a></li>
             </ul>
         </li>
 

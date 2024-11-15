@@ -17,7 +17,7 @@
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
+:root {
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #124265; /* Color for headings, subheadings and title throughout the website */
@@ -146,6 +146,10 @@ section {
   color: var(--heading-color);
 }
 
+.img-fluid {
+  width: 100% !important; 
+}
+
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
   color: var(--contrast-color);
@@ -166,6 +170,10 @@ section {
 @media (max-width: 1200px) {
   .header .logo {
     order: 1;
+  }
+
+  .img-fluid {
+    width: 100% !important; 
   }
 
   .header .btn-getstarted {
@@ -191,6 +199,10 @@ section {
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
+  }
+
+  .img-fluid {
+    width: 100% !important; 
   }
 
   .navmenu ul {
@@ -307,6 +319,10 @@ section {
     margin-right: 10px;
     cursor: pointer;
     transition: color 0.3s;
+  }
+
+  .img-fluid {
+    width: 100% !important; 
   }
 
   .navmenu {
@@ -675,6 +691,10 @@ section {
   .custom-border {
     border: none !important;
   }
+
+  .img-fluid {
+    width: 100% !important; 
+  }
 }
 
 .author .photo {
@@ -782,6 +802,10 @@ section {
     flex: 0 0 100%;
     margin-bottom: 20px;
   }
+
+  .img-fluid {
+    width: 100% !important; 
+  }
 }
 
 .post-entry-2.half .thumbnail {
@@ -793,6 +817,10 @@ section {
     flex: 0 0 100%;
     margin-bottom: 20px;
   }
+
+  .img-fluid {
+    width: 100% !important; 
+  }
 }
 
 .post-entry-2.small-img .thumbnail {
@@ -803,6 +831,10 @@ section {
   .post-entry-2.small-img .thumbnail {
     flex: 0 0 100%;
     margin-bottom: 20px;
+  }
+
+  .img-fluid {
+    width: 100% !important; 
   }
 }
 
@@ -817,6 +849,10 @@ section {
 @media (max-width: 768px) {
   .img-bg {
     height: 400px;
+  }
+
+  .img-fluid {
+    width: 100% !important; 
   }
 }
 
@@ -849,6 +885,10 @@ section {
     padding-right: 30px;
     margin-bottom: 50px;
   }
+
+  .img-fluid {
+    width: 100% !important; 
+  }
 }
 
 .img-bg .img-bg-inner h2,
@@ -859,6 +899,10 @@ section {
 @media (max-width: 500px) {
   .img-bg .img-bg-inner p {
     display: none;
+  }
+
+  .img-fluid {
+    width: 100% !important; 
   }
 }
 
@@ -875,6 +919,10 @@ section {
   .custom-swiper-button-next,
   .custom-swiper-button-prev {
     display: none;
+  }
+
+  .img-fluid {
+    width: 100% !important; 
   }
 }
 
@@ -938,6 +986,10 @@ section {
     padding-left: 15px;
     padding-right: 15px;
   }
+
+  .img-fluid {
+    width: 100% !important; 
+  }
 }
 
 .post-content .firstcharacter {
@@ -962,6 +1014,10 @@ section {
     min-width: auto;
     left: auto !important;
     transform: none;
+  }
+
+  .img-fluid {
+    width: 100% !important; 
   }
 }
 
@@ -1249,6 +1305,10 @@ section {
     border-left: 1px solid rgba(var(--color-secondary-rgb), 0.2);
     border-right: 1px solid rgba(var(--color-secondary-rgb), 0.2);
   }
+
+  .img-fluid {
+    width: 100% !important; 
+  }
 }
 
 .contact .php-email-form {
@@ -1260,6 +1320,10 @@ section {
 @media (max-width: 640px) {
   .contact .php-email-form {
     padding: 20px;
+  }
+
+  .img-fluid {
+    width: 100% !important; 
   }
 }
 
@@ -1468,4 +1532,9 @@ section {
 
 .footer .credits a {
   color: color-mix(in srgb, var(--contrast-color), transparent 30%);
+}
+
+.hati {
+    color: #ff5757;
+    border: #000;
 }

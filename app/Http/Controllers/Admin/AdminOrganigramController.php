@@ -10,8 +10,8 @@ class AdminOrganigramController extends Controller
 {
     public function daftar_organigram()
     {
-        $all_data = Organigram::orderBy('id','asc')->get();
-        return view('admin.daftar_organigram', compact('all_data'));
+        $data_organigram = Organigram::orderBy('id','asc')->get();
+        return view('admin.daftar_organigram', ['data_organigram' => $data_organigram]);
     }
 
     public function tambah()
@@ -44,6 +44,10 @@ class AdminOrganigramController extends Controller
         $obj->icon_url2 = $request->icon_url2;
         $obj->icon3 = $request->icon3;
         $obj->icon_url3 = $request->icon_url3;
+        $obj->icon4 = $request->icon4;
+        $obj->icon_url4 = $request->icon_url4;
+        $obj->icon5 = $request->icon5;
+        $obj->icon_url5 = $request->icon_url5;
         $obj->jabatan = $request->jabatan;
         $obj->save();
 
@@ -91,6 +95,10 @@ class AdminOrganigramController extends Controller
         $obj->icon_url2 = $request->icon_url2;
         $obj->icon3 = $request->icon3;
         $obj->icon_url3 = $request->icon_url3;
+        $obj->icon4 = $request->icon4;
+        $obj->icon_url4 = $request->icon_url4;
+        $obj->icon5 = $request->icon5;
+        $obj->icon_url5 = $request->icon_url5;
         $obj->jabatan = $request->jabatan;
         $obj->update();
 
@@ -103,5 +111,16 @@ class AdminOrganigramController extends Controller
         $row_data->delete();
 
         return redirect()->back()->with('success', 'Data is deleted successfully');
+    }
+
+    public function search(Request $request){
+        if ($request->has('search')) {
+            $data_organigram = Organigram::where('nama','LIKE','%'.$request->search.'%')->get();
+        } else {
+            $data_organigram = Organigram::all();
+        }
+
+        return view('admin.daftar_organigram',['data_organigram' => $data_organigram]);
+
     }
 }

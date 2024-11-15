@@ -12,8 +12,8 @@ class AdminTamanBacaController extends Controller
 
     public function daftar_buku()
     {
-        $buku_data = Buku::orderBy('id','asc')->get();
-        return view('admin.daftar_buku', compact('buku_data'));
+        $data_buku = Buku::orderBy('created_at','desc')->get();
+        return view('admin.daftar_buku', compact('data_buku'));
     }
 
     public function tambah()
@@ -65,16 +65,27 @@ class AdminTamanBacaController extends Controller
         return redirect()->back()->with('success', 'Data is deleted successfully');
     }
 
+    public function search(Request $request){
+        if ($request->has('search')) {
+            $data_buku = Buku::where('judul','LIKE','%'.$request->search.'%')->get();
+        } else {
+            $data_buku = Buku::all();
+        }
 
+        return view('admin.daftar_buku',['data_buku' => $data_buku]);
+
+    }
 
     public function daftar_peminjaman()
     {
-        $peminjaman_data = Peminjaman::orderBy('id','asc')->get();
-        return view('admin.daftar_peminjaman', compact('peminjaman_data'));
+        // $peminjaman = Peminjaman::all();
+        $data_peminjaman = Peminjaman::orderBy('id','asc')->get();
+        return view('admin.daftar_peminjaman', compact('data_peminjaman'));
     }
     public function tambah_data()
     {
-        return view('admin.tambah_peminjaman');
+        $judul = Buku::select('id','judul')->get();
+        return view('admin.tambah_peminjaman', compact('judul'));
     }
 
     public function store_data(Request $request)
@@ -82,7 +93,7 @@ class AdminTamanBacaController extends Controller
         $request->validate([
             'nama' => 'required',
             'kelas' => 'required',
-            'judul' => 'required',
+            'judul_id' => 'required|exists:bukus,id',
             'tanggal_peminjaman' => 'required',
             'tanggal_pengembalian' => 'required',
             'status' => 'required',
@@ -97,7 +108,9 @@ class AdminTamanBacaController extends Controller
 
         $obj->nama = $request->nama;
         $obj->kelas = $request->kelas;
-        $obj->judul = $request->judul;
+        $obj->judul_id = $request->judul_id;
+        $obj->tanggal_peminjaman = $request->tanggal_peminjaman;
+        $obj->tanggal_pengembalian = $request->tanggal_pengembalian;
         $obj->status = $request->status;
         $obj->save();
 
@@ -106,8 +119,9 @@ class AdminTamanBacaController extends Controller
 
     public function edit_data($id)
     {
+        $judul = Buku::select('id','judul')->get();
         $row_data = Peminjaman::where('id',$id)->first();
-        return view('admin.edit_peminjaman', compact('row_data'));
+        return view('admin.edit_peminjaman', compact('row_data', 'judul'));
     }
 
     public function update_data(Request $request, $id)
@@ -115,7 +129,7 @@ class AdminTamanBacaController extends Controller
         $request->validate([
             'nama' => 'required',
             'kelas' => 'required',
-            'judul' => 'required'
+            'judul_id' => 'required|exists:bukus,id',
         ]);
 
         $obj = Peminjaman::where('id',$id)->first();
@@ -137,7 +151,10 @@ class AdminTamanBacaController extends Controller
 
         $obj->nama = $request->nama;
         $obj->kelas = $request->kelas;
-        $obj->judul = $request->judul;
+        $obj->judul_id = $request->judul_id;
+        $obj->tanggal_peminjaman = $request->tanggal_peminjaman;
+        $obj->tanggal_pengembalian = $request->tanggal_pengembalian;
+        $obj->status = $request->status;
         $obj->update();
 
         return redirect()->route('admin_daftar_peminjaman')->with('success', 'Data is updated successfully');
@@ -149,5 +166,16 @@ class AdminTamanBacaController extends Controller
         $row_data->delete();
 
         return redirect()->back()->with('success', 'Data is deleted successfully');
+    }
+
+    public function search_peminjaman(Request $request){
+        if ($request->has('search')) {
+            $data_peminjaman = Peminjaman::where('nama','LIKE','%'.$request->search.'%')->get();
+        } else {
+            $data_peminjaman = Peminjaman::all();
+        }
+
+        return view('admin.daftar_peminjaman',['data_peminjaman' => $data_peminjaman]);
+
     }
 }

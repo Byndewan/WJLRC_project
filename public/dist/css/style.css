@@ -90,6 +90,15 @@ background-color: #66BB6A !important; }
 .bg-karya {
     background-color: #c69e69 !important; }
 
+.bg-resensi {
+    background-color: #ec4242 !important; }
+
+.bg-liputan {
+    background-color: #f02929 !important; }
+
+.bg-konten {
+    background-color: #348bee !important; }
+
 .bg-info {
 background-color: #3abaf4 !important; }
 
@@ -176,7 +185,7 @@ select.form-control:not([size]):not([multiple]),
   height: 42px; }
 
 textarea.form-control {
-  height: 64px !important; }
+  height: 1000px !important; }
 
 .custom-control {
   line-height: 1.6rem; }

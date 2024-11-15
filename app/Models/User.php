@@ -41,4 +41,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function likes(){
+        return $this->belongsToMany(Karya::class,'karya_like')->withTimestamps();
+    }
+
+    public function likeskarya(Karya $karya){
+        return $this->likes()->where('karya_id',$karya->id)->exists();
+    }
+    
 }

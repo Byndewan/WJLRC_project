@@ -10,8 +10,8 @@ class AdminKontenController extends Controller
 {
     public function daftar_konten()
     {
-        $konten_data = Konten::orderBy('id','asc')->get();
-        return view('admin.daftar_konten', compact('konten_data'));
+        $data_konten = Konten::orderBy('created_at','desc')->get();
+        return view('admin.daftar_konten', compact('data_konten'));
     }
 
     public function tambah()
@@ -99,5 +99,16 @@ class AdminKontenController extends Controller
         $row_data->delete();
 
         return redirect()->back()->with('success', 'Data is deleted successfully');
+    }
+
+    public function search(Request $request){
+        if ($request->has('search')) {
+            $data_konten = Konten::where('nama','LIKE','%'.$request->search.'%')->get();
+        } else {
+            $data_konten = Konten::all();
+        }
+
+        return view('admin.daftar_konten',['data_konten' => $data_konten]);
+
     }
 }

@@ -48,68 +48,22 @@
     <section id="posts" class="posts">
       <div class="container" data-aos="fade-up">
         <div class="row g-5">
+            <form class="example" action="/program-online/konten/search" method="GET">
+                <input type="search" placeholder="Cari Judul Konten" name="search">
+                <button type="submit"><i class="fa fa-search"></i> Cari</button>
+            </form>
           <div class="col-lg-12">
             <div class="row g-5">
+                @foreach ($data_konten as $item)
               <div class="col-lg-4 border-start custom-border">
                 <div class="post-entry-1">
-                  <a href="{{ route('detail_konten') }}"><img src="{{ asset('dist_front/konten/img/konten-2.jpg') }}" alt="" class="img-fluid"></a>
-                  <div class="post-meta"><span class="mx-1"></span> <span>5 Juli 2022</span></div>
-                  <h2><a href="">Apa itu literasi?</a></h2>
-                  <div class="post-meta" style="color: #b3b3b3;"><span>Nameera Putri Prianti</span></div>
+                  <a href="{{ route('detail_konten',$item->id) }}"><img src="{{ asset('uploads/'.$item->photo) }}" alt="" class="img-fluid"></a>
+                  <div class="post-meta"><span class="mx-1"></span> <span>{{ $item->tanggal }}</span></div>
+                  <h2><a href="{{ route('detail_konten',$item->id) }}">{{ $item->judul }}</a></h2>
+                  <div class="post-meta" style="color: #b3b3b3;"><span>{{ $item->nama }}</span></div>
                 </div>
-                <div class="post-entry-1">
-                  <a href="{{ route('detail_konten') }}"><img src="{{ asset('dist_front/konten/img/konten-3.jpg') }}" alt="" class="img-fluid"></a>
-                  <div class="post-meta"> <span class="mx-1"></span> <span>17 Juli 2022</span></div>
-                  <h2><a href="">5 Cara Efektif Mengatur Waktu dengan Baik</a></h2>
-                  <div class="post-meta" style="color: #b3b3b3;"><span>Andika Bagja Gumelar</span></div>
-                </div>
-                <div class="post-entry-1">
-                  <a href="{{ route('detail_konten') }}"><img src="{{ asset('dist_front/konten/img/konten-4.jpg') }}" alt="" class="img-fluid"></a>
-                  <div class="post-meta"> <span class="mx-1"></span> <span>15 Maret 2022</span></div>
-                  <h2><a href="">Bagaimana sih cara menghitung perkalian dengan mudah?</a></h2>
-                  <div class="post-meta" style="color: #b3b3b3;"><span>Gista Aulia</span></div>
-                </div>
-              </div>
-              <div class="col-lg-4 border-start custom-border">
-                <div class="post-entry-1">
-                  <a href="{{ route('detail_konten') }}"><img src="{{ asset('dist_front/konten/img/konten-5.jpg') }}" alt="" class="img-fluid"></a>
-                  <div class="post-meta"> <span class="mx-1"></span> <span>5 Juli 2022</span></div>
-                  <h2><a href="">Cara Mengatur Keuangan di Usia Muda</a></h2>
-                  <div class="post-meta" style="color: #b3b3b3;"><span>Andiki Bagja Gumelar</span></div>
-                </div>
-                <div class="post-entry-1">
-                  <a href="{{ route('detail_konten') }}"><img src="{{ asset('dist_front/konten/img/konten-6.jpg') }}" alt="" class="img-fluid"></a>
-                  <div class="post-meta"> <span class="mx-1"></span> <span>17 Juli 2022</span></div>
-                  <h2><a href="{{ route('detail_konten') }}">Teknologi Internet</a></h2>
-                  <div class="post-meta" style="color: #b3b3b3;"><span>Cantika Sahara Putri</span></div>
-                </div>
-                <div class="post-entry-1">
-                  <a href="{{ route('detail_konten') }}"><img src="{{ asset('dist_front/konten/img/konten-7.jpg') }}" alt="" class="img-fluid"></a>
-                  <div class="post-meta"> <span class="mx-1"></span> <span>15 Maret 2022</span></div>
-                  <h2><a href="{{ route('detail_konten') }}">Apa itu Literasi Budaya dan Kewargaan?</a></h2>
-                  <div class="post-meta" style="color: #b3b3b3;"><span>Tania Nurhasanah</span></div>
-                </div>
-              </div>
-              <div class="col-lg-4 border-start custom-border">
-                <div class="post-entry-1">
-                  <a href="{{ route('detail_konten') }}"><img src="{{ asset('dist_front/konten/img/konten-8.jpg') }}" alt="" class="img-fluid"></a>
-                  <div class="post-meta"> <span class="mx-1"></span> <span>5 Juli 2022</span></div>
-                  <h2><a href="">Literasi Sains</a></h2>
-                  <div class="post-meta" style="color: #b3b3b3;"><span>Nabila Sukmaranti</span></div>
-                </div>
-                <div class="post-entry-1">
-                  <a href="{{ route('detail_konten') }}"><img src="{{ asset('dist_front/konten/img/konten-9.jpg') }}" alt="" class="img-fluid"></a>
-                  <div class="post-meta"> <span class="mx-1"></span> <span>1 Maret 2022</span></div>
-                  <h2><a href="">Literasi Sains</a></h2>
-                  <div class="post-meta" style="color: #b3b3b3;"><span>Dhira Ayu Mecka</span></div>
-                </div>
-                <div class="post-entry-1">
-                  <a href="{{ route('detail_konten') }}"><img src="{{ asset('dist_front/konten/img/konten-10.jp') }}g" alt="" class="img-fluid"></a>
-                  <div class="post-meta"><span class="mx-1"></span> <span>5 Juli 2022</span></div>
-                  <h2><a href="">Manajemen Keuangan Pribadi</a></h2>
-                  <div class="post-meta" style="color: #b3b3b3;"><span>Annisa Ayu</span></div>
-                </div>
-              </div>
+            </div>
+            @endforeach
 
             </div>
           </div>
